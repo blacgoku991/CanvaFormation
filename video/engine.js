@@ -2,7 +2,6 @@
 // Aucune animation CSS n'est utilisée, pour que la capture image par image soit exacte.
 (function () {
   const TL = window.TIMELINE;
-  const LEAD = 0.55;
 
   const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
   const E = {
@@ -35,6 +34,9 @@
     return idx / d.vo.length * d.vo_dur;
   }
 
+  // Délai entre le début de la scène et le début de sa voix (propre à chaque scène, voir timings.py).
+  const lead = sc => sc.data.vo_start - sc.data.start;
+
   function parseAt(str, sc) {
     if (str == null || str === '') return null;
     const [base, offStr] = String(str).trim().split('@');
@@ -46,11 +48,11 @@
       let idx = -1;
       for (let k = 0; k < nth; k++) idx = vo.indexOf(word, idx + 1);
       if (idx < 0) console.warn('mot introuvable dans la voix :', word, sc.data.id);
-      return LEAD + voTime(sc.data, Math.max(0, idx)) + off;
+      return lead(sc) + voTime(sc.data, Math.max(0, idx)) + off;
     }
     if (base === 'end') return sc.data.dur + off;
-    if (base === 'vo') return LEAD + off;
-    if (base === 'voend') return LEAD + sc.data.vo_dur + off;
+    if (base === 'vo') return lead(sc) + off;
+    if (base === 'voend') return lead(sc) + sc.data.vo_dur + off;
     return parseFloat(base) + off;
   }
 
@@ -110,8 +112,8 @@
       case 'blur': s.opacity = p * o; s.filter = `blur(${(1 - p) * 14}px)`; s.transform = `scale(${1.04 - .04 * p})`; break;
       case 'scale': s.opacity = p * o; s.transform = `scale(${.86 + .14 * p})`; break;
       case 'pop': s.opacity = clamp(p * 3) * o; s.transform = `scale(${.4 + .6 * p})`; break;
-      case 'mask': // révélation masquée de bas en haut (texte qui monte dans sa ligne)
-        s.clipPath = `inset(${(1 - p) * 100}% 0 -20% 0)`; s.transform = `translateY(${(1 - p) * D}px)`; s.opacity = o; break;
+      case 'mask': // révélation masquée de bas en haut (texte qui monte dans sa ligne) ; marge haute finale pour les accents
+        s.clipPath = `inset(${120 - 150 * p}% 0 -20% 0)`; s.transform = `translateY(${(1 - p) * D}px)`; s.opacity = o; break;
       case 'mask-x': s.clipPath = `inset(0 ${(1 - p) * 100}% 0 0)`; s.opacity = o; break;
       case 'width': s.transform = `scaleX(${p})`; s.opacity = o; break;
       case 'height': s.transform = `scaleY(${p})`; s.opacity = o; break;
@@ -139,7 +141,7 @@
   function applyEnter(sc, lt) {
     const el = sc.el;
     const D = sc.enterDur;
-    const p = D ? E.ioExpo(prog(lt, 0, D)) : 1;
+    const p = sc === scenes[0] ? E.io3(prog(lt, 0, 1.4)) : D ? E.ioExpo(prog(lt, 0, D)) : 1;
     const inner = el.querySelector(':scope > .inner');
     el.style.clipPath = '';
     el.style.opacity = 1;
@@ -163,6 +165,8 @@
     }
     return (p > 0 && p < 1) ? bar : null;
   }
+
+  const uiOn = sc => !!(sc && sc.data.partie && !/^p\d$/.test(sc.data.id));
 
   window.renderFrame = function (T) {
     const frame = Math.round(T * TL.fps);
@@ -191,14 +195,25 @@
       else { wb.style.width = '1920px'; wb.style.height = '10px'; wb.style.transform = `translate(0, ${wipeBar.y - 5}px)`; }
     } else wb.style.opacity = 0;
 
-    const ui = document.getElementById('ui');
-    const showUi = current.data.partie && !/^p\d$/.test(current.data.id);
+    // Libellé de partie et logo : ils restent en place quand la partie ne change pas,
+    // s'effacent au début d'une transition vers une ouverture, et réapparaissent une fois la transition posée.
+    const ci = scenes.indexOf(current);
+    const prev = scenes[ci - 1];
     const lt = T - current.data.start;
-    const uiOp = showUi ? E.out3(prog(lt, .5, .7)) : 0;
-    ui.style.opacity = uiOp;
+    const fadeOut = 1 - E.out3(prog(lt, 0, .35));
+    const fadeIn = E.out3(prog(lt, current.enterDur * .85, .6));
+    let uiOp = 0, partie = current.data.partie;
+    if (!uiOn(current)) { if (uiOn(prev)) { uiOp = fadeOut; partie = prev.data.partie; } }
+    else if (uiOn(prev) && prev.data.partie === current.data.partie) uiOp = 1;
+    else if (uiOn(prev) && lt < .35) { uiOp = fadeOut; partie = prev.data.partie; }
+    else uiOp = fadeIn;
+    const endFade = 1 - prog(T, TL.total - .9, .7);
+    document.getElementById('ui').style.opacity = uiOp * endFade;
     const label = document.getElementById('ui-part');
-    if (label.textContent !== current.data.partie) label.textContent = current.data.partie;
-    document.getElementById('progress').style.transform = `scaleX(${T / TL.total})`;
+    if (label.textContent !== partie) label.textContent = partie;
+    const pr = document.getElementById('progress');
+    pr.style.transform = `scaleX(${T / TL.total})`;
+    pr.style.opacity = endFade;
     const g = document.getElementById('grain');
     const gf = Math.floor(frame / 3);   // grain renouvelé toutes les 3 images : rendu pellicule, fichier plus léger
     g.style.backgroundPosition = `${(gf * 137) % 600}px ${(gf * 263) % 600}px`;

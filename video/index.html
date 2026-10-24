@@ -24,10 +24,11 @@
 
   .kicker { font-family: var(--sans); font-weight: 500; font-size: 21px; letter-spacing: .34em; text-transform: uppercase; color: var(--bordeaux); display: flex; align-items: center; gap: 20px; }
   .kicker::before { content: ''; width: 56px; height: 2px; background: currentColor; }
-  .h1 { font-family: var(--display); font-weight: 400; font-size: 88px; line-height: .98; text-transform: uppercase; color: var(--espresso); letter-spacing: -.005em; }
+  .h1 { font-family: var(--display); font-weight: 400; font-size: 88px; line-height: 1.04; text-transform: uppercase; color: var(--espresso); letter-spacing: -.005em; }
   .h1 .no { font-style: italic; color: var(--bordeaux); text-transform: none; margin-right: 14px; }
   .lead { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 46px; line-height: 1.28; color: var(--mocha); }
   .body { font-size: 29px; line-height: 1.5; color: var(--ink); }
+  .body, .small, .lead, .ft-item .d, .chute-card .txt, .som-card .sub, .alert { text-wrap: pretty; }
   .small { font-size: 22px; line-height: 1.5; color: var(--mocha); }
   .label { font-family: var(--sans); font-weight: 500; font-size: 19px; letter-spacing: .26em; text-transform: uppercase; color: var(--taupe); }
   .chip { display: inline-block; font-family: var(--sans); font-weight: 500; font-size: 24px; letter-spacing: .04em; color: var(--bordeaux); border: 2px solid var(--bordeaux); border-radius: 60px; padding: 8px 26px; white-space: nowrap; }
@@ -48,7 +49,8 @@
   #ui { position: absolute; inset: 0; z-index: 500; pointer-events: none; opacity: 0; }
   #ui-part { position: absolute; left: 64px; top: 40px; padding: 12px 22px; border-radius: 40px; background: rgba(247,242,236,.88); font-weight: 500; font-size: 17px; letter-spacing: .34em; text-transform: uppercase; color: var(--mocha); display: flex; align-items: center; gap: 18px; }
   #ui-part::before { content: ''; width: 40px; height: 2px; background: var(--bordeaux); }
-  #ui-logo { position: absolute; right: 80px; top: 40px; width: 230px; opacity: .85; }
+  #ui-logo-wrap { position: absolute; right: 64px; top: 40px; padding: 11px 24px 10px; border-radius: 40px; background: rgba(247,242,236,.88); }
+  #ui-logo { display: block; width: 168px; opacity: .9; }
   #progress { position: absolute; left: 0; bottom: 0; width: 1920px; height: 5px; background: var(--bordeaux); transform-origin: left center; z-index: 600; }
   #wipebar { position: absolute; left: 0; top: 0; background: var(--bordeaux); z-index: 550; opacity: 0; box-shadow: 0 0 40px rgba(122,36,48,.35); }
   #grain { position: absolute; inset: 0; z-index: 700; pointer-events: none; background-image: url('../design/assets/grain.png'); background-size: 600px 600px; opacity: .55; }
@@ -56,21 +58,23 @@
 
   /* Scènes */
   #s-intro .veil { position: absolute; inset: 0; background: radial-gradient(ellipse 52% 50% at 50% 47%, rgba(247,242,236,.94) 0, rgba(247,242,236,.78) 48%, rgba(247,242,236,0) 100%); }
-  #s-intro .center { position: absolute; left: 0; right: 0; top: 300px; text-align: center; }
-  #s-intro .logo { width: 900px; display: inline-block; }
+  #s-intro .center { position: absolute; left: 0; right: 0; top: 318px; text-align: center; }
+  #s-intro .logo { width: 720px; display: inline-block; }
   #s-intro .rule { width: 170px; margin: 46px auto 40px; transform-origin: center; }
   #s-intro .t1 { font-family: var(--display); font-size: 58px; text-transform: uppercase; color: var(--espresso); }
   #s-intro .lead { margin-top: 26px; font-size: 52px; }
 
   .som-card { position: absolute; top: 320px; width: 390px; height: 680px; }
   .som-card .ph { left: 0; top: 0; width: 390px; height: 420px; }
+  .som-card .ph::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(59,40,35,0) 45%, rgba(59,40,35,.42) 100%); }
+  .som-ghost { position: absolute; top: 320px; width: 390px; height: 420px; border: 1.5px solid var(--sand); background: rgba(240,231,221,.35); }
   .som-card .n { position: absolute; left: 22px; top: 262px; font-family: var(--display); font-style: italic; font-size: 140px; line-height: 1; color: #fff; text-shadow: 0 4px 30px rgba(59,40,35,.35); }
   .som-card .name { position: absolute; left: 0; top: 452px; font-family: var(--display); font-size: 40px; line-height: 1.05; text-transform: uppercase; color: var(--espresso); }
   .som-card .sub { position: absolute; left: 0; top: 560px; width: 380px; font-size: 21px; line-height: 1.55; color: var(--mocha); border-top: 2px solid var(--espresso); padding-top: 16px; }
 
   .fol-label { position: absolute; top: 860px; width: 360px; margin-left: -180px; text-align: center; }
   .fol-label .p { font-family: var(--display); font-size: 46px; letter-spacing: .12em; text-transform: uppercase; color: var(--espresso); }
-  .fol-label .s { font-size: 19px; letter-spacing: .24em; text-transform: uppercase; color: var(--taupe); margin-top: 8px; }
+  .fol-label .s { font-size: 21px; font-weight: 400; letter-spacing: .24em; text-transform: uppercase; color: var(--mocha); margin-top: 8px; }
   .fol-label .tick { width: 2px; height: 34px; background: var(--bordeaux); margin: 0 auto 18px; }
 
   .chute-card { position: absolute; top: 250px; width: 330px; height: 470px; }
@@ -101,7 +105,7 @@
   .ring .nm { font-family: var(--display); font-size: 32px; line-height: 1.15; color: var(--espresso); margin-top: 6px; }
 
   .ft-item { position: absolute; left: 140px; width: 780px; display: grid; grid-template-columns: 96px 1fr; column-gap: 26px; }
-  .ft-item .c { width: 80px; height: 80px; border-radius: 50%; border: 2px solid var(--bordeaux); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-style: italic; font-size: 40px; color: var(--bordeaux); }
+  .ft-item .c { width: 80px; height: 80px; border-radius: 50%; border: 2px solid var(--bordeaux); background: var(--ivory); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-style: italic; font-size: 40px; color: var(--bordeaux); }
   .ft-item .t { font-family: var(--display); font-size: 42px; color: var(--espresso); line-height: 1.1; }
   .ft-item .d { font-size: 24px; line-height: 1.45; color: var(--mocha); margin-top: 8px; }
 
@@ -117,7 +121,7 @@
   .pill i { font-family: var(--display); color: var(--bordeaux); margin-right: 10px; }
   .cal { position: absolute; top: 760px; left: 780px; width: 1000px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
   .cal div { background: var(--paper); border: 1.5px solid var(--line); height: 150px; padding: 18px 14px; }
-  .cal b { display: block; font-family: var(--display); font-weight: 400; font-size: 28px; color: var(--espresso); }
+  .cal b { display: block; font-family: var(--display); font-weight: 400; font-size: 26px; color: var(--espresso); white-space: nowrap; }
   .cal span { display: block; font-size: 18px; line-height: 1.35; color: var(--mocha); margin-top: 10px; }
 
   .g-line { position: absolute; left: 140px; width: 760px; display: flex; align-items: baseline; gap: 26px; border-bottom: 1.5px solid var(--line); padding: 18px 0; }
@@ -125,6 +129,7 @@
   .g-line .t { font-family: var(--display); font-size: 42px; color: var(--espresso); }
   .funnel { position: absolute; left: 140px; top: 880px; display: flex; align-items: center; gap: 14px; }
   .funnel .chip { font-size: 21px; padding: 8px 20px; background: rgba(255,255,255,.85); }
+  .funnel .chip.fill { background: var(--bordeaux); color: #fff; }
   .funnel .ar { width: 34px; height: 2px; background: var(--bordeaux); position: relative; }
   .funnel .ar::after { content: ''; position: absolute; right: -2px; top: -5px; border-left: 10px solid var(--bordeaux); border-top: 6px solid transparent; border-bottom: 6px solid transparent; }
 
@@ -147,7 +152,7 @@
       <img class="logo" src="../design/assets/logo-dolce.png" alt="" data-fx="mask-x" data-at="0.5" data-d="1.6" data-ease="io3">
       <div class="rule" data-fx="width" data-at="1.7" data-d=".9"></div>
       <div class="t1" data-fx="track" data-at="2.0" data-d="1.6" data-dist="60" data-ls=".32">Manuel de formation</div>
-      <div class="lead" data-fx="blur" data-at="2.9" data-d="1.4">Beauté du regard</div>
+      <div class="lead" data-fx="blur" data-at="w:la beauté@-.4" data-d="1.4">Beauté du regard</div>
     </div>
   </div>
 </section>
@@ -157,15 +162,18 @@
   <div class="inner">
     <div class="abs kicker" style="left:140px;top:130px" data-fx="right" data-at=".7">Votre parcours</div>
     <div class="abs h1" style="left:140px;top:172px" data-fx="mask" data-at=".85" data-dist="40">Quatre parties</div>
+    <div data-stagger=".12" data-at="w:quatre parties@-.3">
+      <div class="som-ghost" style="left:135px" data-fx="fade" data-d=".7"></div><div class="som-ghost" style="left:555px" data-fx="fade" data-d=".7"></div><div class="som-ghost" style="left:975px" data-fx="fade" data-d=".7"></div><div class="som-ghost" style="left:1395px" data-fx="fade" data-d=".7"></div>
+    </div>
     <div class="som-card" style="left:135px" data-fx="up" data-at="w:les sourcils@-.2" data-dist="90">
       <div class="ph"><img src="../design/assets/ia/sourcil-macro.jpg" data-kb="in" alt=""></div>
       <div class="n">01</div><div class="name">Sourcils</div>
-      <div class="sub">Cycle du poil · Mapping · Brow Lift · Teinture · Décoloration</div>
+      <div class="sub">Cycle du poil · Mapping · Brow&nbsp;Lift&nbsp;· Teinture · Décoloration</div>
     </div>
     <div class="som-card" style="left:555px" data-fx="up" data-at="w:les cils@-.2" data-dist="90">
       <div class="ph"><img src="../design/assets/ia/cils-teintes-2.jpg" style="object-position:50% 40%" data-kb="in" alt=""></div>
       <div class="n">02</div><div class="name">Les cils</div>
-      <div class="sub">Diagnostic · Rehaussement · Teinture · Lash Botox</div>
+      <div class="sub">Diagnostic · Rehaussement · Teinture · Lash&nbsp;Botox</div>
     </div>
     <div class="som-card" style="left:975px" data-fx="up" data-at="w:la pratique@-.2" data-dist="90">
       <div class="ph"><img src="../design/assets/ia/accueil-institut.jpg" style="object-position:60% 50%" data-kb="in" alt=""></div>
@@ -183,7 +191,7 @@
 <!-- 3. Ouverture Partie I -->
 <section class="scene" id="s-p1" data-enter="circle">
   <div class="inner">
-    <img class="full abs" style="inset:0;object-position:50% 40%" src="../design/assets/ia/ouverture-sourcils.jpg" data-kb="in" data-kb-amt=".14" alt="">
+    <img class="full abs" style="inset:0;object-position:50% 45%" src="../design/assets/ia/sourcil-macro.jpg" data-kb="in" data-kb-amt=".1" alt="">
     <div class="gradient-bottom"></div>
     <svg class="abs bignum" style="right:70px;top:90px" width="820" height="600" viewBox="0 0 820 600">
       <text x="10" y="540" font-size="640" fill="none" stroke="#7A2430" stroke-width="2.4" data-fx="draw" data-len="4200" data-at=".35" data-d="2.4" data-ease="io3">01</text>
@@ -207,7 +215,7 @@
         <path d="M350 236 H446" data-fx="draw" data-at="w:la télogène@-.4" data-d=".6"/>
         <path d="M550 236 H646" data-fx="draw" data-at="w:chaque@-.4" data-d=".6"/>
       </g>
-      <g data-fx="up" data-dist="24" data-at="w:l'anagène@-.2"><g transform="translate(100 0)">
+      <g data-fx="up" data-dist="24" data-at="w:poil@-.1"><g transform="translate(100 0)">
         <path d="M-11 80 C-11 130 -13 165 -20 190 C-28 214 -16 226 0 226 C16 226 28 214 20 190 C13 165 11 130 11 80" fill="#FCFAF7" stroke="#3B2823" stroke-width="1.4"/>
         <path d="M-15 196 C-20 214 -10 221 0 221 C10 221 20 214 15 196 C11 184 6 178 0 178 C-6 178 -11 184 -15 196 Z" fill="#3B2823"/>
         <path d="M-7 221 C-7 211 -4 205 0 205 C4 205 7 211 7 221 Z" fill="#7A2430"/>
@@ -243,12 +251,12 @@
 </section>
 
 <!-- 5. Pourquoi les sourcils tombent-ils ? -->
-<section class="scene" id="s-chute" data-enter="zoom">
+<section class="scene" id="s-chute" data-enter="fade">
   <div class="inner">
-    <div class="abs kicker" style="left:140px;top:150px" data-fx="right" data-at=".5">Anatomie du poil</div>
+    <div class="abs kicker" style="left:140px;top:150px">Anatomie du poil</div>
     <div class="abs h1" style="left:140px;top:192px;width:560px;font-size:70px" data-fx="mask" data-at=".65" data-dist="40">Pourquoi les sourcils tombent-ils&nbsp;?</div>
     <div class="ph" style="left:140px;top:600px;width:560px;height:380px" data-fx="fade" data-at=".9" data-d="1.2"><img src="../design/assets/ia/sourcil-macro-2.jpg" data-kb="in" alt=""></div>
-    <div class="chute-card card" style="left:780px" data-fx="up" data-at="w:perdre@-.2" data-dist="70">
+    <div class="chute-card card" style="left:780px" data-fx="up" data-at="w:perdre@.4" data-dist="70">
       <div class="tagnum">i.</div><div class="lbl">Chute physiologique</div>
       <div class="txt">Un sourcil arrivé en fin de cycle peut tomber&nbsp;: c’est le renouvellement naturel.</div>
     </div>
@@ -258,7 +266,7 @@
     </div>
     <div class="chute-card card al" style="left:1480px" data-fx="up" data-at="w:et une chute@-.2" data-dist="70">
       <div class="tagnum">iii.</div><div class="lbl">Chute inhabituelle</div>
-      <div class="txt">En plaques, rapide, persistante, avec rougeurs ou démangeaisons.</div>
+      <div class="txt">En plaques, rapide, persistante, ou avec rougeur, démangeaisons, squames ou douleur.</div>
     </div>
     <div class="abs alert" style="left:780px;top:790px;width:1030px" data-fx="left" data-at="w:avis médical@-.2" data-dist="60"><b>Avis médical.</b> Une technicienne esthétique ne pose pas de diagnostic médical.</div>
   </div>
@@ -317,12 +325,12 @@
     <div class="tl-node" style="left:600px" data-fx="pop" data-at="w:le neutralisant@-.1" data-d=".7"><div class="dot"></div><div class="st">Étape 2</div><div class="nm">Neutralisant</div></div>
     <div class="tl-node" style="left:1000px" data-fx="pop" data-at="w:la crème@-.1" data-d=".7"><div class="dot"></div><div class="st">Étape finale</div><div class="nm">Crème<br>de soin</div></div>
     <div data-stagger=".22" data-at="w:le temps de pose@-.3">
-      <div class="tbl-row" style="top:660px;border-bottom:2.5px solid var(--espresso);height:56px" data-fx="fade"><span class="label">Nature du poil</span><span class="label" style="color:var(--bordeaux)">Étape 1</span><span class="label" style="color:var(--bordeaux)">Étape 2</span></div>
-      <div class="tbl-row" style="top:716px" data-fx="left" data-dist="50"><span class="k">Poils <em>fins</em></span><span><span class="chip fill">8 min</span></span><span><span class="chip fill">8 min</span></span></div>
-      <div class="tbl-row" style="top:808px" data-fx="left" data-dist="50"><span class="k">Poils <em>normaux</em></span><span><span class="chip fill">10 min</span></span><span><span class="chip fill">10 min</span></span></div>
-      <div class="tbl-row" style="top:900px" data-fx="left" data-dist="50"><span class="k">Poils <em>épais</em></span><span><span class="chip fill">11 à 12 min max</span></span><span><span class="chip fill">11 à 12 min max</span></span></div>
+      <div class="tbl-row" style="top:620px;border-bottom:2.5px solid var(--espresso);height:56px" data-fx="fade"><span class="label">Nature du poil</span><span class="label" style="color:var(--bordeaux)">Étape 1</span><span class="label" style="color:var(--bordeaux)">Étape 2</span></div>
+      <div class="tbl-row" style="top:676px" data-fx="left" data-dist="50"><span class="k">Poils <em>fins</em></span><span><span class="chip fill">8 min</span></span><span><span class="chip fill">8 min</span></span></div>
+      <div class="tbl-row" style="top:768px" data-fx="left" data-dist="50"><span class="k">Poils <em>normaux</em></span><span><span class="chip fill">10 min</span></span><span><span class="chip fill">10 min</span></span></div>
+      <div class="tbl-row" style="top:860px" data-fx="left" data-dist="50"><span class="k">Poils <em>épais</em></span><span><span class="chip fill">11 à 12 min max</span></span><span><span class="chip fill">11 à 12 min max</span></span></div>
     </div>
-    <div class="abs small" style="left:140px;top:1012px;width:1000px;font-style:italic" data-fx="fade" data-at="w:la notice@-.3">Protocole demandé pour la formation — toujours confirmé sur la notice du fabricant.</div>
+    <div class="abs" style="left:140px;top:966px;width:1010px;font-size:24px;line-height:1.4;color:var(--ink)" data-fx="fade" data-at="w:le temps de pose@1.0"><b style="color:var(--bordeaux);font-weight:500">Précaution&nbsp;:</b> temps demandés pour la formation, non validés officiellement par Thuya. Vérifier la notice avant toute application et ne jamais dépasser ses limites.</div>
   </div>
 </section>
 
@@ -340,9 +348,10 @@
     <div class="zola-card" style="left:720px;top:580px;width:250px;height:250px" data-fx="up" data-dist="50" data-at="w:décoloration@-.1"><img src="../design/assets/zola-bb-blond-powder-hd.jpg" alt=""></div>
     <div class="zola-card" style="left:990px;top:580px;width:170px;height:250px" data-fx="up" data-dist="50" data-at="w:décoloration@.15"><img src="../design/assets/zola-oxydant-3-hd.jpg" alt=""></div>
     <div class="abs" style="left:1240px;top:540px;font-family:var(--display);font-size:230px;line-height:1;color:var(--espresso)" data-fx="pop" data-at="w:une dose@-.1" data-d=".8">1<span style="color:var(--bordeaux);font-style:italic;margin:0 30px">:</span>2</div>
-    <div class="abs label" style="left:1250px;top:790px;width:520px;display:flex;justify-content:space-between" data-fx="fade" data-at="w:une dose@.4"><span>dose de poudre</span><span>doses d’oxydant</span></div>
+    <div class="abs label" style="left:1162px;top:790px;width:260px;text-align:center;line-height:1.35;font-size:20px;color:var(--mocha)" data-fx="fade" data-at="w:une dose@.4">dose de<br>poudre</div>
+    <div class="abs label" style="left:1379px;top:790px;width:260px;text-align:center;line-height:1.35;font-size:20px;color:var(--mocha)" data-fx="fade" data-at="w:une dose@.4">doses<br>d’oxydant</div>
     <div class="abs" style="left:720px;top:880px" data-fx="up" data-dist="24" data-at="w:trois pour cent@-.3"><span class="chip fill">Oxydant ZOLA 3 %</span></div>
-    <div class="abs body" style="left:1080px;top:882px;width:720px;color:var(--mocha)" data-fx="up" data-dist="24" data-at="w:surveillance@-.2">Surveiller et retirer dès que le résultat souhaité est atteint.</div>
+    <div class="abs body" style="left:1080px;top:882px;width:720px;color:var(--mocha)" data-fx="up" data-dist="24" data-at="w:selon la notice@-.2"><b style="font-weight:500;color:var(--espresso)">Selon la notice ZOLA</b> · surveiller et retirer dès que le résultat souhaité est atteint.</div>
   </div>
 </section>
 
@@ -355,9 +364,9 @@
       <div class="check" style="top:440px" data-fx="left" data-dist="40"><svg width="40" height="40" viewBox="0 0 40 40"><rect x="1.5" y="1.5" width="37" height="37" rx="4" fill="#FCFAF7" stroke="#6E5047" stroke-width="2"/><path d="M9 21 L17 29 L32 11" fill="none" stroke="#7A2430" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" data-fx="draw" data-at="w:matériel@-.6" data-d=".5"/></svg>Plan de travail propre, mains lavées</div>
       <div class="check" style="top:536px" data-fx="left" data-dist="40"><svg width="40" height="40" viewBox="0 0 40 40"><rect x="1.5" y="1.5" width="37" height="37" rx="4" fill="#FCFAF7" stroke="#6E5047" stroke-width="2"/><path d="M9 21 L17 29 L32 11" fill="none" stroke="#7A2430" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" data-fx="draw" data-at="w:matériel@-.1" data-d=".5"/></svg>Instruments nettoyés puis désinfectés</div>
       <div class="check" style="top:632px" data-fx="left" data-dist="40"><svg width="40" height="40" viewBox="0 0 40 40"><rect x="1.5" y="1.5" width="37" height="37" rx="4" fill="#FCFAF7" stroke="#6E5047" stroke-width="2"/><path d="M9 21 L17 29 L32 11" fill="none" stroke="#7A2430" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" data-fx="draw" data-at="w:désinfecté@.2" data-d=".5"/></svg>Consommables à usage unique</div>
-      <div class="check strong" style="top:728px" data-fx="left" data-dist="40"><svg width="40" height="40" viewBox="0 0 40 40"><rect x="1.5" y="1.5" width="37" height="37" rx="4" fill="#FCFAF7" stroke="#7A2430" stroke-width="2"/><path d="M9 21 L17 29 L32 11" fill="none" stroke="#7A2430" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" data-fx="draw" data-at="w:aucune@.1" data-d=".5"/></svg>Aucune prestation sur une peau irritée</div>
+      <div class="check strong" style="top:728px" data-fx="left" data-dist="40"><svg width="40" height="40" viewBox="0 0 40 40"><rect x="1.5" y="1.5" width="37" height="37" rx="4" fill="#FCFAF7" stroke="#7A2430" stroke-width="2"/><path d="M9 21 L17 29 L32 11" fill="none" stroke="#7A2430" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" data-fx="draw" data-at="w:aucune@.1" data-d=".5"/></svg><span style="font-size:27px">Aucune prestation sur une zone infectée, lésée ou irritée</span></div>
     </div>
-    <div class="abs alert" style="left:140px;top:860px;width:840px;font-size:24px" data-fx="up" data-dist="30" data-at="voend@-.6">En cas de projection oculaire&nbsp;: <b>rinçage immédiat abondant et avis médical urgent.</b></div>
+    <div class="abs alert" style="left:140px;top:860px;width:840px;font-size:24px" data-fx="up" data-dist="30" data-at="w:projection@-.4">En cas de projection oculaire&nbsp;: <b>rinçage immédiat abondant et avis médical urgent.</b></div>
     <svg class="abs" style="left:1080px;top:250px" width="720" height="600" viewBox="40 0 560 290">
       <g fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path d="M40 270 H560" stroke="#A48A7B" stroke-width="1" data-fx="draw" data-at=".8" data-d="1"/>
@@ -395,20 +404,21 @@
     <div class="ph" style="left:0;top:0;width:700px;height:1080px"><img src="../design/assets/ia/rehaussement-pad.jpg" style="object-position:55% 45%" data-kb="in" alt=""></div>
     <div class="abs kicker" style="left:800px;top:150px" data-fx="right" data-at=".7">5. Diagnostic · 6. Rehaussement</div>
     <div class="abs h1" style="left:800px;top:192px" data-fx="mask" data-at=".85" data-dist="40">Noemi Innovate</div>
-    <div class="abs body" style="left:800px;top:310px;width:980px;color:var(--mocha)" data-fx="up" data-dist="30" data-at="w:diagnostic@-.2">Observer les cils, vérifier l’absence d’irritation, choisir les pads adaptés.</div>
+    <div class="abs body" style="left:800px;top:310px;width:980px;color:var(--mocha)" data-fx="up" data-dist="30" data-at="w:diagnostic@-.2">Observer les cils, vérifier l’absence d’irritation ou d’infection oculaire, choisir les pads adaptés.</div>
     <div class="ring" style="left:810px" data-fx="up" data-dist="40" data-at="w:deux étapes@-.5">
-      <svg width="230" height="230" viewBox="0 0 230 230"><circle cx="115" cy="115" r="100" fill="none" stroke="#E4D5C6" stroke-width="10"/><circle cx="115" cy="115" r="100" fill="none" stroke="#7A2430" stroke-width="10" stroke-linecap="round" transform="rotate(-90 115 115)" data-fx="draw" data-len="629" data-at="w:deux étapes@-.2" data-d="1.6"/><text x="115" y="128" text-anchor="middle" font-family="Bodoni Moda" font-size="64" fill="#3B2823">10</text><text x="115" y="160" text-anchor="middle" font-family="Jost" font-size="20" letter-spacing="4" fill="#A48A7B">MIN</text></svg>
+      <svg width="230" height="230" viewBox="0 0 230 230"><circle cx="115" cy="115" r="100" fill="none" stroke="#E4D5C6" stroke-width="10"/><circle cx="115" cy="115" r="100" fill="none" stroke="#7A2430" stroke-width="10" stroke-linecap="round" transform="rotate(-90 115 115)" data-fx="draw" data-len="629" data-at="w:deux étapes@-.2" data-d="1.6"/><text x="115" y="128" text-anchor="middle" font-family="Bodoni Moda" font-size="64" fill="#3B2823">10</text><text x="115" y="160" text-anchor="middle" font-family="Jost" font-size="20" letter-spacing="4" fill="#6E5047">MIN</text></svg>
       <div class="st">Step 1</div><div class="nm">Innovate</div>
     </div>
     <div class="ring" style="left:1140px" data-fx="up" data-dist="40" data-at="w:lash botox@-.3">
-      <svg width="230" height="230" viewBox="0 0 230 230"><circle cx="115" cy="115" r="100" fill="none" stroke="#D8B7AF" stroke-width="4" stroke-dasharray="6 10"/><text x="115" y="112" text-anchor="middle" font-family="Bodoni Moda" font-style="italic" font-size="48" fill="#7A2430">1.5</text><text x="115" y="150" text-anchor="middle" font-family="Jost" font-size="19" letter-spacing="3" fill="#A48A7B">SELON NOTICE</text></svg>
+      <svg width="230" height="230" viewBox="0 0 230 230"><circle cx="115" cy="115" r="100" fill="none" stroke="#D8B7AF" stroke-width="4" stroke-dasharray="6 10"/><text x="115" y="112" text-anchor="middle" font-family="Bodoni Moda" font-style="italic" font-size="42" fill="#7A2430">soin</text><text x="115" y="150" text-anchor="middle" font-family="Jost" font-size="19" letter-spacing="3" fill="#6E5047">SELON NOTICE</text></svg>
       <div class="st">Step 1.5</div><div class="nm">Lash Botox<br>Noemi Intense</div>
     </div>
     <div class="ring" style="left:1470px" data-fx="up" data-dist="40" data-at="w:dix minutes@-.3">
-      <svg width="230" height="230" viewBox="0 0 230 230"><circle cx="115" cy="115" r="100" fill="none" stroke="#E4D5C6" stroke-width="10"/><circle cx="115" cy="115" r="100" fill="none" stroke="#7A2430" stroke-width="10" stroke-linecap="round" transform="rotate(-90 115 115)" data-fx="draw" data-len="629" data-at="w:dix minutes" data-d="1.6"/><text x="115" y="128" text-anchor="middle" font-family="Bodoni Moda" font-size="64" fill="#3B2823">10</text><text x="115" y="160" text-anchor="middle" font-family="Jost" font-size="20" letter-spacing="4" fill="#A48A7B">MIN</text></svg>
+      <svg width="230" height="230" viewBox="0 0 230 230"><circle cx="115" cy="115" r="100" fill="none" stroke="#E4D5C6" stroke-width="10"/><circle cx="115" cy="115" r="100" fill="none" stroke="#7A2430" stroke-width="10" stroke-linecap="round" transform="rotate(-90 115 115)" data-fx="draw" data-len="629" data-at="w:dix minutes" data-d="1.6"/><text x="115" y="128" text-anchor="middle" font-family="Bodoni Moda" font-size="64" fill="#3B2823">10</text><text x="115" y="160" text-anchor="middle" font-family="Jost" font-size="20" letter-spacing="4" fill="#6E5047">MIN</text></svg>
       <div class="st">Step 2</div><div class="nm">Innovate</div>
     </div>
-    <div class="abs alert" style="left:800px;top:880px;width:1000px" data-fx="up" data-dist="30" data-at="w:uniquement@-.2">Vérifier avec le fabricant la place du soin&nbsp;: <b>ne pas appliquer cette séquence sans validation.</b></div>
+    <div class="abs small" style="left:810px;top:806px;width:990px;color:var(--ink)" data-fx="fade" data-at="w:à confirmer@-.2">10 min&nbsp;: protocole de la formation, à confirmer sur la notice du lot utilisé.</div>
+    <div class="abs alert" style="left:800px;top:880px;width:1000px;font-size:24px" data-fx="up" data-dist="30" data-at="w:soin cosmétique@-.3"><b>Lash Botox&nbsp;: soin cosmétique, non une injection.</b> Vérifier auprès du fabricant sa place entre Step 1 et Step 2 avant toute application.</div>
   </div>
 </section>
 
@@ -422,7 +432,7 @@
     <div class="abs body" style="left:860px;top:420px;width:920px;color:var(--mocha)" data-fx="up" data-dist="30" data-at="w:la teinture@.2">Teinture Noemi autorisée pour les cils, avec son révélateur compatible, selon la notice exacte.</div>
     <div class="abs" style="left:860px;top:600px;width:920px;height:2px;background:var(--line)" data-fx="width" data-at="w:les conseils@-.4"></div>
     <div class="abs" style="left:860px;top:640px;font-family:var(--display);font-size:56px;color:var(--espresso)" data-fx="mask" data-dist="30" data-at="w:les conseils@-.2">Conseils après prestation</div>
-    <div class="abs lead" style="left:860px;top:730px;width:920px;font-size:40px" data-fx="up" data-dist="30" data-at="w:les conseils@.3">Recommandations du fabricant et conseils personnalisés, adaptés à ses cils.</div>
+    <div class="abs lead" style="left:860px;top:730px;width:920px;font-size:40px" data-fx="up" data-dist="30" data-at="w:les conseils@.3">Recommandations du fabricant et conseils personnalisés, adaptés aux cils de la cliente.</div>
   </div>
 </section>
 
@@ -434,7 +444,7 @@
       <text x="10" y="500" font-size="600" fill="none" stroke="#7A2430" stroke-width="2.4" data-fx="draw" data-len="4400" data-at=".35" data-d="2.4" data-ease="io3">03</text>
     </svg>
     <div class="abs opener-part" style="left:140px;top:600px" data-fx="up" data-at=".7" data-dist="30">Partie III</div>
-    <div class="abs opener-name" style="left:130px;top:680px;font-size:128px;line-height:.92" data-fx="mask" data-at=".9" data-d="1.1" data-dist="80">Pratique<br>professionnelle</div>
+    <div class="abs opener-name" style="left:130px;top:664px;font-size:128px;line-height:1.02" data-fx="mask" data-at=".9" data-d="1.1" data-dist="80">Pratique<br>professionnelle</div>
   </div>
 </section>
 
@@ -443,7 +453,7 @@
   <div class="inner">
     <div class="abs kicker" style="left:140px;top:150px" data-fx="right" data-at=".7">Fiches pratiques</div>
     <div class="abs h1" style="left:140px;top:192px" data-fx="mask" data-at=".85" data-dist="40">Fiche technique</div>
-    <div class="abs" style="left:179px;top:400px;width:2px;height:440px;background:var(--rose);transform-origin:top" data-fx="height" data-at="w:avant@-.2" data-d="2"></div>
+    <div class="abs" style="left:179px;top:400px;width:2px;height:360px;background:var(--rose);transform-origin:top" data-fx="height" data-at="w:avant@-.2" data-d="2"></div>
     <div class="ft-item" style="top:360px" data-fx="left" data-dist="40" data-at="w:avant@-.2"><div class="c">1</div><div><div class="t">Avant la séance</div><div class="d">Antécédents, observation du poil, matériel désinfecté.</div></div></div>
     <div class="ft-item" style="top:540px" data-fx="left" data-dist="40" data-at="w:pendant@-.2"><div class="c">2</div><div><div class="t">Pendant la séance</div><div class="d">La séquence du protocole, sans application automatique des temps.</div></div></div>
     <div class="ft-item" style="top:720px" data-fx="left" data-dist="40" data-at="w:après@-.2"><div class="c">3</div><div><div class="t">Après la séance</div><div class="d">Tolérance, recommandations, produits et lots notés.</div></div></div>
@@ -476,6 +486,8 @@
         <div><img src="../design/assets/ia/mapping-fil-2.jpg" alt=""></div><div><img src="../design/assets/ia/accueil-institut.jpg" alt=""></div><div><img src="../design/assets/ia/soie-ruban.jpg" alt=""></div>
         <div><img src="../design/assets/ia/teinture-preparation.jpg" alt=""></div><div><img src="../design/assets/ia/sourcil-macro.jpg" alt=""></div><div><img src="../design/assets/ia/outils-soie.jpg" alt=""></div>
         <div><img src="../design/assets/ia/cils-teintes.jpg" alt=""></div><div><img src="../design/assets/ia/evaluation-flatlay.jpg" alt=""></div><div><img src="../design/assets/ia/browlift-brosse.jpg" alt=""></div>
+        <div><img src="../design/assets/ia/photographier-2.jpg" alt=""></div><div><img src="../design/assets/ia/mapping-fil.jpg" alt=""></div><div><img src="../design/assets/ia/cils-teintes-2.jpg" alt=""></div>
+        <div><img src="../design/assets/ia/sourcil-macro-2.jpg" alt=""></div><div><img src="../design/assets/ia/outils-soie.jpg" alt=""></div><div><img src="../design/assets/ia/teinture-preparation.jpg" alt=""></div>
       </div>
     </div>
     <div class="abs kicker" style="left:780px;top:150px" data-fx="right" data-at=".7">Réseaux sociaux &amp; communication</div>
@@ -522,7 +534,7 @@
     <div class="abs" style="right:176px;top:96px;width:608px;height:900px;border:2px solid var(--bordeaux);border-bottom:0;border-radius:304px 304px 0 0;opacity:.45" data-fx="fade" data-at=".6"></div>
     <div class="ph" style="right:200px;top:120px;width:560px;height:876px;border-radius:280px 280px 0 0" data-fx="fade" data-at=".4" data-d="1"><img src="../design/assets/ia/evaluation-flatlay.jpg" data-kb="in" alt=""></div>
     <div class="abs kicker" style="left:140px;top:150px" data-fx="right" data-at=".6">Partie IV</div>
-    <div class="abs h1" style="left:140px;top:192px;font-size:120px" data-fx="mask" data-at=".75" data-dist="40">Évaluation</div>
+    <div class="abs h1" style="left:140px;top:206px;font-size:120px" data-fx="mask" data-at=".75" data-dist="40">Évaluation</div>
     <div class="abs" style="left:140px;top:360px;font-family:var(--display);font-size:300px;line-height:1;color:var(--bordeaux)" data-fx="count" data-to="15" data-at="w:quinze@-.4" data-d="1.4" data-ease="out3">15</div>
     <div class="abs lead" style="left:520px;top:520px;font-size:56px" data-fx="up" data-dist="30" data-at="w:quinze@.2">questions</div>
     <div data-stagger=".3" data-at="w:valider@-.6">
@@ -539,24 +551,25 @@
     <img class="full abs" style="inset:0" src="../design/assets/ia/soie-ruban.jpg" data-kb="out" data-kb-amt=".08" alt="">
     <div class="abs" style="inset:0;background:rgba(247,242,236,.55)"></div>
     <div class="abs" style="left:0;top:0;width:1920px;height:1080px;perspective:2200px">
-      <div class="abs" style="left:180px;top:300px" data-fx="up" data-dist="160" data-at=".3" data-d="1.2" data-out="3.4"><div class="pagecard" style="transform:rotate(-8deg) rotateY(18deg)"><img src="../design/preview/manuel/page-01.png" alt=""></div></div>
-      <div class="abs" style="left:560px;top:190px" data-fx="up" data-dist="160" data-at=".55" data-d="1.2" data-out="3.5"><div class="pagecard" style="transform:rotate(-3deg) rotateY(10deg)"><img src="../design/preview/manuel/page-03.png" alt=""></div></div>
-      <div class="abs" style="left:760px;top:420px" data-fx="up" data-dist="160" data-at=".8" data-d="1.2" data-out="3.6"><div class="pagecard" style="transform:rotate(2deg)"><img src="../design/preview/manuel/page-08.png" alt=""></div></div>
-      <div class="abs" style="left:1120px;top:220px" data-fx="up" data-dist="160" data-at="1.05" data-d="1.2" data-out="3.7"><div class="pagecard" style="transform:rotate(6deg) rotateY(-12deg)"><img src="../design/preview/manuel/page-14.png" alt=""></div></div>
-      <div class="abs" style="left:1180px;top:560px" data-fx="up" data-dist="160" data-at="1.3" data-d="1.2" data-out="3.8"><div class="pagecard" style="transform:rotate(9deg) rotateY(-18deg)"><img src="../design/preview/manuel/page-19.png" alt=""></div></div>
+      <div class="abs" style="left:180px;top:300px" data-fx="up" data-dist="160" data-at=".3" data-d="1.2" data-out="3.0"><div class="pagecard" style="transform:rotate(-8deg) rotateY(18deg)"><img src="../design/preview/manuel/page-01.png" alt=""></div></div>
+      <div class="abs" style="left:560px;top:190px" data-fx="up" data-dist="160" data-at=".55" data-d="1.2" data-out="3.1"><div class="pagecard" style="transform:rotate(-3deg) rotateY(10deg)"><img src="../design/preview/manuel/page-03.png" alt=""></div></div>
+      <div class="abs" style="left:760px;top:420px" data-fx="up" data-dist="160" data-at=".8" data-d="1.2" data-out="3.2"><div class="pagecard" style="transform:rotate(2deg)"><img src="../design/preview/manuel/page-08.png" alt=""></div></div>
+      <div class="abs" style="left:1120px;top:220px" data-fx="up" data-dist="160" data-at="1.05" data-d="1.2" data-out="3.3"><div class="pagecard" style="transform:rotate(6deg) rotateY(-12deg)"><img src="../design/preview/manuel/page-14.png" alt=""></div></div>
+      <div class="abs" style="left:1180px;top:560px" data-fx="up" data-dist="160" data-at="1.3" data-d="1.2" data-out="3.4"><div class="pagecard" style="transform:rotate(9deg) rotateY(-18deg)"><img src="../design/preview/manuel/page-19.png" alt=""></div></div>
     </div>
+    <div class="abs" style="inset:0;background:radial-gradient(ellipse 38% 30% at 50% 50%, rgba(247,242,236,.88), rgba(247,242,236,0) 100%)" data-fx="fade" data-at="w:dolce@-.6" data-d="1"></div>
     <div class="abs" style="left:0;right:0;top:330px;text-align:center">
-      <img src="../design/assets/logo-dolce.png" style="width:860px" data-fx="blur" data-at="4.0" data-d="1.4" alt="">
-      <div class="rule" style="width:170px;margin:44px auto 38px;transform-origin:center" data-fx="width" data-at="4.6" data-d=".9"></div>
-      <div class="lead" style="font-size:54px" data-fx="up" data-dist="24" data-at="4.9">Beauté du regard</div>
-      <div class="label" style="margin-top:26px;color:var(--mocha)" data-fx="fade" data-at="5.3">Manuel de formation · Support pédagogique</div>
+      <img src="../design/assets/logo-dolce.png" style="width:720px" data-fx="blur" data-at="w:dolce@-.4" data-d="1.2" alt="">
+      <div class="rule" style="width:170px;margin:44px auto 38px;transform-origin:center" data-fx="width" data-at="w:la beauté@-.5" data-d=".9"></div>
+      <div class="lead" style="font-size:54px" data-fx="up" data-dist="24" data-at="w:la beauté@-.2">Beauté du regard</div>
+      <div class="label" style="margin-top:26px;color:var(--mocha)" data-fx="fade" data-at="w:méthode@-.1">Manuel de formation · Support pédagogique</div>
     </div>
     <div class="abs" style="inset:0;background:#000" data-fx="fade" data-at="end@-.9" data-d=".9" data-ease="lin"></div>
   </div>
 </section>
 
 <div id="wipebar"></div>
-<div id="ui"><div id="ui-part"></div><img id="ui-logo" src="../design/assets/logo-dolce.png" alt=""></div>
+<div id="ui"><div id="ui-part"></div><div id="ui-logo-wrap"><img id="ui-logo" src="../design/assets/logo-dolce.png" alt=""></div></div>
 <div id="vignette"></div>
 <div id="progress"></div>
 <div id="grain"></div>

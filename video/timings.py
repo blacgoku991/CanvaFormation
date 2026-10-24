@@ -11,8 +11,9 @@ import subprocess
 ROOT = pathlib.Path(__file__).resolve().parent
 CHARS_PER_SEC = 20.0
 LEAD = 0.55   # silence avant la voix, le temps que la transition se pose
+LEADS = {'outro': 3.6}   # la conclusion montre d'abord le collage des pages, puis la voix accompagne le logo
 TAIL = 0.85   # respiration après la voix
-MIN_DUR = {'intro': 6.8, 'sommaire': 6.6, 'p1': 3.2, 'p2': 3.2, 'p3': 3.4, 'gestion': 8.2, 'evaluation': 5.4, 'outro': 8.0}
+MIN_DUR = {'intro': 6.8, 'sommaire': 6.6, 'p1': 3.2, 'p2': 3.2, 'p3': 3.4, 'gestion': 7.4, 'evaluation': 5.4, 'outro': 10.6}
 
 
 def audio_duration(path):
@@ -29,11 +30,12 @@ def main():
         vo_file = ROOT / 'audio' / 'vo' / f"{s['id']}.mp3"
         real = vo_file.exists()
         vo_dur = audio_duration(vo_file) if real else len(s['vo']) / CHARS_PER_SEC
-        dur = max(LEAD + vo_dur + TAIL, MIN_DUR.get(s['id'], 0))
+        lead = LEADS.get(s['id'], LEAD)
+        dur = max(lead + vo_dur + TAIL, MIN_DUR.get(s['id'], 0))
         scenes.append({
             'id': s['id'], 'partie': s['partie'], 'vo': s['vo'],
             'start': round(t, 3), 'dur': round(dur, 3),
-            'vo_start': round(t + LEAD, 3), 'vo_dur': round(vo_dur, 3), 'vo_reelle': real,
+            'vo_start': round(t + lead, 3), 'vo_dur': round(vo_dur, 3), 'vo_reelle': real,
         })
         phrases = vo_file.with_suffix('.json')
         if real and phrases.exists():

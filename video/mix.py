@@ -33,18 +33,23 @@ def smooth(env, attack=.12, release=.55):
     v = env[0]
     for i in range(0, len(env), step):
         target = env[i:i + step].max()
-        a = a_up if target < v else a_dn
+        a = a_dn if target < v else a_up      # montée rapide (attaque), redescente lente (relâchement)
         v = target + (v - target) * a ** step
         out[i:i + step] = v
     return out
 
 
 def srt_time(s):
-    h, r = divmod(s, 3600); m, r = divmod(r, 60)
-    return f'{int(h):02d}:{int(m):02d}:{int(r):02d},{int(round((r % 1) * 1000)):03d}'
+    ms = int(round(s * 1000))
+    return f'{ms // 3600000:02d}:{ms // 60000 % 60:02d}:{ms // 1000 % 60:02d},{ms % 1000:03d}'
 
 
-def chunks(text, maxlen=72):
+def typo(text):
+    """Typographie des sous-titres : nom de marque, apostrophes courbes."""
+    return text.replace('Lash and Brow', 'Lash & Brow').replace("'", '’')
+
+
+def chunks(text, maxlen=64):
     """Découpe aux fins de phrase, puis aux virgules, pour des sous-titres lisibles."""
     import re
     out = []
@@ -86,13 +91,18 @@ def main():
         speech = np.abs(voice) > .01
         rms = np.sqrt(np.mean(voice[speech] ** 2)) if speech.any() else 1
         voice *= 10 ** (-16 / 20) / max(rms, 1e-6)
-        presence = smooth((np.abs(voice) > .004).astype(float), attack=.08, release=.7)
-        presence = np.convolve(presence, np.ones(4410) / 4410, mode='same')
-        music_gain = .62 - .44 * np.clip(presence, 0, 1)      # musique nettement plus basse sous la voix
+        speaking = (np.abs(voice) > .004).astype(float)
+        ahead = int(.15 * SR)                                    # la musique commence à baisser juste avant la voix
+        speaking = np.concatenate([speaking[ahead:], np.zeros(ahead)])
+        presence = smooth(speaking, attack=.08, release=.7)
+        presence = np.convolve(presence, np.ones(2205) / 2205, mode='same')
+        music_gain = .60 - .47 * np.clip(presence, 0, 1)      # musique nettement plus basse sous la voix
     else:
         music_gain = np.full(N, .62)
 
-    mix = music * music_gain + sfx * .55 + voice[None, :]
+    mix = music * music_gain + sfx * .5 + voice[None, :]
+    tail = int(1.0 * SR)
+    mix[:, -tail:] *= np.linspace(1, 0, tail) ** 2          # tout s'éteint avec le fondu au noir final
     peak = np.max(np.abs(mix))
     if peak > .97:
         mix *= .97 / peak
@@ -101,16 +111,20 @@ def main():
         w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR)
         w.writeframes(pcm.T.copy().tobytes())
 
-    # Sous-titres (répartition proportionnelle au nombre de caractères)
+    # Sous-titres : chaque phrase est placée sur ses repères réels (début et fin dans audio/vo/<id>.json),
+    # puis découpée au besoin aux virgules, au prorata des caractères.
     cues, k = [], 1
     for s in tl['scenes']:
-        parts = chunks(s['vo'])
-        total_chars = sum(len(p) for p in parts)
-        t = s['vo_start']
-        for p in parts:
-            d = s['vo_dur'] * len(p) / total_chars
-            cues.append(f'{k}\n{srt_time(t)} --> {srt_time(t + d - .05)}\n{p}\n')
-            t += d; k += 1
+        phrases = s.get('phrases') or [{'i0': 0, 'i1': len(s['vo']), 't0': 0, 't1': s['vo_dur']}]
+        for ph in phrases:
+            text = s['vo'][ph['i0']:ph['i1']].strip()
+            parts = chunks(text)
+            total_chars = sum(len(c) for c in parts)
+            t = s['vo_start'] + ph['t0']
+            for c in parts:
+                d = (ph['t1'] - ph['t0']) * len(c) / total_chars
+                cues.append(f'{k}\n{srt_time(t)} --> {srt_time(t + d - .04)}\n{typo(c)}\n')
+                t += d; k += 1
     (ROOT / 'out').mkdir(exist_ok=True)
     (ROOT / 'out' / 'sous-titres.srt').write_text('\n'.join(cues), encoding='utf-8')
     print(f"mix {'avec' if has_voice else 'sans'} voix -> audio/mix.wav ; {k - 1} sous-titres")

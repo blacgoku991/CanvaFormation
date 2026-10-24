@@ -79,7 +79,10 @@ def main():
             anchors.append({'i0': i0, 'i1': m.end(), 't0': round(t, 3), 't1': round(t + len(audio) / sr, 3)})
             parts.append(audio); t += len(audio) / sr
         audio = np.concatenate(parts)
-        pcm = (np.clip(audio / (np.max(np.abs(audio)) + 1e-9) * .9, -1, 1) * 32767).astype('<i2')
+        speech = audio[np.abs(audio) > .02]
+        audio = audio * (10 ** (-20 / 20) / (np.sqrt(np.mean(speech ** 2)) + 1e-9))   # même niveau parlé (-20 dBFS RMS) pour toutes les scènes
+        audio = audio * min(1.0, .95 / (np.max(np.abs(audio)) + 1e-9))
+        pcm = (np.clip(audio, -1, 1) * 32767).astype('<i2')
         subprocess.run(['ffmpeg', '-y', '-v', 'error', '-f', 's16le', '-ar', str(sr), '-ac', '1', '-i', '-',
                         '-c:a', 'libmp3lame', '-q:a', '2', str(out / f"{s['id']}.mp3")], input=pcm.tobytes(), check=True)
         (out / f"{s['id']}.json").write_text(json.dumps({'phrases': anchors}, ensure_ascii=False), encoding='utf-8')

@@ -2,7 +2,7 @@
  "fps": 30,
  "width": 1920,
  "height": 1080,
- "total": 152.328,
+ "total": 165.744,
  "scenes": [
   {
    "id": "intro",
@@ -139,11 +139,11 @@
   {
    "id": "mapping",
    "partie": "Partie I — Sourcils",
-   "vo": "Place ensuite à la restructuration. Le mapping fixe trois repères : le début, l'arche et la queue, pour dessiner une ligne harmonieuse, validée avec la cliente avant toute épilation.",
+   "vo": "Place ensuite à la restructuration. Le mapping fixe trois repères : le début du sourcil, l'arche et la queue, pour dessiner une ligne harmonieuse, validée avec la cliente avant toute épilation.",
    "start": 40.24,
-   "dur": 11.216,
+   "dur": 11.984,
    "vo_start": 40.79,
-   "vo_dur": 9.816,
+   "vo_dur": 10.584,
    "vo_reelle": true,
    "phrases": [
     {
@@ -154,20 +154,20 @@
     },
     {
      "i0": 36,
-     "i1": 182,
+     "i1": 193,
      "t0": 2.217,
-     "t1": 9.747
+     "t1": 10.523
     }
    ]
   },
   {
    "id": "browlift",
    "partie": "Partie I — Sourcils",
-   "vo": "Le Brow Lift Thuya suit une séquence précise : la lotion permanente, le neutralisant, puis la crème de soin. Le temps de pose s'adapte à la nature du poil, et se confirme toujours sur la notice du fabricant.",
-   "start": 51.456,
-   "dur": 13.016,
-   "vo_start": 52.006,
-   "vo_dur": 11.616,
+   "vo": "Le Brow Lift Thuya suit une séquence précise : la lotion permanente, le neutralisant, puis la crème de soin. Le temps de pose s'adapte à la nature du poil, et se vérifie toujours sur la notice du fabricant.",
+   "start": 52.224,
+   "dur": 12.968,
+   "vo_start": 52.774,
+   "vo_dur": 11.568,
    "vo_reelle": true,
    "phrases": [
     {
@@ -178,20 +178,20 @@
     },
     {
      "i0": 109,
-     "i1": 207,
+     "i1": 206,
      "t0": 6.27,
-     "t1": 11.56
+     "t1": 11.517
     }
    ]
   },
   {
    "id": "couleur",
    "partie": "Partie I — Sourcils",
-   "vo": "Côté couleur, la teinture Brow Daddy se choisit selon le diagnostic. Pour la décoloration ZOLA : une dose de poudre pour deux doses d'oxydant à trois pour cent, sous surveillance constante.",
-   "start": 64.472,
-   "dur": 11.552,
-   "vo_start": 65.022,
-   "vo_dur": 10.152,
+   "vo": "Côté couleur, la teinture Brow Daddy se choisit selon le diagnostic. Pour la décoloration ZOLA : une dose de poudre pour deux doses d'oxydant à trois pour cent, selon la notice, sous surveillance constante.",
+   "start": 65.192,
+   "dur": 12.536,
+   "vo_start": 65.742,
+   "vo_dur": 11.136,
    "vo_reelle": true,
    "phrases": [
     {
@@ -202,27 +202,33 @@
     },
     {
      "i0": 69,
-     "i1": 189,
+     "i1": 206,
      "t0": 4.048,
-     "t1": 10.098
+     "t1": 11.083
     }
    ]
   },
   {
    "id": "hygiene",
    "partie": "Partie I — Sourcils",
-   "vo": "Et à chaque étape, l'hygiène et la sécurité passent avant tout : matériel désinfecté, et aucune prestation si la peau est irritée.",
-   "start": 76.024,
-   "dur": 8.336,
-   "vo_start": 76.574,
-   "vo_dur": 6.936,
+   "vo": "Et à chaque étape, l'hygiène et la sécurité passent avant tout : matériel désinfecté, et aucune prestation en cas d'irritation, de lésion ou d'infection. En cas de projection oculaire : rinçage abondant, et avis médical urgent.",
+   "start": 77.728,
+   "dur": 14.024,
+   "vo_start": 78.278,
+   "vo_dur": 12.624,
    "vo_reelle": true,
    "phrases": [
     {
      "i0": 0,
-     "i1": 130,
+     "i1": 153,
      "t0": 0.0,
-     "t1": 6.887
+     "t1": 8.273
+    },
+    {
+     "i0": 154,
+     "i1": 227,
+     "t0": 8.613,
+     "t1": 12.572
     }
    ]
   },
@@ -230,9 +236,9 @@
    "id": "p2",
    "partie": "Partie II — Les cils",
    "vo": "Deuxième partie : les cils.",
-   "start": 84.36,
+   "start": 91.752,
    "dur": 3.2,
-   "vo_start": 84.91,
+   "vo_start": 92.302,
    "vo_dur": 1.536,
    "vo_reelle": true,
    "phrases": [
@@ -247,24 +253,24 @@
   {
    "id": "rehaussement",
    "partie": "Partie II — Les cils",
-   "vo": "Après un diagnostic attentif, le rehaussement Noemi Innovate se déroule en deux étapes de dix minutes. Le soin Lash Botox Noemi Intense peut s'y ajouter, uniquement après validation de la notice.",
-   "start": 87.56,
-   "dur": 12.8,
-   "vo_start": 88.11,
-   "vo_dur": 11.4,
+   "vo": "Après un diagnostic attentif, le rehaussement Noemi Innovate se déroule en deux étapes de dix minutes, à confirmer sur la notice. Le soin Lash Botox Noemi Intense, soin cosmétique sans injection, peut s'y ajouter, uniquement après vérification auprès du fabricant.",
+   "start": 94.952,
+   "dur": 17.024,
+   "vo_start": 95.502,
+   "vo_dur": 15.624,
    "vo_reelle": true,
    "phrases": [
     {
      "i0": 0,
-     "i1": 102,
+     "i1": 129,
      "t0": 0.0,
-     "t1": 5.713
+     "t1": 7.506
     },
     {
-     "i0": 103,
-     "i1": 195,
-     "t0": 6.053,
-     "t1": 11.34
+     "i0": 130,
+     "i1": 264,
+     "t0": 7.846,
+     "t1": 15.557
     }
    ]
   },
@@ -272,9 +278,9 @@
    "id": "teintecils",
    "partie": "Partie II — Les cils",
    "vo": "La teinture des cils sublime le résultat, et les conseils après prestation le prolongent.",
-   "start": 100.36,
+   "start": 111.976,
    "dur": 6.344,
-   "vo_start": 100.91,
+   "vo_start": 112.526,
    "vo_dur": 4.944,
    "vo_reelle": true,
    "phrases": [
@@ -290,9 +296,9 @@
    "id": "p3",
    "partie": "Partie III — Pratique professionnelle",
    "vo": "Troisième partie : la pratique professionnelle.",
-   "start": 106.704,
+   "start": 118.32,
    "dur": 3.944,
-   "vo_start": 107.254,
+   "vo_start": 118.87,
    "vo_dur": 2.544,
    "vo_reelle": true,
    "phrases": [
@@ -308,9 +314,9 @@
    "id": "fiche",
    "partie": "Partie III — Pratique professionnelle",
    "vo": "Une fiche technique pour chaque séance : avant, pendant et après. Et des photos avant-après prises avec le même angle, la même distance et la même lumière.",
-   "start": 110.648,
+   "start": 122.264,
    "dur": 9.512,
-   "vo_start": 111.198,
+   "vo_start": 122.814,
    "vo_dur": 8.112,
    "vo_reelle": true,
    "phrases": [
@@ -332,9 +338,9 @@
    "id": "reseaux",
    "partie": "Partie III — Pratique professionnelle",
    "vo": "Vous apprendrez aussi à développer votre activité : un profil Instagram optimisé, cinq piliers de contenu, des Reels efficaces, et un calendrier simple à tenir.",
-   "start": 120.16,
+   "start": 131.776,
    "dur": 10.568,
-   "vo_start": 120.71,
+   "vo_start": 132.326,
    "vo_dur": 9.168,
    "vo_reelle": true,
    "phrases": [
@@ -350,9 +356,9 @@
    "id": "gestion",
    "partie": "Partie III — Pratique professionnelle",
    "vo": "Sans oublier la gestion : des tarifs clairs, une expérience cliente soignée, et des résultats que l'on mesure.",
-   "start": 130.728,
-   "dur": 8.2,
-   "vo_start": 131.278,
+   "start": 142.344,
+   "dur": 7.4,
+   "vo_start": 142.894,
    "vo_dur": 5.928,
    "vo_reelle": true,
    "phrases": [
@@ -368,9 +374,9 @@
    "id": "evaluation",
    "partie": "Partie IV — Évaluation",
    "vo": "Enfin, l'évaluation, avec quinze questions pour valider vos acquis.",
-   "start": 138.928,
+   "start": 149.744,
    "dur": 5.4,
-   "vo_start": 139.478,
+   "vo_start": 150.294,
    "vo_dur": 3.48,
    "vo_reelle": true,
    "phrases": [
@@ -386,9 +392,9 @@
    "id": "outro",
    "partie": "",
    "vo": "Dolce Lash and Brow. La beauté du regard, avec méthode et précision.",
-   "start": 144.328,
-   "dur": 8.0,
-   "vo_start": 144.878,
+   "start": 155.144,
+   "dur": 10.6,
+   "vo_start": 158.744,
    "vo_dur": 4.248,
    "vo_reelle": true,
    "phrases": [

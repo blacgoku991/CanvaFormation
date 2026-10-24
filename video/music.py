@@ -6,6 +6,7 @@ Le minutage suit video/timeline.json.
 """
 import json
 import pathlib
+import re
 import wave
 
 import numpy as np
@@ -13,6 +14,7 @@ import numpy as np
 ROOT = pathlib.Path(__file__).resolve().parent
 SR = 44100
 rng = np.random.default_rng(11)
+ENTER_DUR = {'fade': .8, 'zoom': .9, 'wipe-left': 1.0, 'wipe-right': 1.0, 'wipe-up': 1.0, 'circle': 1.15}   # comme engine.js
 
 
 def midi(n):
@@ -192,7 +194,7 @@ def main():
 
     # Mise en forme générale : fondu d'entrée, sortie, réverbe
     fade_in = np.minimum(1, t / 2.5)
-    fade_out = np.clip((total - t) / 4.0, 0, 1)
+    fade_out = np.clip((tl['total'] - .2 - t) / 4.0, 0, 1)
     mus *= fade_in * fade_out
     mus = reverb(mus)
     mus /= np.max(np.abs(mus)) + 1e-9
@@ -201,11 +203,14 @@ def main():
 
     # Effets : souffle à chaque transition, impact doux aux ouvertures de partie
     sfx = np.zeros((2, N))
+    html = (ROOT / 'index.html').read_text(encoding='utf-8')
+    enters = dict(re.findall(r'id="s-([\w-]+)" data-enter="([\w-]+)"', html))
     for s in tl['scenes'][1:]:
         st = s['start']
+        mid = st + ENTER_DUR.get(enters.get(s['id'], 'fade'), .8) / 2   # milieu du mouvement d'entrée
         opener = s['id'] in ('p1', 'p2', 'p3', 'evaluation')
         dur = 1.1 if opener else .75
-        s0 = int((st - dur * .55) * SR)
+        s0 = int((mid - dur * .55) * SR)
         n = int(dur * SR)
         if s0 < 0 or s0 + n >= N: continue
         tt = np.arange(n) / SR
@@ -222,10 +227,10 @@ def main():
         sfx[0, s0:s0 + n] += sweep * (1 - pan) * 2
         sfx[1, s0:s0 + n] += sweep * pan * 2
         if opener:
-            b0 = int(st * SR); n2 = int(1.8 * SR); tt2 = np.arange(n2) / SR
+            b0 = int((st + .45) * SR); n2 = int(1.8 * SR); tt2 = np.arange(n2) / SR
             boom = np.sin(2 * np.pi * np.cumsum(38 + 60 * np.exp(-tt2 / .05)) / SR) * np.exp(-tt2 / .45)
             shimmer = sum(np.sin(2 * np.pi * midi(n_) * tt2) for n_ in (74, 81, 86)) * np.exp(-tt2 / .7) * .18
-            sfx[:, b0:b0 + n2] += (boom * .9 + shimmer)[:N - b0]
+            sfx[:, b0:b0 + n2] += (boom * .6 + shimmer)[:N - b0]
     sfx = reverb(sfx, seconds=1.6, decay=.5, wet=.25)
     sfx /= np.max(np.abs(sfx)) + 1e-9
     sfx *= .55
