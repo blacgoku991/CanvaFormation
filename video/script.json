@@ -1,0 +1,106 @@
+{
+ "voix": {
+  "actuelle": {
+   "nom": "Kokoro « ff_siwis » (voix française féminine, générée en local)",
+   "script": "voix_locale.py"
+  },
+  "premium": {
+   "nom": "Perle | Premium French Corporate Voice",
+   "voice_id": "UaGvaD7NWzU5mJNoUqoY",
+   "modele": "eleven_multilingual_v2",
+   "note": "environ 2 200 crédits ElevenLabs pour tout le script ; déposer les fichiers dans audio/vo/<id>.mp3"
+  }
+ },
+ "scenes": [
+  {
+   "id": "intro",
+   "partie": "",
+   "vo": "Bienvenue dans la formation Dolce Lash and Brow. Un parcours complet pour sublimer la beauté du regard."
+  },
+  {
+   "id": "sommaire",
+   "partie": "",
+   "vo": "Votre manuel s'organise en quatre parties : les sourcils, les cils, la pratique professionnelle, et l'évaluation."
+  },
+  {
+   "id": "p1",
+   "partie": "Partie I — Sourcils",
+   "vo": "Partie un : les sourcils."
+  },
+  {
+   "id": "cycle",
+   "partie": "Partie I — Sourcils",
+   "vo": "Tout commence par le poil et son cycle de vie. L'anagène, la croissance. La catagène, la transition. La télogène, le repos. Chaque follicule évolue à son propre rythme."
+  },
+  {
+   "id": "chute",
+   "partie": "Partie I — Sourcils",
+   "vo": "Perdre quelques poils est naturel. La casse, elle, vient souvent des frottements ou de traitements mal adaptés. Et une chute inhabituelle mérite toujours un avis médical."
+  },
+  {
+   "id": "mapping",
+   "partie": "Partie I — Sourcils",
+   "vo": "Place ensuite à la restructuration. Le mapping fixe trois repères : le début, l'arche et la queue, pour dessiner une ligne harmonieuse, validée avec la cliente avant toute épilation."
+  },
+  {
+   "id": "browlift",
+   "partie": "Partie I — Sourcils",
+   "vo": "Le Brow Lift Thuya suit une séquence précise : la lotion permanente, le neutralisant, puis la crème de soin. Le temps de pose s'adapte à la nature du poil, et se confirme toujours sur la notice du fabricant."
+  },
+  {
+   "id": "couleur",
+   "partie": "Partie I — Sourcils",
+   "vo": "Côté couleur, la teinture Brow Daddy se choisit selon le diagnostic. Pour la décoloration ZOLA : une dose de poudre pour deux doses d'oxydant à trois pour cent, sous surveillance constante."
+  },
+  {
+   "id": "hygiene",
+   "partie": "Partie I — Sourcils",
+   "vo": "Et à chaque étape, l'hygiène et la sécurité passent avant tout : matériel désinfecté, et aucune prestation sur une peau irritée."
+  },
+  {
+   "id": "p2",
+   "partie": "Partie II — Les cils",
+   "vo": "Partie deux : les cils."
+  },
+  {
+   "id": "rehaussement",
+   "partie": "Partie II — Les cils",
+   "vo": "Après un diagnostic attentif, le rehaussement Noemi Innovate se déroule en deux étapes de dix minutes. Le soin Lash Botox Noemi Intense peut s'y ajouter, uniquement après validation de la notice."
+  },
+  {
+   "id": "teintecils",
+   "partie": "Partie II — Les cils",
+   "vo": "La teinture des cils sublime le résultat, et les conseils après prestation le prolongent."
+  },
+  {
+   "id": "p3",
+   "partie": "Partie III — Pratique professionnelle",
+   "vo": "Partie trois : la pratique professionnelle."
+  },
+  {
+   "id": "fiche",
+   "partie": "Partie III — Pratique professionnelle",
+   "vo": "Une fiche technique pour chaque séance : avant, pendant et après. Et des photos avant-après prises avec le même angle, la même distance et la même lumière."
+  },
+  {
+   "id": "reseaux",
+   "partie": "Partie III — Pratique professionnelle",
+   "vo": "Vous apprendrez aussi à développer votre activité : un profil Instagram optimisé, cinq piliers de contenu, des Reels efficaces, et un calendrier simple à tenir."
+  },
+  {
+   "id": "gestion",
+   "partie": "Partie III — Pratique professionnelle",
+   "vo": "Sans oublier la gestion : des tarifs clairs, une expérience cliente soignée, et des résultats que l'on mesure."
+  },
+  {
+   "id": "evaluation",
+   "partie": "Partie IV — Évaluation",
+   "vo": "Enfin, l'évaluation : quinze questions pour valider vos acquis."
+  },
+  {
+   "id": "outro",
+   "partie": "",
+   "vo": "Dolce Lash and Brow. La beauté du regard, avec méthode et précision."
+  }
+ ]
+}

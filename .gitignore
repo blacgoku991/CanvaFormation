@@ -3,3 +3,6 @@ design/_work-*.html
 design/assets/ia-src/
 design/assets-light/
 design/*-leger.html
+video/_stills/
+video/out/
+video/audio/*.wav
