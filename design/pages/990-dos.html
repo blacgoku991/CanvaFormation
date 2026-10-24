@@ -11,11 +11,18 @@
   }
   [data-id="dos"] .dos-foot {
     position: absolute; left: 0; right: 0; bottom: 12mm; text-align: center;
-    font-size: 6.6pt; letter-spacing: .3em; text-transform: uppercase; color: var(--taupe);
+    font-size: 6.6pt; font-weight: 500; letter-spacing: .3em; text-transform: uppercase; color: var(--espresso);
+  }
+  [data-id="dos"] .dos-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
+  [data-id="dos"] .dos-veil {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 58% 52% at 50% 46%, rgba(247, 242, 236, .92) 0, rgba(247, 242, 236, .78) 45%, rgba(247, 242, 236, 0) 100%);
   }
   [data-id="dos"] .dos-band { position: absolute; right: 0; top: 0; bottom: 0; width: 6mm; background: var(--bordeaux); }
 </style>
 <section class="page" data-id="dos">
+  <img class="dos-bg" src="assets/ia/soie-ruban.jpg" alt="">
+  <div class="dos-veil"></div>
   <div class="dos-band"></div>
   <div class="dos-center">
     <img class="dos-logo" src="assets/logo-dolce.png" alt="dolce lash &amp; brow">

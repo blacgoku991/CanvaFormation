@@ -21,8 +21,7 @@
     position: absolute; top: 3mm; left: 3mm; right: 3mm; bottom: 0; overflow: hidden;
     border-radius: 29mm 29mm 0 0; background: var(--paper);
   }
-  /* portrait-couverture.jpg (1129 × 1210 px), échelle 0,92 : zone x 465–703 px, y 200–705 px */
-  [data-id="teinture-cils"] .arch img { position: absolute; width: 274.8mm; left: -113.2mm; top: -48.7mm; }
+  [data-id="teinture-cils"] .arch img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
 
   [data-id="teinture-cils"] .s8 .alert { margin-top: 6mm; }
   [data-id="teinture-cils"] .s8 .alert p + p { margin-top: 2mm; }
@@ -67,7 +66,7 @@
 
       <div class="visual">
         <div class="arch-line"></div>
-        <div class="arch"><img class="blend" src="assets/portrait-couverture.jpg" alt=""></div>
+        <div class="arch"><img src="assets/ia/cils-teintes.jpg" alt=""></div>
       </div>
 
       <div class="col s8">

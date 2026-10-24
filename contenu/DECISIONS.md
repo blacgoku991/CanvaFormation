@@ -9,3 +9,10 @@
 ## En attente de la cliente
 - Pages manquantes d'après le sommaire : §2 Brow Lift (technique et temps de pose, Thuya), §3 Teinture hybride, « Diagnostic et application en cabine », point 4 de « Gestion d'activité ».
 - Photos HD originales si disponibles.
+
+## Refonte visuelle (24/10/2026, 2e version)
+- À la demande de la cliente, le portrait répété est remplacé par 19 photos d'ambiance générées par IA (FLUX 3, compte ElevenLabs de la cliente, ~38 000 crédits), dans `design/assets/ia/`. Elles sont **décoratives** : jamais présentées comme des résultats de la formatrice (l'atelier visuel garde la planche fournie).
+- Le portrait de marque reste sur la couverture et en avatar de la maquette Instagram ; la photo du sac reste en ouverture de la Partie III.
+- Visuels d'origine en basse définition agrandis ×2 (Lanczos + accentuation) : versions `*-hd.jpg`.
+- Grain papier léger sur toutes les pages ; 4e de couverture sur fond soie et ruban bordeaux.
+- Deux PDF : HD pour l'impression, « léger » pour l'envoi par téléphone.

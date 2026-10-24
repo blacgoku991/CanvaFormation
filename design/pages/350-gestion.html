@@ -7,12 +7,7 @@
   [data-id="gestion"] .rule.short { margin: 6mm 0 0; }
   [data-id="gestion"] .head { display: flex; flex-direction: column; }
   [data-id="gestion"] .head .photo { margin-top: auto; height: 40mm; position: relative; overflow: hidden; }
-  /* portrait-cou-bas.jpg (1129 × 838 px), échelle 0,449 : zone x 330–1020 px, y 0–337 px */
-  [data-id="gestion"] .head .photo img {
-    position: absolute; width: 134.1mm; left: -39.2mm; top: 0;
-    -webkit-mask-image: linear-gradient(90deg, #000 0, #000 85%, transparent 99%);
-            mask-image: linear-gradient(90deg, #000 0, #000 85%, transparent 99%);
-  }
+  [data-id="gestion"] .head .photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; }
 
   [data-id="gestion"] .sec-head {
     border-bottom: .3mm solid var(--espresso); padding-bottom: 2.4mm; margin-bottom: 4mm;
@@ -41,7 +36,7 @@
         <div class="kicker">Pratique professionnelle</div>
         <h2 class="h-title">Gestion d’activité et fidélisation</h2>
         <div class="rule short"></div>
-        <div class="photo"><img class="blend" src="assets/portrait-cou-bas.jpg" alt=""></div>
+        <div class="photo"><img src="assets/ia/accueil-institut.jpg" alt=""></div>
       </div>
 
       <div class="welcome">

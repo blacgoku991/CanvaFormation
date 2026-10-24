@@ -72,6 +72,18 @@ body {
   counter-increment: pg;
 }
 
+/* Grain papier très léger : donne une matière « imprimée » aux fonds unis */
+.page::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/grain.png');
+  background-size: 50mm 50mm;
+  opacity: .5;
+  pointer-events: none;
+  z-index: 40;
+}
+
 .page.tint-cream { background: var(--cream); }
 .page.tint-blush { background: var(--blush); }
 .page.tint-paper { background: var(--paper); }

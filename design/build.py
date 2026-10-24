@@ -5,7 +5,7 @@ Usage :
   python3 design/build.py manuel --only=070,080 --tag=lot3
       # aperçu partiel (pages dont le nom commence par 070 ou 080)
       # -> design/_work/lot3/ (PDF + PNG), sans toucher aux livrables
-Options : --no-png
+Options : --no-png, --light (PDF allégé pour l'envoi : images réduites)
 """
 import pathlib
 import re
@@ -41,7 +41,28 @@ def option(name):
     return None
 
 
-def build(doc, png=True, only=None, tag=None):
+def make_light_assets(max_px=1500, quality=80):
+    """Copie réduite de design/assets/ dans design/assets-light/ (régénérée si la source est plus récente)."""
+    from PIL import Image
+    src_root, dst_root = ROOT / 'assets', ROOT / 'assets-light'
+    for src in src_root.rglob('*'):
+        if src.suffix.lower() not in ('.jpg', '.jpeg', '.png') or 'ia-src' in src.parts:
+            continue
+        dst = dst_root / src.relative_to(src_root)
+        if dst.exists() and dst.stat().st_mtime >= src.stat().st_mtime:
+            continue
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        im = Image.open(src)
+        scale = max_px / max(im.size)
+        if scale < 1:
+            im = im.resize((round(im.size[0] * scale), round(im.size[1] * scale)), Image.LANCZOS)
+        if src.suffix.lower() == '.png':
+            im.save(dst, optimize=True)
+        else:
+            im.convert('RGB').save(dst, quality=quality, optimize=True, progressive=True)
+
+
+def build(doc, png=True, only=None, tag=None, light=False):
     pages_dir, pdf_name, title = DOCS[doc]
     fragments = sorted(pages_dir.glob('*.html'))
     if only:
@@ -75,6 +96,12 @@ def build(doc, png=True, only=None, tag=None):
     else:
         out_dir = PROJECT / 'livrables'
         html_path = ROOT / f'{doc}.html'
+    if light:
+        # Version allégée (envoi par téléphone, e-mail) : images réduites, même mise en page
+        make_light_assets()
+        body = body.replace('src="assets/', 'src="assets-light/')
+        html_path = html_path.with_name(html_path.stem + '-leger.html')
+        pdf_name = pdf_name.replace('.pdf', '-leger.pdf')
     out_dir.mkdir(parents=True, exist_ok=True)
     html_path.write_text(HEAD.format(title=title, body=body), encoding='utf-8')
 
@@ -94,4 +121,4 @@ def build(doc, png=True, only=None, tag=None):
 if __name__ == '__main__':
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
     build(args[0] if args else 'manuel', png='--no-png' not in sys.argv,
-          only=option('only'), tag=option('tag'))
+          only=option('only'), tag=option('tag'), light='--light' in sys.argv)
