@@ -1,26 +1,22 @@
 <style>
-  /* Bandeau panoramique du regard (photo de la cliente, 3120 × 900 px) sur toute la largeur */
+  /* Bandeau du regard (photo de la cliente, 2762 × 1170 px) sur toute la largeur : les deux yeux et les deux
+     sourcils entiers, rien posé sur le visage ; on ne retire qu'un peu de front en haut */
   [data-id="partie-1"] .p1-band {
-    position: absolute; left: 0; top: 0; width: 297mm; height: 86mm; overflow: hidden;
+    position: absolute; left: 0; top: 0; width: 297mm; height: 106mm; overflow: hidden;
   }
   [data-id="partie-1"] .p1-band img {
     display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 100%;
   }
-  /* Encoche ivoire : le titre « entre » dans la photo (elle masque le bas du cadrage, coupé au ras de l'œil) */
-  /* Haut de l'encoche dans le creux de peau entre le sourcil gauche et ses cils : le sourcil garde un peu d'air */
-  [data-id="partie-1"] .p1-notch {
-    position: absolute; left: 0; top: 67mm; width: 142mm; height: 20mm; background: var(--ivory);
-  }
-  [data-id="partie-1"] .p1-title { position: absolute; left: 20mm; top: 70.5mm; }
+  [data-id="partie-1"] .p1-title { position: absolute; left: 20mm; top: 111mm; }
   [data-id="partie-1"] .p1-part {
     font-family: var(--display); font-style: italic; font-weight: 400; font-size: 19pt; line-height: 1.1;
     color: var(--bordeaux); margin: 0 0 1mm;
   }
   [data-id="partie-1"] .p1-name {
-    font-family: var(--display); font-weight: 400; font-size: 66pt; line-height: 1;
+    font-family: var(--display); font-weight: 400; font-size: 58pt; line-height: 1;
     text-transform: uppercase; letter-spacing: .01em; color: var(--espresso);
   }
-  [data-id="partie-1"] .p1-num { position: absolute; right: 20mm; bottom: 16mm; height: 72mm; width: auto; }
+  [data-id="partie-1"] .p1-num { position: absolute; right: 20mm; top: 116mm; height: 58mm; width: auto; }
   [data-id="partie-1"] .p1-toc { position: absolute; left: 20mm; width: 152mm; bottom: 16mm; }
   [data-id="partie-1"] .p1-toc .label {
     font-family: var(--sans); font-weight: 400; font-size: 6.6pt; line-height: 1.4; letter-spacing: .3em;
@@ -34,7 +30,7 @@
   /* Numéro et intitulé dans une même ligne de texte */
   [data-id="partie-1"] .p1-toc .item {
     display: block; white-space: nowrap; margin: 0;
-    padding: 2.1mm 0; border-bottom: .2mm solid var(--line);
+    padding: 1.7mm 0; border-bottom: .2mm solid var(--line);
     font-family: var(--sans); font-weight: 300; font-size: 8.6pt; line-height: 1.4; color: var(--ink);
   }
   [data-id="partie-1"] .p1-toc .item .pg {
@@ -43,8 +39,7 @@
   }
 </style>
 <section class="page opener" data-id="partie-1">
-  <div class="p1-band"><img src="assets/client/portrait-goupillon-regard.jpg" alt=""></div>
-  <div class="p1-notch"></div>
+  <div class="p1-band"><img src="assets/client/portrait-goupillon-regard-complet.jpg" alt=""></div>
   <div class="p1-title">
     <p class="p1-part">Partie I</p>
     <h2 class="p1-name">Sourcils</h2>
@@ -53,15 +48,15 @@
   <div class="p1-toc">
     <p class="label">Au programme de cette partie</p>
     <div class="items">
-      <p class="item"><span class="pg">{{p:cycle}}</span>Le cycle de vie du sourcil</p>
-      <p class="item"><span class="pg">{{p:chute}}</span>Pourquoi les sourcils tombent-ils&nbsp;?</p>
-      <p class="item"><span class="pg">{{p:diagnostic}}</span>Restructuration des sourcils &amp;&nbsp;mapping</p>
-      <p class="item"><span class="pg">{{p:mapping}}</span>Mapping&nbsp;: les trois repères</p>
-      <p class="item"><span class="pg">{{p:browlift}}</span>Brow Lift — Thuya</p>
-      <p class="item"><span class="pg">{{p:teinture}}</span>Teinture des sourcils — Brow Daddy</p>
-      <p class="item"><span class="pg">{{p:decoloration}}</span>Décoloration des sourcils — ZOLA</p>
-      <p class="item"><span class="pg">{{p:atelier}}</span>Atelier visuel — Brow Lift</p>
-      <p class="item"><span class="pg">{{p:hygiene}}</span>Hygiène, sécurité et qualité</p>
+      <p class="item"><span class="pg">{{p:cycle}}&nbsp;</span>Le cycle de vie du sourcil</p>
+      <p class="item"><span class="pg">{{p:chute}}&nbsp;</span>Pourquoi les sourcils tombent-ils&nbsp;?</p>
+      <p class="item"><span class="pg">{{p:diagnostic}}&nbsp;</span>Restructuration des sourcils &amp;&nbsp;mapping</p>
+      <p class="item"><span class="pg">{{p:mapping}}&nbsp;</span>Mapping&nbsp;: les trois repères</p>
+      <p class="item"><span class="pg">{{p:browlift}}&nbsp;</span>Brow Lift — Thuya</p>
+      <p class="item"><span class="pg">{{p:teinture}}&nbsp;</span>Teinture des sourcils — Brow Daddy</p>
+      <p class="item"><span class="pg">{{p:decoloration}}&nbsp;</span>Décoloration des sourcils</p>
+      <p class="item"><span class="pg">{{p:atelier}}&nbsp;</span>Atelier visuel — Brow Lift</p>
+      <p class="item"><span class="pg">{{p:hygiene}}&nbsp;</span>Hygiène, sécurité et qualité</p>
     </div>
   </div>
 </section>

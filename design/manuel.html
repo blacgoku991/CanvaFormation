@@ -66,8 +66,9 @@
   [data-id="sommaire"] .side-text { position: absolute; left: 20mm; top: 27mm; width: 68mm; }
   [data-id="sommaire"] .side .h-display { font-size: 31pt; line-height: 1.05; margin: 5mm 0 4.5mm; }
   [data-id="sommaire"] .side .lead { font-size: 13.5pt; line-height: 1.32; }
+  /* Arche calée sur la grille du sommaire : haut sur le filet de la Partie II, bas sur celui de la Partie IV */
   [data-id="sommaire"] .arch {
-    position: absolute; left: 20mm; top: 92mm; width: 62mm; height: 80mm;
+    position: absolute; left: 20mm; top: 96mm; width: 62mm; height: 77.8mm;
     border-radius: 31mm 31mm 0 0; overflow: hidden; background: #FFFFFF;
   }
   [data-id="sommaire"] .arch img {
@@ -103,9 +104,9 @@
   }
   [data-id="sommaire"] .entry:last-child { border-bottom: 0; }
   [data-id="sommaire"] .entry .t { flex: 0 1 auto; }
-  [data-id="sommaire"] .entry .dots {
-    flex: 1 1 auto; min-width: 5mm; height: 0; border-bottom: .25mm dotted var(--taupe); align-self: center; margin-top: 1mm;
-  }
+  /* Espace extensible entre l'intitulé et le numéro (pas de points de conduite : en pointillés CSS, ils
+     deviendraient des centaines de petits carrés dans Canva ; le filet de chaque ligne guide déjà l'œil) */
+  [data-id="sommaire"] .entry .dots { flex: 1 1 auto; min-width: 5mm; }
   [data-id="sommaire"] .entry .pg {
     flex: 0 0 auto; font-family: var(--display); font-style: italic; font-size: 9.6pt; line-height: 1; color: var(--bordeaux);
   }
@@ -124,68 +125,65 @@
     <div class="part">
       <div class="part-head"><span class="roman">I.</span><span class="name">Sourcils</span><span class="pg-part">Ouverture p.&nbsp;03</span></div>
       <div class="entries">
-        <p class="entry"><span class="t">Le cycle de vie du sourcil</span><span class="dots"></span><span class="pg">04</span></p>
-        <p class="entry"><span class="t">Pourquoi les sourcils tombent-ils&nbsp;?</span><span class="dots"></span><span class="pg">05</span></p>
-        <p class="entry"><span class="t">Restructuration des sourcils &amp;&nbsp;mapping</span><span class="dots"></span><span class="pg">06</span></p>
-        <p class="entry"><span class="t">Mapping&nbsp;: les trois repères</span><span class="dots"></span><span class="pg">07</span></p>
-        <p class="entry"><span class="t">Brow Lift — Thuya</span><span class="dots"></span><span class="pg">08</span></p>
-        <p class="entry"><span class="t">Teinture des sourcils — Brow Daddy</span><span class="dots"></span><span class="pg">09</span></p>
-        <p class="entry"><span class="t">Décoloration des sourcils — ZOLA</span><span class="dots"></span><span class="pg">10</span></p>
-        <p class="entry"><span class="t">Atelier visuel — Brow Lift</span><span class="dots"></span><span class="pg">11</span></p>
-        <p class="entry"><span class="t">Hygiène, sécurité et qualité</span><span class="dots"></span><span class="pg">12</span></p>
+        <p class="entry"><span class="t">Le cycle de vie du sourcil</span><span class="dots"> </span><span class="pg">04</span></p>
+        <p class="entry"><span class="t">Pourquoi les sourcils tombent-ils&nbsp;?</span><span class="dots"> </span><span class="pg">05</span></p>
+        <p class="entry"><span class="t">Restructuration des sourcils &amp;&nbsp;mapping</span><span class="dots"> </span><span class="pg">06</span></p>
+        <p class="entry"><span class="t">Mapping&nbsp;: les trois repères</span><span class="dots"> </span><span class="pg">07</span></p>
+        <p class="entry"><span class="t">Brow Lift — Thuya</span><span class="dots"> </span><span class="pg">08</span></p>
+        <p class="entry"><span class="t">Teinture des sourcils — Brow Daddy</span><span class="dots"> </span><span class="pg">09</span></p>
+        <p class="entry"><span class="t">Décoloration des sourcils</span><span class="dots"> </span><span class="pg">10</span></p>
+        <p class="entry"><span class="t">Atelier visuel — Brow Lift</span><span class="dots"> </span><span class="pg">11</span></p>
+        <p class="entry"><span class="t">Hygiène, sécurité et qualité</span><span class="dots"> </span><span class="pg">12</span></p>
       </div>
     </div>
     <div class="part">
       <div class="part-head"><span class="roman">II.</span><span class="name">Les cils</span><span class="pg-part">Ouverture p.&nbsp;13</span></div>
       <div class="entries">
-        <p class="entry"><span class="t">Brow Lift et rehaussement de cils&nbsp;: les fondamentaux</span><span class="dots"></span><span class="pg">14</span></p>
-        <p class="entry"><span class="t">Contre-indications</span><span class="dots"></span><span class="pg">15</span></p>
-        <p class="entry"><span class="t">Diagnostic et rehaussement de cils — Noemi Innovate</span><span class="dots"></span><span class="pg">16</span></p>
-        <p class="entry"><span class="t">Teinture des cils et Lash Botox — Noemi</span><span class="dots"></span><span class="pg">17</span></p>
-        <p class="entry"><span class="t">Protocoles de prestation&nbsp;: avant, pendant, après</span><span class="dots"></span><span class="pg">18</span></p>
+        <p class="entry"><span class="t">Brow Lift &amp;&nbsp;rehaussement de cils&nbsp;: les fondamentaux</span><span class="dots"> </span><span class="pg">14</span></p>
+        <p class="entry"><span class="t">Contre-indications</span><span class="dots"> </span><span class="pg">15</span></p>
+        <p class="entry"><span class="t">Diagnostic et rehaussement de cils — Noemi Innovate</span><span class="dots"> </span><span class="pg">16</span></p>
+        <p class="entry"><span class="t">Teinture des cils et Lash Botox — Noemi</span><span class="dots"> </span><span class="pg">17</span></p>
+        <p class="entry"><span class="t">Protocoles de prestation&nbsp;: avant, pendant, après</span><span class="dots"> </span><span class="pg">18</span></p>
       </div>
     </div>
     <div class="part">
       <div class="part-head"><span class="roman">III.</span><span class="name">Pratique professionnelle</span><span class="pg-part">Ouverture p.&nbsp;19</span></div>
       <div class="entries">
-        <p class="entry"><span class="t">Fiche technique — Brow Lift</span><span class="dots"></span><span class="pg">20</span></p>
-        <p class="entry"><span class="t">Photographier son travail</span><span class="dots"></span><span class="pg">21</span></p>
-        <p class="entry"><span class="t">Développer son activité sur les réseaux sociaux</span><span class="dots"></span><span class="pg">22–23</span></p>
-        <p class="entry"><span class="t">Gestion d’activité et fidélisation</span><span class="dots"></span><span class="pg">24</span></p>
+        <p class="entry"><span class="t">Fiche technique — Brow Lift</span><span class="dots"> </span><span class="pg">20</span></p>
+        <p class="entry"><span class="t">Photographier son travail</span><span class="dots"> </span><span class="pg">21</span></p>
+        <p class="entry"><span class="t">Développer son activité sur les réseaux sociaux</span><span class="dots"> </span><span class="pg">22–23</span></p>
+        <p class="entry"><span class="t">Gestion d’activité et fidélisation</span><span class="dots"> </span><span class="pg">24</span></p>
       </div>
     </div>
     <div class="part">
       <div class="part-head"><span class="roman">IV.</span><span class="name">Évaluation</span><span class="pg-part">Ouverture p.&nbsp;25</span></div>
       <div class="entries">
-        <p class="entry"><span class="t">Questionnaire d’évaluation (QCM)</span><span class="dots"></span><span class="pg">26–27</span></p>
-        <p class="entry"><span class="t">Sources et vérification des protocoles</span><span class="dots"></span><span class="pg">28</span></p>
+        <p class="entry"><span class="t">Évaluation QCM</span><span class="dots"> </span><span class="pg">26–27</span></p>
+        <p class="entry"><span class="t">Sources et vérification des protocoles</span><span class="dots"> </span><span class="pg">28</span></p>
       </div>
     </div>
   </div>
 </section>
 
 <style>
-  /* Bandeau panoramique du regard (photo de la cliente, 3120 × 900 px) sur toute la largeur */
+  /* Bandeau du regard (photo de la cliente, 2762 × 1170 px) sur toute la largeur : les deux yeux et les deux
+     sourcils entiers, rien posé sur le visage ; on ne retire qu'un peu de front en haut */
   [data-id="partie-1"] .p1-band {
-    position: absolute; left: 0; top: 0; width: 297mm; height: 86mm; overflow: hidden;
+    position: absolute; left: 0; top: 0; width: 297mm; height: 106mm; overflow: hidden;
   }
   [data-id="partie-1"] .p1-band img {
     display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 100%;
   }
-  /* Encoche ivoire : le titre « entre » dans la photo (elle masque le bas du cadrage, coupé au ras de l'œil) */
-  [data-id="partie-1"] .p1-notch {
-    position: absolute; left: 0; top: 66mm; width: 142mm; height: 21mm; background: var(--ivory);
-  }
-  [data-id="partie-1"] .p1-title { position: absolute; left: 20mm; top: 69.5mm; }
+  [data-id="partie-1"] .p1-title { position: absolute; left: 20mm; top: 111mm; }
   [data-id="partie-1"] .p1-part {
     font-family: var(--display); font-style: italic; font-weight: 400; font-size: 19pt; line-height: 1.1;
     color: var(--bordeaux); margin: 0 0 1mm;
   }
   [data-id="partie-1"] .p1-name {
-    font-family: var(--display); font-weight: 400; font-size: 66pt; line-height: 1;
+    font-family: var(--display); font-weight: 400; font-size: 58pt; line-height: 1;
     text-transform: uppercase; letter-spacing: .01em; color: var(--espresso);
   }
-  [data-id="partie-1"] .p1-num { position: absolute; right: 20mm; bottom: 16mm; height: 72mm; width: auto; }
+  [data-id="partie-1"] .p1-num { position: absolute; right: 20mm; top: 116mm; height: 58mm; width: auto; }
   [data-id="partie-1"] .p1-toc { position: absolute; left: 20mm; width: 152mm; bottom: 16mm; }
   [data-id="partie-1"] .p1-toc .label {
     font-family: var(--sans); font-weight: 400; font-size: 6.6pt; line-height: 1.4; letter-spacing: .3em;
@@ -199,7 +197,7 @@
   /* Numéro et intitulé dans une même ligne de texte */
   [data-id="partie-1"] .p1-toc .item {
     display: block; white-space: nowrap; margin: 0;
-    padding: 2.1mm 0; border-bottom: .2mm solid var(--line);
+    padding: 1.7mm 0; border-bottom: .2mm solid var(--line);
     font-family: var(--sans); font-weight: 300; font-size: 8.6pt; line-height: 1.4; color: var(--ink);
   }
   [data-id="partie-1"] .p1-toc .item .pg {
@@ -208,8 +206,7 @@
   }
 </style>
 <section class="page opener" data-id="partie-1">
-  <div class="p1-band"><img src="assets/client/portrait-goupillon-regard.jpg" alt=""></div>
-  <div class="p1-notch"></div>
+  <div class="p1-band"><img src="assets/client/portrait-goupillon-regard-complet.jpg" alt=""></div>
   <div class="p1-title">
     <p class="p1-part">Partie I</p>
     <h2 class="p1-name">Sourcils</h2>
@@ -218,15 +215,15 @@
   <div class="p1-toc">
     <p class="label">Au programme de cette partie</p>
     <div class="items">
-      <p class="item"><span class="pg">04</span>Le cycle de vie du sourcil</p>
-      <p class="item"><span class="pg">05</span>Pourquoi les sourcils tombent-ils&nbsp;?</p>
-      <p class="item"><span class="pg">06</span>Restructuration des sourcils &amp;&nbsp;mapping</p>
-      <p class="item"><span class="pg">07</span>Mapping&nbsp;: les trois repères</p>
-      <p class="item"><span class="pg">08</span>Brow Lift — Thuya</p>
-      <p class="item"><span class="pg">09</span>Teinture des sourcils — Brow Daddy</p>
-      <p class="item"><span class="pg">10</span>Décoloration des sourcils — ZOLA</p>
-      <p class="item"><span class="pg">11</span>Atelier visuel — Brow Lift</p>
-      <p class="item"><span class="pg">12</span>Hygiène, sécurité et qualité</p>
+      <p class="item"><span class="pg">04&nbsp;</span>Le cycle de vie du sourcil</p>
+      <p class="item"><span class="pg">05&nbsp;</span>Pourquoi les sourcils tombent-ils&nbsp;?</p>
+      <p class="item"><span class="pg">06&nbsp;</span>Restructuration des sourcils &amp;&nbsp;mapping</p>
+      <p class="item"><span class="pg">07&nbsp;</span>Mapping&nbsp;: les trois repères</p>
+      <p class="item"><span class="pg">08&nbsp;</span>Brow Lift — Thuya</p>
+      <p class="item"><span class="pg">09&nbsp;</span>Teinture des sourcils — Brow Daddy</p>
+      <p class="item"><span class="pg">10&nbsp;</span>Décoloration des sourcils</p>
+      <p class="item"><span class="pg">11&nbsp;</span>Atelier visuel — Brow Lift</p>
+      <p class="item"><span class="pg">12&nbsp;</span>Hygiène, sécurité et qualité</p>
     </div>
   </div>
 </section>
@@ -351,9 +348,9 @@
 
     <div class="cy-text">
       <p class="key">Le cycle est continu, mais chaque follicule évolue indépendamment.</p>
-      <p class="phases"><strong>Anagène</strong>&nbsp;: le follicule fabrique un nouveau poil.<br><strong>Catagène</strong>&nbsp;: l’activité de croissance ralentit et le follicule se rétracte.<br><strong>Télogène</strong>&nbsp;: le poil reste en place au repos, puis se détache lors de l’exogène (phase de libération du poil). Un nouveau cycle peut alors commencer.</p>
+      <p class="phases"><strong>Anagène</strong>&nbsp;: le follicule fabrique un nouveau poil.<br><strong>Catagène</strong>&nbsp;: l’activité de croissance ralentit et le follicule se rétracte.<br><strong>Télogène</strong>&nbsp;: le poil reste en place au repos, puis se détache lors de l’exogène (phase de libération du poil). Un nouveau cycle peut alors&nbsp;commencer.</p>
       <div class="card">
-        <p>Les sourcils ont un cycle plus court que les cheveux du cuir chevelu&nbsp;: ils restent donc naturellement plus courts. <strong>Les durées varient selon les personnes et les follicules&nbsp;; les schémas ne sont pas un chronomètre individuel.</strong></p>
+        <p>Les sourcils ont un cycle plus court que les cheveux du cuir chevelu&nbsp;: ils restent donc naturellement plus courts. <strong>Les durées varient selon les personnes et les follicules&nbsp;; les schémas ne sont pas un chronomètre&nbsp;individuel.</strong></p>
       </div>
     </div>
   </div>
@@ -363,7 +360,7 @@
 <style>
   /* Grille 2 × 2 : titre | cartes, puis photo | « En pratique » sur une même bande basse */
   [data-id="chute"] .layout {
-    display: grid; grid-template-columns: 78mm 1fr; grid-template-rows: 1fr 62mm;
+    display: grid; grid-template-columns: 70mm 1fr; grid-template-rows: 1fr 68mm;
     column-gap: 12mm; row-gap: 6mm; height: 100%;
   }
   [data-id="chute"] .side .h-title { margin: 4mm 0 5.4mm; font-size: 25pt; }
@@ -376,8 +373,11 @@
     position: absolute; top: -.6mm; left: -.6mm; width: calc(100% + 1.2mm); height: calc(100% + 1.2mm);
     object-fit: cover; object-position: 50% 50%;
   }
-  [data-id="chute"] .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; }
+  /* Carte iii (texte le plus long, avis médical) plus large : les trois cartes se remplissent de façon égale ;
+     i et ii gardent la largeur minimale qui tient « Casse ou fragilisation » sur une ligne */
+  [data-id="chute"] .cards { display: grid; grid-template-columns: 53.7mm 53.7mm 1fr; gap: 5mm; }
   [data-id="chute"] .cards .card { padding: 5mm 5mm 5mm; }
+  [data-id="chute"] .cards .card p, [data-id="chute"] .practice li, [data-id="chute"] .practice .alert p { font-size: 9.4pt; }
   [data-id="chute"] .cards .tag {
     font-family: var(--display); font-style: italic; font-size: 24pt; line-height: 1; color: var(--rose);
     margin-bottom: 2.8mm;
@@ -392,7 +392,7 @@
   [data-id="chute"] .cards .card.alert .tag { color: #B78489; }
   [data-id="chute"] .cards .card.alert .h-label { color: var(--bordeaux); }
   [data-id="chute"] .practice {
-    display: grid; grid-template-columns: 42mm 1fr; gap: 6mm; align-content: center; align-items: start;
+    display: grid; grid-template-columns: 50mm 1fr; gap: 6mm; align-content: center; align-items: start;
     background: var(--cream); padding: 6mm 7mm;
   }
   [data-id="chute"] .practice .lead { font-size: 15pt; }
@@ -413,7 +413,7 @@
           <div class="card">
             <div class="tag">i.</div>
             <h3 class="h-label">Chute physiologique</h3>
-            <p>Un sourcil arrivé en fin de cycle peut tomber&nbsp;: c’est le renouvellement naturel. La perte isolée de quelques poils n’indique pas forcément un problème. Les follicules ne sont pas synchronisés, ce qui permet de conserver une ligne visible.</p>
+            <p>Un sourcil arrivé en fin de cycle peut tomber&nbsp;: c’est le renouvellement naturel. La perte isolée de quelques poils n’indique pas forcément un problème. Les follicules ne sont pas synchronisés, ce qui permet de conserver une ligne&nbsp;visible.</p>
           </div>
           <div class="card">
             <div class="tag">ii.</div>
@@ -423,12 +423,12 @@
           <div class="card alert">
             <div class="tag">iii.</div>
             <h3 class="h-label">Chute inhabituelle</h3>
-            <p>Une perte en plaques, rapide, persistante ou associée à rougeur, démangeaisons, squames ou douleur <strong>mérite un avis médical.</strong> Parmi les causes possibles&nbsp;: affection dermatologique, alopécie, troubles thyroïdiens, carences ou certains traitements. <strong>Une technicienne esthétique ne pose pas de diagnostic médical.</strong></p>
+            <p>Une perte en plaques, rapide, persistante ou associée à rougeur, démangeaisons, squames ou douleur <strong>mérite un avis médical.</strong> Parmi les causes possibles&nbsp;: affection dermatologique, alopécie, troubles thyroïdiens, carences ou certains traitements. <strong>Une technicienne esthétique ne pose pas de diagnostic&nbsp;médical.</strong></p>
           </div>
       </div>
       <div class="photo"><img src="assets/client/sourcil-lamine.jpg" alt=""></div>
       <div class="practice">
-          <p class="lead">En pratique, avant une prestation&nbsp;:</p>
+          <p class="lead">En pratique, avant une&nbsp;prestation&nbsp;:</p>
           <div>
             <ul class="dots">
               <li>Observer la densité, les zones clairsemées, l’état de la peau et la résistance apparente du poil.</li>
@@ -449,7 +449,8 @@
   [data-id="diagnostic"] .layout {
     display: grid; grid-template-columns: 82mm 1fr; grid-template-rows: 1fr auto; column-gap: 12mm; row-gap: 7mm; height: 100%;
   }
-  [data-id="diagnostic"] .top-side .h-title { margin: 4mm 0 0; font-size: 23pt; }
+  /* 22 pt : « 1. Restructuration » tient dans la colonne de 82 mm (à 23 pt il la dépassait de 2 mm) */
+  [data-id="diagnostic"] .top-side .h-title { margin: 4mm 0 0; font-size: 22pt; }
   [data-id="diagnostic"] .top-side .rule.short { margin: 7mm 0 6.4mm; }
   [data-id="diagnostic"] .synth .h-label { color: var(--bordeaux); }
   [data-id="diagnostic"] .synth .alert { margin-top: 3.4mm; padding: 3.4mm 5mm 3.4mm 13.5mm; }
@@ -505,7 +506,7 @@
     <div class="layout">
       <div class="top-side">
         <div class="kicker">Protocole</div>
-        <h2 class="h-title"><span class="no">1.</span>Restructuration des sourcils &amp;&nbsp;mapping</h2>
+        <h2 class="h-title"><span class="no">1.&nbsp;</span>Restructuration des sourcils &amp;&nbsp;mapping</h2>
         <div class="rule short"></div>
         <div class="synth">
           <h3 class="h-label">Diagnostic et restructuration</h3>
@@ -621,7 +622,7 @@
     <div class="mp-steps">
       <div class="step">
         <div class="step-head"><span class="n" aria-hidden="true">03</span><h3 class="st"><span class="k">Étape 3 —</span> Dessiner et faire valider</h3></div>
-        <p>Marquer le début, l’arche et la queue des deux côtés. Relier les points pour délimiter les contours supérieur et inférieur. Comparer les hauteurs, les épaisseurs et la direction des queues&nbsp;; corriger en tenant compte de l’asymétrie du visage. <strong>Faire valider le dessin à la cliente avant l’épilation.</strong></p>
+        <p>Marquer le début, l’arche et la queue des deux côtés. Relier les points pour délimiter les contours supérieur et inférieur. Comparer les hauteurs, les épaisseurs et la direction des queues&nbsp;; corriger en tenant compte de l’asymétrie du visage. <strong>Faire valider le dessin à la cliente avant&nbsp;l’épilation.</strong></p>
       </div>
       <div class="step">
         <div class="step-head"><span class="n" aria-hidden="true">04</span><h3 class="st"><span class="k">Étape 4 —</span> Restructurer</h3></div>
@@ -643,27 +644,25 @@
 <style>
   [data-id="browlift"] .layout { display: grid; grid-template-columns: 82mm 1fr; gap: 12mm; height: 100%; }
   [data-id="browlift"] .side { display: flex; flex-direction: column; }
-  [data-id="browlift"] .side .h-title { margin: 3mm 0 4.5mm; font-size: 23pt; }
+  [data-id="browlift"] .side .h-title { margin: 3.5mm 0 0; font-size: 24pt; }
+  [data-id="browlift"] .side .rule.short { margin: 5.5mm 0 5.5mm; }
   [data-id="browlift"] .side .protocol { font-size: 9.8pt; }
   /* Carte produit blanche : la photo Thuya (fond blanc pur) se fond dans la carte */
   [data-id="browlift"] .side .prod {
     margin-top: 7mm; flex: 1; min-height: 60mm; display: flex; flex-direction: column;
     background: #fff; border: .2mm solid var(--line);
   }
-  [data-id="browlift"] .side .prod .shot { position: relative; flex: 1; overflow: hidden; }
-  /* 852 × 1034 px affichés sur 78 mm de large (≈ 280 dpi) ; les produits (x 86-800, y 258-802 px)
-     sont centrés dans le cadre, le blanc de la photo se confond avec celui de la carte */
-  [data-id="browlift"] .side .prod .shot img {
-    position: absolute; display: block; width: 78mm; height: auto;
-    left: calc(50% - 40.6mm); top: calc(50% - 49.5mm);
-  }
+  /* Photo déjà recadrée autour des produits (819 × 600 px, ≈ 270 dpi à 77 mm) : centrée dans la carte,
+     sans masque ni débord, donc identique après un import Canva ; son blanc se confond avec la carte */
+  [data-id="browlift"] .side .prod .shot { flex: 1; display: flex; align-items: center; justify-content: center; }
+  [data-id="browlift"] .side .prod .shot img { display: block; width: 77mm; height: auto; }
   [data-id="browlift"] .side .prod .cap {
     margin: 0 5.5mm; padding: 3mm 0 3.6mm; border-top: .2mm solid var(--line);
-    font-family: var(--display); font-size: 12.5pt; line-height: 1.2; color: var(--espresso);
+    font-family: var(--display); font-size: 14pt; line-height: 1.15; color: var(--espresso);
   }
   [data-id="browlift"] .side .prod .cap .lbl {
-    display: block; font-family: var(--sans); font-size: 6.4pt; font-weight: 500; letter-spacing: .24em;
-    text-transform: uppercase; color: var(--bordeaux); margin-bottom: 1.2mm;
+    display: block; font-family: var(--sans); font-size: 6.8pt; font-weight: 500; letter-spacing: .24em;
+    text-transform: uppercase; color: var(--bordeaux); margin-bottom: 1.4mm;
   }
   [data-id="browlift"] .main { display: flex; flex-direction: column; }
   [data-id="browlift"] .times-group { margin-top: auto; }
@@ -716,11 +715,12 @@
     <div class="layout">
       <div class="side">
         <div class="kicker">Technique et temps de pose</div>
-        <h2 class="h-title"><span class="no">2.</span>Brow Lift&nbsp;— Thuya</h2>
+        <h2 class="h-title"><span class="no">2.&nbsp;</span>Brow Lift&nbsp;— Thuya</h2>
+        <div class="rule short"></div>
         <p class="protocol">Nettoyer les sourcils, appliquer la lotion permanente Thuya selon les zones prévues, puis retirer complètement. Appliquer ensuite le neutralisant (deuxième étape), retirer selon la notice, puis <strong>terminer par la crème de soin Thuya</strong>, à la fin de la prestation.</p>
         <div class="prod">
-          <div class="shot"><img src="assets/client/produits-thuya.jpg" alt="Produits Thuya"></div>
-          <p class="cap"><span class="lbl">Produits utilisés&nbsp;:</span>Gamme Thuya</p>
+          <div class="shot"><img src="assets/client/produits-thuya-net.jpg" alt="Produits Thuya"></div>
+          <p class="cap"><span class="lbl">Produits utilisés&nbsp;:</span> Gamme Thuya</p>
         </div>
       </div>
 
@@ -786,7 +786,7 @@
 <style>
   [data-id="teinture"] .layout { display: grid; grid-template-columns: 1fr 96mm; gap: 13mm; height: 100%; }
   [data-id="teinture"] .main { display: flex; flex-direction: column; }
-  [data-id="teinture"] .main .h-title { margin: 3.5mm 0 0; font-size: 25pt; }
+  [data-id="teinture"] .main .h-title { margin: 3.5mm 0 0; font-size: 24pt; }
   [data-id="teinture"] .rule.short { margin: 6mm 0 6.5mm; }
   [data-id="teinture"] .main .lead { font-size: 15.5pt; line-height: 1.38; color: var(--espresso); max-width: 112mm; }
   [data-id="teinture"] .main .alert { margin-top: 7mm; }
@@ -811,7 +811,7 @@
     <div class="layout">
       <div class="main">
         <div class="kicker">Teinture hybride et décoloration</div>
-        <h2 class="h-title"><span class="no">3.</span>Teinture des sourcils&nbsp;— Brow Daddy</h2>
+        <h2 class="h-title"><span class="no">3.&nbsp;</span>Teinture des sourcils&nbsp;— Brow&nbsp;Daddy</h2>
         <div class="rule short"></div>
         <p class="lead">Choisir la nuance selon le diagnostic et suivre la notice de la gamme Brow Daddy utilisée (Hybrid Tint ou StainMe). Protéger la peau et contrôler la coloration.</p>
         <div class="alert">
@@ -846,7 +846,7 @@
     display: grid; grid-template-columns: 84mm 1fr 74mm; gap: 9mm; height: 100%;
   }
   [data-id="decoloration"] .col { display: flex; flex-direction: column; min-height: 0; }
-  [data-id="decoloration"] .col1 .h-title { margin: 3.5mm 0 0; font-size: 23pt; }
+  [data-id="decoloration"] .col1 .h-title { margin: 3.5mm 0 0; font-size: 24pt; }
   [data-id="decoloration"] .col1 .rule.short { margin: 5mm 0 6mm; }
 
   /* Cartes produit blanches (photos ≤ 45 mm) */
@@ -856,12 +856,11 @@
   }
   [data-id="decoloration"] .prod .shot img { width: auto; display: block; }
   [data-id="decoloration"] .prod .shot.bb img { height: 33.4mm; margin-top: .3mm; }
-  /* Oxydant : le fond du fichier est à 253 (bandeau blanc pur de 2 mm en haut, lignes grises en bas).
-     On masque ces bords (cadre en overflow hidden) et la carte prend la teinte exacte du fond (#FDFDFD),
-     sans filtre CSS : aucune « boîte » visible autour du flacon. */
+  /* Oxydant : fichier recadré (bandeau blanc du haut et lignes grises du bas retirés) ; la carte prend
+     la teinte exacte de son fond (#FDFDFD), sans filtre ni masque : aucune « boîte » visible, même dans Canva. */
   [data-id="decoloration"] .col3 .prod { background: #FDFDFD; }
   [data-id="decoloration"] .col3 .prod .shot { height: 40.8mm; margin-bottom: 4mm; }
-  [data-id="decoloration"] .prod .shot.ox img { height: 44.7mm; margin-top: -2.3mm; }
+  [data-id="decoloration"] .prod .shot.ox img { height: 40.8mm; margin: 0 auto; }
   [data-id="decoloration"] .prod-name {
     font-family: var(--display); font-weight: 400; font-size: 14pt; line-height: 1.15; color: var(--espresso);
     border-top: .2mm solid var(--line); padding-top: 3mm; margin-bottom: 2mm;
@@ -894,10 +893,10 @@
   [data-id="decoloration"] .nw { white-space: nowrap; }
   [data-id="decoloration"] ol.steps > li .chip { font-size: 8.4pt; padding: .3mm 2.4mm; }
   [data-id="decoloration"] ol.steps > li.warn {
-    background: var(--bordeaux-soft); margin-left: -2.6mm; padding: 1.8mm 2.6mm 1.8mm 11.6mm;
+    background: var(--bordeaux-soft); margin-left: -2.6mm; padding: 1.8mm 2.6mm 1.8mm 10.8mm;
     border-left: .8mm solid var(--bordeaux);
   }
-  [data-id="decoloration"] ol.steps > li.warn .n { left: 2.2mm; top: 1.2mm; }
+  [data-id="decoloration"] ol.steps > li.warn .n { left: 1.8mm; top: 1.2mm; }
   [data-id="decoloration"] .pose { margin-top: auto; padding: 4.6mm 5.5mm 5mm; }
   [data-id="decoloration"] .pose .h-sub { margin-bottom: 2.4mm; }
   [data-id="decoloration"] .pose .chip { font-size: 8.4pt; }
@@ -914,7 +913,7 @@
 
       <div class="col col1">
         <div class="kicker">Teinture hybride et décoloration</div>
-        <h2 class="h-title"><span class="no">4.</span>Décoloration des sourcils</h2>
+        <h2 class="h-title"><span class="no">4.&nbsp;</span>Décoloration des sourcils</h2>
         <div class="rule short"></div>
         <div class="prod">
           <div class="shot bb"><img src="assets/zola-bb-blond-powder-hd.jpg" alt="ZOLA BB Blond Powder"></div>
@@ -950,9 +949,9 @@
 
       <div class="col col3">
         <div class="prod">
-          <div class="shot ox"><img src="assets/zola-oxydant-3-hd.jpg" alt="Oxydant ZOLA 3 %"></div>
+          <div class="shot ox"><img src="assets/zola-oxydant-3-hd-net.jpg" alt="Oxydant ZOLA 3 %"></div>
           <h3 class="prod-name"><span class="lbl">Oxydant utilisé&nbsp;:</span> ZOLA <span class="chip fill">3&nbsp;%</span></h3>
-          <p>Oxydant teinture sourcils ZOLA à 3&nbsp;%, associé à la poudre ZOLA BB Blond Powder selon les instructions <span class="nw">du fabricant.</span></p>
+          <p>Oxydant teinture sourcils ZOLA à 3&nbsp;%, associé à la poudre <span class="nw">ZOLA BB Blond Powder</span> selon les instructions du fabricant.</p>
         </div>
         <div class="alert">
           <div class="alert-title">Important</div>
@@ -970,7 +969,7 @@
 <style>
   [data-id="atelier"] .layout { display: grid; grid-template-columns: 92mm 1fr; gap: 17mm; height: 100%; }
   [data-id="atelier"] .side { display: flex; flex-direction: column; }
-  [data-id="atelier"] .side .h-title { margin: 3.5mm 0 0; font-size: 25pt; }
+  [data-id="atelier"] .side .h-title { margin: 3.5mm 0 0; font-size: 24pt; }
   [data-id="atelier"] .side .rule.short { margin: 7mm 0 9mm; }
   [data-id="atelier"] .side .h-label { margin-bottom: 1mm; }
   [data-id="atelier"] .tasks { list-style: none; border-top: .3mm solid var(--espresso); }
@@ -1049,7 +1048,7 @@
   [data-id="hygiene"] .side .rule.short { margin: 6.5mm 0 7mm; }
   [data-id="hygiene"] .sec-head { display: flex; align-items: baseline; gap: 2.6mm; margin-bottom: 3mm; }
   [data-id="hygiene"] .sec-head .no {
-    font-family: var(--display); font-style: italic; font-size: 19pt; line-height: 1; color: var(--rose);
+    font-family: var(--display); font-style: italic; font-size: 19pt; line-height: 1; color: var(--rose); margin-right: .9mm;
   }
   [data-id="hygiene"] .sec-head .h-sub { margin: 0; font-size: 13pt; }
 
@@ -1091,10 +1090,10 @@
   <div class="content">
     <div class="layout">
       <div class="side">
-        <div class="kicker">Les fondamentaux</div>
+        <div class="kicker">Bonnes pratiques</div>
         <h2 class="h-title">Hygiène, sécurité et qualité</h2>
         <div class="rule short"></div>
-        <div class="sec-head"><span class="no">i.</span><h3 class="h-sub">Checklist du poste de travail</h3></div>
+        <div class="sec-head"><h3 class="h-sub"><span class="no">i.&nbsp;</span>Checklist du poste de travail</h3></div>
         <ul class="checks">
           <li>Plan de travail propre&nbsp;; mains lavées&nbsp;; instruments nettoyés puis désinfectés selon leur usage.</li>
           <li>Produits identifiés, non périmés, fermés et conservés conformément aux notices.</li>
@@ -1146,7 +1145,7 @@
           </g>
         </svg></div>
         <div class="vigil">
-          <div class="sec-head"><span class="no">ii.</span><h3 class="h-sub">Points de vigilance par technique</h3></div>
+          <div class="sec-head"><h3 class="h-sub"><span class="no">ii.&nbsp;</span>Points de vigilance par technique</h3></div>
           <table class="data">
             <thead><tr><th>Technique</th><th>Vigilance principale</th></tr></thead>
             <tbody>
@@ -1185,8 +1184,7 @@
     text-transform: uppercase; letter-spacing: .01em; color: var(--espresso); white-space: nowrap;
   }
   /* Sommaire de la partie : carte papier posée à cheval sur le bord de la photo.
-     NB : elle masque aussi, en bas à droite de la photo, un reste du sommaire de la capture
-     (chiffres « 14 / 15 » et filet) : ne pas la déplacer sans nettoyer l'image. */
+     (La photo a été nettoyée du reste de sommaire de la capture : la carte peut être déplacée dans Canva.) */
   [data-id="partie-2"] .p2-toc {
     position: absolute; left: 112mm; right: 18mm; bottom: 16mm;
     background: var(--paper); border: .2mm solid var(--line); border-top: .6mm solid var(--bordeaux);
@@ -1223,14 +1221,14 @@
   <div class="p2-toc" data-fit>
     <p class="label">Au programme de cette partie</p>
     <div class="items">
-      <p class="item"><span class="pg">14</span>Les fondamentaux</p>
-      <p class="item"><span class="pg">15</span>Contre-indications</p>
-      <p class="item"><span class="pg">16</span>Diagnostic avant rehaussement</p>
-      <p class="item"><span class="pg">16</span>Rehaussement de cils — Noemi Innovate</p>
-      <p class="item"><span class="pg">17</span>Teinture des cils — Noemi</p>
-      <p class="item"><span class="pg">17</span>Lash Botox — Noemi Intense, Step&nbsp;1.5</p>
-      <p class="item"><span class="pg">17</span>Conseils après prestation</p>
-      <p class="item"><span class="pg">18</span>Protocoles de prestation</p>
+      <p class="item"><span class="pg">14&nbsp;</span>Les fondamentaux</p>
+      <p class="item"><span class="pg">15&nbsp;</span>Contre-indications</p>
+      <p class="item"><span class="pg">16&nbsp;</span>Diagnostic avant rehaussement</p>
+      <p class="item"><span class="pg">16&nbsp;</span>Rehaussement de cils — Noemi Innovate</p>
+      <p class="item"><span class="pg">17&nbsp;</span>Teinture des cils — Noemi</p>
+      <p class="item"><span class="pg">17&nbsp;</span>Lash Botox — Noemi Intense, Step&nbsp;1.5</p>
+      <p class="item"><span class="pg">17&nbsp;</span>Conseils après prestation</p>
+      <p class="item"><span class="pg">18&nbsp;</span>Protocoles de prestation</p>
     </div>
   </div>
 </section>
@@ -1250,8 +1248,16 @@
     position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%;
   }
 
-  [data-id="fondamentaux"] .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; min-height: 0; }
-  [data-id="fondamentaux"] .tech { padding: 5.6mm 6.4mm 5mm; display: flex; flex-direction: column; }
+  /* Les deux cartes partagent les mêmes lignes (sous-grille) : chaque rubrique et chaque filet
+     sont à la même hauteur d'une carte à l'autre, et les deux cartes se terminent ensemble */
+  [data-id="fondamentaux"] .cards {
+    display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(4, auto) 1fr;
+    column-gap: 6mm; row-gap: 0; min-height: 0;
+  }
+  [data-id="fondamentaux"] .tech {
+    padding: 5.6mm 6.4mm 5mm; grid-row: 1 / span 5;
+    display: grid; grid-template-rows: subgrid; row-gap: 0;
+  }
   [data-id="fondamentaux"] .tech.cream { background: var(--cream); }
   [data-id="fondamentaux"] .tech-head {
     display: flex; align-items: flex-end; gap: 3.4mm;
@@ -1287,7 +1293,7 @@
       <div class="cards" data-fit>
         <div class="card tech">
           <div class="tech-head">
-            <img class="num-svg" src="assets/numerals/01-bordeaux.svg" alt="01">
+            <img class="num-svg" src="assets/numerals/01-bordeaux-petit.svg" alt="01">
             <div>
               <h3 class="h-sub">Brow Lift</h3>
               <p class="sub">Sourcils · mise en forme</p>
@@ -1313,7 +1319,7 @@
 
         <div class="card tech cream">
           <div class="tech-head">
-            <img class="num-svg" src="assets/numerals/02-bordeaux.svg" alt="02">
+            <img class="num-svg" src="assets/numerals/02-bordeaux-petit.svg" alt="02">
             <div>
               <h3 class="h-sub">Rehaussement de cils</h3>
               <p class="sub">Cils naturels · courbure</p>
@@ -1379,11 +1385,17 @@
   [data-id="contre-indications"] .ci { padding: 4.7mm 0 4.7mm; border-bottom: .2mm solid var(--line); }
   [data-id="contre-indications"] .ci:last-child { border-bottom: 0; }
   [data-id="contre-indications"] .ci .lbl {
-    font-family: var(--display); font-weight: 600; font-size: 11.8pt; line-height: 1.25; color: var(--bordeaux); margin: 0 0 1.4mm;
+    font-family: var(--display); font-weight: 500; font-size: 12pt; line-height: 1.25; color: var(--bordeaux); margin: 0 0 1.4mm;
   }
   [data-id="contre-indications"] .ci p { font-size: 9.2pt; line-height: 1.6; }
   [data-id="contre-indications"] .alert { margin-top: auto; padding-top: 4.4mm; padding-bottom: 4.6mm; }
-  [data-id="contre-indications"] .alert p { font-size: 9.4pt; line-height: 1.6; }
+  /* « À retenir » en deux paragraphes côte à côte (lignes de ~70-80 mm au lieu de 155 mm),
+     le second calé sur la colonne « Rehaussement de cils » : zone de texte = 180 − 22,1 mm,
+     2e colonne à (180 − 9) / 2 + 9 mm du bord de la colonne principale */
+  [data-id="contre-indications"] .alert .alert-cols {
+    display: grid; grid-template-columns: calc(50% - 9.55mm) 1fr; column-gap: 9mm;
+  }
+  [data-id="contre-indications"] .alert p { font-size: 9.4pt; line-height: 1.6; margin: 0; }
 </style>
 <section class="page" data-id="contre-indications">
   <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie II — Les cils</span></div>
@@ -1444,7 +1456,10 @@
 
         <div class="alert">
           <div class="alert-title">À retenir</div>
-          <p>Avant chaque prestation&nbsp;: réaliser un diagnostic, questionner la cliente sur ses antécédents, vérifier les contre-indications et suivre la notice du fabricant. En cas de doute ou de symptômes persistants, <strong>reporter le soin et orienter vers un professionnel de santé. Ne jamais appliquer de produit sur une zone lésée ou infectée.</strong></p>
+          <div class="alert-cols">
+            <p>Avant chaque prestation&nbsp;: réaliser un diagnostic, questionner la cliente sur ses antécédents, vérifier les contre-indications et suivre la notice du fabricant.</p>
+            <p>En cas de doute ou de symptômes persistants, <strong>reporter le soin et orienter vers un professionnel de santé. Ne jamais appliquer de produit sur une zone lésée ou infectée.</strong></p>
+          </div>
         </div>
       </div>
     </div>
@@ -1459,7 +1474,7 @@
   [data-id="rehaussement"] .h-title { margin: 3mm 0 0; font-size: 21pt; font-variant-numeric: lining-nums; }
   [data-id="rehaussement"] .rule.short { margin: 5mm 0 5mm; }
   [data-id="rehaussement"] .side .diag { font-size: 9.4pt; line-height: 1.62; }
-  /* Photo de la cliente : diagnostic sur tablette (864 × 1058 px, ~270 dpi à cette taille) */
+  /* Photo de la cliente : diagnostic sur tablette (856 × 1056 px, ~265 dpi à cette taille) */
   [data-id="rehaussement"] .side .photo {
     margin-top: 6mm; flex: 1; min-height: 60mm; position: relative; overflow: hidden; background: var(--cream);
   }
@@ -1471,11 +1486,14 @@
 
   /* En-tête du protocole : titre à gauche, produits Noemi Innovate (fond blanc) à droite */
   [data-id="rehaussement"] .main .head { display: grid; grid-template-columns: 1fr 50mm; column-gap: 8mm; align-items: start; }
+  /* Cadre produits : son bas s'aligne sur le filet bordeaux du titre (27 + 28,8 mm), 5 mm au-dessus
+     de la phrase d'accroche (alignée sur le texte du diagnostic à gauche). Image de 44 mm décalée
+     de −0,9 mm / +0,8 mm (marges blanches inégales de la photo) : produits centrés à ~2,6 mm du cadre */
   [data-id="rehaussement"] .main .product {
-    background: #fff; border: .2mm solid var(--line); height: 34mm; overflow: hidden;
-    display: flex; align-items: center; justify-content: center;
+    background: #fff; border: .2mm solid var(--line); height: 28.8mm; overflow: hidden;
+    display: flex; align-items: flex-start; justify-content: center;
   }
-  [data-id="rehaussement"] .main .product img { display: block; width: 100%; height: auto; }
+  [data-id="rehaussement"] .main .product img { display: block; width: 44mm; height: auto; margin: -.9mm 0 0 1.6mm; }
   [data-id="rehaussement"] .main .lead { font-size: 15pt; line-height: 1.36; color: var(--espresso); max-width: 150mm; }
   [data-id="rehaussement"] .protocol { margin-top: auto; }
   [data-id="rehaussement"] .protocol .h-label { margin-bottom: 3.2mm; }
@@ -1486,7 +1504,10 @@
   [data-id="rehaussement"] .steps-table th:last-child { text-align: right; padding-right: 2mm; }
   [data-id="rehaussement"] .steps-table .chip { font-size: 8pt; padding: .7mm 3mm; }
   [data-id="rehaussement"] .steps-table tr.mid td { background: var(--blush); }
-  [data-id="rehaussement"] .steps-table tr.mid td.key { padding-left: 2mm; }
+  /* Même retrait de 2 mm pour toute la colonne « Étape » : Step 1, 1.5 et 2 restent alignés,
+     et le texte de la ligne rosée ne touche pas le bord de son aplat */
+  [data-id="rehaussement"] .steps-table th:first-child,
+  [data-id="rehaussement"] .steps-table td.key { padding-left: 2mm; }
   [data-id="rehaussement"] .alert { margin-top: 5mm; }
   [data-id="rehaussement"] .alert p { font-size: 9pt; line-height: 1.58; }
 </style>
@@ -1496,7 +1517,7 @@
     <div class="layout">
       <div class="side">
         <div class="kicker">Avant tout</div>
-        <h2 class="h-title"><span class="no">5.</span>Diagnostic avant rehaussement</h2>
+        <h2 class="h-title"><span class="no">5.&nbsp;</span>Diagnostic avant rehaussement</h2>
         <div class="rule short"></div>
         <p class="diag">Observer les cils, leur état et les éventuelles contre-indications. Vérifier l’absence d’irritation ou d’infection oculaire, effectuer les contrôles prévus par les notices et choisir les pads adaptés.</p>
         <div class="photo"><img src="assets/client/diagnostic-tablette.jpg" alt=""></div>
@@ -1506,7 +1527,7 @@
         <div class="head">
           <div>
             <div class="kicker">Protocole</div>
-            <h2 class="h-title"><span class="no">6.</span>Rehaussement de cils&nbsp;— Noemi&nbsp;Innovate</h2>
+            <h2 class="h-title"><span class="no">6.&nbsp;</span>Rehaussement de cils&nbsp;— Noemi&nbsp;Innovate</h2>
             <div class="rule short"></div>
           </div>
           <div class="product"><img src="assets/client/produits-noemi-innovate.jpg" alt=""></div>
@@ -1525,7 +1546,7 @@
           </table>
           <div class="alert">
             <div class="alert-title">Important</div>
-            <p>Ces temps de 10&nbsp;minutes correspondent au protocole demandé pour la formation et doivent être confirmés sur les notices Noemi Innovate du lot utilisé. Vérifier expressément auprès du fabricant que le soin Intense peut être appliqué entre Step&nbsp;1 et Step&nbsp;2&nbsp;: certains systèmes imposent de neutraliser avant tout soin. <strong>Ne pas appliquer cette séquence sans validation.</strong></p>
+            <p>Ces temps de 10&nbsp;minutes correspondent au protocole demandé pour la formation et doivent être confirmés sur les notices Noemi Innovate du lot utilisé. Vérifier expressément auprès du fabricant que le soin Intense peut être appliqué entre Step&nbsp;1 et Step&nbsp;2&nbsp;: certains systèmes imposent de neutraliser avant tout soin. <strong>Ne pas appliquer cette séquence sans&nbsp;validation.</strong></p>
           </div>
         </div>
       </div>
@@ -1561,7 +1582,8 @@
     position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: contain; object-position: 50% 62%;
   }
 
-  [data-id="teinture-cils"] .s8 .alert { margin-top: 6mm; }
+  /* filet bordeaux sous le titre 8, comme sous le titre 7 (même hauteur) */
+  [data-id="teinture-cils"] .s8 .alert { margin-top: 0; }
   [data-id="teinture-cils"] .s8 .alert p { font-size: 9.2pt; line-height: 1.58; }
   [data-id="teinture-cils"] .s8 .alert p + p { margin-top: 2mm; }
   /* Repère « Step 1.5 » : mot en texte réel, chiffres en tracé vectoriel (assets/numerals) */
@@ -1588,7 +1610,7 @@
     <div class="layout">
       <div class="col s7">
         <div class="kicker">Protocole</div>
-        <h2 class="h-title"><span class="no">7.</span>Teinture des cils&nbsp;— Noemi</h2>
+        <h2 class="h-title"><span class="no">7.&nbsp;</span>Teinture des cils&nbsp;— Noemi</h2>
         <div class="rule short"></div>
         <p class="lead">Utiliser la teinture Noemi autorisée pour les cils avec son révélateur compatible.</p>
         <div class="card care">
@@ -1604,11 +1626,12 @@
 
       <div class="col s8">
         <div class="kicker">Soin cosmétique</div>
-        <h2 class="h-title"><span class="no">8.</span>Lash Botox&nbsp;— Noemi Intense, Step&nbsp;1.5</h2>
+        <h2 class="h-title"><span class="no">8.&nbsp;</span>Lash Botox&nbsp;— Noemi Intense, Step&nbsp;1.5</h2>
+        <div class="rule short"></div>
         <div class="alert">
           <div class="alert-title">Important</div>
           <p><strong>Le Lash Botox est un soin cosmétique et non une injection.</strong> Dans ce manuel, il est nommé <strong>Noemi&nbsp;Intense&nbsp;— Step&nbsp;1.5&nbsp;— Lash Botox</strong>.</p>
-          <p><strong>Le temps de pose et sa place exacte dans la procédure restent à valider avec la notice du fabricant.</strong></p>
+          <p><strong>Le temps de pose et sa place exacte dans la procédure restent à valider avec la notice du&nbsp;fabricant.</strong></p>
         </div>
         <div class="marker">
           <p class="step">Step</p>
@@ -1632,9 +1655,10 @@
   /* Protocoles de prestation — en-tête, deux colonnes (Brow Lift / rehaussement) en frise avant → pendant → après,
      précautions essentielles en encadré bordeaux */
   [data-id="protocoles"] .wrap { display: flex; flex-direction: column; height: 100%; }
-  [data-id="protocoles"] .head { display: flex; align-items: flex-end; justify-content: space-between; gap: 10mm; }
+  /* la phrase d'accroche partage la ligne de base du titre */
+  [data-id="protocoles"] .head { display: flex; align-items: last baseline; justify-content: space-between; gap: 10mm; }
   [data-id="protocoles"] .head .h-title { margin: 3.5mm 0 0; font-size: 24pt; }
-  [data-id="protocoles"] .head .lead { font-size: 15pt; line-height: 1.3; color: var(--mocha); margin: 0 0 .8mm; }
+  [data-id="protocoles"] .head .lead { font-size: 15pt; line-height: 1.3; color: var(--mocha); margin: 0; }
 
   [data-id="protocoles"] .cols { display: grid; grid-template-columns: 1fr 1fr; column-gap: 10mm; margin-top: 9mm; }
   [data-id="protocoles"] .tech-head {
@@ -1660,8 +1684,17 @@
   [data-id="protocoles"] .phase .h-label { color: var(--bordeaux); margin: 0 0 1.2mm; font-size: 6.8pt; line-height: 1.6; }
   [data-id="protocoles"] .phase p { font-size: 9pt; line-height: 1.58; }
 
+  [data-id="protocoles"] .phase .nw { white-space: nowrap; }
+
+  /* Précautions : deux paragraphes côte à côte (lignes de ~105 mm au lieu de 240 mm),
+     le second calé sur le texte de la colonne « Rehaussement de cils » */
   [data-id="protocoles"] .alert { margin-top: auto; padding-top: 4mm; padding-bottom: 4.2mm; }
-  [data-id="protocoles"] .alert p { font-size: 9.4pt; line-height: 1.58; }
+  [data-id="protocoles"] .alert .alert-cols {
+    /* zone de texte de l'encadré = page utile − 22,1 mm (filet 1,1 + retrait 15 + marge 6) :
+       la 2e colonne démarre à (261 − 10) / 2 + 10 + 7 mm du bord, comme le texte au-dessus */
+    display: grid; grid-template-columns: calc(50% - 3.05mm) 1fr; column-gap: 10mm;
+  }
+  [data-id="protocoles"] .alert p { font-size: 9.4pt; line-height: 1.58; margin: 0; }
 </style>
 <section class="page" data-id="protocoles">
   <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie II — Les cils</span></div>
@@ -1678,12 +1711,12 @@
       <div class="cols">
         <div class="col">
           <div class="tech-head">
-            <img class="num-svg" src="assets/numerals/01-bordeaux.svg" alt="01">
+            <img class="num-svg" src="assets/numerals/01-bordeaux-petit.svg" alt="01">
             <h3 class="h-sub">Brow Lift&nbsp;— Sourcils</h3>
           </div>
           <div class="phase">
             <h4 class="h-label">Avant la prestation</h4>
-            <p>Questionner la cliente sur ses attentes, allergies, soins récents et antécédents. Examiner la peau et les poils&nbsp;; rechercher toute contre-indication. Réaliser le test de sensibilité selon la notice et préparer un poste propre.</p>
+            <p>Questionner la cliente sur ses attentes, allergies, soins récents et antécédents. Examiner la peau et les poils&nbsp;; rechercher toute <span class="nw">contre-indication</span>. Réaliser le test de sensibilité selon la notice et préparer un poste propre.</p>
           </div>
           <div class="phase on">
             <h4 class="h-label">Pendant la prestation</h4>
@@ -1697,7 +1730,7 @@
 
         <div class="col">
           <div class="tech-head">
-            <img class="num-svg" src="assets/numerals/02-bordeaux.svg" alt="02">
+            <img class="num-svg" src="assets/numerals/02-bordeaux-petit.svg" alt="02">
             <h3 class="h-sub">Rehaussement de cils</h3>
           </div>
           <div class="phase">
@@ -1717,7 +1750,10 @@
 
       <div class="alert">
         <div class="alert-title">Précautions essentielles</div>
-        <p><strong>Ne jamais appliquer sur une zone irritée ou infectée.</strong> Ne pas improviser les temps de pose ni mélanger des gammes sans validation du fabricant. <strong>En cas de brûlure ou de projection oculaire&nbsp;: arrêter, rincer abondamment à l’eau et demander rapidement un avis médical.</strong></p>
+        <div class="alert-cols">
+          <p><strong>Ne jamais appliquer sur une zone irritée ou infectée.</strong> Ne pas improviser les temps de pose ni mélanger des gammes sans validation&nbsp;du&nbsp;fabricant.</p>
+          <p><strong>En cas de brûlure ou de projection oculaire&nbsp;: arrêter, rincer abondamment à l’eau et demander rapidement un avis médical.</strong></p>
+        </div>
       </div>
     </div>
   </div>
@@ -1734,7 +1770,7 @@
   [data-id="partie-3"] .os-name { font-size: 50pt; line-height: .96; }
   [data-id="partie-3"] .os-toc { left: 20mm; width: 162mm; bottom: 18mm; }
   [data-id="partie-3"] .os-toc .items { display: grid; grid-template-columns: 1fr 1fr; column-gap: 9mm; }
-  /* Numéro et intitulé dans une même ligne de texte */
+  /* Numéro et intitulé dans une même ligne de texte ; une vraie espace insécable après le numéro (Canva la garde) */
   [data-id="partie-3"] .os-toc .item { display: block; white-space: nowrap; }
   [data-id="partie-3"] .os-toc .item .pg { display: inline-block; width: 9mm; }
 </style>
@@ -1748,10 +1784,10 @@
   <div class="os-toc">
     <div class="label">Au programme de cette partie</div>
     <div class="items">
-      <div class="item"><span class="pg">20</span>Fiches pratiques et suivi des clientes</div>
-      <div class="item"><span class="pg">21</span>Photographier son travail</div>
-      <div class="item"><span class="pg">22</span>Réseaux sociaux et communication</div>
-      <div class="item"><span class="pg">24</span>Gestion d’activité et fidélisation</div>
+      <div class="item"><span class="pg">20&nbsp;</span>Fiche technique&nbsp;— Brow Lift</div>
+      <div class="item"><span class="pg">21&nbsp;</span>Photographier son travail</div>
+      <div class="item"><span class="pg">22&nbsp;</span>Développer son activité sur les réseaux sociaux</div>
+      <div class="item"><span class="pg">24&nbsp;</span>Gestion d’activité et fidélisation</div>
     </div>
   </div>
 </section>
@@ -1882,7 +1918,8 @@
   [data-id="photographier"] .rule.short { margin: 5.5mm 0 4.5mm; }
   [data-id="photographier"] .side .lead { font-size: 18pt; line-height: 1.28; color: var(--espresso); }
 
-  /* Méthode : quatre consignes numérotées, filets fins (numéro et texte dans la même ligne) */
+  /* Méthode : quatre consignes numérotées, filets fins (numéro et texte dans la même ligne,
+     séparés par une vraie espace insécable dans la boîte du numéro, conservée par Canva) */
   [data-id="photographier"] .method { list-style: none; margin-top: auto; border-top: .3mm solid var(--espresso); }
   [data-id="photographier"] .method li {
     position: relative; padding: 5.6mm 1mm 5.8mm 12mm; border-bottom: .2mm solid var(--line);
@@ -1931,10 +1968,10 @@
         <p class="lead">Une méthode cohérente<br>pour les avant/après</p>
 
         <ol class="method">
-          <li><span class="n">i.</span>Photographier avant et après avec le même angle, la même distance et un éclairage comparable.</li>
-          <li><span class="n">ii.</span>Nettoyer l’objectif&nbsp;; choisir un fond neutre&nbsp;; <strong>éviter les filtres qui changent la couleur de la peau ou du poil.</strong></li>
-          <li><span class="n">iii.</span>Privilégier un cadrage net et régulier&nbsp;; <strong>demander une autorisation explicite avant toute publication.</strong></li>
-          <li><span class="n">iv.</span>Conserver les originaux et <strong>ne jamais présenter comme sien le travail d’une autre professionnelle.</strong></li>
+          <li><span class="n">i.&nbsp;</span>Photographier avant et après avec le même angle, la même distance et un éclairage comparable.</li>
+          <li><span class="n">ii.&nbsp;</span>Nettoyer l’objectif&nbsp;; choisir un fond neutre&nbsp;; <strong>éviter les filtres qui changent la couleur de la peau ou du poil.</strong></li>
+          <li><span class="n">iii.&nbsp;</span>Privilégier un cadrage net et régulier&nbsp;; <strong>demander une autorisation explicite avant toute publication.</strong></li>
+          <li><span class="n">iv.&nbsp;</span>Conserver les originaux et <strong>ne jamais présenter comme sien le travail d’une autre professionnelle.</strong></li>
         </ol>
       </div>
 
@@ -1962,6 +1999,8 @@
 
   [data-id="reseaux"] .sec-head { border-bottom: .3mm solid var(--espresso); padding-bottom: 2.4mm; margin-bottom: 3.6mm; }
   [data-id="reseaux"] .sec-head .h-sub { font-size: 14pt; margin: 0; }
+  /* numéro suivi d’une vraie espace insécable (Canva la conserve) ; marge réduite d’autant */
+  [data-id="reseaux"] .sec-head .h-sub .no { margin-right: .25mm; }
   [data-id="reseaux"] .identity { margin-top: auto; }
   [data-id="reseaux"] .identity .lead { font-size: 13.4pt; line-height: 1.42; color: var(--espresso); text-wrap: pretty; }
 
@@ -1976,7 +2015,7 @@
   }
   [data-id="reseaux"] .phone .row { position: relative; }
   [data-id="reseaux"] .phone .mk {
-    position: absolute; right: -8.4mm; top: 50%; margin-top: -2.3mm;
+    position: absolute; right: -6.675mm; top: 50%; margin-top: -2.3mm; /* centrée sur le contour du téléphone (4,2 mm de marge + ½ trait) */
     width: 4.6mm; height: 4.6mm; border-radius: 50%; background: var(--bordeaux); color: #fff;
     font-family: var(--display); font-style: italic; font-size: 8.6pt; line-height: 4.3mm; text-align: center;
   }
@@ -2031,7 +2070,7 @@
   }
   [data-id="reseaux"] .tips li:last-child { border-bottom: 0; }
   [data-id="reseaux"] .tips .mk {
-    display: inline-block; vertical-align: .5mm; width: 4.6mm; height: 4.6mm; margin: 0 4.4mm 0 -9mm;
+    display: inline-block; vertical-align: .5mm; width: 4.6mm; height: 4.6mm; margin: 0 3.35mm 0 -9mm; /* + espace insécable réelle (1,05 mm) */
     border-radius: 50%; border: .25mm solid var(--bordeaux); color: var(--bordeaux);
     font-family: var(--display); font-style: italic; font-size: 8.4pt; line-height: 4.1mm; text-align: center;
   }
@@ -2053,13 +2092,13 @@
   }
   [data-id="reseaux"] table.pil td { vertical-align: top; padding: 0 4.5mm; border-left: .2mm solid var(--line); }
   [data-id="reseaux"] table.pil tr.names td { padding-top: 3mm; padding-bottom: 2.4mm; }
-  [data-id="reseaux"] table.pil tr.names th { padding-top: 9.4mm; }
+  [data-id="reseaux"] table.pil tr.names th { padding-top: 11.9mm; } /* même ligne de base que le nom du pilier */
   [data-id="reseaux"] table.pil tr.names td .r {
     display: block; font-family: var(--display); font-style: italic; font-size: 15pt; line-height: 1; color: var(--rose); margin-bottom: 1.4mm;
   }
   [data-id="reseaux"] table.pil tr.names td .nm { font-family: var(--display); font-size: 13.5pt; line-height: 1.2; color: var(--espresso); }
   [data-id="reseaux"] table.pil tr.ideas td { font-size: 9.2pt; line-height: 1.5; text-wrap: pretty; padding-bottom: .5mm; }
-  [data-id="reseaux"] table.pil tr.ideas th { padding-top: 0; }
+  [data-id="reseaux"] table.pil tr.ideas th { padding-top: .9mm; } /* même ligne de base que la 1re ligne d’idées */
 </style>
 <section class="page" data-id="reseaux">
   <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie III — Pratique professionnelle</span></div>
@@ -2070,7 +2109,7 @@
         <h2 class="h-title">Développer son activité sur les réseaux sociaux</h2>
         <div class="rule short"></div>
         <div class="identity">
-          <div class="sec-head"><h3 class="h-sub"><span class="no">1.</span>Construire une identité professionnelle</h3></div>
+          <div class="sec-head"><h3 class="h-sub"><span class="no">1.&nbsp;</span>Construire une identité professionnelle</h3></div>
           <p class="lead">Choisir un nom cohérent, une photo de profil lisible, une palette de couleurs et une présentation claire des prestations. Indiquer la ville, les modalités de réservation et un lien fonctionnel. Mettre en avant le savoir-faire, l’hygiène, les résultats réels et l’accueil.</p>
         </div>
       </div>
@@ -2101,17 +2140,17 @@
       </div>
 
       <div class="col profile">
-        <div class="sec-head"><h3 class="h-sub"><span class="no">2.</span>Optimiser son profil Instagram</h3></div>
+        <div class="sec-head"><h3 class="h-sub"><span class="no">2.&nbsp;</span>Optimiser son profil Instagram</h3></div>
         <ul class="tips">
-          <li><span class="k"><span class="mk">a</span>Nom visible&nbsp;:</span><span>spécialité&nbsp;+ localisation, lorsque cela reste naturel.</span></li>
-          <li><span class="k"><span class="mk">b</span>Biographie&nbsp;:</span><span>prestations, secteur géographique, bénéfice concret et appel à réserver.</span></li>
-          <li><span class="k"><span class="mk">c</span>Stories à la une&nbsp;:</span><span>Tarifs, Résultats, Avis, FAQ, Accès, Disponibilités.</span></li>
-          <li><span class="k"><span class="mk">d</span>Épingler trois publications&nbsp;:</span><span>présentation, prestations, résultats représentatifs.</span></li>
+          <li><span class="k"><span class="mk">a</span>&nbsp;Nom visible&nbsp;:</span><span>spécialité&nbsp;+ localisation, lorsque cela reste naturel.</span></li>
+          <li><span class="k"><span class="mk">b</span>&nbsp;Biographie&nbsp;:</span><span>prestations, secteur géographique, bénéfice concret et appel à réserver.</span></li>
+          <li><span class="k"><span class="mk">c</span>&nbsp;Stories à la une&nbsp;:</span><span>Tarifs, Résultats, Avis, FAQ, Accès, Disponibilités.</span></li>
+          <li><span class="k"><span class="mk">d</span>&nbsp;Épingler trois publications&nbsp;:</span><span>présentation, prestations, résultats représentatifs.</span></li>
         </ul>
       </div>
 
       <div class="pillars">
-        <div class="sec-head"><h3 class="h-sub"><span class="no">3.</span>Les cinq piliers de contenu</h3></div>
+        <div class="sec-head"><h3 class="h-sub"><span class="no">3.&nbsp;</span>Les cinq piliers de contenu</h3></div>
         <table class="pil">
           <colgroup><col class="lab"><col><col><col><col><col></colgroup>
           <tr class="names">
@@ -2150,10 +2189,12 @@
   }
   [data-id="reseaux-2"] .sec-head { border-bottom: .3mm solid var(--espresso); padding-bottom: 2.4mm; margin-bottom: 3.8mm; }
   [data-id="reseaux-2"] .sec-head .h-sub { font-size: 14pt; margin: 0; }
+  /* numéro suivi d’une vraie espace insécable (Canva la conserve) ; marge réduite d’autant */
+  [data-id="reseaux-2"] .sec-head .h-sub .no { margin-right: .25mm; }
 
   /* ---- 4. Reel ---- */
   [data-id="reseaux-2"] .reel { grid-row: 1 / 3; display: flex; flex-direction: column; }
-  [data-id="reseaux-2"] .reel .lead { font-size: 14pt; line-height: 1.42; color: var(--espresso); text-wrap: pretty; }
+  [data-id="reseaux-2"] .reel .lead { font-size: 14.8pt; line-height: 1.42; color: var(--espresso); text-wrap: pretty; }
   [data-id="reseaux-2"] .reel .lead strong { font-weight: 500; color: var(--bordeaux); }
   [data-id="reseaux-2"] .board { margin-top: auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; }
   [data-id="reseaux-2"] .board .fr {
@@ -2224,8 +2265,8 @@
 
       <div class="body">
         <div class="reel">
-          <div class="sec-head"><h3 class="h-sub"><span class="no">4.</span>Réaliser un Reel efficace</h3></div>
-          <p class="lead">Commencer par une accroche claire dans les premières secondes («&nbsp;Brow Lift naturel&nbsp;: voici le résultat&nbsp;»), montrer le détail de la prestation <strong>sans masquer les précautions</strong>, puis terminer par un appel à l’action («&nbsp;Réservation via le lien en bio&nbsp;»). Ajouter des sous-titres et une couverture lisible.</p>
+          <div class="sec-head"><h3 class="h-sub"><span class="no">4.&nbsp;</span>Réaliser un Reel efficace</h3></div>
+          <p class="lead">Commencer par une accroche claire dans les premières secondes («&nbsp;Brow Lift naturel&nbsp;: voici le résultat&nbsp;»), montrer le détail de la prestation <strong>sans masquer les précautions</strong>, puis terminer par un appel à l’action («&nbsp;Réservation via le lien en&nbsp;bio&nbsp;»). Ajouter des sous-titres et une couverture lisible.</p>
           <div class="board" aria-hidden="true">
             <div>
               <div class="fr"><img src="assets/ia/browlift-brosse.jpg" alt="" style="object-position:55% 30%"><span class="n">1</span>
@@ -2249,7 +2290,7 @@
         </div>
 
         <div class="week">
-          <div class="sec-head"><h3 class="h-sub"><span class="no">5.</span>Exemple de calendrier hebdomadaire</h3></div>
+          <div class="sec-head"><h3 class="h-sub"><span class="no">5.&nbsp;</span>Exemple de calendrier hebdomadaire</h3></div>
           <div class="cal">
             <div class="lab r1">Jour</div>
             <div class="day">Lundi</div><div class="day">Mardi</div><div class="day">Mercredi</div>
@@ -2270,7 +2311,7 @@
         </div>
 
         <div class="local">
-          <div class="sec-head"><h3 class="h-sub"><span class="no">6.</span>Attirer une clientèle locale</h3></div>
+          <div class="sec-head"><h3 class="h-sub"><span class="no">6.&nbsp;</span>Attirer une clientèle locale</h3></div>
           <div class="inner">
             <ul class="dots">
               <li>Préciser la zone desservie dans la biographie et les publications pertinentes.</li>
@@ -2304,8 +2345,8 @@
   [data-id="gestion"] .h-title { margin: 3.5mm 0 0; }
   [data-id="gestion"] .rule.short { margin: 6mm 0 0; }
   [data-id="gestion"] .head { display: flex; flex-direction: column; }
-  [data-id="gestion"] .head .photo { margin-top: auto; height: 40mm; position: relative; overflow: hidden; }
-  [data-id="gestion"] .head .photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 58%; }
+  [data-id="gestion"] .head .photo { margin-top: auto; height: 46mm; position: relative; overflow: hidden; }
+  [data-id="gestion"] .head .photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 40% 50%; }
 
   [data-id="gestion"] .sec-head {
     border-bottom: .3mm solid var(--espresso); padding-bottom: 2.4mm; margin-bottom: 4mm;
@@ -2382,8 +2423,11 @@
     position: absolute; right: 20mm; top: 18mm; width: 100mm; height: 158mm;
     border: .25mm solid var(--rose); border-bottom: 0; border-radius: 50mm 50mm 0 0;
   }
-  [data-id="partie-4"] .p4-num { position: absolute; left: 19mm; top: 25mm; height: 58mm; width: auto; }
-  [data-id="partie-4"] .os-title { left: 20mm; top: 94mm; }
+  /* Même position et même taille que le « 03 » de l'ouverture III ; le haut du chiffre s'aligne sur l'arche */
+  [data-id="partie-4"] .p4-num { position: absolute; left: 19mm; top: 19mm; height: 60mm; width: auto; }
+  [data-id="partie-4"] .os-title { left: 20mm; top: 90mm; }
+  /* un peu d'air entre « Partie IV » et l'accent du É */
+  [data-id="partie-4"] .os-part { margin-bottom: 3mm; }
   [data-id="partie-4"] .os-toc { left: 20mm; width: 140mm; bottom: 18mm; }
 </style>
 <section class="page opener-side" data-id="partie-4">
@@ -2396,8 +2440,8 @@
   </div>
   <div class="os-toc">
     <div class="label">Au programme de cette partie</div>
-    <div class="item"><span class="pg">26</span>Évaluation QCM</div>
-    <div class="item"><span class="pg">28</span>Sources et vérification des protocoles</div>
+    <div class="item"><span class="pg">26&nbsp;</span>Évaluation QCM</div>
+    <div class="item"><span class="pg">28&nbsp;</span>Sources et vérification des protocoles</div>
   </div>
 </section>
 
@@ -2518,7 +2562,7 @@
           <p class="q-text"><span class="q-no">2.</span> Pourquoi effectuer un diagnostic avant un Brow&nbsp;Lift&nbsp;?</p>
           <ul class="opts">
             <li><span class="let">A.</span> Pour choisir uniquement la couleur de teinture</li>
-            <li><span class="let">B.</span> Pour évaluer le poil, la peau et les contre-indications</li>
+            <li><span class="let">B.</span> Pour évaluer le poil, la peau et les&nbsp;contre-indications</li>
             <li><span class="let">C.</span> Pour supprimer le test de sensibilité</li>
           </ul>
         </div>
@@ -2558,7 +2602,7 @@
           <p class="q-text"><span class="q-no">7.</span> Quel critère est prioritaire pour une restructuration des sourcils&nbsp;?</p>
           <ul class="opts">
             <li><span class="let">A.</span> Reproduire la même forme sur toutes les clientes</li>
-            <li><span class="let">B.</span> Respecter la morphologie, l’implantation et les souhaits réalistes</li>
+            <li><span class="let">B.</span> Respecter la morphologie, l’implantation et les&nbsp;souhaits réalistes</li>
             <li><span class="let">C.</span> Épiler systématiquement le dessus</li>
           </ul>
         </div>
@@ -2628,7 +2672,7 @@
             <ul class="opts">
               <li><span class="let">A.</span> Des conseils adaptés à la technique et aux recommandations fabricant</li>
               <li><span class="let">B.</span> Aucun conseil n’est utile</li>
-              <li><span class="let">C.</span> Refaire immédiatement la prestation si le résultat déplaît</li>
+              <li><span class="let">C.</span> Refaire immédiatement la prestation si le&nbsp;résultat déplaît</li>
             </ul>
           </div>
           <div class="q">
@@ -2761,7 +2805,7 @@
           <div class="kicker">Fournisseur professionnel des produits</div>
           <h3 class="name">Only Lash Paris <em>(Brow &amp; Lash)</em></h3>
           <div class="txt">
-            <p>Les produits Thuya, Brow Daddy, Noemi et ZOLA utilisés pendant la formation ont été achetés auprès de Only Lash Paris (Brow&nbsp;&amp;&nbsp;Lash).</p>
+            <p>Les produits Thuya, Brow Daddy, Noemi et ZOLA utilisés pendant la formation ont été achetés auprès de Only&nbsp;Lash&nbsp;Paris (Brow&nbsp;&amp;&nbsp;Lash).</p>
             <div class="alert">
               <p><strong>Les notices des fabricants restent les références pour les temps de pose, les compatibilités et les précautions de chaque produit.</strong></p>
             </div>

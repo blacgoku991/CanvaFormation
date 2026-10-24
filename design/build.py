@@ -41,7 +41,7 @@ def option(name):
     return None
 
 
-def make_light_assets(max_px=1500, quality=80):
+def make_light_assets(max_px=2000, quality=80):
     """Copie réduite de design/assets/ dans design/assets-light/ (régénérée si la source est plus récente)."""
     from PIL import Image
     src_root, dst_root = ROOT / 'assets', ROOT / 'assets-light'
@@ -106,7 +106,8 @@ def build(doc, png=True, only=None, tag=None, light=False):
     html_path.write_text(HEAD.format(title=title, body=body), encoding='utf-8')
 
     pdf_path = out_dir / pdf_name
-    subprocess.run(['node', str(ROOT / 'render.js'), str(html_path), str(pdf_path)], check=True)
+    env = dict(__import__('os').environ, PDF_DPI='150' if light else '300')   # résolution des photos recadrées
+    subprocess.run(['node', str(ROOT / 'render.js'), str(html_path), str(pdf_path)], check=True, env=env)
     print(f'{len(tags)} pages -> {pdf_path}')
 
     if png:

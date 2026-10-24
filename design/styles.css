@@ -180,11 +180,10 @@ body {
   color: var(--espresso);
   letter-spacing: .01em;
 }
-.h-title .no {
+.h-title .no {            /* le numéro contient une espace insécable (« 2.&nbsp;») : pas de marge, rien de collé dans Canva */
   font-style: italic;
   color: var(--bordeaux);
   text-transform: none;
-  margin-right: 2mm;
 }
 
 .h-sub {
@@ -198,7 +197,6 @@ body {
 .h-sub .no {
   font-style: italic;
   color: var(--bordeaux);
-  margin-right: 1.5mm;
 }
 
 .h-label {
@@ -470,10 +468,10 @@ table.data tr:last-child td { border-bottom: 0; }
 }
 
 /* Compatibilité import Canva : chaque texte reste un vrai texte, sans césure ni justification */
-body { hyphens: manual; text-align: left; }
+body { hyphens: manual; text-align: left; font-variant-ligatures: no-common-ligatures; }   /* pas de ligature « ﬁ » : mots intacts dans Canva */
 
 /* Chiffres alignés pour les titres, pastilles et tableaux (Playfair a des chiffres elzéviriens par défaut) */
 .h-display, .h-title, .h-sub, table.data td.key, .chip, .folio .num { font-variant-numeric: lining-nums; }
 
 /* Impression : le PDF fait 297,01 mm de large ; le fond hors page reste ivoire au lieu d'un filet gris */
-@media print { html, body { background: var(--ivory); } }
+@media print { html, body { background: none; } }   /* un seul fond par page (celui de .page) */

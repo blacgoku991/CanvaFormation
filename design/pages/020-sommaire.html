@@ -43,9 +43,9 @@
   }
   [data-id="sommaire"] .entry:last-child { border-bottom: 0; }
   [data-id="sommaire"] .entry .t { flex: 0 1 auto; }
-  [data-id="sommaire"] .entry .dots {
-    flex: 1 1 auto; min-width: 5mm; height: 0; border-bottom: .25mm dotted var(--taupe); align-self: center; margin-top: 1mm;
-  }
+  /* Espace extensible entre l'intitulé et le numéro (pas de points de conduite : en pointillés CSS, ils
+     deviendraient des centaines de petits carrés dans Canva ; le filet de chaque ligne guide déjà l'œil) */
+  [data-id="sommaire"] .entry .dots { flex: 1 1 auto; min-width: 5mm; }
   [data-id="sommaire"] .entry .pg {
     flex: 0 0 auto; font-family: var(--display); font-style: italic; font-size: 9.6pt; line-height: 1; color: var(--bordeaux);
   }
@@ -64,41 +64,41 @@
     <div class="part">
       <div class="part-head"><span class="roman">I.</span><span class="name">Sourcils</span><span class="pg-part">Ouverture p.&nbsp;{{p:partie-1}}</span></div>
       <div class="entries">
-        <p class="entry"><span class="t">Le cycle de vie du sourcil</span><span class="dots"></span><span class="pg">{{p:cycle}}</span></p>
-        <p class="entry"><span class="t">Pourquoi les sourcils tombent-ils&nbsp;?</span><span class="dots"></span><span class="pg">{{p:chute}}</span></p>
-        <p class="entry"><span class="t">Restructuration des sourcils &amp;&nbsp;mapping</span><span class="dots"></span><span class="pg">{{p:diagnostic}}</span></p>
-        <p class="entry"><span class="t">Mapping&nbsp;: les trois repères</span><span class="dots"></span><span class="pg">{{p:mapping}}</span></p>
-        <p class="entry"><span class="t">Brow Lift — Thuya</span><span class="dots"></span><span class="pg">{{p:browlift}}</span></p>
-        <p class="entry"><span class="t">Teinture des sourcils — Brow Daddy</span><span class="dots"></span><span class="pg">{{p:teinture}}</span></p>
-        <p class="entry"><span class="t">Décoloration des sourcils — ZOLA</span><span class="dots"></span><span class="pg">{{p:decoloration}}</span></p>
-        <p class="entry"><span class="t">Atelier visuel — Brow Lift</span><span class="dots"></span><span class="pg">{{p:atelier}}</span></p>
-        <p class="entry"><span class="t">Hygiène, sécurité et qualité</span><span class="dots"></span><span class="pg">{{p:hygiene}}</span></p>
+        <p class="entry"><span class="t">Le cycle de vie du sourcil</span><span class="dots"> </span><span class="pg">{{p:cycle}}</span></p>
+        <p class="entry"><span class="t">Pourquoi les sourcils tombent-ils&nbsp;?</span><span class="dots"> </span><span class="pg">{{p:chute}}</span></p>
+        <p class="entry"><span class="t">Restructuration des sourcils &amp;&nbsp;mapping</span><span class="dots"> </span><span class="pg">{{p:diagnostic}}</span></p>
+        <p class="entry"><span class="t">Mapping&nbsp;: les trois repères</span><span class="dots"> </span><span class="pg">{{p:mapping}}</span></p>
+        <p class="entry"><span class="t">Brow Lift — Thuya</span><span class="dots"> </span><span class="pg">{{p:browlift}}</span></p>
+        <p class="entry"><span class="t">Teinture des sourcils — Brow Daddy</span><span class="dots"> </span><span class="pg">{{p:teinture}}</span></p>
+        <p class="entry"><span class="t">Décoloration des sourcils</span><span class="dots"> </span><span class="pg">{{p:decoloration}}</span></p>
+        <p class="entry"><span class="t">Atelier visuel — Brow Lift</span><span class="dots"> </span><span class="pg">{{p:atelier}}</span></p>
+        <p class="entry"><span class="t">Hygiène, sécurité et qualité</span><span class="dots"> </span><span class="pg">{{p:hygiene}}</span></p>
       </div>
     </div>
     <div class="part">
       <div class="part-head"><span class="roman">II.</span><span class="name">Les cils</span><span class="pg-part">Ouverture p.&nbsp;{{p:partie-2}}</span></div>
       <div class="entries">
-        <p class="entry"><span class="t">Brow Lift et rehaussement de cils&nbsp;: les fondamentaux</span><span class="dots"></span><span class="pg">{{p:fondamentaux}}</span></p>
-        <p class="entry"><span class="t">Contre-indications</span><span class="dots"></span><span class="pg">{{p:contre-indications}}</span></p>
-        <p class="entry"><span class="t">Diagnostic et rehaussement de cils — Noemi Innovate</span><span class="dots"></span><span class="pg">{{p:rehaussement}}</span></p>
-        <p class="entry"><span class="t">Teinture des cils et Lash Botox — Noemi</span><span class="dots"></span><span class="pg">{{p:teinture-cils}}</span></p>
-        <p class="entry"><span class="t">Protocoles de prestation&nbsp;: avant, pendant, après</span><span class="dots"></span><span class="pg">{{p:protocoles}}</span></p>
+        <p class="entry"><span class="t">Brow Lift &amp;&nbsp;rehaussement de cils&nbsp;: les fondamentaux</span><span class="dots"> </span><span class="pg">{{p:fondamentaux}}</span></p>
+        <p class="entry"><span class="t">Contre-indications</span><span class="dots"> </span><span class="pg">{{p:contre-indications}}</span></p>
+        <p class="entry"><span class="t">Diagnostic et rehaussement de cils — Noemi Innovate</span><span class="dots"> </span><span class="pg">{{p:rehaussement}}</span></p>
+        <p class="entry"><span class="t">Teinture des cils et Lash Botox — Noemi</span><span class="dots"> </span><span class="pg">{{p:teinture-cils}}</span></p>
+        <p class="entry"><span class="t">Protocoles de prestation&nbsp;: avant, pendant, après</span><span class="dots"> </span><span class="pg">{{p:protocoles}}</span></p>
       </div>
     </div>
     <div class="part">
       <div class="part-head"><span class="roman">III.</span><span class="name">Pratique professionnelle</span><span class="pg-part">Ouverture p.&nbsp;{{p:partie-3}}</span></div>
       <div class="entries">
-        <p class="entry"><span class="t">Fiche technique — Brow Lift</span><span class="dots"></span><span class="pg">{{p:fiche-technique}}</span></p>
-        <p class="entry"><span class="t">Photographier son travail</span><span class="dots"></span><span class="pg">{{p:photographier}}</span></p>
-        <p class="entry"><span class="t">Développer son activité sur les réseaux sociaux</span><span class="dots"></span><span class="pg">{{p:reseaux}}–{{p:reseaux-2}}</span></p>
-        <p class="entry"><span class="t">Gestion d’activité et fidélisation</span><span class="dots"></span><span class="pg">{{p:gestion}}</span></p>
+        <p class="entry"><span class="t">Fiche technique — Brow Lift</span><span class="dots"> </span><span class="pg">{{p:fiche-technique}}</span></p>
+        <p class="entry"><span class="t">Photographier son travail</span><span class="dots"> </span><span class="pg">{{p:photographier}}</span></p>
+        <p class="entry"><span class="t">Développer son activité sur les réseaux sociaux</span><span class="dots"> </span><span class="pg">{{p:reseaux}}–{{p:reseaux-2}}</span></p>
+        <p class="entry"><span class="t">Gestion d’activité et fidélisation</span><span class="dots"> </span><span class="pg">{{p:gestion}}</span></p>
       </div>
     </div>
     <div class="part">
       <div class="part-head"><span class="roman">IV.</span><span class="name">Évaluation</span><span class="pg-part">Ouverture p.&nbsp;{{p:partie-4}}</span></div>
       <div class="entries">
-        <p class="entry"><span class="t">Questionnaire d’évaluation (QCM)</span><span class="dots"></span><span class="pg">{{p:qcm}}–{{p:qcm-2}}</span></p>
-        <p class="entry"><span class="t">Sources et vérification des protocoles</span><span class="dots"></span><span class="pg">{{p:sources}}</span></p>
+        <p class="entry"><span class="t">Évaluation QCM</span><span class="dots"> </span><span class="pg">{{p:qcm}}–{{p:qcm-2}}</span></p>
+        <p class="entry"><span class="t">Sources et vérification des protocoles</span><span class="dots"> </span><span class="pg">{{p:sources}}</span></p>
       </div>
     </div>
   </div>

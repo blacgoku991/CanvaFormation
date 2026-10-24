@@ -31,11 +31,17 @@ Ce dossier accompagne le manuel (Manuel-Dolce-Lash-Brow.pdf) pour le modifier da
 
 ## Polices utilisées
 Le manuel n'utilise que trois polices, choisies parce qu'elles sont proposées dans Canva :
-- **Playfair Display** — titres (Regular, Medium, Italic)
-- **Cormorant Garamond** — phrases d'introduction en italique
-- **Montserrat** — texte courant et petites capitales espacées (Light, Regular, Medium, SemiBold)
+- **Playfair Display** — titres et numéros (Regular, Italic, Medium, Medium Italic, SemiBold)
+- **Cormorant Garamond** — phrases d'introduction en italique (Light Italic, Italic, Medium Italic)
+- **Montserrat** — texte courant et petites capitales espacées (Light, Light Italic, Regular, Italic, Medium, SemiBold)
 
 Si l'une d'elles est remplacée à l'import, sélectionnez le texte et choisissez-la dans la liste des polices de Canva. Les fichiers sont aussi dans le dossier « polices » (Canva Pro permet de les ajouter à votre kit de marque).
+
+Bon à savoir :
+- Dans Canva, Playfair Display affiche ses chiffres « à l'ancienne » (le 3, le 5 et le 9 descendent sous la ligne) : c'est normal, la police est la même.
+- Les grands chiffres en contour (01, 02, 03, 04, 1.5) sont des dessins vectoriels : on peut les déplacer, les agrandir ou changer leur couleur, mais pas les retaper au clavier.
+- Après l'import, vérifiez une page avec de petites capitales espacées (par exemple « AU PROGRAMME DE CETTE PARTIE ») : si Canva a séparé les lettres, retapez le texte puis réglez l'espacement des lettres dans Canva.
+- Page 29 (quatrième de couverture) : la photo de soie est le fond de la page. Clic droit sur la photo → « Définir comme arrière-plan » pour qu'elle ne se sélectionne plus par erreur.
 
 ## Couleurs
 {palette}
