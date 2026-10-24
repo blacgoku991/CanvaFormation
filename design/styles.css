@@ -20,10 +20,11 @@
   --line: rgba(59, 40, 35, .16);
   --line-strong: rgba(59, 40, 35, .32);
 
-  /* Typographie */
-  --display: 'Bodoni Moda', 'Didot', serif;
-  --serif: 'Cormorant Garamond', 'Garamond', serif;
-  --sans: 'Jost', 'Helvetica Neue', sans-serif;
+  /* Typographie — trois familles présentes dans Canva (fichiers statiques, fonts/fonts-canva.css),
+     pour qu'un import du PDF dans Canva garde les bonnes polices */
+  --display: 'Playfair Display', serif;
+  --serif: 'Cormorant Garamond', serif;
+  --sans: 'Montserrat', sans-serif;
 
   /* Grille */
   --page-w: 297mm;
@@ -46,8 +47,8 @@ html, body {
 body {
   font-family: var(--sans);
   font-weight: 300;
-  font-size: 9.6pt;
-  line-height: 1.55;
+  font-size: 8.8pt;
+  line-height: 1.6;
   color: var(--ink);
   font-optical-sizing: auto;
   font-kerning: normal;
@@ -72,17 +73,8 @@ body {
   counter-increment: pg;
 }
 
-/* Grain papier très léger : donne une matière « imprimée » aux fonds unis */
-.page::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url('assets/grain.png');
-  background-size: 50mm 50mm;
-  opacity: .5;
-  pointer-events: none;
-  z-index: 40;
-}
+/* Pas de calque de grain au-dessus des pages : dans Canva, il deviendrait une image
+   posée sur tout le contenu et gênerait chaque modification. */
 
 .page.tint-cream { background: var(--cream); }
 .page.tint-blush { background: var(--blush); }
@@ -107,9 +99,9 @@ body {
   justify-content: space-between;
   align-items: center;
   font-family: var(--sans);
-  font-size: 6.6pt;
+  font-size: 6pt;
   font-weight: 400;
-  letter-spacing: .28em;
+  letter-spacing: .26em;
   text-transform: uppercase;
   color: var(--taupe);
   padding-bottom: 2.6mm;
@@ -126,7 +118,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  font-size: 6.6pt;
+  font-size: 6pt;
   letter-spacing: .22em;
   text-transform: uppercase;
   color: var(--taupe);
@@ -147,9 +139,9 @@ body {
    -------------------------------------------------------------------------- */
 .kicker {
   font-family: var(--sans);
-  font-size: 7pt;
+  font-size: 6.4pt;
   font-weight: 500;
-  letter-spacing: .32em;
+  letter-spacing: .3em;
   text-transform: uppercase;
   color: var(--bordeaux);
   display: flex;
@@ -167,9 +159,9 @@ body {
 .h-display {
   font-family: var(--display);
   font-weight: 400;
-  font-size: 34pt;
-  line-height: .98;
-  letter-spacing: -.005em;
+  font-size: 30pt;
+  line-height: 1.1;
+  letter-spacing: 0;
   text-transform: uppercase;
   color: var(--espresso);
 }
@@ -182,11 +174,11 @@ body {
 .h-title {
   font-family: var(--display);
   font-weight: 400;
-  font-size: 24pt;
-  line-height: 1.05;
+  font-size: 21pt;
+  line-height: 1.14;
   text-transform: uppercase;
   color: var(--espresso);
-  letter-spacing: .005em;
+  letter-spacing: .01em;
 }
 .h-title .no {
   font-style: italic;
@@ -197,9 +189,9 @@ body {
 
 .h-sub {
   font-family: var(--display);
-  font-weight: 500;
-  font-size: 12.5pt;
-  line-height: 1.2;
+  font-weight: 400;
+  font-size: 12pt;
+  line-height: 1.25;
   color: var(--espresso);
   margin: 0 0 2mm;
 }
@@ -211,9 +203,9 @@ body {
 
 .h-label {
   font-family: var(--sans);
-  font-size: 7.2pt;
+  font-size: 6.6pt;
   font-weight: 500;
-  letter-spacing: .24em;
+  letter-spacing: .22em;
   text-transform: uppercase;
   color: var(--mocha);
   margin: 0 0 1.6mm;
@@ -232,7 +224,7 @@ p { margin: 0 0 2.2mm; }
 p:last-child { margin-bottom: 0; }
 strong, b { font-weight: 500; color: var(--espresso); }
 
-.small { font-size: 8.4pt; line-height: 1.5; }
+.small { font-size: 7.8pt; line-height: 1.55; }
 .muted { color: var(--taupe); }
 
 /* Listes */
@@ -316,8 +308,8 @@ ol.steps > li::before {
 .alert .alert-title {
   font-family: var(--sans);
   font-weight: 600;
-  font-size: 7.4pt;
-  letter-spacing: .26em;
+  font-size: 6.6pt;
+  letter-spacing: .24em;
   text-transform: uppercase;
   color: var(--bordeaux);
   margin-bottom: 1.2mm;
@@ -340,8 +332,8 @@ ol.steps > li::before {
   display: inline-block;
   font-family: var(--sans);
   font-weight: 500;
-  font-size: 7.8pt;
-  letter-spacing: .06em;
+  font-size: 7.2pt;
+  letter-spacing: .05em;
   color: var(--bordeaux);
   border: .25mm solid var(--bordeaux);
   border-radius: 10mm;
@@ -355,14 +347,14 @@ ol.steps > li::before {
 table.data {
   width: 100%;
   border-collapse: collapse;
-  font-size: 9pt;
+  font-size: 8.4pt;
 }
 table.data th {
   text-align: left;
   font-family: var(--sans);
   font-weight: 500;
-  font-size: 6.8pt;
-  letter-spacing: .22em;
+  font-size: 6.2pt;
+  letter-spacing: .2em;
   text-transform: uppercase;
   color: var(--taupe);
   padding: 0 3mm 2mm 0;
@@ -375,7 +367,7 @@ table.data td {
 }
 table.data td.key {
   font-family: var(--display);
-  font-size: 10.5pt;
+  font-size: 10pt;
   color: var(--espresso);
   white-space: nowrap;
 }
@@ -424,9 +416,11 @@ table.data tr:last-child td { border-bottom: 0; }
 
 /* Images */
 .img-cover { width: 100%; height: 100%; object-fit: cover; display: block; }
-.blend { mix-blend-mode: multiply; }
+/* (pas de mode de fusion : Canva ne les importe pas) */
 
-/* Grand numéro façon magazine */
+/* Grand numéro façon magazine — pour Canva, préférer les tracés SVG de assets/numerals/
+   (<img class="num-svg" src="assets/numerals/01-bordeaux.svg">) au texte en contour. */
+.num-svg { display: block; height: auto; }
 .big-num {
   font-family: var(--display);
   font-weight: 400;
@@ -483,3 +477,6 @@ table.data tr:last-child td { border-bottom: 0; }
 .opener-side .os-toc .item .pg {
   font-family: var(--display); font-style: italic; color: var(--bordeaux); font-size: 9.5pt; min-width: 6mm;
 }
+
+/* Compatibilité import Canva : chaque texte reste un vrai texte, sans césure ni justification */
+body { hyphens: manual; text-align: left; }

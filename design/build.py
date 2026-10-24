@@ -24,7 +24,7 @@ HEAD = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <title>{title}</title>
-<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="fonts/fonts-canva.css">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
