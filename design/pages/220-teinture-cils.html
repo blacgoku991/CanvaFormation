@@ -4,42 +4,39 @@
     column-gap: 10mm; row-gap: 8mm; height: 100%;
   }
   [data-id="teinture-cils"] .col { display: flex; flex-direction: column; }
-  [data-id="teinture-cils"] .h-title { margin: 3mm 0 0; font-size: 21pt; }
+  [data-id="teinture-cils"] .h-title { margin: 3mm 0 0; font-size: 21pt; font-variant-numeric: lining-nums; }
   [data-id="teinture-cils"] .rule.short { margin: 5mm 0 5mm; }
   [data-id="teinture-cils"] .s7 .lead { font-size: 16.5pt; line-height: 1.34; color: var(--espresso); }
-  [data-id="teinture-cils"] .s7 .care { margin-top: auto; height: 43mm; padding: 5.6mm 6mm 6mm; }
-  [data-id="teinture-cils"] .s7 .care p { font-size: 10.2pt; line-height: 1.55; }
+  [data-id="teinture-cils"] .s7 .care { margin-top: auto; padding: 5.6mm 6mm 6mm; }
+  [data-id="teinture-cils"] .s7 .care p { font-size: 9.6pt; line-height: 1.58; }
   [data-id="teinture-cils"] .s7 .care p + p { margin-top: 2mm; }
 
-  /* Visuel : regard et cils, recadré dans une arche */
+  /* Produit Noemi Intense — Step 1.5 (photo de la cliente, fond blanc) dans une arche blanche */
   [data-id="teinture-cils"] .visual { position: relative; }
   [data-id="teinture-cils"] .arch-line {
     position: absolute; inset: 0;
-    border: .25mm solid var(--bordeaux); border-bottom: 0; border-radius: 32mm 32mm 0 0; opacity: .45;
+    border: .25mm solid var(--rose); border-bottom: 0; border-radius: 32mm 32mm 0 0;
   }
   [data-id="teinture-cils"] .arch {
     position: absolute; top: 3mm; left: 3mm; right: 3mm; bottom: 0; overflow: hidden;
-    border-radius: 29mm 29mm 0 0; background: var(--paper);
+    border-radius: 29mm 29mm 0 0; background: #fff;
   }
-  [data-id="teinture-cils"] .arch img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+  [data-id="teinture-cils"] .arch img {
+    position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: contain; object-position: 50% 62%;
+  }
 
   [data-id="teinture-cils"] .s8 .alert { margin-top: 6mm; }
+  [data-id="teinture-cils"] .s8 .alert p { font-size: 9.2pt; line-height: 1.58; }
   [data-id="teinture-cils"] .s8 .alert p + p { margin-top: 2mm; }
+  /* Repère « Step 1.5 » : mot en texte réel, chiffres en tracé vectoriel (assets/numerals) */
   [data-id="teinture-cils"] .s8 .marker {
-    margin-top: auto; height: 43mm; display: grid; grid-template-columns: auto 1fr; column-gap: 6mm; align-items: end;
-    border-top: .2mm solid var(--line); padding-top: 3.4mm;
+    margin-top: auto; border-top: .2mm solid var(--line); padding-top: 4mm;
   }
-  [data-id="teinture-cils"] .s8 .marker .num {
-    font-family: var(--display); font-weight: 400; font-size: 92pt; line-height: .76; letter-spacing: -.02em;
-    color: transparent; -webkit-text-stroke: .3mm var(--bordeaux); opacity: .8;
+  [data-id="teinture-cils"] .s8 .marker .step {
+    font-family: var(--display); font-style: italic; font-size: 15pt; line-height: 1; color: var(--bordeaux);
+    margin: 0 0 1.6mm .4mm;
   }
-  [data-id="teinture-cils"] .s8 .marker .num small {
-    display: block; font-size: 15pt; font-style: italic; letter-spacing: 0; line-height: 1;
-    color: var(--bordeaux); -webkit-text-stroke: 0; margin: 0 0 1.2mm .6mm;
-  }
-  [data-id="teinture-cils"] .s8 .see { font-size: 8.4pt; line-height: 1.45; color: var(--mocha); padding-bottom: 1mm; }
-  [data-id="teinture-cils"] .s8 .see .h-label { display: block; color: var(--taupe); margin-bottom: .8mm; }
-  [data-id="teinture-cils"] .s8 .see .pg { font-family: var(--display); font-style: italic; font-size: 10pt; color: var(--bordeaux); }
+  [data-id="teinture-cils"] .s8 .marker .num-svg { height: 30mm; width: auto; }
 
   [data-id="teinture-cils"] .after {
     grid-column: 1 / -1;
@@ -47,7 +44,7 @@
     background: var(--cream); padding: 7mm 8mm 7.4mm;
   }
   [data-id="teinture-cils"] .after .h-sub { font-size: 17pt; margin: 2.6mm 0 0; }
-  [data-id="teinture-cils"] .after .lead { font-size: 16.5pt; line-height: 1.32; max-width: 140mm; color: var(--espresso); }
+  [data-id="teinture-cils"] .after .lead { font-size: 16pt; line-height: 1.34; max-width: 145mm; color: var(--espresso); }
 </style>
 <section class="page" data-id="teinture-cils">
   <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie II — Les cils</span></div>
@@ -66,7 +63,7 @@
 
       <div class="visual">
         <div class="arch-line"></div>
-        <div class="arch"><img src="assets/ia/cils-teintes.jpg" alt=""></div>
+        <div class="arch"><img src="assets/client/produit-noemi-intense.jpg" alt=""></div>
       </div>
 
       <div class="col s8">
@@ -78,8 +75,8 @@
           <p><strong>Le temps de pose et sa place exacte dans la procédure restent à valider avec la notice du fabricant.</strong></p>
         </div>
         <div class="marker">
-          <div class="num"><small>Step</small>1.5</div>
-          <div class="see"><span class="h-label">Voir aussi</span>Ordre des étapes enseigné, p.&nbsp;<span class="pg">{{p:rehaussement}}</span></div>
+          <p class="step">Step</p>
+          <img class="num-svg" src="assets/numerals/1-5-bordeaux.svg" alt="1.5">
         </div>
       </div>
 

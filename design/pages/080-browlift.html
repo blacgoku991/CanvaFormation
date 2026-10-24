@@ -3,12 +3,25 @@
   [data-id="browlift"] .side { display: flex; flex-direction: column; }
   [data-id="browlift"] .side .h-title { margin: 3mm 0 4.5mm; font-size: 23pt; }
   [data-id="browlift"] .side .protocol { font-size: 9.8pt; }
-  [data-id="browlift"] .side .photo {
-    margin-top: 7mm; flex: 1; min-height: 52mm; overflow: hidden; position: relative; background: #fff;
+  /* Carte produit blanche : la photo Thuya (fond blanc pur) se fond dans la carte */
+  [data-id="browlift"] .side .prod {
+    margin-top: 7mm; flex: 1; min-height: 60mm; display: flex; flex-direction: column;
+    background: #fff; border: .2mm solid var(--line);
   }
-  /* Gros plan sur le sourcil (portrait de couverture affiché à ~0,8× sa taille naturelle) */
-  [data-id="browlift"] .side .photo img {
-    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%;
+  [data-id="browlift"] .side .prod .shot { position: relative; flex: 1; overflow: hidden; }
+  /* 852 × 1034 px affichés sur 78 mm de large (≈ 280 dpi) ; les produits (x 86-800, y 258-802 px)
+     sont centrés dans le cadre, le blanc de la photo se confond avec celui de la carte */
+  [data-id="browlift"] .side .prod .shot img {
+    position: absolute; display: block; width: 78mm; height: auto;
+    left: calc(50% - 40.6mm); top: calc(50% - 49.5mm);
+  }
+  [data-id="browlift"] .side .prod .cap {
+    margin: 0 5.5mm; padding: 3mm 0 3.6mm; border-top: .2mm solid var(--line);
+    font-family: var(--display); font-size: 12.5pt; line-height: 1.2; color: var(--espresso);
+  }
+  [data-id="browlift"] .side .prod .cap .lbl {
+    display: block; font-family: var(--sans); font-size: 6.4pt; font-weight: 500; letter-spacing: .24em;
+    text-transform: uppercase; color: var(--bordeaux); margin-bottom: 1.2mm;
   }
   [data-id="browlift"] .main { display: flex; flex-direction: column; }
   [data-id="browlift"] .times-group { margin-top: auto; }
@@ -63,7 +76,10 @@
         <div class="kicker">Technique et temps de pose</div>
         <h2 class="h-title"><span class="no">2.</span>Brow Lift&nbsp;— Thuya</h2>
         <p class="protocol">Nettoyer les sourcils, appliquer la lotion permanente Thuya selon les zones prévues, puis retirer complètement. Appliquer ensuite le neutralisant (deuxième étape), retirer selon la notice, puis <strong>terminer par la crème de soin Thuya</strong>, à la fin de la prestation.</p>
-        <div class="photo"><img src="assets/ia/browlift-brosse.jpg" alt=""></div>
+        <div class="prod">
+          <div class="shot"><img src="assets/client/produits-thuya.jpg" alt="Produits Thuya"></div>
+          <p class="cap"><span class="lbl">Produits utilisés&nbsp;:</span>Gamme Thuya</p>
+        </div>
       </div>
 
       <div class="main">

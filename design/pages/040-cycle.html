@@ -5,14 +5,11 @@
   }
   [data-id="cycle"] .cy-head .h-title { margin-top: 4mm; }
   [data-id="cycle"] .cy-head .lead { font-size: 13.5pt; padding-bottom: .6mm; }
-  [data-id="cycle"] .cy-figure { margin: 7mm auto 0; width: 224mm; }
-  [data-id="cycle"] .cy-figure svg {
-    display: block; width: 100%; height: auto;
-    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
-    mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
-  }
+  [data-id="cycle"] .cy-figure { margin: 5mm auto 0; width: 224mm; }
+  /* Pas de masque de fondu (non importé par Canva) : la bande de peau garde des bords nets */
+  [data-id="cycle"] .cy-figure svg { display: block; width: 100%; height: auto; }
   [data-id="cycle"] .cy-labels { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 3.4mm; }
-  [data-id="cycle"] .cy-labels .ph { text-align: center; padding: 0 5mm; }
+  [data-id="cycle"] .cy-labels .ph { text-align: center; padding: 0 1.5mm; }
   [data-id="cycle"] .cy-labels .ph::before {
     content: ''; display: block; width: .25mm; height: 3.4mm; margin: 0 auto 2.4mm; background: var(--bordeaux);
   }
@@ -21,7 +18,7 @@
     color: var(--espresso); line-height: 1.1;
   }
   [data-id="cycle"] .cy-labels .ph-desc {
-    display: block; margin-top: 1.4mm; font-size: 7.2pt; font-weight: 400; letter-spacing: .2em; text-transform: uppercase;
+    display: block; margin-top: 1.4mm; font-size: 6.8pt; font-weight: 400; letter-spacing: .18em; text-transform: uppercase;
     color: var(--taupe); line-height: 1.6;
   }
   [data-id="cycle"] .cy-text {
@@ -107,7 +104,7 @@
     <path class="bulb" d="M-15 196 C-20 214 -10 221 0 221 C10 221 20 214 15 196 C11 184 6 178 0 178 C-6 178 -11 184 -15 196 Z"/>
     <path class="papilla" d="M-7 221 C-7 211 -4 205 0 205 C4 205 7 211 7 221 Z"/>
     <path class="hair-new" d="M0 182 C0 150 0 118 1 96"/>
-    <ellipse class="bulb" cx="-3" cy="92" rx="6" ry="8" opacity=".35"/>
+    <ellipse cx="-3" cy="92" rx="6" ry="8" fill="#B9B1AD"/>
     <path class="hair-old" d="M-3 86 C-3 64 -1 46 4 30 C10 14 24 4 42 0"/>
   </g>
 </svg>

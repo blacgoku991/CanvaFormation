@@ -1,63 +1,63 @@
 <style>
-  .opener .op-photo {
-    position: absolute; left: 0; top: 0; width: 297mm; height: 128mm; overflow: hidden;
+  /* Bandeau panoramique du regard (photo de la cliente, 3120 × 900 px) sur toute la largeur */
+  [data-id="partie-1"] .p1-band {
+    position: absolute; left: 0; top: 0; width: 297mm; height: 79mm; overflow: hidden;
   }
-  .opener .op-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 42%; }
-  .opener .op-photo::after {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(247, 242, 236, 0) 62%, rgba(247, 242, 236, .9) 96%, var(--ivory) 100%);
+  [data-id="partie-1"] .p1-band img {
+    display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 100%;
   }
-  .opener .op-num {
-    position: absolute; right: 14mm; top: 58mm;
-    font-family: var(--display); font-size: 250pt; line-height: .72; letter-spacing: -.03em;
-    color: transparent; -webkit-text-stroke: .4mm var(--bordeaux); opacity: .85;
+  /* Fondu doux vers l'ivoire en bas du bandeau (forme décorative séparée, supprimable dans Canva) */
+  [data-id="partie-1"] .p1-notch {
+    position: absolute; left: 0; top: 59mm; width: 118mm; height: 21mm; background: var(--ivory);
   }
-  .opener .op-title {
-    position: absolute; left: 20mm; top: 104mm;
+  [data-id="partie-1"] .p1-num { position: absolute; right: 20mm; top: 88mm; height: 54mm; width: auto; }
+  [data-id="partie-1"] .p1-title { position: absolute; left: 20mm; top: 64mm; }
+  [data-id="partie-1"] .p1-part {
+    font-family: var(--display); font-style: italic; font-weight: 400; font-size: 19pt; line-height: 1.1;
+    color: var(--bordeaux); margin: 0 0 1.5mm;
   }
-  .opener .op-part {
-    font-family: var(--display); font-style: italic; font-size: 20pt; color: var(--bordeaux);
-    margin-bottom: 1mm;
+  [data-id="partie-1"] .p1-name {
+    font-family: var(--display); font-weight: 400; font-size: 64pt; line-height: 1;
+    text-transform: uppercase; letter-spacing: .01em; color: var(--espresso);
   }
-  .opener .op-name {
-    font-family: var(--display); font-weight: 400; font-size: 76pt; line-height: .86;
-    text-transform: uppercase; letter-spacing: -.01em; color: var(--espresso);
+  [data-id="partie-1"] .p1-toc { position: absolute; left: 20mm; right: 20mm; bottom: 16mm; }
+  [data-id="partie-1"] .p1-toc .label {
+    font-family: var(--sans); font-weight: 400; font-size: 6.6pt; line-height: 1.4; letter-spacing: .3em;
+    text-transform: uppercase; color: var(--taupe);
+    padding-bottom: 2.6mm; border-bottom: .3mm solid var(--espresso); margin: 0 0 .6mm;
   }
-  .opener .op-toc { position: absolute; left: 20mm; right: 20mm; bottom: 16mm; }
-  /* Libellé posé sur le filet, comme les ouvertures des Parties II à IV */
-  .opener .op-toc .label {
-    font-size: 7pt; letter-spacing: .3em; text-transform: uppercase; color: var(--taupe);
-    padding-bottom: 2.6mm; border-bottom: .3mm solid var(--espresso); margin-bottom: 1mm;
+  [data-id="partie-1"] .p1-toc .items { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 9mm; }
+  /* Numéro et intitulé dans une même ligne de texte */
+  [data-id="partie-1"] .p1-toc .item {
+    display: block; white-space: nowrap; margin: 0;
+    padding: 1.8mm 0; border-bottom: .2mm solid var(--line);
+    font-family: var(--sans); font-weight: 300; font-size: 8.4pt; line-height: 1.4; color: var(--ink);
   }
-  .opener .op-toc .items { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 9mm; row-gap: 0; }
-  .opener .op-toc .item {
-    display: flex; gap: 2.6mm; align-items: baseline;
-    padding: 1.7mm 0; border-bottom: .2mm solid var(--line);
-    font-size: 8.4pt; color: var(--ink);
-  }
-  .opener .op-toc .item .pg {
-    font-family: var(--display); font-style: italic; color: var(--bordeaux); font-size: 9.5pt; min-width: 6mm;
+  [data-id="partie-1"] .p1-toc .item .pg {
+    display: inline-block; width: 9mm;
+    font-family: var(--display); font-style: italic; font-size: 9.5pt; color: var(--bordeaux);
   }
 </style>
 <section class="page opener" data-id="partie-1">
-  <div class="op-photo"><img src="assets/ia/ouverture-sourcils.jpg" alt=""></div>
-  <div class="op-num">01</div>
-  <div class="op-title">
-    <div class="op-part">Partie I</div>
-    <div class="op-name">Sourcils</div>
+  <div class="p1-band"><img src="assets/client/portrait-goupillon-regard.jpg" alt=""></div>
+  <div class="p1-notch"></div>
+  <img class="num-svg p1-num" src="assets/numerals/01-bordeaux.svg" alt="">
+  <div class="p1-title">
+    <p class="p1-part">Partie I</p>
+    <h2 class="p1-name">Sourcils</h2>
   </div>
-  <div class="op-toc">
-    <div class="label">Au programme de cette partie</div>
+  <div class="p1-toc">
+    <p class="label">Au programme de cette partie</p>
     <div class="items">
-      <div class="item"><span class="pg">{{p:cycle}}</span>Le cycle de vie du sourcil</div>
-      <div class="item"><span class="pg">{{p:chute}}</span>Pourquoi les sourcils tombent-ils&nbsp;?</div>
-      <div class="item"><span class="pg">{{p:diagnostic}}</span>Restructuration des sourcils &amp;&nbsp;mapping</div>
-      <div class="item"><span class="pg">{{p:mapping}}</span>Mapping&nbsp;: les trois repères</div>
-      <div class="item"><span class="pg">{{p:browlift}}</span>Brow Lift — Thuya</div>
-      <div class="item"><span class="pg">{{p:teinture}}</span>Teinture des sourcils — Brow Daddy</div>
-      <div class="item"><span class="pg">{{p:decoloration}}</span>Décoloration des sourcils</div>
-      <div class="item"><span class="pg">{{p:atelier}}</span>Atelier visuel — Brow Lift</div>
-      <div class="item"><span class="pg">{{p:hygiene}}</span>Hygiène, sécurité et qualité</div>
+      <p class="item"><span class="pg">{{p:cycle}}</span>Le cycle de vie du sourcil</p>
+      <p class="item"><span class="pg">{{p:chute}}</span>Pourquoi les sourcils tombent-ils&nbsp;?</p>
+      <p class="item"><span class="pg">{{p:diagnostic}}</span>Restructuration des sourcils &amp;&nbsp;mapping</p>
+      <p class="item"><span class="pg">{{p:mapping}}</span>Mapping&nbsp;: les trois repères</p>
+      <p class="item"><span class="pg">{{p:browlift}}</span>Brow Lift — Thuya</p>
+      <p class="item"><span class="pg">{{p:teinture}}</span>Teinture des sourcils — Brow Daddy</p>
+      <p class="item"><span class="pg">{{p:decoloration}}</span>Décoloration des sourcils — ZOLA</p>
+      <p class="item"><span class="pg">{{p:atelier}}</span>Atelier visuel — Brow Lift</p>
+      <p class="item"><span class="pg">{{p:hygiene}}</span>Hygiène, sécurité et qualité</p>
     </div>
   </div>
 </section>

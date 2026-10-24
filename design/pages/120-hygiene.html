@@ -12,33 +12,33 @@
   /* Checklist : cases à cocher */
   [data-id="hygiene"] ul.checks { list-style: none; border-top: .3mm solid var(--espresso); }
   [data-id="hygiene"] ul.checks li {
-    position: relative; padding: 3.7mm 0 3.7mm 8.4mm; border-bottom: .2mm solid var(--line); line-height: 1.5;
-    text-wrap: pretty;
+    position: relative; padding: 4.6mm 0 4.6mm 8.4mm; border-bottom: .2mm solid var(--line); line-height: 1.5;
+    font-size: 9.4pt;
   }
   [data-id="hygiene"] ul.checks li:last-child { border-bottom: 0; }
   [data-id="hygiene"] ul.checks li::before {
-    content: ''; position: absolute; left: 0; top: calc(3.7mm + .22em); width: 3.5mm; height: 3.5mm;
+    content: ''; position: absolute; left: 0; top: calc(4.6mm + .22em); width: 3.5mm; height: 3.5mm;
     border: .28mm solid var(--mocha); border-radius: .5mm; background: var(--paper);
   }
-  [data-id="hygiene"] .side .alert { margin-top: 1.6mm; padding: 3.8mm 5mm 4mm 14mm; }
+  [data-id="hygiene"] .side .alert { margin-top: auto; padding: 3.8mm 5mm 4mm 14mm; }
   [data-id="hygiene"] .side .alert::before { left: 4mm; top: 3.8mm; }
   [data-id="hygiene"] .side .alert ul.checks { border-top: 0; }
+  [data-id="hygiene"] .side .alert ul.checks li { padding-top: 3.7mm; padding-bottom: 3.7mm; }
+  [data-id="hygiene"] .side .alert ul.checks li::before { top: calc(3.7mm + .22em); }
   [data-id="hygiene"] .side .alert ul.checks li { border-bottom-color: rgba(122, 36, 48, .2); }
   [data-id="hygiene"] .side .alert ul.checks li:first-child { padding-top: 1.2mm; }
   [data-id="hygiene"] .side .alert ul.checks li:first-child::before { top: calc(1.2mm + .22em); }
   [data-id="hygiene"] .side .alert ul.checks li:last-child { padding-bottom: 0; }
   [data-id="hygiene"] .side .alert ul.checks li::before { border-color: var(--bordeaux); background: #fff; }
-  [data-id="hygiene"] .side .alert li.eye { font-size: 10.2pt; }
+  [data-id="hygiene"] .side .alert ul.checks li { font-size: 9.4pt; }
 
   /* Colonne de droite : visuel + tableau */
   [data-id="hygiene"] .main { display: flex; flex-direction: column; }
-  [data-id="hygiene"] .photo {
-    position: relative; flex: 1; min-height: 60mm; overflow: hidden; background: var(--cream);
-    display: flex; align-items: center; justify-content: center; padding: 6mm 10mm 4mm;
-  }
-  [data-id="hygiene"] .photo svg { width: 100%; height: 100%; }
+  /* Illustration (SVG décoratif) : prend la hauteur restante, sans imposer sa hauteur naturelle */
+  [data-id="hygiene"] .photo { position: relative; flex: 1 1 0; min-height: 0; overflow: hidden; background: var(--cream); }
+  [data-id="hygiene"] .photo svg { position: absolute; left: 10mm; right: 10mm; top: 6mm; bottom: 4mm; width: calc(100% - 20mm); height: calc(100% - 10mm); }
   [data-id="hygiene"] .vigil { margin-top: 8mm; }
-  [data-id="hygiene"] table.data td { text-wrap: pretty; font-size: 9.4pt; padding-top: 3.2mm; padding-bottom: 3.2mm; }
+  [data-id="hygiene"] table.data td { font-size: 9.4pt; padding-top: 3.2mm; padding-bottom: 3.2mm; }
   [data-id="hygiene"] table.data td.key { width: 46mm; font-size: 12.5pt; line-height: 1.2; }
   [data-id="hygiene"] table.data th { padding-bottom: 2.4mm; }
 </style>
@@ -60,7 +60,7 @@
           <div class="alert-title">Important</div>
           <ul class="checks">
             <li><strong>Aucune prestation sur une zone présentant une infection, une lésion ou une irritation active.</strong></li>
-            <li class="eye"><strong>En cas de projection oculaire&nbsp;: rinçage immédiat abondant et avis médical urgent.</strong></li>
+            <li class="eye"><strong>En cas de projection oculaire&nbsp;:<br>rinçage immédiat abondant et avis médical urgent.</strong></li>
           </ul>
         </div>
       </div>
@@ -106,7 +106,7 @@
           <table class="data">
             <thead><tr><th>Technique</th><th>Vigilance principale</th></tr></thead>
             <tbody>
-              <tr><td class="key">Teinture <em>hybride</em></td><td>Sensibilisation possible&nbsp;: respecter le test préalable et la notice exacte.</td></tr>
+              <tr><td class="key">Teinture <em>hybride</em></td><td>Sensibilisation possible&nbsp;:<br>respecter le test préalable et la notice exacte.</td></tr>
               <tr><td class="key">Décoloration</td><td>Éviter le surtraitement, utiliser uniquement l’oxydant compatible indiqué par le fabricant.</td></tr>
               <tr><td class="key">Rehaussement <em>de cils</em></td><td>Protéger l’œil, contrôler le placement des cils et respecter les temps du système.</td></tr>
               <tr><td class="key">Lash <em>Botox</em></td><td>Soin cosmétique&nbsp;: emplacement dans la séquence à vérifier auprès du fabricant.</td></tr>

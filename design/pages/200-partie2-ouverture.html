@@ -1,28 +1,71 @@
 <style>
-  [data-id="partie-2"] .os-photo { left: 0; width: 158mm; }
-  [data-id="partie-2"] .os-photo img { object-position: 40% 35%; }
-  [data-id="partie-2"] .os-photo::after {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(90deg, rgba(247, 242, 236, 0) 70%, var(--ivory) 100%);
+  /* Ouverture Partie II — photo de la cliente (goupillon) sur la moitié gauche, pleine hauteur, bord franc
+     (pas de fondu : un dégradé deviendrait une image posée sur la photo dans Canva). */
+  [data-id="partie-2"] .p2-photo {
+    position: absolute; left: 0; top: 0; width: 158mm; height: 210mm; overflow: hidden;
   }
-  [data-id="partie-2"] .os-num { right: 16mm; top: 20mm; }
-  /* Titre et sommaire alignés sur un même bord, hors du visage (ne traverse plus les lèvres) */
-  [data-id="partie-2"] .os-title { left: 136mm; top: 96mm; }
-  [data-id="partie-2"] .os-toc { left: 136mm; right: 20mm; bottom: 18mm; }
+  /* l'image déborde de 0,6 mm pour masquer le liseré clair laissé par l'extraction (bords droit et bas) */
+  [data-id="partie-2"] .p2-photo img {
+    position: absolute; left: -.6mm; top: -.6mm; width: calc(100% + 1.2mm); height: calc(100% + 1.2mm);
+    object-fit: cover; object-position: 50% 0;
+  }
+  [data-id="partie-2"] .p2-num { position: absolute; right: 18mm; top: 20mm; height: 56mm; width: auto; }
+  [data-id="partie-2"] .p2-title { position: absolute; left: 172mm; top: 88mm; }
+  [data-id="partie-2"] .p2-part {
+    font-family: var(--display); font-style: italic; font-weight: 400; font-size: 19pt; line-height: 1.1;
+    color: var(--bordeaux); margin: 0 0 1.5mm;
+  }
+  [data-id="partie-2"] .p2-name {
+    font-family: var(--display); font-weight: 400; font-size: 64pt; line-height: 1;
+    text-transform: uppercase; letter-spacing: .01em; color: var(--espresso); white-space: nowrap;
+  }
+  /* Sommaire de la partie : carte papier posée à cheval sur le bord de la photo.
+     NB : elle masque aussi, en bas à droite de la photo, un reste du sommaire de la capture
+     (chiffres « 14 / 15 » et filet) : ne pas la déplacer sans nettoyer l'image. */
+  [data-id="partie-2"] .p2-toc {
+    position: absolute; left: 112mm; right: 18mm; bottom: 16mm;
+    background: var(--paper); border: .2mm solid var(--line); border-top: .6mm solid var(--bordeaux);
+    padding: 5mm 8mm 4.2mm;
+  }
+  [data-id="partie-2"] .p2-toc .label {
+    font-family: var(--sans); font-weight: 400; font-size: 6.6pt; line-height: 1.4; letter-spacing: .3em;
+    text-transform: uppercase; color: var(--taupe);
+    padding-bottom: 2.6mm; border-bottom: .3mm solid var(--espresso); margin: 0 0 .6mm;
+  }
+  [data-id="partie-2"] .p2-toc .items {
+    display: grid; grid-template-columns: 1fr 1fr; grid-auto-flow: column; grid-template-rows: repeat(4, auto);
+    column-gap: 9mm;
+  }
+  /* Numéro et intitulé dans une même ligne de texte */
+  [data-id="partie-2"] .p2-toc .item {
+    display: block; white-space: nowrap; margin: 0;
+    padding: 1.7mm 0; border-bottom: .2mm solid var(--line);
+    font-family: var(--sans); font-weight: 300; font-size: 8.4pt; line-height: 1.4; color: var(--ink);
+  }
+  [data-id="partie-2"] .p2-toc .item:nth-child(4n) { border-bottom: 0; }
+  [data-id="partie-2"] .p2-toc .item .pg {
+    display: inline-block; width: 9mm;
+    font-family: var(--display); font-style: italic; font-size: 9.5pt; color: var(--bordeaux);
+  }
 </style>
-<section class="page opener-side" data-id="partie-2">
-  <div class="os-photo"><img src="assets/ia/ouverture-cils.jpg" alt=""></div>
-  <div class="os-num">02</div>
-  <div class="os-title">
-    <div class="os-part">Partie II</div>
-    <div class="os-name">Les cils</div>
+<section class="page" data-id="partie-2">
+  <div class="p2-photo"><img src="assets/client/portrait-goupillon-p2.jpg" alt=""></div>
+  <img class="num-svg p2-num" src="assets/numerals/02-bordeaux.svg" alt="">
+  <div class="p2-title">
+    <p class="p2-part">Partie II</p>
+    <h2 class="p2-name">Les cils</h2>
   </div>
-  <div class="os-toc">
-    <div class="label">Au programme de cette partie</div>
-    <div class="item"><span class="pg">{{p:rehaussement}}</span>Diagnostic avant rehaussement</div>
-    <div class="item"><span class="pg">{{p:rehaussement}}</span>Rehaussement de cils — Noemi Innovate</div>
-    <div class="item"><span class="pg">{{p:teinture-cils}}</span>Teinture des cils — Noemi</div>
-    <div class="item"><span class="pg">{{p:teinture-cils}}</span>Lash Botox — Noemi Intense, Step 1.5</div>
-    <div class="item"><span class="pg">{{p:teinture-cils}}</span>Conseils après prestation</div>
+  <div class="p2-toc" data-fit>
+    <p class="label">Au programme de cette partie</p>
+    <div class="items">
+      <p class="item"><span class="pg">{{p:fondamentaux}}</span>Les fondamentaux</p>
+      <p class="item"><span class="pg">{{p:contre-indications}}</span>Contre-indications</p>
+      <p class="item"><span class="pg">{{p:rehaussement}}</span>Diagnostic avant rehaussement</p>
+      <p class="item"><span class="pg">{{p:rehaussement}}</span>Rehaussement de cils — Noemi Innovate</p>
+      <p class="item"><span class="pg">{{p:teinture-cils}}</span>Teinture des cils — Noemi</p>
+      <p class="item"><span class="pg">{{p:teinture-cils}}</span>Lash Botox — Noemi Intense, Step&nbsp;1.5</p>
+      <p class="item"><span class="pg">{{p:teinture-cils}}</span>Conseils après prestation</p>
+      <p class="item"><span class="pg">{{p:protocoles}}</span>Protocoles de prestation</p>
+    </div>
   </div>
 </section>

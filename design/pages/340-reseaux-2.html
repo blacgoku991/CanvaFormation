@@ -6,8 +6,8 @@
   [data-id="reseaux-2"] .head .see .pg { font-family: var(--display); font-style: italic; font-size: 10pt; color: var(--bordeaux); }
 
   [data-id="reseaux-2"] .body {
-    flex: 1; margin-top: 9mm; display: grid; grid-template-columns: 84mm 1fr; grid-template-rows: auto 1fr;
-    column-gap: 11mm; row-gap: 9mm;
+    flex: 1; min-height: 0; margin-top: 7mm; display: grid; grid-template-columns: 78mm 1fr; grid-template-rows: auto 1fr;
+    column-gap: 11mm; row-gap: 7mm;
   }
   [data-id="reseaux-2"] .sec-head { border-bottom: .3mm solid var(--espresso); padding-bottom: 2.4mm; margin-bottom: 3.8mm; }
   [data-id="reseaux-2"] .sec-head .h-sub { font-size: 14pt; margin: 0; }
@@ -23,11 +23,12 @@
   [data-id="reseaux-2"] .board .fr img { width: 100%; height: 100%; object-fit: cover; display: block; }
   /* Gros plan sans transform (un transform empêche l’arrondi de découper l’image dans le PDF) */
   [data-id="reseaux-2"] .board .fr img.zoom { position: absolute; width: 145%; height: 145%; left: -27.9%; top: -18.9%; max-width: none; }
+  /* numéro de vignette sur une pastille ivoire : lisible sur la photo comme sur l’aplat */
   [data-id="reseaux-2"] .board .fr .n {
-    position: absolute; top: 2mm; left: 2.4mm; font-family: var(--display); font-style: italic; font-size: 12pt;
-    line-height: 1; color: #fff;
+    position: absolute; top: 2mm; left: 2mm; width: 5.4mm; height: 5.4mm; border-radius: 50%;
+    background: var(--paper); text-align: center;
+    font-family: var(--display); font-style: italic; font-size: 9.6pt; line-height: 5.2mm; color: var(--bordeaux);
   }
-  [data-id="reseaux-2"] .board .fr.plain .n { color: var(--bordeaux); }
   [data-id="reseaux-2"] .board .fr .subs { position: absolute; left: 2.6mm; right: 2.6mm; bottom: 4mm; }
   [data-id="reseaux-2"] .board .fr .subs i { display: block; height: 1.3mm; border-radius: .7mm; background: rgba(255,255,255,.92); margin: 0 auto; }
   [data-id="reseaux-2"] .board .fr .subs i + i { margin-top: 1.2mm; }
@@ -48,11 +49,11 @@
   [data-id="reseaux-2"] .board .cap { margin-top: .4mm; font-size: 7pt; letter-spacing: .2em; line-height: 1.45; text-transform: uppercase; color: var(--mocha); font-weight: 500; }
 
   /* ---- 5. Calendrier : une colonne par jour, sur une frise ---- */
-  [data-id="reseaux-2"] .cal { display: grid; grid-template-columns: 20mm repeat(6, 1fr); }
+  [data-id="reseaux-2"] .cal { display: grid; grid-template-columns: 18mm repeat(6, minmax(0, 1fr)); }
   [data-id="reseaux-2"] .cal .lab {
-    font-weight: 500; font-size: 6.8pt; letter-spacing: .22em; text-transform: uppercase; color: var(--taupe); line-height: 1.5;
+    font-weight: 500; font-size: 6.6pt; letter-spacing: .14em; text-transform: uppercase; color: var(--taupe); line-height: 1.5;
   }
-  [data-id="reseaux-2"] .cal .day { font-family: var(--display); font-size: 13pt; line-height: 1.1; color: var(--espresso); padding-right: 2mm; }
+  [data-id="reseaux-2"] .cal .day { font-family: var(--display); font-size: 12pt; line-height: 1.1; color: var(--espresso); padding-right: 2mm; }
   [data-id="reseaux-2"] .cal .lab.r1 { padding-top: 1.6mm; }
   [data-id="reseaux-2"] .cal .dot { position: relative; height: 10.5mm; }
   [data-id="reseaux-2"] .cal .dot::before { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: .25mm; background: var(--rose); }
@@ -62,13 +63,13 @@
   }
   [data-id="reseaux-2"] .cal .dot.first::before { left: 1mm; }
   [data-id="reseaux-2"] .cal .dot.last::before { right: 0; }
-  [data-id="reseaux-2"] .cal .txt { font-size: 9.4pt; line-height: 1.5; padding-right: 3.5mm; text-wrap: pretty; }
+  [data-id="reseaux-2"] .cal .txt { font-size: 8.4pt; line-height: 1.5; padding-right: 2.2mm; text-wrap: pretty; }
 
   /* ---- 6. Clientèle locale ---- */
-  [data-id="reseaux-2"] .local .inner { display: grid; grid-template-columns: 1fr 44mm; column-gap: 9mm; align-items: center; }
-  [data-id="reseaux-2"] .local ul.dots li { font-size: 10.2pt; line-height: 1.55; margin-bottom: 3.4mm; text-wrap: pretty; }
+  [data-id="reseaux-2"] .local .inner { display: grid; grid-template-columns: 1fr 40mm; column-gap: 8mm; align-items: center; }
+  [data-id="reseaux-2"] .local ul.dots li { font-size: 9.6pt; line-height: 1.55; margin-bottom: 3.4mm; text-wrap: pretty; }
   [data-id="reseaux-2"] .local ul.dots li:last-child { margin-bottom: 0; }
-  [data-id="reseaux-2"] .local svg { width: 44mm; height: 44mm; display: block; }
+  [data-id="reseaux-2"] .local svg { width: 40mm; height: 40mm; display: block; }
 </style>
 <section class="page" data-id="reseaux-2">
   <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie III — Pratique professionnelle</span></div>

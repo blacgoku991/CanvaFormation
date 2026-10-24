@@ -1,35 +1,50 @@
 <style>
-  [data-id="photographier"] .layout { display: grid; grid-template-columns: 1fr 147mm; column-gap: 12mm; height: 100%; }
-  [data-id="photographier"] .side { display: flex; flex-direction: column; }
-  [data-id="photographier"] .h-title { margin: 3.5mm 0 0; font-size: 26pt; }
-  [data-id="photographier"] .rule.short { margin: 6mm 0 5mm; }
-  [data-id="photographier"] .side .lead { font-size: 19pt; line-height: 1.25; color: var(--espresso); max-width: 92mm; }
+  [data-id="photographier"] .layout {
+    display: grid; grid-template-columns: minmax(0, 1fr) 147mm; grid-template-rows: minmax(0, 1fr);
+    column-gap: 12mm; height: 100%;
+  }
+  [data-id="photographier"] .side { display: flex; flex-direction: column; min-height: 0; }
+  [data-id="photographier"] .h-title { margin: 3.5mm 0 0; font-size: 26pt; line-height: 1.12; }
+  [data-id="photographier"] .rule.short { margin: 5.5mm 0 4.5mm; }
+  [data-id="photographier"] .side .lead { font-size: 18pt; line-height: 1.28; color: var(--espresso); }
 
-  /* Méthode : quatre consignes numérotées, filets fins */
+  /* Méthode : quatre consignes numérotées, filets fins (numéro et texte dans la même ligne) */
   [data-id="photographier"] .method { list-style: none; margin-top: auto; border-top: .3mm solid var(--espresso); }
   [data-id="photographier"] .method li {
-    display: grid; grid-template-columns: 13mm 1fr; align-items: baseline;
-    padding: 5.6mm 0 5.8mm; border-bottom: .2mm solid var(--line);
-    font-size: 10.4pt; line-height: 1.58; text-wrap: pretty;
+    position: relative; padding: 5.6mm 1mm 5.8mm 12mm; border-bottom: .2mm solid var(--line);
+    font-size: 9.6pt; line-height: 1.6; text-wrap: pretty;
   }
   [data-id="photographier"] .method li:last-child { border-bottom: 0; padding-bottom: 0; }
   [data-id="photographier"] .method .n {
-    font-family: var(--display); font-style: italic; font-size: 17pt; line-height: 1; color: var(--rose);
+    display: inline-block; width: 12mm; margin-left: -12mm;
+    font-family: var(--display); font-style: italic; font-size: 15pt; line-height: 1; color: var(--rose);
   }
 
-  /* Visuel : regard cadré comme dans un viseur (repères d’angle, tiers, mise au point) */
-  [data-id="photographier"] .shot { position: relative; }
-  /* Photo en retrait de 5 mm : les repères de cadrage sont tracés dans la marge, autour */
+  /* Visuel : la photo cadrée comme dans un viseur (repères d’angle, tiers, mise au point),
+     repères tracés en bordures CSS ; la photo est montrée entière (1440 × 1618 px) */
+  [data-id="photographier"] .shot { position: relative; align-self: center; width: 147mm; height: 163.94mm; }
   [data-id="photographier"] .shot .frame {
-    position: absolute; inset: 5mm; overflow: hidden; background: #fff;
+    position: absolute; left: 5mm; top: 5mm; width: 137mm; height: 153.94mm; overflow: hidden; background: #fff;
   }
-  [data-id="photographier"] .shot .frame img {
-    width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; display: block;
-  }
-  [data-id="photographier"] .shot svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
-  [data-id="photographier"] .shot .thirds line { stroke: #fff; stroke-width: .22; opacity: .75; }
-  [data-id="photographier"] .shot .corners path { fill: none; stroke: var(--espresso); stroke-width: .3; }
-  [data-id="photographier"] .shot .cross line { stroke: #fff; stroke-width: .3; }
+  [data-id="photographier"] .shot .frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  [data-id="photographier"] .shot .v,
+  [data-id="photographier"] .shot .h { position: absolute; background: rgba(255, 255, 255, .72); }
+  [data-id="photographier"] .shot .v { top: 0; bottom: 0; width: .3mm; margin-left: -.15mm; }
+  [data-id="photographier"] .shot .h { left: 0; right: 0; height: .3mm; margin-top: -.15mm; }
+  [data-id="photographier"] .shot .v1 { left: 33.333%; }
+  [data-id="photographier"] .shot .v2 { left: 66.667%; }
+  [data-id="photographier"] .shot .h1 { top: 33.333%; }
+  [data-id="photographier"] .shot .h2 { top: 66.667%; }
+  /* mise au point, posée sur l’écran de l’appareil */
+  [data-id="photographier"] .shot .fx { position: absolute; left: 48.5%; top: 40%; width: 7mm; height: 7mm; margin: -3.5mm 0 0 -3.5mm; }
+  [data-id="photographier"] .shot .fx i { position: absolute; background: #fff; }
+  [data-id="photographier"] .shot .fx i:first-child { left: 0; right: 0; top: 50%; height: .3mm; margin-top: -.15mm; }
+  [data-id="photographier"] .shot .fx i:last-child { top: 0; bottom: 0; left: 50%; width: .3mm; margin-left: -.15mm; }
+  [data-id="photographier"] .shot .c { position: absolute; width: 14mm; height: 14mm; border: 0 solid var(--espresso); }
+  [data-id="photographier"] .shot .c.tl { left: 0; top: 0; border-left-width: .3mm; border-top-width: .3mm; }
+  [data-id="photographier"] .shot .c.tr { right: 0; top: 0; border-right-width: .3mm; border-top-width: .3mm; }
+  [data-id="photographier"] .shot .c.bl { left: 0; bottom: 0; border-left-width: .3mm; border-bottom-width: .3mm; }
+  [data-id="photographier"] .shot .c.br { right: 0; bottom: 0; border-right-width: .3mm; border-bottom-width: .3mm; }
 </style>
 <section class="page" data-id="photographier">
   <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie III — Pratique professionnelle</span></div>
@@ -42,28 +57,20 @@
         <p class="lead">Une méthode cohérente<br>pour les avant/après</p>
 
         <ol class="method">
-          <li><span class="n">i.</span><span>Photographier avant et après avec le même angle, la même distance et un éclairage comparable.</span></li>
-          <li><span class="n">ii.</span><span>Nettoyer l’objectif&nbsp;; choisir un fond neutre&nbsp;; <strong>éviter les filtres qui changent la couleur de la peau ou du poil.</strong></span></li>
-          <li><span class="n">iii.</span><span>Privilégier un cadrage net et régulier&nbsp;; <strong>demander une autorisation explicite avant toute publication.</strong></span></li>
-          <li><span class="n">iv.</span><span>Conserver les originaux et <strong>ne jamais présenter comme sien le travail d’une autre professionnelle.</strong></span></li>
+          <li><span class="n">i.</span>Photographier avant et après avec le même angle, la même distance et un éclairage comparable.</li>
+          <li><span class="n">ii.</span>Nettoyer l’objectif&nbsp;; choisir un fond neutre&nbsp;; <strong>éviter les filtres qui changent la couleur de la peau ou du poil.</strong></li>
+          <li><span class="n">iii.</span>Privilégier un cadrage net et régulier&nbsp;; <strong>demander une autorisation explicite avant toute publication.</strong></li>
+          <li><span class="n">iv.</span>Conserver les originaux et <strong>ne jamais présenter comme sien le travail d’une autre professionnelle.</strong></li>
         </ol>
       </div>
 
       <div class="shot" aria-hidden="true">
-        <div class="frame"><img src="assets/ia/photographier.jpg" alt=""></div>
-        <svg viewBox="0 0 147 164" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <g class="thirds">
-            <line x1="50.67" y1="5" x2="50.67" y2="159"/><line x1="96.33" y1="5" x2="96.33" y2="159"/>
-            <line x1="5" y1="56.33" x2="142" y2="56.33"/><line x1="5" y1="107.67" x2="142" y2="107.67"/>
-          </g>
-          <g class="corners">
-            <path d="M0 14 V0 H14"/><path d="M133 0 H147 V14"/>
-            <path d="M147 150 V164 H133"/><path d="M14 164 H0 V150"/>
-          </g>
-          <g class="cross">
-            <line x1="70.5" y1="82" x2="76.5" y2="82"/><line x1="73.5" y1="79" x2="73.5" y2="85"/>
-          </g>
-        </svg>
+        <div class="frame">
+          <img src="assets/client/photo-appareil-cabine.jpg" alt="">
+          <div class="v v1"></div><div class="v v2"></div><div class="h h1"></div><div class="h h2"></div>
+          <div class="fx"><i></i><i></i></div>
+        </div>
+        <div class="c tl"></div><div class="c tr"></div><div class="c bl"></div><div class="c br"></div>
       </div>
     </div>
   </div>

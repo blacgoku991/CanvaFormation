@@ -7,7 +7,7 @@
   [data-id="atelier"] .tasks { list-style: none; border-top: .3mm solid var(--espresso); }
   [data-id="atelier"] .tasks li {
     position: relative; padding: 4.2mm 0 4.2mm 6mm; border-bottom: .2mm solid var(--line);
-    font-size: 10.2pt; line-height: 1.5; text-wrap: pretty;
+    font-size: 10.2pt; line-height: 1.5;
   }
   [data-id="atelier"] .tasks li::before {
     content: ''; position: absolute; left: .4mm; top: calc(4.2mm + .62em); width: 1.5mm; height: 1.5mm;
@@ -15,18 +15,18 @@
   }
   [data-id="atelier"] .tasks li:last-child { border-bottom: 0; }
   [data-id="atelier"] .side .alert { margin-top: auto; }
-  [data-id="atelier"] .side .alert p { font-size: 10.2pt; text-wrap: balance; }
+  [data-id="atelier"] .side .alert p { font-size: 10.2pt; }
 
   [data-id="atelier"] .main { display: flex; flex-direction: column; }
   [data-id="atelier"] .intro {
     font-family: var(--serif); font-style: italic; font-size: 12.6pt; line-height: 1.36; color: var(--espresso);
-    margin: 0 0 5.5mm; text-wrap: pretty;
+    margin: 0 0 4mm;
   }
   [data-id="atelier"] .intro .lbl {
     font-family: var(--sans); font-style: normal; font-size: 6.8pt; font-weight: 500; letter-spacing: .26em;
     text-transform: uppercase; color: var(--bordeaux); margin-right: .6mm;
   }
-  [data-id="atelier"] .views { display: flex; flex-direction: column; gap: 2.2mm; }
+  [data-id="atelier"] .views { display: flex; flex-direction: column; gap: 1.8mm; }
   [data-id="atelier"] .view { display: grid; grid-template-columns: 14mm 1fr; gap: 4mm; align-items: start; }
   [data-id="atelier"] .view .n {
     font-family: var(--display); font-style: italic; font-size: 30pt; line-height: .9; color: var(--bordeaux);
@@ -35,7 +35,7 @@
   /* Photos affichées entières, à leur proportion d'origine : aucun recadrage, filigrane de la 3e vue intact */
   [data-id="atelier"] .view img { display: block; width: 134mm; height: auto; }
   [data-id="atelier"] .credit {
-    margin: 2.4mm 0 0 18mm; font-size: 8.4pt; letter-spacing: .04em; color: var(--taupe);
+    margin: 2mm 0 0 18mm; font-size: 8.4pt; letter-spacing: .04em; color: var(--taupe);
   }
 </style>
 <section class="page" data-id="atelier">

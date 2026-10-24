@@ -9,13 +9,16 @@
   /* Cartes produit blanches (photos ≤ 45 mm) */
   [data-id="decoloration"] .prod { background: #fff; border: .2mm solid var(--line); padding: 4.5mm 5.5mm 5mm; }
   [data-id="decoloration"] .prod .shot {
-    height: 40mm; display: flex; justify-content: center; align-items: flex-start; margin-bottom: 3.5mm; overflow: hidden;
+    height: 34mm; display: flex; justify-content: center; align-items: flex-start; margin-bottom: 3.2mm; overflow: hidden;
   }
   [data-id="decoloration"] .prod .shot img { width: auto; display: block; }
-  [data-id="decoloration"] .prod .shot.bb img { height: 39mm; margin-top: .5mm; }
-  /* le fichier a un fond à 253 et 2 lignes grises en bas : on masque le bord et on remonte le blanc */
-  [data-id="decoloration"] .col3 .prod .shot { height: 44mm; }
-  [data-id="decoloration"] .prod .shot.ox img { height: 44.7mm; filter: brightness(1.013); }
+  [data-id="decoloration"] .prod .shot.bb img { height: 33.4mm; margin-top: .3mm; }
+  /* Oxydant : le fond du fichier est à 253 (bandeau blanc pur de 2 mm en haut, lignes grises en bas).
+     On masque ces bords (cadre en overflow hidden) et la carte prend la teinte exacte du fond (#FDFDFD),
+     sans filtre CSS : aucune « boîte » visible autour du flacon. */
+  [data-id="decoloration"] .col3 .prod { background: #FDFDFD; }
+  [data-id="decoloration"] .col3 .prod .shot { height: 40.8mm; margin-bottom: 4mm; }
+  [data-id="decoloration"] .prod .shot.ox img { height: 44.7mm; margin-top: -2.3mm; }
   [data-id="decoloration"] .prod-name {
     font-family: var(--display); font-weight: 400; font-size: 14pt; line-height: 1.15; color: var(--espresso);
     border-top: .2mm solid var(--line); padding-top: 3mm; margin-bottom: 2mm;
@@ -39,12 +42,19 @@
   [data-id="decoloration"] .h-sub { font-size: 13pt; }
   [data-id="decoloration"] .col2 .h-sub { margin-bottom: 3.8mm; }
   [data-id="decoloration"] ol.steps > li { margin-bottom: 3.4mm; }
+  /* numéro écrit dans la ligne elle-même (pas de compteur ::before), même dessin que ol.steps */
+  [data-id="decoloration"] ol.steps > li::before { content: none; }
+  [data-id="decoloration"] ol.steps > li .n {
+    position: absolute; left: 0; top: -.6mm; font-family: var(--display); font-style: italic; font-weight: 400;
+    font-size: 12pt; line-height: 1.6; color: var(--bordeaux);
+  }
+  [data-id="decoloration"] .nw { white-space: nowrap; }
   [data-id="decoloration"] ol.steps > li .chip { font-size: 8.4pt; padding: .3mm 2.4mm; }
   [data-id="decoloration"] ol.steps > li.warn {
     background: var(--bordeaux-soft); margin-left: -2.6mm; padding: 1.8mm 2.6mm 1.8mm 11.6mm;
     border-left: .8mm solid var(--bordeaux);
   }
-  [data-id="decoloration"] ol.steps > li.warn::before { left: 2.2mm; top: 1.2mm; }
+  [data-id="decoloration"] ol.steps > li.warn .n { left: 2.2mm; top: 1.2mm; }
   [data-id="decoloration"] .pose { margin-top: auto; padding: 4.6mm 5.5mm 5mm; }
   [data-id="decoloration"] .pose .h-sub { margin-bottom: 2.4mm; }
   [data-id="decoloration"] .pose .chip { font-size: 8.4pt; }
@@ -66,7 +76,7 @@
         <div class="prod">
           <div class="shot bb"><img src="assets/zola-bb-blond-powder-hd.jpg" alt="ZOLA BB Blond Powder"></div>
           <h3 class="prod-name"><span class="lbl">Produit utilisé&nbsp;:</span> ZOLA BB Blond Powder</h3>
-          <p>Poudre éclaircissante spécifique pour les sourcils.</p>
+          <p>Poudre éclaircissante spécifique pour <span class="nw">les sourcils.</span></p>
         </div>
         <div class="card recall">
           <div class="kicker plain">Rappel</div>
@@ -80,16 +90,16 @@
       <div class="col col2">
         <h3 class="h-sub">Préparation et application</h3>
         <ol class="steps">
-          <li>Effectuer le diagnostic, vérifier les contre-indications et le test de sensibilité.</li>
-          <li>Protéger la peau autour des sourcils et porter des gants.</li>
-          <li>Mélanger dans un récipient non métallique&nbsp;: <span class="chip">1&nbsp;dose de poudre pour 2&nbsp;doses</span> d’oxydant ZOLA compatible, conformément à la notice du produit.</li>
-          <li class="warn"><strong>Appliquer uniquement sur les poils des sourcils, sans contact avec les yeux.</strong></li>
-          <li>Surveiller visuellement et retirer dès que le résultat souhaité est atteint.</li>
-          <li>Rincer et nettoyer soigneusement selon la notice.</li>
+          <li><span class="n">01</span>Effectuer le diagnostic, vérifier les <span class="nw">contre-indications</span> et le test de sensibilité.</li>
+          <li><span class="n">02</span>Protéger la peau autour des sourcils et porter <span class="nw">des gants.</span></li>
+          <li><span class="n">03</span>Mélanger dans un récipient non métallique&nbsp;:<br><span class="chip">1&nbsp;dose de poudre pour 2&nbsp;doses</span> d’oxydant ZOLA compatible, conformément à la notice <span class="nw">du produit.</span></li>
+          <li class="warn"><span class="n">04</span><strong>Appliquer uniquement sur les poils des sourcils, sans contact avec les yeux.</strong></li>
+          <li><span class="n">05</span>Surveiller visuellement et retirer dès que le résultat souhaité est atteint.</li>
+          <li><span class="n">06</span>Rincer et nettoyer soigneusement selon la notice.</li>
         </ol>
         <div class="pose card cream">
           <h3 class="h-sub">Temps de pose</h3>
-          <p>Les revendeurs indiquent <span class="chip">3 à 20&nbsp;minutes</span> selon le résultat visé.</p>
+          <p>Les revendeurs indiquent<br><span class="chip">3 à 20&nbsp;minutes</span> selon le résultat visé.</p>
           <p><strong>Adapter au poil et à l’objectif, pas uniquement à la couleur de peau.</strong></p>
           <p>Sur peau foncée comme sur peau claire, contrôler régulièrement l’éclaircissement, la tolérance cutanée et le contraste recherché.</p>
         </div>
@@ -99,7 +109,7 @@
         <div class="prod">
           <div class="shot ox"><img src="assets/zola-oxydant-3-hd.jpg" alt="Oxydant ZOLA 3 %"></div>
           <h3 class="prod-name"><span class="lbl">Oxydant utilisé&nbsp;:</span> ZOLA <span class="chip fill">3&nbsp;%</span></h3>
-          <p>Oxydant teinture sourcils ZOLA à 3&nbsp;%, associé à la poudre ZOLA BB Blond Powder selon les instructions du fabricant.</p>
+          <p>Oxydant teinture sourcils ZOLA à 3&nbsp;%, associé à la poudre ZOLA BB Blond Powder selon les instructions <span class="nw">du fabricant.</span></p>
         </div>
         <div class="alert">
           <div class="alert-title">Important</div>

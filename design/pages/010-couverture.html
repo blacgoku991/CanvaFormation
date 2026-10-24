@@ -1,51 +1,51 @@
 <style>
+  /* Portrait au goupillon dans l'arche (photo de la cliente, arche déjà découpée sur fond ivoire) */
   [data-id="couverture"] .cover-photo {
-    position: absolute; top: 0; right: -24mm; height: 210mm; width: auto;
-  }
-  [data-id="couverture"] .cover-veil {
-    position: absolute; inset: 0;
-    background: linear-gradient(90deg, var(--ivory) 0 34%, rgba(247, 242, 236, 0) 52%);
-  }
-  [data-id="couverture"] .cover-text {
-    position: absolute; left: 20mm; top: 30mm; width: 150mm;
-  }
-  [data-id="couverture"] .cover-logo { width: 84mm; display: block; margin-bottom: 15mm; }
-  [data-id="couverture"] .cover-title {
-    font-family: var(--display); font-weight: 400; text-transform: uppercase;
-    font-size: 54pt; line-height: .9; color: var(--espresso); letter-spacing: -.01em;
-    margin: 6mm 0 0;
-  }
-  [data-id="couverture"] .cover-title em {
-    font-style: italic; text-transform: none; color: var(--bordeaux); font-size: .78em;
-  }
-  [data-id="couverture"] .cover-sub {
-    font-family: var(--sans); font-size: 7.6pt; letter-spacing: .3em; text-transform: uppercase;
-    color: var(--mocha);
-  }
-  [data-id="couverture"] .cover-sub span { color: var(--rose); margin: 0 2.4mm; }
-  [data-id="couverture"] .cover-tagline {
-    position: absolute; left: 20mm; bottom: 15mm;
-    font-family: var(--serif); font-style: italic; font-size: 15pt; color: var(--mocha);
-  }
-  [data-id="couverture"] .cover-foot {
-    position: absolute; left: 20mm; bottom: 9mm;
-    font-size: 6.4pt; letter-spacing: .28em; text-transform: uppercase; color: var(--mocha);
+    position: absolute; top: 0; right: 0; height: 210mm; width: auto; display: block;
   }
   [data-id="couverture"] .cover-band {
     position: absolute; left: 0; top: 0; bottom: 0; width: 6mm; background: var(--bordeaux);
   }
+  [data-id="couverture"] .cover-logo { position: absolute; left: 24mm; top: 28mm; width: 74mm; display: block; }
+  [data-id="couverture"] .cover-text {
+    position: absolute; left: 24mm; top: 70mm; width: 118mm;
+  }
+  [data-id="couverture"] .cover-title {
+    font-family: var(--display); font-weight: 400; text-transform: uppercase;
+    font-size: 47pt; line-height: 1.02; color: var(--espresso); letter-spacing: 0;
+    margin: 5mm 0 0;
+  }
+  [data-id="couverture"] .cover-title em {
+    font-style: italic; text-transform: none; color: var(--bordeaux); font-size: .8em;
+  }
+  [data-id="couverture"] .cover-rule { width: 14mm; height: .35mm; background: var(--bordeaux); margin: 7mm 0 5.5mm; }
+  [data-id="couverture"] .cover-sub {
+    font-family: var(--sans); font-weight: 400; font-size: 6.8pt; line-height: 1.9; letter-spacing: .24em;
+    text-transform: uppercase; color: var(--mocha);
+  }
+  [data-id="couverture"] .cover-sub .sep { color: var(--rose); }
+  [data-id="couverture"] .cover-bottom { position: absolute; left: 24mm; bottom: 10mm; width: 110mm; }
+  [data-id="couverture"] .cover-tagline {
+    font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 16pt; line-height: 1.2;
+    color: var(--mocha); margin-bottom: 2.4mm;
+  }
+  [data-id="couverture"] .cover-foot {
+    font-family: var(--sans); font-weight: 400; font-size: 6pt; line-height: 1.5; letter-spacing: .26em;
+    text-transform: uppercase; color: var(--taupe);
+  }
 </style>
 <section class="page" data-id="couverture">
-  <img class="cover-photo blend" src="assets/portrait-couverture-hd.jpg" alt="">
-  <div class="cover-veil"></div>
+  <img class="cover-photo" src="assets/client/portrait-goupillon-couv.jpg" alt="">
   <div class="cover-band"></div>
+  <img class="cover-logo" src="assets/logo-dolce.png" alt="dolce lash &amp; brow">
   <div class="cover-text">
-    <img class="cover-logo" src="assets/logo-dolce.png" alt="dolce lash &amp; brow">
     <div class="kicker">Support pédagogique</div>
     <h1 class="cover-title">Manuel<br><em>de</em> formation</h1>
-    <div class="rule short"></div>
-    <p class="cover-sub">Sourcils<span>·</span>Cils<span>·</span>Pratique professionnelle<span>·</span>Évaluation</p>
+    <div class="cover-rule"></div>
+    <p class="cover-sub">Sourcils <span class="sep">·</span> Cils <span class="sep">·</span> Pratique professionnelle <span class="sep">·</span> Évaluation</p>
   </div>
-  <div class="cover-tagline">Beauté du regard</div>
-  <div class="cover-foot">Dolce Lash &amp;&nbsp;Brow&nbsp;·&nbsp;Support pédagogique</div>
+  <div class="cover-bottom">
+    <p class="cover-tagline">Beauté du regard</p>
+    <p class="cover-foot">Dolce Lash &amp;&nbsp;Brow · Support pédagogique</p>
+  </div>
 </section>

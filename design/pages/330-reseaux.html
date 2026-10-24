@@ -19,7 +19,7 @@
   }
   [data-id="reseaux"] .phone::before {
     content: ''; position: absolute; top: 2.6mm; left: 50%; width: 13mm; height: 1.5mm; margin-left: -6.5mm;
-    border-radius: 1mm; background: var(--espresso); opacity: .85;
+    border-radius: 1mm; background: #574740;
   }
   [data-id="reseaux"] .phone .row { position: relative; }
   [data-id="reseaux"] .phone .mk {
@@ -29,24 +29,24 @@
   }
   [data-id="reseaux"] .bar { height: 1.1mm; border-radius: .6mm; background: var(--sand); }
   [data-id="reseaux"] .bar + .bar { margin-top: 1.5mm; }
-  [data-id="reseaux"] .bar.dark { background: var(--espresso); height: 1.6mm; opacity: .85; }
-  [data-id="reseaux"] .bar.link { background: var(--bordeaux); opacity: .55; }
+  [data-id="reseaux"] .bar.dark { background: #574740; height: 1.6mm; }
+  [data-id="reseaux"] .bar.link { background: #B4848A; }
 
   [data-id="reseaux"] .p-top { display: flex; align-items: center; gap: 4mm; }
   [data-id="reseaux"] .avatar {
     flex: none; width: 14mm; height: 14mm; border-radius: 50%; overflow: hidden;
-    box-shadow: 0 0 0 .5mm var(--paper), 0 0 0 .85mm var(--rose);
+    outline: .35mm solid var(--rose); outline-offset: .5mm;
   }
   [data-id="reseaux"] .avatar img { width: 100%; height: 100%; object-fit: cover; object-position: 62% 38%; }
   [data-id="reseaux"] .stats { flex: 1; display: flex; justify-content: space-between; }
   [data-id="reseaux"] .stats span { display: flex; flex-direction: column; align-items: center; gap: 1.2mm; }
-  [data-id="reseaux"] .stats i { display: block; height: 1.6mm; width: 5mm; border-radius: .6mm; background: var(--espresso); opacity: .8; }
+  [data-id="reseaux"] .stats i { display: block; height: 1.6mm; width: 5mm; border-radius: .6mm; background: #62524D; }
   [data-id="reseaux"] .stats b { display: block; height: 1mm; width: 7.5mm; border-radius: .5mm; background: var(--sand); }
 
   [data-id="reseaux"] .hl { display: flex; justify-content: space-between; }
   [data-id="reseaux"] .hl span:not(.mk) {
     width: 6.6mm; height: 6.6mm; border-radius: 50%; background: var(--cream);
-    box-shadow: 0 0 0 .45mm var(--paper), 0 0 0 .75mm var(--rose);
+    outline: .3mm solid var(--rose); outline-offset: .45mm;
   }
   [data-id="reseaux"] .hl span:nth-child(2n):not(.mk) { background: var(--blush); }
   [data-id="reseaux"] .hl span:nth-child(3n):not(.mk) { background: var(--sand); }
@@ -73,20 +73,21 @@
   /* ---- 2. Profil : quatre réglages, repérés a–d sur la maquette ---- */
   [data-id="reseaux"] .tips { list-style: none; }
   [data-id="reseaux"] .tips li {
-    display: grid; grid-template-columns: 9mm 1fr; padding: 3mm 0; border-bottom: .2mm solid var(--line);
-    font-size: 9.8pt; line-height: 1.55; text-wrap: pretty;
+    padding: 3mm 0 3mm 9mm; border-bottom: .2mm solid var(--line);
+    font-size: 9.2pt; line-height: 1.55; text-wrap: pretty;
   }
   [data-id="reseaux"] .tips li:last-child { border-bottom: 0; }
   [data-id="reseaux"] .tips .mk {
-    width: 4.6mm; height: 4.6mm; margin-top: .5mm; border-radius: 50%; border: .25mm solid var(--bordeaux); color: var(--bordeaux);
-    font-family: var(--display); font-style: italic; font-size: 8.6pt; line-height: 4.1mm; text-align: center;
+    display: inline-block; vertical-align: .5mm; width: 4.6mm; height: 4.6mm; margin: 0 4.4mm 0 -9mm;
+    border-radius: 50%; border: .25mm solid var(--bordeaux); color: var(--bordeaux);
+    font-family: var(--display); font-style: italic; font-size: 8.4pt; line-height: 4.1mm; text-align: center;
   }
   [data-id="reseaux"] .tips .k {
     display: block; font-family: var(--display); font-weight: 400; font-size: 12pt; line-height: 1.25;
     color: var(--espresso); margin-bottom: .8mm;
   }
   [data-id="reseaux"] .profile .tips { flex: 1; display: flex; flex-direction: column; margin-top: -3.6mm; }
-  [data-id="reseaux"] .profile .tips li { flex: 1; align-content: center; }
+  [data-id="reseaux"] .profile .tips li { flex: 1; display: flex; flex-direction: column; justify-content: center; }
 
   /* ---- 3. Les cinq piliers : tableau transposé, une colonne par pilier ---- */
   [data-id="reseaux"] .pillars { grid-column: 1 / -1; }
@@ -149,10 +150,10 @@
       <div class="col profile">
         <div class="sec-head"><h3 class="h-sub"><span class="no">2.</span>Optimiser son profil Instagram</h3></div>
         <ul class="tips">
-          <li><span class="mk">a</span><span><span class="k">Nom visible&nbsp;:</span> spécialité&nbsp;+ localisation, lorsque cela reste naturel.</span></li>
-          <li><span class="mk">b</span><span><span class="k">Biographie&nbsp;:</span> prestations, secteur géographique, bénéfice concret et appel à réserver.</span></li>
-          <li><span class="mk">c</span><span><span class="k">Stories à la une&nbsp;:</span> Tarifs, Résultats, Avis, FAQ, Accès, Disponibilités.</span></li>
-          <li><span class="mk">d</span><span><span class="k">Épingler trois publications&nbsp;:</span> présentation, prestations, résultats représentatifs.</span></li>
+          <li><span class="k"><span class="mk">a</span>Nom visible&nbsp;:</span><span>spécialité&nbsp;+ localisation, lorsque cela reste naturel.</span></li>
+          <li><span class="k"><span class="mk">b</span>Biographie&nbsp;:</span><span>prestations, secteur géographique, bénéfice concret et appel à réserver.</span></li>
+          <li><span class="k"><span class="mk">c</span>Stories à la une&nbsp;:</span><span>Tarifs, Résultats, Avis, FAQ, Accès, Disponibilités.</span></li>
+          <li><span class="k"><span class="mk">d</span>Épingler trois publications&nbsp;:</span><span>présentation, prestations, résultats représentatifs.</span></li>
         </ul>
       </div>
 

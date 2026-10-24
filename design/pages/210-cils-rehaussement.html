@@ -1,31 +1,40 @@
 <style>
   [data-id="rehaussement"] .layout { display: grid; grid-template-columns: 82mm 1fr; gap: 12mm; height: 100%; }
   [data-id="rehaussement"] .side,
-  [data-id="rehaussement"] .main { display: flex; flex-direction: column; }
-  [data-id="rehaussement"] .h-title { margin: 3mm 0 0; font-size: 21pt; }
+  [data-id="rehaussement"] .main { display: flex; flex-direction: column; min-height: 0; }
+  [data-id="rehaussement"] .h-title { margin: 3mm 0 0; font-size: 21pt; font-variant-numeric: lining-nums; }
   [data-id="rehaussement"] .rule.short { margin: 5mm 0 5mm; }
-  [data-id="rehaussement"] .side .diag { font-size: 9.8pt; }
-  /* Gros plan sur les cils (œil éloigné du portrait de couverture, ~1× sa taille naturelle) :
-     un autre regard que l'arche de la page en vis-à-vis */
+  [data-id="rehaussement"] .side .diag { font-size: 9.4pt; line-height: 1.62; }
+  /* Photo de la cliente : diagnostic sur tablette (864 × 1058 px, ~270 dpi à cette taille) */
   [data-id="rehaussement"] .side .photo {
-    margin-top: 7mm; flex: 1; min-height: 60mm; position: relative; overflow: hidden; background: var(--ivory);
+    margin-top: 6mm; flex: 1; min-height: 60mm; position: relative; overflow: hidden; background: var(--cream);
   }
+  /* l'image déborde de 0,6 mm pour masquer le liseré clair des bords gauche et droit */
   [data-id="rehaussement"] .side .photo img {
-    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 55% 45%;
+    position: absolute; left: -.6mm; top: -.6mm; width: calc(100% + 1.2mm); height: calc(100% + 1.2mm);
+    object-fit: cover; object-position: 50% 22%;
   }
 
+  /* En-tête du protocole : titre à gauche, produits Noemi Innovate (fond blanc) à droite */
+  [data-id="rehaussement"] .main .head { display: grid; grid-template-columns: 1fr 50mm; column-gap: 8mm; align-items: start; }
+  [data-id="rehaussement"] .main .product {
+    background: #fff; border: .2mm solid var(--line); height: 34mm; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  [data-id="rehaussement"] .main .product img { display: block; width: 100%; height: auto; }
   [data-id="rehaussement"] .main .lead { font-size: 15pt; line-height: 1.36; color: var(--espresso); max-width: 150mm; }
   [data-id="rehaussement"] .protocol { margin-top: auto; }
   [data-id="rehaussement"] .protocol .h-label { margin-bottom: 3.2mm; }
   [data-id="rehaussement"] .steps-table th { padding-bottom: 2.4mm; }
-  [data-id="rehaussement"] .steps-table td { font-size: 9.6pt; padding-top: 4.2mm; padding-bottom: 4.2mm; vertical-align: middle; }
-  [data-id="rehaussement"] .steps-table td.key { width: 30mm; font-size: 14pt; }
-  [data-id="rehaussement"] .steps-table td.time { width: 44mm; text-align: right; padding-right: 2mm; }
+  [data-id="rehaussement"] .steps-table td { font-size: 9.4pt; padding-top: 4mm; padding-bottom: 4mm; vertical-align: middle; }
+  [data-id="rehaussement"] .steps-table td.key { width: 30mm; font-size: 14pt; font-variant-numeric: lining-nums; }
+  [data-id="rehaussement"] .steps-table td.time { width: 46mm; text-align: right; padding-right: 2mm; }
   [data-id="rehaussement"] .steps-table th:last-child { text-align: right; padding-right: 2mm; }
-  [data-id="rehaussement"] .steps-table .chip { font-size: 8.4pt; padding: .7mm 3mm; }
-  [data-id="rehaussement"] .steps-table tr.mid td { background: rgba(240, 224, 220, .5); }
+  [data-id="rehaussement"] .steps-table .chip { font-size: 8pt; padding: .7mm 3mm; }
+  [data-id="rehaussement"] .steps-table tr.mid td { background: var(--blush); }
   [data-id="rehaussement"] .steps-table tr.mid td.key { padding-left: 2mm; }
   [data-id="rehaussement"] .alert { margin-top: 5mm; }
+  [data-id="rehaussement"] .alert p { font-size: 9pt; line-height: 1.58; }
 </style>
 <section class="page" data-id="rehaussement">
   <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie II — Les cils</span></div>
@@ -36,13 +45,18 @@
         <h2 class="h-title"><span class="no">5.</span>Diagnostic avant rehaussement</h2>
         <div class="rule short"></div>
         <p class="diag">Observer les cils, leur état et les éventuelles contre-indications. Vérifier l’absence d’irritation ou d’infection oculaire, effectuer les contrôles prévus par les notices et choisir les pads adaptés.</p>
-        <div class="photo"><img src="assets/ia/rehaussement-pad.jpg" alt=""></div>
+        <div class="photo"><img src="assets/client/diagnostic-tablette.jpg" alt=""></div>
       </div>
 
       <div class="main">
-        <div class="kicker">Protocole</div>
-        <h2 class="h-title"><span class="no">6.</span>Rehaussement de cils&nbsp;— Noemi&nbsp;Innovate</h2>
-        <div class="rule short"></div>
+        <div class="head">
+          <div>
+            <div class="kicker">Protocole</div>
+            <h2 class="h-title"><span class="no">6.</span>Rehaussement de cils&nbsp;— Noemi&nbsp;Innovate</h2>
+            <div class="rule short"></div>
+          </div>
+          <div class="product"><img src="assets/client/produits-noemi-innovate.jpg" alt=""></div>
+        </div>
         <p class="lead">Nettoyer les cils, protéger les cils inférieurs, positionner le pad en silicone et aligner soigneusement les cils.</p>
 
         <div class="protocol">
@@ -50,9 +64,9 @@
           <table class="data steps-table">
             <thead><tr><th>Étape</th><th>Produit</th><th>Temps de pose</th></tr></thead>
             <tbody>
-              <tr><td class="key"><em>Step</em> 1</td><td>Noemi Innovate — Step 1</td><td class="time"><span class="chip fill">10&nbsp;minutes</span></td></tr>
+              <tr><td class="key"><em>Step</em> 1</td><td>Noemi Innovate — Step&nbsp;1</td><td class="time"><span class="chip fill">10&nbsp;minutes</span></td></tr>
               <tr class="mid"><td class="key"><em>Step</em> 1.5</td><td>Noemi Intense — Lash Botox (soin cils et sourcils)</td><td class="time"><span class="chip">Selon notice du soin</span></td></tr>
-              <tr><td class="key"><em>Step</em> 2</td><td>Noemi Innovate — Step 2</td><td class="time"><span class="chip fill">10&nbsp;minutes</span></td></tr>
+              <tr><td class="key"><em>Step</em> 2</td><td>Noemi Innovate — Step&nbsp;2</td><td class="time"><span class="chip fill">10&nbsp;minutes</span></td></tr>
             </tbody>
           </table>
           <div class="alert">

@@ -1,28 +1,36 @@
 <style>
-  [data-id="chute"] .layout { display: grid; grid-template-columns: 78mm 1fr; gap: 12mm; height: 100%; }
-  [data-id="chute"] .side { display: flex; flex-direction: column; }
-  [data-id="chute"] .side .h-title { margin: 4mm 0 4mm; }
-  [data-id="chute"] .side .photo {
-    margin-top: auto; height: 62mm; overflow: hidden; position: relative;
+  /* Grille 2 × 2 : titre | cartes, puis photo | « En pratique » sur une même bande basse */
+  [data-id="chute"] .layout {
+    display: grid; grid-template-columns: 78mm 1fr; grid-template-rows: 1fr 62mm;
+    column-gap: 12mm; row-gap: 6mm; height: 100%;
   }
-  [data-id="chute"] .side .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 48%; }
+  [data-id="chute"] .side .h-title { margin: 4mm 0 5.4mm; font-size: 25pt; }
+  [data-id="chute"] .side .h-title .nw { white-space: nowrap; }
+  [data-id="chute"] .side .rule.short { margin: 0 0 5mm; }
+  [data-id="chute"] .side .lead { font-size: 16pt; line-height: 1.32; }
+  [data-id="chute"] .photo { overflow: hidden; position: relative; }
+  /* l'image déborde de 0,6 mm de son cadre pour masquer le liseré clair laissé par l'extraction */
+  [data-id="chute"] .photo img {
+    position: absolute; top: -.6mm; left: -.6mm; width: calc(100% + 1.2mm); height: calc(100% + 1.2mm);
+    object-fit: cover; object-position: 50% 50%;
+  }
   [data-id="chute"] .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; }
-  [data-id="chute"] .cards .card { padding: 5mm 5mm 5.5mm; }
+  [data-id="chute"] .cards .card { padding: 5mm 5mm 5mm; }
   [data-id="chute"] .cards .tag {
-    font-family: var(--display); font-style: italic; font-size: 26pt; line-height: 1; color: var(--rose);
-    margin-bottom: 3mm;
+    font-family: var(--display); font-style: italic; font-size: 24pt; line-height: 1; color: var(--rose);
+    margin-bottom: 2.8mm;
   }
   /* Carte iii : mise en garde (avis médical) traitée comme un encadré .alert */
   [data-id="chute"] .cards .card.alert {
     background: var(--bordeaux-soft); border: 0; border-left: 1.1mm solid var(--bordeaux);
-    padding: 5mm 5mm 5.5mm;
+    padding: 5mm 5mm 5mm;
   }
-  [data-id="chute"] .cards .card.alert::before { left: auto; right: 5mm; top: 5.6mm; }
-  [data-id="chute"] .cards .card.alert .tag { color: var(--bordeaux); opacity: .5; }
+  [data-id="chute"] .cards .card.alert::before { left: auto; right: 5mm; top: 5.4mm; }
+  /* teinte pleine (bordeaux à 50 % sur le rose) plutôt qu'une opacité */
+  [data-id="chute"] .cards .card.alert .tag { color: #B78489; }
   [data-id="chute"] .cards .card.alert .h-label { color: var(--bordeaux); }
-  [data-id="chute"] .main { display: flex; flex-direction: column; }
   [data-id="chute"] .practice {
-    margin-top: auto; display: grid; grid-template-columns: 42mm 1fr; gap: 6mm; align-items: start;
+    display: grid; grid-template-columns: 42mm 1fr; gap: 6mm; align-content: center; align-items: start;
     background: var(--cream); padding: 6mm 7mm;
   }
   [data-id="chute"] .practice .lead { font-size: 15pt; }
@@ -35,12 +43,11 @@
     <div class="layout">
       <div class="side">
         <div class="kicker">Anatomie du poil</div>
-        <h2 class="h-title">Pourquoi les sourcils tombent-ils&nbsp;?</h2>
+        <h2 class="h-title">Pourquoi les sourcils <span class="nw">tombent-ils&nbsp;?</span></h2>
+        <div class="rule short"></div>
         <p class="lead">Distinguer renouvellement normal, casse et chute anormale</p>
-        <div class="photo"><img src="assets/ia/sourcil-macro.jpg" alt=""></div>
       </div>
-      <div class="main">
-        <div class="cards">
+      <div class="cards">
           <div class="card">
             <div class="tag">i.</div>
             <h3 class="h-label">Chute physiologique</h3>
@@ -56,8 +63,9 @@
             <h3 class="h-label">Chute inhabituelle</h3>
             <p>Une perte en plaques, rapide, persistante ou associée à rougeur, démangeaisons, squames ou douleur <strong>mérite un avis médical.</strong> Parmi les causes possibles&nbsp;: affection dermatologique, alopécie, troubles thyroïdiens, carences ou certains traitements. <strong>Une technicienne esthétique ne pose pas de diagnostic médical.</strong></p>
           </div>
-        </div>
-        <div class="practice">
+      </div>
+      <div class="photo"><img src="assets/client/sourcil-lamine.jpg" alt=""></div>
+      <div class="practice">
           <p class="lead">En pratique, avant une prestation&nbsp;:</p>
           <div>
             <ul class="dots">
@@ -69,7 +77,6 @@
               <p>Reporter tout traitement chimique sur une zone irritée ou lorsque l’état des poils paraît préoccupant.</p>
             </div>
           </div>
-        </div>
       </div>
     </div>
   </div>

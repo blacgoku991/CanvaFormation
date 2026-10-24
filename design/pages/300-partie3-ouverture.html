@@ -2,15 +2,19 @@
   [data-id="partie-3"] { background: var(--cream); }
   [data-id="partie-3"] .os-photo { right: 0; width: 90mm; }
   [data-id="partie-3"] .os-photo img { object-position: 50% 50%; }
-  [data-id="partie-3"] .os-num { left: 18mm; top: 16mm; -webkit-text-stroke-color: var(--bordeaux); opacity: .7; }
-  [data-id="partie-3"] .os-title { left: 20mm; top: 86mm; }
-  [data-id="partie-3"] .os-name { font-size: 50pt; }
-  [data-id="partie-3"] .os-toc { left: 20mm; width: 160mm; bottom: 18mm; }
-  [data-id="partie-3"] .os-toc .items { display: grid; grid-template-columns: 1fr 1fr; column-gap: 8mm; }
+  /* Grand « 03 » en contour : tracé vectoriel (assets/numerals), importable tel quel dans Canva */
+  [data-id="partie-3"] .p3-num { position: absolute; left: 19mm; top: 19mm; height: 60mm; width: auto; }
+  [data-id="partie-3"] .os-title { left: 20mm; top: 90mm; }
+  [data-id="partie-3"] .os-name { font-size: 50pt; line-height: .96; }
+  [data-id="partie-3"] .os-toc { left: 20mm; width: 162mm; bottom: 18mm; }
+  [data-id="partie-3"] .os-toc .items { display: grid; grid-template-columns: 1fr 1fr; column-gap: 9mm; }
+  /* Numéro et intitulé dans une même ligne de texte */
+  [data-id="partie-3"] .os-toc .item { display: block; white-space: nowrap; }
+  [data-id="partie-3"] .os-toc .item .pg { display: inline-block; width: 9mm; }
 </style>
 <section class="page opener-side" data-id="partie-3">
   <div class="os-photo"><img src="assets/sac-jambes-hd.jpg" alt=""></div>
-  <div class="os-num">03</div>
+  <img class="num-svg p3-num" src="assets/numerals/03-bordeaux.svg" alt="">
   <div class="os-title">
     <div class="os-part">Partie III</div>
     <div class="os-name">Pratique<br>professionnelle</div>

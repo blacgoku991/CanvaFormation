@@ -11,8 +11,10 @@
   /* Haut de la colonne principale : photo + objectif */
   [data-id="diagnostic"] .top-main { display: flex; flex-direction: column; }
   [data-id="diagnostic"] .photo { position: relative; flex: 1; min-height: 60mm; overflow: hidden; }
+  /* l'image déborde légèrement de son cadre (surtout à droite) pour masquer le liseré blanc de l'extraction */
   [data-id="diagnostic"] .photo img {
-    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 38%;
+    position: absolute; top: -.4mm; left: -.4mm; width: calc(100% + 2.8mm); height: calc(100% + .8mm);
+    object-fit: cover; object-position: 50% 40%;
   }
   [data-id="diagnostic"] .objectif { margin-top: 6mm; font-size: 14pt; line-height: 1.36; max-width: 132mm; }
   [data-id="diagnostic"] .objectif .lbl {
@@ -69,7 +71,7 @@
       </div>
 
       <div class="top-main">
-        <div class="photo"><img src="assets/ia/mapping-fil.jpg" alt=""></div>
+        <div class="photo"><img src="assets/client/mapping-fil-cliente.jpg" alt=""></div>
         <p class="lead objectif"><span class="lbl">Objectif&nbsp;:</span> dessiner une ligne harmonieuse adaptée au visage, tout en respectant la pousse naturelle, la densité et les souhaits de la cliente. Les deux sourcils ne sont pas nécessairement identiques&nbsp;: rechercher une symétrie visuelle, sans surépiler.</p>
       </div>
 
