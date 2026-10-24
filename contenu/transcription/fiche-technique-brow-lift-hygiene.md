@@ -52,5 +52,5 @@ Pour la gamme Thuya citée dans le manuel initial, conserver la séquence de pr�
 - **Contenu à faire valider (sécurité / protocole)** : le paragraphe « Pendant la séance » ne donne aucun temps de pose ; il renvoie à « la gamme Thuya citée dans le manuel initial » et à « la version initiale » — ces temps ne figurent pas sur cette page. Si la cliente veut afficher les temps Thuya, il faudra les récupérer dans une autre source (manuel initial) et les faire confirmer sur notice. La séquence citée est : préparation → lotion permanente → retrait complet → neutralisant → retrait → soin final.
 - Mention « manuel initial » / « version initiale » : formulation qui fait référence à une ancienne version du document ; à reformuler éventuellement par la cliente (texte non modifié ici).
 - Le tableau parle de « Teinture hybride », « Décoloration », « Rehaussement de cils », « Lash Botox » alors que la page est titrée Brow Lift : c'est un tableau transversal (toutes techniques) rattaché à « Hygiène, sécurité et qualité ».
-- Pied de page « Support pédagogique » (et non « Manuel de formation » comme sur certaines pages) ; pas d'en-tête.
+- Pied de page « Support pédagogique » (et non « Manuel de formation » ni « Support de formation » comme sur certaines pages : trois libellés différents dans le manuel) ; pas d'en-tête.
 - Bas de page vide de y ≈ 87 % à 96 %.
