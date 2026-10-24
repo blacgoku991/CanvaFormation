@@ -6,8 +6,8 @@
   [data-id="sommaire"] .side .h-display { font-size: 31pt; line-height: 1.05; margin: 5mm 0 4.5mm; }
   [data-id="sommaire"] .side .lead { font-size: 13.5pt; line-height: 1.32; }
   [data-id="sommaire"] .arch {
-    position: absolute; left: 20mm; top: 98mm; width: 60mm; height: 76mm;
-    border-radius: 30mm 30mm 0 0; overflow: hidden; background: #FFFFFF;
+    position: absolute; left: 20mm; top: 92mm; width: 62mm; height: 80mm;
+    border-radius: 31mm 31mm 0 0; overflow: hidden; background: #FFFFFF;
   }
   [data-id="sommaire"] .arch img {
     display: block; width: 100%; height: 100%; object-fit: cover; object-position: 58% 30%;
@@ -16,7 +16,7 @@
 
   /* Les quatre parties empilées : intitulé à gauche, rubriques à droite */
   [data-id="sommaire"] .parts {
-    position: absolute; left: 110mm; right: 18mm; top: 22mm; bottom: 13mm;
+    position: absolute; left: 110mm; right: 18mm; top: 27mm; bottom: 15mm;
     display: flex; flex-direction: column; justify-content: space-between;
   }
   [data-id="sommaire"] .part {
@@ -37,8 +37,8 @@
   }
   [data-id="sommaire"] .entry {
     display: flex; align-items: baseline; gap: 2.2mm; margin: 0;
-    padding: 1.25mm 0 1.3mm; border-bottom: .2mm solid var(--line);
-    font-family: var(--sans); font-weight: 300; font-size: 8.7pt; line-height: 1.35; color: var(--ink);
+    padding: 1.2mm 0 1.25mm; border-bottom: .2mm solid var(--line);
+    font-family: var(--sans); font-weight: 300; font-size: 8.7pt; line-height: 1.3; color: var(--ink);
   }
   [data-id="sommaire"] .entry:last-child { border-bottom: 0; }
   [data-id="sommaire"] .entry .t { flex: 0 1 auto; }
@@ -46,7 +46,7 @@
     flex: 1 1 auto; min-width: 5mm; height: 0; border-bottom: .25mm dotted var(--taupe); align-self: center; margin-top: 1mm;
   }
   [data-id="sommaire"] .entry .pg {
-    flex: 0 0 auto; font-family: var(--display); font-style: italic; font-size: 9.6pt; color: var(--bordeaux);
+    flex: 0 0 auto; font-family: var(--display); font-style: italic; font-size: 9.6pt; line-height: 1; color: var(--bordeaux);
   }
 </style>
 <section class="page" data-id="sommaire">

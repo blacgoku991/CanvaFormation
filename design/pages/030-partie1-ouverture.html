@@ -1,51 +1,54 @@
 <style>
   /* Bandeau panoramique du regard (photo de la cliente, 3120 × 900 px) sur toute la largeur */
   [data-id="partie-1"] .p1-band {
-    position: absolute; left: 0; top: 0; width: 297mm; height: 79mm; overflow: hidden;
+    position: absolute; left: 0; top: 0; width: 297mm; height: 86mm; overflow: hidden;
   }
   [data-id="partie-1"] .p1-band img {
     display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 100%;
   }
-  /* Fondu doux vers l'ivoire en bas du bandeau (forme décorative séparée, supprimable dans Canva) */
+  /* Encoche ivoire : le titre « entre » dans la photo (elle masque le bas du cadrage, coupé au ras de l'œil) */
   [data-id="partie-1"] .p1-notch {
-    position: absolute; left: 0; top: 59mm; width: 118mm; height: 21mm; background: var(--ivory);
+    position: absolute; left: 0; top: 66mm; width: 142mm; height: 21mm; background: var(--ivory);
   }
-  [data-id="partie-1"] .p1-num { position: absolute; right: 20mm; top: 88mm; height: 54mm; width: auto; }
-  [data-id="partie-1"] .p1-title { position: absolute; left: 20mm; top: 64mm; }
+  [data-id="partie-1"] .p1-title { position: absolute; left: 20mm; top: 69.5mm; }
   [data-id="partie-1"] .p1-part {
     font-family: var(--display); font-style: italic; font-weight: 400; font-size: 19pt; line-height: 1.1;
-    color: var(--bordeaux); margin: 0 0 1.5mm;
+    color: var(--bordeaux); margin: 0 0 1mm;
   }
   [data-id="partie-1"] .p1-name {
-    font-family: var(--display); font-weight: 400; font-size: 64pt; line-height: 1;
+    font-family: var(--display); font-weight: 400; font-size: 66pt; line-height: 1;
     text-transform: uppercase; letter-spacing: .01em; color: var(--espresso);
   }
-  [data-id="partie-1"] .p1-toc { position: absolute; left: 20mm; right: 20mm; bottom: 16mm; }
+  [data-id="partie-1"] .p1-num { position: absolute; right: 20mm; bottom: 16mm; height: 72mm; width: auto; }
+  [data-id="partie-1"] .p1-toc { position: absolute; left: 20mm; width: 152mm; bottom: 16mm; }
   [data-id="partie-1"] .p1-toc .label {
     font-family: var(--sans); font-weight: 400; font-size: 6.6pt; line-height: 1.4; letter-spacing: .3em;
     text-transform: uppercase; color: var(--taupe);
     padding-bottom: 2.6mm; border-bottom: .3mm solid var(--espresso); margin: 0 0 .6mm;
   }
-  [data-id="partie-1"] .p1-toc .items { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 9mm; }
+  [data-id="partie-1"] .p1-toc .items {
+    display: grid; grid-template-columns: 1fr 1fr; grid-auto-flow: column; grid-template-rows: repeat(5, auto);
+    column-gap: 8mm;
+  }
   /* Numéro et intitulé dans une même ligne de texte */
   [data-id="partie-1"] .p1-toc .item {
     display: block; white-space: nowrap; margin: 0;
-    padding: 1.8mm 0; border-bottom: .2mm solid var(--line);
-    font-family: var(--sans); font-weight: 300; font-size: 8.4pt; line-height: 1.4; color: var(--ink);
+    padding: 2.1mm 0; border-bottom: .2mm solid var(--line);
+    font-family: var(--sans); font-weight: 300; font-size: 8.6pt; line-height: 1.4; color: var(--ink);
   }
   [data-id="partie-1"] .p1-toc .item .pg {
     display: inline-block; width: 9mm;
-    font-family: var(--display); font-style: italic; font-size: 9.5pt; color: var(--bordeaux);
+    font-family: var(--display); font-style: italic; font-size: 9.6pt; color: var(--bordeaux);
   }
 </style>
 <section class="page opener" data-id="partie-1">
   <div class="p1-band"><img src="assets/client/portrait-goupillon-regard.jpg" alt=""></div>
   <div class="p1-notch"></div>
-  <img class="num-svg p1-num" src="assets/numerals/01-bordeaux.svg" alt="">
   <div class="p1-title">
     <p class="p1-part">Partie I</p>
     <h2 class="p1-name">Sourcils</h2>
   </div>
+  <img class="num-svg p1-num" src="assets/numerals/01-bordeaux.svg" alt="">
   <div class="p1-toc">
     <p class="label">Au programme de cette partie</p>
     <div class="items">

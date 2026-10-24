@@ -1,0 +1,111 @@
+<style>
+  /* Les fondamentaux — colonne de titre + visuel à gauche, deux cartes (Brow Lift / rehaussement) à droite */
+  [data-id="fondamentaux"] .layout {
+    display: grid; grid-template-columns: 70mm 1fr; grid-template-rows: 1fr auto;
+    column-gap: 11mm; row-gap: 5mm; height: 100%;
+  }
+  [data-id="fondamentaux"] .side { grid-row: 1 / span 2; display: flex; flex-direction: column; min-height: 0; }
+  [data-id="fondamentaux"] .side .h-title { margin: 3.5mm 0 0; font-size: 23pt; }
+  [data-id="fondamentaux"] .side .rule.short { margin: 5mm 0 4.6mm; }
+  [data-id="fondamentaux"] .side .lead { font-size: 15pt; line-height: 1.32; color: var(--espresso); }
+  [data-id="fondamentaux"] .side .photo { margin-top: 7mm; flex: 1 1 0; min-height: 0; position: relative; overflow: hidden; background: var(--cream); }
+  [data-id="fondamentaux"] .side .photo img {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%;
+  }
+
+  [data-id="fondamentaux"] .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; min-height: 0; }
+  [data-id="fondamentaux"] .tech { padding: 5.6mm 6.4mm 5mm; display: flex; flex-direction: column; }
+  [data-id="fondamentaux"] .tech.cream { background: var(--cream); }
+  [data-id="fondamentaux"] .tech-head {
+    display: flex; align-items: flex-end; gap: 4mm;
+    padding-bottom: 3.6mm; border-bottom: .3mm solid var(--espresso); margin-bottom: 1mm;
+  }
+  [data-id="fondamentaux"] .tech-head .num-svg { height: 11.5mm; width: auto; flex: none; }
+  [data-id="fondamentaux"] .tech-head .h-sub {
+    margin: 0; font-size: 14pt; line-height: 1.15; text-transform: uppercase; letter-spacing: .02em;
+  }
+  [data-id="fondamentaux"] .tech-head .sub {
+    margin: 1.2mm 0 0; font-size: 7.6pt; letter-spacing: .12em; text-transform: uppercase; color: var(--taupe); line-height: 1.3;
+  }
+  [data-id="fondamentaux"] .q { padding: 3.3mm 0 3.3mm; border-bottom: .2mm solid var(--line); }
+  [data-id="fondamentaux"] .q:last-child { border-bottom: 0; padding-bottom: 0; }
+  [data-id="fondamentaux"] .q .h-label { color: var(--bordeaux); margin: 0 0 1.2mm; }
+  [data-id="fondamentaux"] .q p { font-size: 8.9pt; line-height: 1.58; }
+
+  [data-id="fondamentaux"] .keep { grid-column: 2; }
+  [data-id="fondamentaux"] .keep p { font-size: 9.2pt; line-height: 1.55; }
+</style>
+<section class="page" data-id="fondamentaux">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie II — Les cils</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="side">
+        <div class="kicker">Les fondamentaux</div>
+        <h2 class="h-title">Brow Lift &amp; rehaussement de cils</h2>
+        <div class="rule short"></div>
+        <p class="lead">Comprendre la prestation, son objectif et les résultats attendus</p>
+        <div class="photo"><img src="assets/ia/cils-teintes.jpg" alt=""></div>
+      </div>
+
+      <div class="cards" data-fit>
+        <div class="card tech">
+          <div class="tech-head">
+            <img class="num-svg" src="assets/numerals/01-bordeaux.svg" alt="01">
+            <div>
+              <h3 class="h-sub">Brow Lift</h3>
+              <p class="sub">Sourcils · mise en forme</p>
+            </div>
+          </div>
+          <div class="q">
+            <h4 class="h-label">Qu’est-ce que c’est&nbsp;?</h4>
+            <p>Technique esthétique qui assouplit puis fixe temporairement les poils des sourcils dans une nouvelle direction, à l’aide de produits adaptés.</p>
+          </div>
+          <div class="q">
+            <h4 class="h-label">Son objectif</h4>
+            <p>Discipliner les sourcils, harmoniser leur ligne et créer un effet visuel plus fourni et structuré, sans maquillage permanent.</p>
+          </div>
+          <div class="q">
+            <h4 class="h-label">Ses bienfaits et son résultat</h4>
+            <p>Les poils paraissent mieux orientés, les sourcils plus nets et le regard plus ouvert. Le résultat est temporaire et varie selon la nature du poil et son entretien.</p>
+          </div>
+          <div class="q">
+            <h4 class="h-label">Pour qui&nbsp;?</h4>
+            <p>Pour les personnes souhaitant dompter des sourcils indisciplinés ou redessiner visuellement leur ligne, après diagnostic.</p>
+          </div>
+        </div>
+
+        <div class="card tech cream">
+          <div class="tech-head">
+            <img class="num-svg" src="assets/numerals/02-bordeaux.svg" alt="02">
+            <div>
+              <h3 class="h-sub">Rehaussement de cils</h3>
+              <p class="sub">Cils naturels · courbure</p>
+            </div>
+          </div>
+          <div class="q">
+            <h4 class="h-label">Qu’est-ce que c’est&nbsp;?</h4>
+            <p>Technique esthétique qui donne une courbure aux cils naturels depuis leur base, grâce à un support en silicone et des produits spécifiques.</p>
+          </div>
+          <div class="q">
+            <h4 class="h-label">Son objectif</h4>
+            <p>Soulever visuellement les cils, mettre en valeur leur longueur naturelle et ouvrir le regard sans poser d’extensions.</p>
+          </div>
+          <div class="q">
+            <h4 class="h-label">Ses bienfaits et son résultat</h4>
+            <p>Les cils semblent plus courbés et plus visibles, pour un effet naturel dès le réveil. La tenue dépend du cycle des cils et des soins réalisés.</p>
+          </div>
+          <div class="q">
+            <h4 class="h-label">Pour qui&nbsp;?</h4>
+            <p>Pour les personnes qui souhaitent valoriser leurs cils naturels, après vérification de leur état et des contre-indications.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert keep">
+        <div class="alert-title">À retenir</div>
+        <p>Ces prestations nécessitent un diagnostic préalable, le respect des notices fabricants et des précautions adaptées à la zone traitée.</p>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>
