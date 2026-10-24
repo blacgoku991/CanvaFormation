@@ -2,187 +2,409 @@
  "fps": 30,
  "width": 1920,
  "height": 1080,
- "total": 150.888,
+ "total": 152.328,
  "scenes": [
   {
    "id": "intro",
    "partie": "",
    "vo": "Bienvenue dans la formation Dolce Lash and Brow. Un parcours complet pour sublimer la beauté du regard.",
    "start": 0.0,
-   "dur": 7.28,
+   "dur": 7.088,
    "vo_start": 0.55,
-   "vo_dur": 5.88,
-   "vo_reelle": true
+   "vo_dur": 5.688,
+   "vo_reelle": true,
+   "phrases": [
+    {
+     "i0": 0,
+     "i1": 48,
+     "t0": 0.0,
+     "t1": 2.649
+    },
+    {
+     "i0": 49,
+     "i1": 103,
+     "t0": 2.989,
+     "t1": 5.63
+    }
+   ]
   },
   {
    "id": "sommaire",
    "partie": "",
    "vo": "Votre manuel s'organise en quatre parties : les sourcils, les cils, la pratique professionnelle, et l'évaluation.",
-   "start": 7.28,
+   "start": 7.088,
    "dur": 7.688,
-   "vo_start": 7.83,
+   "vo_start": 7.638,
    "vo_dur": 6.288,
-   "vo_reelle": true
+   "vo_reelle": true,
+   "phrases": [
+    {
+     "i0": 0,
+     "i1": 113,
+     "t0": 0.0,
+     "t1": 6.225
+    }
+   ]
   },
   {
    "id": "p1",
    "partie": "Partie I — Sourcils",
-   "vo": "Partie un : les sourcils.",
-   "start": 14.968,
+   "vo": "Première partie : les sourcils.",
+   "start": 14.776,
    "dur": 3.2,
-   "vo_start": 15.518,
-   "vo_dur": 1.344,
-   "vo_reelle": true
+   "vo_start": 15.326,
+   "vo_dur": 1.584,
+   "vo_reelle": true,
+   "phrases": [
+    {
+     "i0": 0,
+     "i1": 31,
+     "t0": 0.0,
+     "t1": 1.523
+    }
+   ]
   },
   {
    "id": "cycle",
    "partie": "Partie I — Sourcils",
    "vo": "Tout commence par le poil et son cycle de vie. L'anagène, la croissance. La catagène, la transition. La télogène, le repos. Chaque follicule évolue à son propre rythme.",
-   "start": 18.168,
-   "dur": 11.456,
-   "vo_start": 18.718,
-   "vo_dur": 10.056,
-   "vo_reelle": true
+   "start": 17.976,
+   "dur": 11.816,
+   "vo_start": 18.526,
+   "vo_dur": 10.416,
+   "vo_reelle": true,
+   "phrases": [
+    {
+     "i0": 0,
+     "i1": 46,
+     "t0": 0.0,
+     "t1": 2.258
+    },
+    {
+     "i0": 47,
+     "i1": 72,
+     "t0": 2.598,
+     "t1": 4.072
+    },
+    {
+     "i0": 73,
+     "i1": 100,
+     "t0": 4.412,
+     "t1": 6.158
+    },
+    {
+     "i0": 101,
+     "i1": 123,
+     "t0": 6.498,
+     "t1": 7.832
+    },
+    {
+     "i0": 124,
+     "i1": 168,
+     "t0": 8.172,
+     "t1": 10.363
+    }
+   ]
   },
   {
    "id": "chute",
    "partie": "Partie I — Sourcils",
    "vo": "Perdre quelques poils est naturel. La casse, elle, vient souvent des frottements ou de traitements mal adaptés. Et une chute inhabituelle mérite toujours un avis médical.",
-   "start": 29.624,
-   "dur": 10.304,
-   "vo_start": 30.174,
-   "vo_dur": 8.904,
-   "vo_reelle": true
+   "start": 29.792,
+   "dur": 10.448,
+   "vo_start": 30.342,
+   "vo_dur": 9.048,
+   "vo_reelle": true,
+   "phrases": [
+    {
+     "i0": 0,
+     "i1": 34,
+     "t0": 0.0,
+     "t1": 1.669
+    },
+    {
+     "i0": 35,
+     "i1": 111,
+     "t0": 2.009,
+     "t1": 5.588
+    },
+    {
+     "i0": 112,
+     "i1": 170,
+     "t0": 5.928,
+     "t1": 8.979
+    }
+   ]
   },
   {
    "id": "mapping",
    "partie": "Partie I — Sourcils",
    "vo": "Place ensuite à la restructuration. Le mapping fixe trois repères : le début, l'arche et la queue, pour dessiner une ligne harmonieuse, validée avec la cliente avant toute épilation.",
-   "start": 39.928,
-   "dur": 11.048,
-   "vo_start": 40.478,
-   "vo_dur": 9.648,
-   "vo_reelle": true
+   "start": 40.24,
+   "dur": 11.216,
+   "vo_start": 40.79,
+   "vo_dur": 9.816,
+   "vo_reelle": true,
+   "phrases": [
+    {
+     "i0": 0,
+     "i1": 35,
+     "t0": 0.0,
+     "t1": 1.877
+    },
+    {
+     "i0": 36,
+     "i1": 182,
+     "t0": 2.217,
+     "t1": 9.747
+    }
+   ]
   },
   {
    "id": "browlift",
    "partie": "Partie I — Sourcils",
    "vo": "Le Brow Lift Thuya suit une séquence précise : la lotion permanente, le neutralisant, puis la crème de soin. Le temps de pose s'adapte à la nature du poil, et se confirme toujours sur la notice du fabricant.",
-   "start": 50.976,
-   "dur": 12.728,
-   "vo_start": 51.526,
-   "vo_dur": 11.328,
-   "vo_reelle": true
+   "start": 51.456,
+   "dur": 13.016,
+   "vo_start": 52.006,
+   "vo_dur": 11.616,
+   "vo_reelle": true,
+   "phrases": [
+    {
+     "i0": 0,
+     "i1": 108,
+     "t0": 0.0,
+     "t1": 5.93
+    },
+    {
+     "i0": 109,
+     "i1": 207,
+     "t0": 6.27,
+     "t1": 11.56
+    }
+   ]
   },
   {
    "id": "couleur",
    "partie": "Partie I — Sourcils",
    "vo": "Côté couleur, la teinture Brow Daddy se choisit selon le diagnostic. Pour la décoloration ZOLA : une dose de poudre pour deux doses d'oxydant à trois pour cent, sous surveillance constante.",
-   "start": 63.704,
-   "dur": 11.6,
-   "vo_start": 64.254,
-   "vo_dur": 10.2,
-   "vo_reelle": true
+   "start": 64.472,
+   "dur": 11.552,
+   "vo_start": 65.022,
+   "vo_dur": 10.152,
+   "vo_reelle": true,
+   "phrases": [
+    {
+     "i0": 0,
+     "i1": 68,
+     "t0": 0.0,
+     "t1": 3.708
+    },
+    {
+     "i0": 69,
+     "i1": 189,
+     "t0": 4.048,
+     "t1": 10.098
+    }
+   ]
   },
   {
    "id": "hygiene",
    "partie": "Partie I — Sourcils",
-   "vo": "Et à chaque étape, l'hygiène et la sécurité passent avant tout : matériel désinfecté, et aucune prestation sur une peau irritée.",
-   "start": 75.304,
-   "dur": 8.288,
-   "vo_start": 75.854,
-   "vo_dur": 6.888,
-   "vo_reelle": true
+   "vo": "Et à chaque étape, l'hygiène et la sécurité passent avant tout : matériel désinfecté, et aucune prestation si la peau est irritée.",
+   "start": 76.024,
+   "dur": 8.336,
+   "vo_start": 76.574,
+   "vo_dur": 6.936,
+   "vo_reelle": true,
+   "phrases": [
+    {
+     "i0": 0,
+     "i1": 130,
+     "t0": 0.0,
+     "t1": 6.887
+    }
+   ]
   },
   {
    "id": "p2",
    "partie": "Partie II — Les cils",
-   "vo": "Partie deux : les cils.",
-   "start": 83.592,
+   "vo": "Deuxième partie : les cils.",
+   "start": 84.36,
    "dur": 3.2,
-   "vo_start": 84.142,
-   "vo_dur": 1.224,
-   "vo_reelle": true
+   "vo_start": 84.91,
+   "vo_dur": 1.536,
+   "vo_reelle": true,
+   "phrases": [
+    {
+     "i0": 0,
+     "i1": 27,
+     "t0": 0.0,
+     "t1": 1.486
+    }
+   ]
   },
   {
    "id": "rehaussement",
    "partie": "Partie II — Les cils",
    "vo": "Après un diagnostic attentif, le rehaussement Noemi Innovate se déroule en deux étapes de dix minutes. Le soin Lash Botox Noemi Intense peut s'y ajouter, uniquement après validation de la notice.",
-   "start": 86.792,
-   "dur": 12.488,
-   "vo_start": 87.342,
-   "vo_dur": 11.088,
-   "vo_reelle": true
+   "start": 87.56,
+   "dur": 12.8,
+   "vo_start": 88.11,
+   "vo_dur": 11.4,
+   "vo_reelle": true,
+   "phrases": [
+    {
+     "i0": 0,
+     "i1": 102,
+     "t0": 0.0,
+     "t1": 5.713
+    },
+    {
+     "i0": 103,
+     "i1": 195,
+     "t0": 6.053,
+     "t1": 11.34
+    }
+   ]
   },
   {
    "id": "teintecils",
    "partie": "Partie II — Les cils",
    "vo": "La teinture des cils sublime le résultat, et les conseils après prestation le prolongent.",
-   "start": 99.28,
+   "start": 100.36,
    "dur": 6.344,
-   "vo_start": 99.83,
+   "vo_start": 100.91,
    "vo_dur": 4.944,
-   "vo_reelle": true
+   "vo_reelle": true,
+   "phrases": [
+    {
+     "i0": 0,
+     "i1": 89,
+     "t0": 0.0,
+     "t1": 4.882
+    }
+   ]
   },
   {
    "id": "p3",
    "partie": "Partie III — Pratique professionnelle",
-   "vo": "Partie trois : la pratique professionnelle.",
-   "start": 105.624,
-   "dur": 3.68,
-   "vo_start": 106.174,
-   "vo_dur": 2.28,
-   "vo_reelle": true
+   "vo": "Troisième partie : la pratique professionnelle.",
+   "start": 106.704,
+   "dur": 3.944,
+   "vo_start": 107.254,
+   "vo_dur": 2.544,
+   "vo_reelle": true,
+   "phrases": [
+    {
+     "i0": 0,
+     "i1": 47,
+     "t0": 0.0,
+     "t1": 2.493
+    }
+   ]
   },
   {
    "id": "fiche",
    "partie": "Partie III — Pratique professionnelle",
    "vo": "Une fiche technique pour chaque séance : avant, pendant et après. Et des photos avant-après prises avec le même angle, la même distance et la même lumière.",
-   "start": 109.304,
-   "dur": 9.416,
-   "vo_start": 109.854,
-   "vo_dur": 8.016,
-   "vo_reelle": true
+   "start": 110.648,
+   "dur": 9.512,
+   "vo_start": 111.198,
+   "vo_dur": 8.112,
+   "vo_reelle": true,
+   "phrases": [
+    {
+     "i0": 0,
+     "i1": 65,
+     "t0": 0.0,
+     "t1": 3.064
+    },
+    {
+     "i0": 66,
+     "i1": 155,
+     "t0": 3.404,
+     "t1": 8.04
+    }
+   ]
   },
   {
    "id": "reseaux",
    "partie": "Partie III — Pratique professionnelle",
    "vo": "Vous apprendrez aussi à développer votre activité : un profil Instagram optimisé, cinq piliers de contenu, des Reels efficaces, et un calendrier simple à tenir.",
-   "start": 118.72,
+   "start": 120.16,
    "dur": 10.568,
-   "vo_start": 119.27,
+   "vo_start": 120.71,
    "vo_dur": 9.168,
-   "vo_reelle": true
+   "vo_reelle": true,
+   "phrases": [
+    {
+     "i0": 0,
+     "i1": 160,
+     "t0": 0.0,
+     "t1": 9.101
+    }
+   ]
   },
   {
    "id": "gestion",
    "partie": "Partie III — Pratique professionnelle",
    "vo": "Sans oublier la gestion : des tarifs clairs, une expérience cliente soignée, et des résultats que l'on mesure.",
-   "start": 129.288,
+   "start": 130.728,
    "dur": 8.2,
-   "vo_start": 129.838,
+   "vo_start": 131.278,
    "vo_dur": 5.928,
-   "vo_reelle": true
+   "vo_reelle": true,
+   "phrases": [
+    {
+     "i0": 0,
+     "i1": 110,
+     "t0": 0.0,
+     "t1": 5.868
+    }
+   ]
   },
   {
    "id": "evaluation",
    "partie": "Partie IV — Évaluation",
-   "vo": "Enfin, l'évaluation : quinze questions pour valider vos acquis.",
-   "start": 137.488,
+   "vo": "Enfin, l'évaluation, avec quinze questions pour valider vos acquis.",
+   "start": 138.928,
    "dur": 5.4,
-   "vo_start": 138.038,
-   "vo_dur": 3.144,
-   "vo_reelle": true
+   "vo_start": 139.478,
+   "vo_dur": 3.48,
+   "vo_reelle": true,
+   "phrases": [
+    {
+     "i0": 0,
+     "i1": 67,
+     "t0": 0.0,
+     "t1": 3.428
+    }
+   ]
   },
   {
    "id": "outro",
    "partie": "",
    "vo": "Dolce Lash and Brow. La beauté du regard, avec méthode et précision.",
-   "start": 142.888,
+   "start": 144.328,
    "dur": 8.0,
-   "vo_start": 143.438,
-   "vo_dur": 4.128,
-   "vo_reelle": true
+   "vo_start": 144.878,
+   "vo_dur": 4.248,
+   "vo_reelle": true,
+   "phrases": [
+    {
+     "i0": 0,
+     "i1": 20,
+     "t0": 0.0,
+     "t1": 1.29
+    },
+    {
+     "i0": 21,
+     "i1": 68,
+     "t0": 1.63,
+     "t1": 4.185
+    }
+   ]
   }
  ]
 }

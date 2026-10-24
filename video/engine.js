@@ -24,6 +24,17 @@
   //   "1.2"            -> 1,2 s après le début de la scène
   //   "w:anagène@0.2"  -> au moment où la voix prononce « anagène » (+0,2 s) ; "w:cils#2" = 2e occurrence
   //   "vo", "voend@-1" -> début / fin de la voix ; "end@-1.5" -> 1,5 s avant la fin de la scène
+  // Instant (depuis le début de la voix) où est prononcé le caractère idx du texte :
+  // interpolé dans sa phrase quand les repères de phrase existent, sinon sur l'ensemble du texte.
+  function voTime(d, idx) {
+    const ph = d.phrases;
+    if (ph && ph.length) {
+      const p = ph.find(q => idx < q.i1) || ph[ph.length - 1];
+      return p.t0 + clamp((idx - p.i0) / Math.max(1, p.i1 - p.i0)) * (p.t1 - p.t0);
+    }
+    return idx / d.vo.length * d.vo_dur;
+  }
+
   function parseAt(str, sc) {
     if (str == null || str === '') return null;
     const [base, offStr] = String(str).trim().split('@');
@@ -35,8 +46,7 @@
       let idx = -1;
       for (let k = 0; k < nth; k++) idx = vo.indexOf(word, idx + 1);
       if (idx < 0) console.warn('mot introuvable dans la voix :', word, sc.data.id);
-      const frac = idx < 0 ? 0 : idx / vo.length;
-      return LEAD + frac * sc.data.vo_dur + off;
+      return LEAD + voTime(sc.data, Math.max(0, idx)) + off;
     }
     if (base === 'end') return sc.data.dur + off;
     if (base === 'vo') return LEAD + off;

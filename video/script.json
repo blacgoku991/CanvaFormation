@@ -25,7 +25,7 @@
   {
    "id": "p1",
    "partie": "Partie I — Sourcils",
-   "vo": "Partie un : les sourcils."
+   "vo": "Première partie : les sourcils."
   },
   {
    "id": "cycle",
@@ -55,12 +55,12 @@
   {
    "id": "hygiene",
    "partie": "Partie I — Sourcils",
-   "vo": "Et à chaque étape, l'hygiène et la sécurité passent avant tout : matériel désinfecté, et aucune prestation sur une peau irritée."
+   "vo": "Et à chaque étape, l'hygiène et la sécurité passent avant tout : matériel désinfecté, et aucune prestation si la peau est irritée."
   },
   {
    "id": "p2",
    "partie": "Partie II — Les cils",
-   "vo": "Partie deux : les cils."
+   "vo": "Deuxième partie : les cils."
   },
   {
    "id": "rehaussement",
@@ -75,7 +75,7 @@
   {
    "id": "p3",
    "partie": "Partie III — Pratique professionnelle",
-   "vo": "Partie trois : la pratique professionnelle."
+   "vo": "Troisième partie : la pratique professionnelle."
   },
   {
    "id": "fiche",
@@ -95,7 +95,7 @@
   {
    "id": "evaluation",
    "partie": "Partie IV — Évaluation",
-   "vo": "Enfin, l'évaluation : quinze questions pour valider vos acquis."
+   "vo": "Enfin, l'évaluation, avec quinze questions pour valider vos acquis."
   },
   {
    "id": "outro",

@@ -2,6 +2,7 @@
 
 Si la voix off d'une scène existe (audio/vo/<id>.mp3), sa durée réelle est utilisée ;
 sinon la durée est estimée à 20 caractères par seconde (mesuré sur la voix « Perle »).
+Si audio/vo/<id>.json existe, les débuts et fins de phrase qu'il contient sont repris pour la synchronisation.
 """
 import json
 import pathlib
@@ -34,6 +35,9 @@ def main():
             'start': round(t, 3), 'dur': round(dur, 3),
             'vo_start': round(t + LEAD, 3), 'vo_dur': round(vo_dur, 3), 'vo_reelle': real,
         })
+        phrases = vo_file.with_suffix('.json')
+        if real and phrases.exists():
+            scenes[-1]['phrases'] = json.loads(phrases.read_text(encoding='utf-8'))['phrases']
         t += dur
     timeline = {'fps': 30, 'width': 1920, 'height': 1080, 'total': round(t, 3), 'scenes': scenes}
     (ROOT / 'timeline.json').write_text(json.dumps(timeline, ensure_ascii=False, indent=1), encoding='utf-8')
