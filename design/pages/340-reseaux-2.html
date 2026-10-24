@@ -1,0 +1,157 @@
+<style>
+  [data-id="reseaux-2"] .wrap { display: flex; flex-direction: column; height: 100%; }
+  [data-id="reseaux-2"] .head { display: flex; justify-content: space-between; align-items: flex-end; }
+  [data-id="reseaux-2"] .head .h-title { margin: 3.5mm 0 0; font-size: 22pt; }
+  [data-id="reseaux-2"] .head .see { font-size: 8.4pt; letter-spacing: .04em; color: var(--taupe); padding-bottom: 1mm; }
+  [data-id="reseaux-2"] .head .see .pg { font-family: var(--display); font-style: italic; font-size: 10pt; color: var(--bordeaux); }
+
+  [data-id="reseaux-2"] .body {
+    flex: 1; margin-top: 9mm; display: grid; grid-template-columns: 84mm 1fr; grid-template-rows: auto 1fr;
+    column-gap: 11mm; row-gap: 9mm;
+  }
+  [data-id="reseaux-2"] .sec-head { border-bottom: .3mm solid var(--espresso); padding-bottom: 2.4mm; margin-bottom: 3.8mm; }
+  [data-id="reseaux-2"] .sec-head .h-sub { font-size: 14pt; margin: 0; }
+
+  /* ---- 4. Reel ---- */
+  [data-id="reseaux-2"] .reel { grid-row: 1 / 3; display: flex; flex-direction: column; }
+  [data-id="reseaux-2"] .reel .lead { font-size: 14pt; line-height: 1.42; color: var(--espresso); text-wrap: pretty; }
+  [data-id="reseaux-2"] .reel .lead strong { font-weight: 500; color: var(--bordeaux); }
+  [data-id="reseaux-2"] .board { margin-top: auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; }
+  [data-id="reseaux-2"] .board .fr {
+    position: relative; aspect-ratio: 9 / 16; border-radius: 3mm; overflow: hidden; background: var(--blush);
+  }
+  [data-id="reseaux-2"] .board .fr img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  /* Gros plan sans transform (un transform empêche l’arrondi de découper l’image dans le PDF) */
+  [data-id="reseaux-2"] .board .fr img.zoom { position: absolute; width: 145%; height: 145%; left: -27.9%; top: -18.9%; max-width: none; }
+  [data-id="reseaux-2"] .board .fr .n {
+    position: absolute; top: 2mm; left: 2.4mm; font-family: var(--display); font-style: italic; font-size: 12pt;
+    line-height: 1; color: #fff;
+  }
+  [data-id="reseaux-2"] .board .fr.plain .n { color: var(--bordeaux); }
+  [data-id="reseaux-2"] .board .fr .subs { position: absolute; left: 2.6mm; right: 2.6mm; bottom: 4mm; }
+  [data-id="reseaux-2"] .board .fr .subs i { display: block; height: 1.3mm; border-radius: .7mm; background: rgba(255,255,255,.92); margin: 0 auto; }
+  [data-id="reseaux-2"] .board .fr .subs i + i { margin-top: 1.2mm; }
+  [data-id="reseaux-2"] .board .fr .cta {
+    position: absolute; left: 3.2mm; right: 3.2mm; bottom: 5mm; height: 4.4mm; border-radius: 2.2mm; background: var(--bordeaux);
+  }
+  [data-id="reseaux-2"] .board .fr .play {
+    position: absolute; top: 50%; left: 50%; width: 7mm; height: 7mm; margin: -3.5mm 0 0 -3.5mm;
+  }
+  /* frise sous les vignettes : même tracé que le calendrier */
+  [data-id="reseaux-2"] .board .tick { position: relative; height: 8mm; margin-right: -4mm; }
+  [data-id="reseaux-2"] .board > div:last-child .tick { margin-right: 0; }
+  [data-id="reseaux-2"] .board .tick::before { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: .25mm; background: var(--rose); }
+  [data-id="reseaux-2"] .board .tick::after {
+    content: ''; position: absolute; left: 0; top: 50%; width: 2.2mm; height: 2.2mm; margin-top: -1.1mm;
+    border-radius: 50%; background: var(--ivory); border: .3mm solid var(--bordeaux);
+  }
+  [data-id="reseaux-2"] .board .cap { margin-top: .4mm; font-size: 7pt; letter-spacing: .2em; line-height: 1.45; text-transform: uppercase; color: var(--mocha); font-weight: 500; }
+
+  /* ---- 5. Calendrier : une colonne par jour, sur une frise ---- */
+  [data-id="reseaux-2"] .cal { display: grid; grid-template-columns: 20mm repeat(6, 1fr); }
+  [data-id="reseaux-2"] .cal .lab {
+    font-weight: 500; font-size: 6.8pt; letter-spacing: .22em; text-transform: uppercase; color: var(--taupe); line-height: 1.5;
+  }
+  [data-id="reseaux-2"] .cal .day { font-family: var(--display); font-size: 13pt; line-height: 1.1; color: var(--espresso); padding-right: 2mm; }
+  [data-id="reseaux-2"] .cal .lab.r1 { padding-top: 1.6mm; }
+  [data-id="reseaux-2"] .cal .dot { position: relative; height: 10.5mm; }
+  [data-id="reseaux-2"] .cal .dot::before { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: .25mm; background: var(--rose); }
+  [data-id="reseaux-2"] .cal .dot::after {
+    content: ''; position: absolute; left: 0; top: 50%; width: 2.2mm; height: 2.2mm; margin-top: -1.1mm;
+    border-radius: 50%; background: var(--ivory); border: .3mm solid var(--bordeaux);
+  }
+  [data-id="reseaux-2"] .cal .dot.first::before { left: 1mm; }
+  [data-id="reseaux-2"] .cal .dot.last::before { right: 0; }
+  [data-id="reseaux-2"] .cal .txt { font-size: 9.4pt; line-height: 1.5; padding-right: 3.5mm; text-wrap: pretty; }
+
+  /* ---- 6. Clientèle locale ---- */
+  [data-id="reseaux-2"] .local .inner { display: grid; grid-template-columns: 1fr 44mm; column-gap: 9mm; align-items: center; }
+  [data-id="reseaux-2"] .local ul.dots li { font-size: 10.2pt; line-height: 1.55; margin-bottom: 3.4mm; text-wrap: pretty; }
+  [data-id="reseaux-2"] .local ul.dots li:last-child { margin-bottom: 0; }
+  [data-id="reseaux-2"] .local svg { width: 44mm; height: 44mm; display: block; }
+</style>
+<section class="page" data-id="reseaux-2">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie III — Pratique professionnelle</span></div>
+  <div class="content">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <div class="kicker">Réseaux sociaux et communication</div>
+          <h2 class="h-title">Développer son activité sur les réseaux sociaux</h2>
+        </div>
+        <div class="see">Suite de la p.&nbsp;<span class="pg">{{p:reseaux}}</span></div>
+      </div>
+
+      <div class="body">
+        <div class="reel">
+          <div class="sec-head"><h3 class="h-sub"><span class="no">4.</span>Réaliser un Reel efficace</h3></div>
+          <p class="lead">Commencer par une accroche claire dans les premières secondes («&nbsp;Brow Lift naturel&nbsp;: voici le résultat&nbsp;»), montrer le détail de la prestation <strong>sans masquer les précautions</strong>, puis terminer par un appel à l’action («&nbsp;Réservation via le lien en bio&nbsp;»). Ajouter des sous-titres et une couverture lisible.</p>
+          <div class="board" aria-hidden="true">
+            <div>
+              <div class="fr"><img class="zoom" src="assets/portrait-couverture.jpg" alt="" style="object-position:62% 45%"><span class="n">1</span>
+                <svg class="play" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9.3" fill="none" stroke="#fff" stroke-width=".9"/><path d="M8 6.2v7.6l6-3.8z" fill="#fff"/></svg>
+                <div class="subs"><i style="width:86%"></i><i style="width:62%"></i></div></div>
+              <div class="tick"></div>
+              <div class="cap">Accroche</div>
+            </div>
+            <div>
+              <div class="fr"><img src="assets/portrait-regard-haut.jpg" alt="" style="object-position:45% 50%"><span class="n">2</span>
+                <div class="subs"><i style="width:80%"></i><i style="width:54%"></i></div></div>
+              <div class="tick"></div>
+              <div class="cap">Détail de la prestation</div>
+            </div>
+            <div>
+              <div class="fr plain"><span class="n">3</span><div class="cta"></div></div>
+              <div class="tick"></div>
+              <div class="cap">Appel à l’action</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="week">
+          <div class="sec-head"><h3 class="h-sub"><span class="no">5.</span>Exemple de calendrier hebdomadaire</h3></div>
+          <div class="cal">
+            <div class="lab r1">Jour</div>
+            <div class="day">Lundi</div><div class="day">Mardi</div><div class="day">Mercredi</div>
+            <div class="day">Jeudi</div><div class="day">Vendredi</div><div class="day">Week-end</div>
+
+            <div></div>
+            <div class="dot first"></div><div class="dot"></div><div class="dot"></div>
+            <div class="dot"></div><div class="dot"></div><div class="dot last"></div>
+
+            <div class="lab">Contenu</div>
+            <div class="txt">Conseil pratique en carrousel</div>
+            <div class="txt">Story&nbsp;: coulisses et préparation du poste</div>
+            <div class="txt">Reel&nbsp;: résultat avant/après autorisé</div>
+            <div class="txt">Réponse à une question fréquente</div>
+            <div class="txt">Avis authentique ou présentation d’une prestation</div>
+            <div class="txt">Story&nbsp;: disponibilités de la semaine suivante</div>
+          </div>
+        </div>
+
+        <div class="local">
+          <div class="sec-head"><h3 class="h-sub"><span class="no">6.</span>Attirer une clientèle locale</h3></div>
+          <div class="inner">
+            <ul class="dots">
+              <li>Préciser la zone desservie dans la biographie et les publications pertinentes.</li>
+              <li>Développer une fiche d’établissement à jour lorsque l’activité est éligible.</li>
+              <li>Collaborer avec des professionnels complémentaires, <strong>sans échanges d’avis trompeurs.</strong></li>
+              <li>Répondre rapidement et poliment aux messages&nbsp;; proposer une réservation simple.</li>
+              <li>Utiliser quelques mots-clés locaux précis plutôt qu’une longue série de hashtags génériques.</li>
+            </ul>
+            <svg viewBox="0 0 100 100" aria-hidden="true">
+              <circle cx="50" cy="54" r="44" fill="none" stroke="#D8B7AF" stroke-width=".5" stroke-dasharray="1.6 2.2"/>
+              <circle cx="50" cy="54" r="30" fill="none" stroke="#D8B7AF" stroke-width=".5"/>
+              <circle cx="50" cy="54" r="16" fill="#F0E0DC"/>
+              <circle cx="22" cy="34" r="1.6" fill="#A48A7B"/><circle cx="80" cy="40" r="1.6" fill="#A48A7B"/>
+              <circle cx="73" cy="82" r="1.6" fill="#A48A7B"/><circle cx="24" cy="76" r="1.6" fill="#A48A7B"/>
+              <path d="M50 58 C45 50 41.5 46 41.5 41.5 A8.5 8.5 0 0 1 58.5 41.5 C58.5 46 55 50 50 58 Z" fill="#7A2430"/>
+              <circle cx="50" cy="41.5" r="3" fill="#F7F2EC"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>

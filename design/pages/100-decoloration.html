@@ -1,0 +1,115 @@
+<style>
+  [data-id="decoloration"] .layout {
+    display: grid; grid-template-columns: 84mm 1fr 74mm; gap: 9mm; height: 100%;
+  }
+  [data-id="decoloration"] .col { display: flex; flex-direction: column; min-height: 0; }
+  [data-id="decoloration"] .col1 .h-title { margin: 3.5mm 0 0; font-size: 23pt; }
+  [data-id="decoloration"] .col1 .rule.short { margin: 5mm 0 6mm; }
+
+  /* Cartes produit blanches (photos ≤ 45 mm) */
+  [data-id="decoloration"] .prod { background: #fff; border: .2mm solid var(--line); padding: 4.5mm 5.5mm 5mm; }
+  [data-id="decoloration"] .prod .shot {
+    height: 40mm; display: flex; justify-content: center; align-items: flex-start; margin-bottom: 3.5mm; overflow: hidden;
+  }
+  [data-id="decoloration"] .prod .shot img { width: auto; display: block; }
+  [data-id="decoloration"] .prod .shot.bb img { height: 39mm; margin-top: .5mm; }
+  /* le fichier a un fond à 253 et 2 lignes grises en bas : on masque le bord et on remonte le blanc */
+  [data-id="decoloration"] .col3 .prod .shot { height: 44mm; }
+  [data-id="decoloration"] .prod .shot.ox img { height: 44.7mm; filter: brightness(1.013); }
+  [data-id="decoloration"] .prod-name {
+    font-family: var(--display); font-weight: 400; font-size: 14pt; line-height: 1.15; color: var(--espresso);
+    border-top: .2mm solid var(--line); padding-top: 3mm; margin-bottom: 2mm;
+  }
+  [data-id="decoloration"] .prod-name .lbl {
+    display: block; font-family: var(--sans); font-size: 6.8pt; font-weight: 500; letter-spacing: .24em;
+    text-transform: uppercase; color: var(--bordeaux); margin-bottom: 1.4mm;
+  }
+  [data-id="decoloration"] .prod-name .chip { font-size: 8.4pt; vertical-align: .6mm; margin-left: 1mm; }
+
+  [data-id="decoloration"] .recall { margin-top: auto; padding: 4.2mm 5.5mm 4.6mm; }
+  [data-id="decoloration"] .recall .kicker { margin-bottom: 1.6mm; }
+  [data-id="decoloration"] .recall .h-label { margin-bottom: 2.4mm; }
+  [data-id="decoloration"] .recall .tech {
+    font-family: var(--display); font-size: 12pt; color: var(--espresso); border-top: .3mm solid var(--espresso);
+    padding-top: 2.2mm; margin-bottom: 1.2mm;
+  }
+  [data-id="decoloration"] .recall .see { font-size: 8.4pt; letter-spacing: .04em; color: var(--taupe); margin-top: 2mm; }
+  [data-id="decoloration"] .recall .see .pg { font-family: var(--display); font-style: italic; font-size: 10pt; color: var(--bordeaux); }
+
+  [data-id="decoloration"] .h-sub { font-size: 13pt; }
+  [data-id="decoloration"] .col2 .h-sub { margin-bottom: 3.8mm; }
+  [data-id="decoloration"] ol.steps > li { margin-bottom: 3.4mm; }
+  [data-id="decoloration"] ol.steps > li .chip { font-size: 8.4pt; padding: .3mm 2.4mm; }
+  [data-id="decoloration"] ol.steps > li.warn {
+    background: var(--bordeaux-soft); margin-left: -2.6mm; padding: 1.8mm 2.6mm 1.8mm 11.6mm;
+    border-left: .8mm solid var(--bordeaux);
+  }
+  [data-id="decoloration"] ol.steps > li.warn::before { left: 2.2mm; top: 1.2mm; }
+  [data-id="decoloration"] .pose { margin-top: auto; padding: 4.6mm 5.5mm 5mm; }
+  [data-id="decoloration"] .pose .h-sub { margin-bottom: 2.4mm; }
+  [data-id="decoloration"] .pose .chip { font-size: 8.4pt; }
+
+  [data-id="decoloration"] .col3 .prod { padding-top: 5mm; }
+  [data-id="decoloration"] .col3 .alert { margin-top: 5mm; padding-top: 4.4mm; padding-bottom: 4.6mm; }
+  [data-id="decoloration"] .col3 .alert p + p { margin-top: 1.6mm; }
+  [data-id="decoloration"] .after { margin-top: auto; padding: 4.6mm 5.5mm 5mm; }
+</style>
+<section class="page" data-id="decoloration">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie I — Sourcils</span></div>
+  <div class="content">
+    <div class="layout">
+
+      <div class="col col1">
+        <div class="kicker">Teinture hybride et décoloration</div>
+        <h2 class="h-title"><span class="no">4.</span>Décoloration des sourcils</h2>
+        <div class="rule short"></div>
+        <div class="prod">
+          <div class="shot bb"><img src="assets/zola-bb-blond-powder.jpg" alt="ZOLA BB Blond Powder"></div>
+          <h3 class="prod-name"><span class="lbl">Produit utilisé&nbsp;:</span> ZOLA BB Blond Powder</h3>
+          <p>Poudre éclaircissante spécifique pour les sourcils.</p>
+        </div>
+        <div class="card recall">
+          <div class="kicker plain">Rappel</div>
+          <h3 class="h-label">Points de vigilance par technique</h3>
+          <div class="tech">Décoloration</div>
+          <p>Éviter le surtraitement, utiliser uniquement l’oxydant compatible indiqué par le fabricant.</p>
+          <p class="see">Voir aussi&nbsp;: Hygiène, sécurité et qualité, p.&nbsp;<span class="pg">{{p:hygiene}}</span></p>
+        </div>
+      </div>
+
+      <div class="col col2">
+        <h3 class="h-sub">Préparation et application</h3>
+        <ol class="steps">
+          <li>Effectuer le diagnostic, vérifier les contre-indications et le test de sensibilité.</li>
+          <li>Protéger la peau autour des sourcils et porter des gants.</li>
+          <li>Mélanger dans un récipient non métallique&nbsp;: <span class="chip">1&nbsp;dose de poudre pour 2&nbsp;doses</span> d’oxydant ZOLA compatible, conformément à la notice du produit.</li>
+          <li class="warn"><strong>Appliquer uniquement sur les poils des sourcils, sans contact avec les yeux.</strong></li>
+          <li>Surveiller visuellement et retirer dès que le résultat souhaité est atteint.</li>
+          <li>Rincer et nettoyer soigneusement selon la notice.</li>
+        </ol>
+        <div class="pose card cream">
+          <h3 class="h-sub">Temps de pose</h3>
+          <p>Les revendeurs indiquent <span class="chip">3 à 20&nbsp;minutes</span> selon le résultat visé.</p>
+          <p><strong>Adapter au poil et à l’objectif, pas uniquement à la couleur de peau.</strong></p>
+          <p>Sur peau foncée comme sur peau claire, contrôler régulièrement l’éclaircissement, la tolérance cutanée et le contraste recherché.</p>
+        </div>
+      </div>
+
+      <div class="col col3">
+        <div class="prod">
+          <div class="shot ox"><img src="assets/zola-oxydant-3.jpg" alt="Oxydant ZOLA 3 %"></div>
+          <h3 class="prod-name"><span class="lbl">Oxydant utilisé&nbsp;:</span> ZOLA <span class="chip fill">3&nbsp;%</span></h3>
+          <p>Oxydant teinture sourcils ZOLA à 3&nbsp;%, associé à la poudre ZOLA BB Blond Powder selon les instructions du fabricant.</p>
+        </div>
+        <div class="alert">
+          <div class="alert-title">Important</div>
+          <p><strong>Ne pas remplacer par un oxydant plus concentré.</strong></p>
+          <p>Respecter le ratio de mélange et les limites de pose de la notice.</p>
+        </div>
+        <div class="after card cream"><p><strong>Après prestation&nbsp;:</strong> éviter les frottements et surveiller toute irritation.</p></div>
+      </div>
+
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>

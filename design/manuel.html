@@ -56,14 +56,105 @@
     <p class="cover-sub">Sourcils<span>·</span>Cils<span>·</span>Pratique professionnelle<span>·</span>Évaluation</p>
   </div>
   <div class="cover-tagline">Beauté du regard</div>
-  <div class="cover-foot">Dolce Lash &amp; Brow • Support de formation</div>
+  <div class="cover-foot">Dolce Lash &amp;&nbsp;Brow&nbsp;·&nbsp;Support pédagogique</div>
+</section>
+
+<style>
+  [data-id="sommaire"] .layout { position: absolute; inset: 0; display: grid; grid-template-columns: 96mm 1fr; }
+  [data-id="sommaire"] .side {
+    position: relative; background: var(--cream); padding: 30mm 12mm 16mm 20mm; overflow: hidden;
+  }
+  [data-id="sommaire"] .side .h-display { font-size: 36pt; margin: 6mm 0 6mm; }
+  [data-id="sommaire"] .side .lead { font-size: 14pt; max-width: 64mm; }
+  [data-id="sommaire"] .side .arch {
+    position: absolute; left: 20mm; bottom: 32mm; width: 58mm; height: 72mm;
+    border-radius: 29mm 29mm 0 0; overflow: hidden; background: var(--paper);
+  }
+  [data-id="sommaire"] .side .arch img {
+    width: 100%; height: 100%; object-fit: cover; object-position: 58% 40%;
+    transform: scale(1.22); transform-origin: 38% 74%; filter: brightness(1.02);
+  }
+  [data-id="sommaire"] .side .logo { position: absolute; left: 20mm; bottom: 16mm; width: 46mm; opacity: .85; }
+
+  /* Parties empilées sur toute la hauteur : intitulé de partie à gauche, rubriques à droite */
+  [data-id="sommaire"] .parts {
+    padding: 30mm 20mm 17mm 16mm; display: flex; flex-direction: column; justify-content: space-between;
+  }
+  [data-id="sommaire"] .part {
+    display: grid; grid-template-columns: 47mm 1fr; column-gap: 8mm; align-items: start;
+    border-top: .3mm solid var(--espresso); padding-top: 3.4mm;
+  }
+  [data-id="sommaire"] .part-head .roman {
+    display: block; font-family: var(--display); font-style: italic; font-size: 26pt; line-height: .9; color: var(--bordeaux);
+  }
+  [data-id="sommaire"] .part-head .name {
+    display: block; margin-top: 2mm; font-family: var(--display); font-size: 11.5pt; line-height: 1.2;
+    text-transform: uppercase; letter-spacing: .05em; color: var(--espresso);
+  }
+  [data-id="sommaire"] .part-head .pg,
+  [data-id="sommaire"] .entry .pg {
+    font-family: var(--display); font-style: italic; font-size: 10pt; color: var(--bordeaux);
+  }
+  [data-id="sommaire"] .part-head .pg { display: block; margin-top: 1.2mm; }
+  [data-id="sommaire"] .entry {
+    display: flex; align-items: baseline; gap: 2mm; padding: 1.9mm 0; font-size: 9.6pt; color: var(--ink);
+    border-bottom: .2mm solid var(--line);
+  }
+  [data-id="sommaire"] .entry:first-child { padding-top: .6mm; }
+  [data-id="sommaire"] .entry:last-child { border-bottom: 0; }
+  [data-id="sommaire"] .entry .dots { flex: 1; min-width: 6mm; border-bottom: .25mm dotted var(--taupe); transform: translateY(-1mm); }
+</style>
+<section class="page" data-id="sommaire">
+  <div class="layout">
+    <div class="side">
+      <div class="kicker">Support pédagogique</div>
+      <h2 class="h-display">Sommaire</h2>
+      <p class="lead">Parcours de formation&nbsp;: les sourcils, puis les cils et le développement professionnel</p>
+      <div class="arch"><img class="blend" src="assets/portrait-regard-haut-chaud.jpg" alt=""></div>
+      <img class="logo" src="assets/logo-dolce.png" alt="dolce lash &amp; brow">
+    </div>
+    <div class="parts">
+      <div class="part">
+        <div class="part-head"><span class="roman">I.</span><span class="name">Sourcils</span><span class="pg">03</span></div>
+        <div class="entries">
+          <div class="entry">Anatomie et cycle de vie du poil<span class="dots"></span><span class="pg">04</span></div>
+          <div class="entry">Pourquoi les sourcils tombent-ils&nbsp;?<span class="dots"></span><span class="pg">05</span></div>
+          <div class="entry">Diagnostic et application en cabine<span class="dots"></span><span class="pg">06</span></div>
+          <div class="entry">Restructuration et mapping<span class="dots"></span><span class="pg">07</span></div>
+          <div class="entry">Brow Lift&nbsp;: technique et temps de pose<span class="dots"></span><span class="pg">08</span></div>
+          <div class="entry">Teinture hybride et décoloration<span class="dots"></span><span class="pg">09</span></div>
+          <div class="entry">Atelier visuel Brow Lift et sécurité<span class="dots"></span><span class="pg">11</span></div>
+        </div>
+      </div>
+      <div class="part">
+        <div class="part-head"><span class="roman">II.</span><span class="name">Cils</span><span class="pg">13</span></div>
+        <div class="entries">
+          <div class="entry">Diagnostic, rehaussement de cils, teinture et Lash Botox<span class="dots"></span><span class="pg">14</span></div>
+        </div>
+      </div>
+      <div class="part">
+        <div class="part-head"><span class="roman">III.</span><span class="name">Pratique professionnelle</span><span class="pg">16</span></div>
+        <div class="entries">
+          <div class="entry">Fiches pratiques et suivi des clientes<span class="dots"></span><span class="pg">17</span></div>
+          <div class="entry">Réseaux sociaux et communication<span class="dots"></span><span class="pg">18</span></div>
+          <div class="entry">Gestion d’activité et fidélisation<span class="dots"></span><span class="pg">21</span></div>
+        </div>
+      </div>
+      <div class="part">
+        <div class="part-head"><span class="roman">IV.</span><span class="name">Évaluation</span><span class="pg">22</span></div>
+        <div class="entries">
+          <div class="entry">Questionnaire de connaissances et références<span class="dots"></span><span class="pg">23</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <style>
   .opener .op-photo {
     position: absolute; left: 0; top: 0; width: 297mm; height: 128mm; overflow: hidden;
   }
-  .opener .op-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 78%; mix-blend-mode: multiply; }
+  .opener .op-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 78%; mix-blend-mode: multiply; filter: brightness(1.02); }
   .opener .op-photo::after {
     content: ''; position: absolute; inset: 0;
     background: linear-gradient(180deg, rgba(247, 242, 236, 0) 62%, rgba(247, 242, 236, .9) 96%, var(--ivory) 100%);
@@ -84,22 +175,20 @@
     font-family: var(--display); font-weight: 400; font-size: 76pt; line-height: .86;
     text-transform: uppercase; letter-spacing: -.01em; color: var(--espresso);
   }
-  .opener .op-toc {
-    position: absolute; left: 20mm; right: 20mm; bottom: 15mm;
-    display: grid; grid-template-columns: repeat(4, 1fr); column-gap: 8mm; row-gap: 0;
-    border-top: .3mm solid var(--espresso); padding-top: 3.4mm;
+  .opener .op-toc { position: absolute; left: 20mm; right: 20mm; bottom: 16mm; }
+  /* Libellé posé sur le filet, comme les ouvertures des Parties II à IV */
+  .opener .op-toc .label {
+    font-size: 7pt; letter-spacing: .3em; text-transform: uppercase; color: var(--taupe);
+    padding-bottom: 2.6mm; border-bottom: .3mm solid var(--espresso); margin-bottom: 1mm;
   }
+  .opener .op-toc .items { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 9mm; row-gap: 0; }
   .opener .op-toc .item {
     display: flex; gap: 2.6mm; align-items: baseline;
-    padding: 1.6mm 0; border-bottom: .2mm solid var(--line);
-    font-size: 8.2pt; color: var(--ink);
+    padding: 1.7mm 0; border-bottom: .2mm solid var(--line);
+    font-size: 8.4pt; color: var(--ink);
   }
   .opener .op-toc .item .pg {
     font-family: var(--display); font-style: italic; color: var(--bordeaux); font-size: 9.5pt; min-width: 6mm;
-  }
-  .opener .op-intro {
-    position: absolute; left: 20mm; bottom: 34mm; width: 120mm;
-    font-family: var(--sans); font-size: 7pt; letter-spacing: .3em; text-transform: uppercase; color: var(--taupe);
   }
 </style>
 <section class="page opener" data-id="partie-1">
@@ -109,17 +198,152 @@
     <div class="op-part">Partie I</div>
     <div class="op-name">Sourcils</div>
   </div>
-  <div class="op-intro">Au programme de cette partie</div>
   <div class="op-toc">
-    <div class="item"><span class="pg">??</span>Anatomie et cycle de vie du poil</div>
-    <div class="item"><span class="pg">03</span>Pourquoi les sourcils tombent-ils ?</div>
-    <div class="item"><span class="pg">??</span>Restructuration et mapping</div>
-    <div class="item"><span class="pg">??</span>Brow Lift : technique et temps de pose</div>
-    <div class="item"><span class="pg">??</span>Teinture hybride</div>
-    <div class="item"><span class="pg">??</span>Décoloration</div>
-    <div class="item"><span class="pg">??</span>Atelier visuel Brow Lift</div>
-    <div class="item"><span class="pg">??</span>Hygiène, sécurité et qualité</div>
+    <div class="label">Au programme de cette partie</div>
+    <div class="items">
+      <div class="item"><span class="pg">04</span>Le cycle de vie du sourcil</div>
+      <div class="item"><span class="pg">05</span>Pourquoi les sourcils tombent-ils&nbsp;?</div>
+      <div class="item"><span class="pg">06</span>Restructuration des sourcils &amp;&nbsp;mapping</div>
+      <div class="item"><span class="pg">07</span>Mapping&nbsp;: les trois repères</div>
+      <div class="item"><span class="pg">08</span>Brow Lift — Thuya</div>
+      <div class="item"><span class="pg">09</span>Teinture des sourcils — Brow Daddy</div>
+      <div class="item"><span class="pg">10</span>Décoloration des sourcils</div>
+      <div class="item"><span class="pg">11</span>Atelier visuel — Brow Lift</div>
+      <div class="item"><span class="pg">12</span>Hygiène, sécurité et qualité</div>
+    </div>
   </div>
+</section>
+
+<style>
+  [data-id="cycle"] .content { display: flex; flex-direction: column; }
+  [data-id="cycle"] .cy-head {
+    display: grid; grid-template-columns: 1fr 86mm; column-gap: 12mm; align-items: end;
+  }
+  [data-id="cycle"] .cy-head .h-title { margin-top: 4mm; }
+  [data-id="cycle"] .cy-head .lead { font-size: 13.5pt; padding-bottom: .6mm; }
+  [data-id="cycle"] .cy-figure { margin: 7mm auto 0; width: 224mm; }
+  [data-id="cycle"] .cy-figure svg {
+    display: block; width: 100%; height: auto;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
+  }
+  [data-id="cycle"] .cy-labels { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 3.4mm; }
+  [data-id="cycle"] .cy-labels .ph { text-align: center; padding: 0 5mm; }
+  [data-id="cycle"] .cy-labels .ph::before {
+    content: ''; display: block; width: .25mm; height: 3.4mm; margin: 0 auto 2.4mm; background: var(--bordeaux);
+  }
+  [data-id="cycle"] .cy-labels .ph-name {
+    display: block; font-family: var(--display); font-size: 12pt; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--espresso); line-height: 1.1;
+  }
+  [data-id="cycle"] .cy-labels .ph-desc {
+    display: block; margin-top: 1.4mm; font-size: 7.2pt; font-weight: 400; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--taupe); line-height: 1.6;
+  }
+  [data-id="cycle"] .cy-text {
+    margin-top: auto; display: grid; grid-template-columns: 78mm 1fr 86mm; column-gap: 12mm; align-items: start;
+    border-top: .2mm solid var(--line); padding-top: 6mm;
+  }
+  [data-id="cycle"] .cy-text .key {
+    font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 17pt; line-height: 1.28; color: var(--espresso);
+  }
+  [data-id="cycle"] .cy-text .key::before { content: ''; display: block; width: 14mm; height: .35mm; background: var(--bordeaux); margin: 1.4mm 0 3.6mm; }
+  [data-id="cycle"] .cy-text .phases { line-height: 1.6; }
+  [data-id="cycle"] .cy-text .phases strong { font-weight: 500; color: var(--bordeaux); }
+  [data-id="cycle"] .cy-text .card { padding: 4.6mm 5.4mm; }
+</style>
+<section class="page" data-id="cycle">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie I — Sourcils</span></div>
+  <div class="content">
+    <div class="cy-head">
+      <div>
+        <div class="kicker">Anatomie du poil</div>
+        <h2 class="h-title">Le cycle de vie du sourcil</h2>
+      </div>
+      <p class="lead">Comprendre la croissance, le repos et la chute naturelle du poil</p>
+    </div>
+
+    <div class="cy-figure">
+<svg class="schema-cycle" viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Les quatre phases du cycle du poil : anagène, catagène, télogène, puis anagène à nouveau">
+  <style>
+    .schema-cycle .derm { fill: #F0E0DC; }
+    .schema-cycle .epi { fill: #E4CFC8; }
+    .schema-cycle .skin { fill: none; stroke: #3B2823; stroke-width: 1.6; }
+    .schema-cycle .sheath { fill: #FCFAF7; stroke: #3B2823; stroke-width: 1.4; }
+    .schema-cycle .bulb { fill: #3B2823; }
+    .schema-cycle .papilla { fill: #7A2430; }
+    .schema-cycle .hair { fill: none; stroke: #3B2823; stroke-width: 4.2; stroke-linecap: round; }
+    .schema-cycle .hair-new { fill: none; stroke: #3B2823; stroke-width: 3.2; stroke-linecap: round; }
+    .schema-cycle .hair-old { fill: none; stroke: #A48A7B; stroke-width: 3.6; stroke-linecap: round; stroke-dasharray: 1 6; }
+    .schema-cycle .strand { fill: none; stroke: #A48A7B; stroke-width: 1.2; stroke-dasharray: 3 4; }
+    .schema-cycle .arrow { fill: none; stroke: #D8B7AF; stroke-width: 1.2; }
+    .schema-cycle .arrow-head { fill: #D8B7AF; }
+  </style>
+  <!-- peau -->
+  <rect class="derm" x="0" y="92" width="800" height="158"/>
+  <rect class="epi" x="0" y="80" width="800" height="14"/>
+  <path class="skin" d="M0 80 H800"/>
+
+  <!-- flèches de progression entre les phases -->
+  <g>
+    <path class="arrow" d="M150 236 H246"/><path class="arrow-head" d="M246 232 L254 236 L246 240 Z"/>
+    <path class="arrow" d="M350 236 H446"/><path class="arrow-head" d="M446 232 L454 236 L446 240 Z"/>
+    <path class="arrow" d="M550 236 H646"/><path class="arrow-head" d="M646 232 L654 236 L646 240 Z"/>
+  </g>
+
+  <!-- 1. Anagène : follicule long, bulbe profond, poil en pleine croissance -->
+  <g transform="translate(100 0)">
+    <path class="sheath" d="M-11 80 C-11 130 -13 165 -20 190 C-28 214 -16 226 0 226 C16 226 28 214 20 190 C13 165 11 130 11 80"/>
+    <path class="bulb" d="M-15 196 C-20 214 -10 221 0 221 C10 221 20 214 15 196 C11 184 6 178 0 178 C-6 178 -11 184 -15 196 Z"/>
+    <path class="papilla" d="M-7 221 C-7 211 -4 205 0 205 C4 205 7 211 7 221 Z"/>
+    <path class="hair" d="M0 182 C0 120 0 80 4 52 C9 24 26 8 48 2"/>
+  </g>
+
+  <!-- 2. Catagène : le follicule se rétracte, le bulbe remonte -->
+  <g transform="translate(300 0)">
+    <path class="sheath" d="M-11 80 C-11 115 -12 138 -16 152 C-21 168 -12 176 0 176 C12 176 21 168 16 152 C12 138 11 115 11 80"/>
+    <path class="bulb" d="M-10 156 C-13 168 -6 172 0 172 C6 172 13 168 10 156 C7 148 4 144 0 144 C-4 144 -7 148 -10 156 Z"/>
+    <path class="strand" d="M0 176 V212"/>
+    <path class="papilla" d="M-6 222 C-6 214 -3 210 0 210 C3 210 6 214 6 222 Z"/>
+    <path class="hair" d="M0 148 C0 110 0 80 4 52 C9 24 26 8 48 2"/>
+  </g>
+
+  <!-- 3. Télogène : poil au repos, détaché de la papille -->
+  <g transform="translate(500 0)">
+    <path class="sheath" d="M-11 80 C-11 106 -11 120 -13 130 C-16 142 -9 148 0 148 C9 148 16 142 13 130 C11 120 11 106 11 80"/>
+    <ellipse class="bulb" cx="0" cy="134" rx="8" ry="10"/>
+    <path class="strand" d="M0 148 V200"/>
+    <path class="papilla" d="M-6 210 C-6 202 -3 198 0 198 C3 198 6 202 6 210 Z"/>
+    <path class="hair" d="M0 128 C0 100 0 80 4 52 C9 24 26 8 48 2"/>
+  </g>
+
+  <!-- 4. Anagène : nouvelle pousse, l'ancien poil se libère (exogène) -->
+  <g transform="translate(700 0)">
+    <path class="sheath" d="M-11 80 C-11 130 -13 165 -20 190 C-28 214 -16 226 0 226 C16 226 28 214 20 190 C13 165 11 130 11 80"/>
+    <path class="bulb" d="M-15 196 C-20 214 -10 221 0 221 C10 221 20 214 15 196 C11 184 6 178 0 178 C-6 178 -11 184 -15 196 Z"/>
+    <path class="papilla" d="M-7 221 C-7 211 -4 205 0 205 C4 205 7 211 7 221 Z"/>
+    <path class="hair-new" d="M0 182 C0 150 0 118 1 96"/>
+    <ellipse class="bulb" cx="-3" cy="92" rx="6" ry="8" opacity=".35"/>
+    <path class="hair-old" d="M-3 86 C-3 64 -1 46 4 30 C10 14 24 4 42 0"/>
+  </g>
+</svg>
+      <div class="cy-labels">
+        <div class="ph"><span class="ph-name">Anagène</span><span class="ph-desc">Phase de croissance</span></div>
+        <div class="ph"><span class="ph-name">Catagène</span><span class="ph-desc">Phase de transition</span></div>
+        <div class="ph"><span class="ph-name">Télogène</span><span class="ph-desc">Phase de repos</span></div>
+        <div class="ph"><span class="ph-name">Anagène</span><span class="ph-desc">Le cycle recommence, nouvelle pousse de poils</span></div>
+      </div>
+    </div>
+
+    <div class="cy-text">
+      <p class="key">Le cycle est continu, mais chaque follicule évolue indépendamment.</p>
+      <p class="phases"><strong>Anagène</strong>&nbsp;: le follicule fabrique un nouveau poil.<br><strong>Catagène</strong>&nbsp;: l’activité de croissance ralentit et le follicule se rétracte.<br><strong>Télogène</strong>&nbsp;: le poil reste en place au repos, puis se détache lors de l’exogène (phase de libération du poil). Un nouveau cycle peut alors commencer.</p>
+      <div class="card">
+        <p>Les sourcils ont un cycle plus court que les cheveux du cuir chevelu&nbsp;: ils restent donc naturellement plus courts. <strong>Les durées varient selon les personnes et les follicules&nbsp;; les schémas ne sont pas un chronomètre individuel.</strong></p>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
 </section>
 
 <style>
@@ -129,19 +353,29 @@
   [data-id="chute"] .side .photo {
     margin-top: auto; height: 62mm; overflow: hidden; position: relative;
   }
-  [data-id="chute"] .side .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 55% 62%; }
+  [data-id="chute"] .side .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 55% 62%; filter: brightness(1.02); }
   [data-id="chute"] .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; }
   [data-id="chute"] .cards .card { padding: 5mm 5mm 5.5mm; }
   [data-id="chute"] .cards .tag {
     font-family: var(--display); font-style: italic; font-size: 26pt; line-height: 1; color: var(--rose);
     margin-bottom: 3mm;
   }
-  [data-id="chute"] .cards .card.alertish { border-top: .8mm solid var(--bordeaux); }
+  /* Carte iii : mise en garde (avis médical) traitée comme un encadré .alert */
+  [data-id="chute"] .cards .card.alert {
+    background: var(--bordeaux-soft); border: 0; border-left: 1.1mm solid var(--bordeaux);
+    padding: 5mm 5mm 5.5mm;
+  }
+  [data-id="chute"] .cards .card.alert::before { left: auto; right: 5mm; top: 5.6mm; }
+  [data-id="chute"] .cards .card.alert .tag { color: var(--bordeaux); opacity: .5; }
+  [data-id="chute"] .cards .card.alert .h-label { color: var(--bordeaux); }
+  [data-id="chute"] .main { display: flex; flex-direction: column; }
   [data-id="chute"] .practice {
-    margin-top: 6mm; display: grid; grid-template-columns: 42mm 1fr; gap: 6mm; align-items: start;
+    margin-top: auto; display: grid; grid-template-columns: 42mm 1fr; gap: 6mm; align-items: start;
     background: var(--cream); padding: 6mm 7mm;
   }
   [data-id="chute"] .practice .lead { font-size: 15pt; }
+  [data-id="chute"] .practice .alert { margin-top: 3.4mm; padding: 3.4mm 5mm 3.4mm 13.5mm; }
+  [data-id="chute"] .practice .alert::before { left: 3.8mm; top: 3.4mm; }
 </style>
 <section class="page" data-id="chute">
   <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie I — Sourcils</span></div>
@@ -149,34 +383,1117 @@
     <div class="layout">
       <div class="side">
         <div class="kicker">Anatomie du poil</div>
-        <h2 class="h-title">Pourquoi les sourcils tombent-ils ?</h2>
+        <h2 class="h-title">Pourquoi les sourcils tombent-ils&nbsp;?</h2>
         <p class="lead">Distinguer renouvellement normal, casse et chute anormale</p>
-        <div class="photo"><img src="assets/portrait-regard-haut.jpg" alt=""></div>
+        <div class="photo"><img class="blend" src="assets/portrait-regard-haut.jpg" alt=""></div>
       </div>
       <div class="main">
         <div class="cards">
           <div class="card">
             <div class="tag">i.</div>
             <h3 class="h-label">Chute physiologique</h3>
-            <p>Un sourcil arrivé en fin de cycle peut tomber : c’est le renouvellement naturel. La perte isolée de quelques poils n’indique pas forcément un problème. Les follicules ne sont pas synchronisés, ce qui permet de conserver une ligne visible.</p>
+            <p>Un sourcil arrivé en fin de cycle peut tomber&nbsp;: c’est le renouvellement naturel. La perte isolée de quelques poils n’indique pas forcément un problème. Les follicules ne sont pas synchronisés, ce qui permet de conserver une ligne visible.</p>
           </div>
           <div class="card">
             <div class="tag">ii.</div>
             <h3 class="h-label">Casse ou fragilisation</h3>
             <p>Les frottements répétés, l’épilation excessive, les traitements chimiques mal adaptés et une manipulation agressive peuvent casser les poils ou fragiliser la zone. Un poil cassé n’est pas nécessairement un poil tombé avec sa racine.</p>
           </div>
-          <div class="card alertish">
+          <div class="card alert">
             <div class="tag">iii.</div>
             <h3 class="h-label">Chute inhabituelle</h3>
-            <p>Une perte en plaques, rapide, persistante ou associée à rougeur, démangeaisons, squames ou douleur mérite un avis médical. Parmi les causes possibles : affection dermatologique, alopécie, troubles thyroïdiens, carences ou certains traitements. <strong>Une technicienne esthétique ne pose pas de diagnostic médical.</strong></p>
+            <p>Une perte en plaques, rapide, persistante ou associée à rougeur, démangeaisons, squames ou douleur <strong>mérite un avis médical.</strong> Parmi les causes possibles&nbsp;: affection dermatologique, alopécie, troubles thyroïdiens, carences ou certains traitements. <strong>Une technicienne esthétique ne pose pas de diagnostic médical.</strong></p>
           </div>
         </div>
         <div class="practice">
-          <p class="lead">En pratique, avant une prestation :</p>
-          <ul class="dots">
-            <li>Observer la densité, les zones clairsemées, l’état de la peau et la résistance apparente du poil.</li>
-            <li>Questionner sans juger sur les épilations et soins récents.</li>
-            <li>Reporter tout traitement chimique sur une zone irritée ou lorsque l’état des poils paraît préoccupant.</li>
+          <p class="lead">En pratique, avant une prestation&nbsp;:</p>
+          <div>
+            <ul class="dots">
+              <li>Observer la densité, les zones clairsemées, l’état de la peau et la résistance apparente du poil.</li>
+              <li>Questionner sans juger sur les épilations et soins récents.</li>
+            </ul>
+            <div class="alert">
+              <div class="alert-title">Important</div>
+              <p>Reporter tout traitement chimique sur une zone irritée ou lorsque l’état des poils paraît préoccupant.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>
+
+<style>
+  [data-id="diagnostic"] .layout {
+    display: grid; grid-template-columns: 82mm 1fr; grid-template-rows: 1fr auto; column-gap: 12mm; row-gap: 7mm; height: 100%;
+  }
+  [data-id="diagnostic"] .top-side .h-title { margin: 4mm 0 0; font-size: 23pt; }
+  [data-id="diagnostic"] .top-side .rule.short { margin: 7mm 0 6.4mm; }
+  [data-id="diagnostic"] .synth .h-label { color: var(--bordeaux); }
+  [data-id="diagnostic"] .synth .alert { margin-top: 3.4mm; padding: 3.4mm 5mm 3.4mm 13.5mm; }
+  [data-id="diagnostic"] .synth .alert::before { left: 3.8mm; top: 3.4mm; }
+
+  /* Haut de la colonne principale : photo + objectif */
+  [data-id="diagnostic"] .top-main { display: flex; flex-direction: column; }
+  [data-id="diagnostic"] .photo { position: relative; flex: 1; min-height: 60mm; overflow: hidden; }
+  [data-id="diagnostic"] .photo img {
+    position: absolute; width: 270mm; left: -91mm; top: -70mm; max-width: none; filter: brightness(1.02);
+    -webkit-mask-image: linear-gradient(90deg, #000 76%, transparent 93%); mask-image: linear-gradient(90deg, #000 76%, transparent 93%);
+  }
+  [data-id="diagnostic"] .objectif { margin-top: 6mm; font-size: 14pt; line-height: 1.36; max-width: 132mm; }
+  [data-id="diagnostic"] .objectif .lbl {
+    font-family: var(--sans); font-style: normal; font-weight: 500; font-size: 7.2pt; letter-spacing: .26em;
+    text-transform: uppercase; color: var(--bordeaux);
+  }
+
+  /* Bande basse : déroulé, matériel, étape 1 */
+  [data-id="diagnostic"] .rail { border-top: .3mm solid var(--espresso); padding-top: 2.6mm; }
+  [data-id="diagnostic"] .rail .rail-label {
+    font-size: 6.8pt; font-weight: 500; letter-spacing: .3em; text-transform: uppercase; color: var(--taupe);
+    padding-bottom: .6mm;
+  }
+  [data-id="diagnostic"] .rail .it {
+    display: flex; align-items: baseline; gap: 3mm; padding: 1.3mm 0; border-bottom: .2mm solid var(--line);
+    font-size: 8.4pt; color: var(--ink);
+  }
+  [data-id="diagnostic"] .rail .it:last-child { border-bottom: 0; padding-bottom: 0; }
+  [data-id="diagnostic"] .rail .it .n {
+    font-family: var(--display); font-style: italic; font-size: 11pt; color: var(--bordeaux); min-width: 6mm;
+  }
+  [data-id="diagnostic"] .rail .it .t { flex: 1; }
+  [data-id="diagnostic"] .rail .it .pg { font-family: var(--display); font-style: italic; font-size: 9pt; color: var(--taupe); }
+  [data-id="diagnostic"] .rail .it.on .t { font-weight: 500; color: var(--espresso); }
+
+  [data-id="diagnostic"] .bottom-main { display: grid; grid-template-columns: 1fr 1.18fr; column-gap: 9mm; align-items: stretch; }
+  [data-id="diagnostic"] .bottom-main .card { padding: 4.6mm 5.4mm; }
+  [data-id="diagnostic"] .step { border-top: .3mm solid var(--espresso); padding-top: 3.4mm; }
+  [data-id="diagnostic"] .step-head { display: flex; align-items: flex-end; gap: 3.4mm; margin-bottom: 2.6mm; }
+  [data-id="diagnostic"] .step-head .n {
+    font-family: var(--display); font-style: italic; font-size: 34pt; line-height: .8; color: var(--bordeaux); letter-spacing: -.02em;
+  }
+  [data-id="diagnostic"] .step-head .st {
+    font-family: var(--display); font-weight: 500; font-size: 11pt; line-height: 1.2; color: var(--espresso);
+  }
+  [data-id="diagnostic"] .step-head .st .k { display: block; font-style: italic; font-weight: 400; font-size: 9.5pt; color: var(--bordeaux); margin-bottom: .4mm; }
+</style>
+<section class="page" data-id="diagnostic">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie I — Sourcils</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="top-side">
+        <div class="kicker">Protocole</div>
+        <h2 class="h-title"><span class="no">1.</span>Restructuration des sourcils &amp;&nbsp;mapping</h2>
+        <div class="rule short"></div>
+        <div class="synth">
+          <h3 class="h-label">Diagnostic et restructuration</h3>
+          <p>Évaluer la ligne naturelle, la symétrie, la densité et le résultat souhaité. Effectuer un mapping et le valider avec la cliente.</p>
+          <div class="alert">
+            <div class="alert-title">Important</div>
+            <p>Épiler uniquement les poils hors du tracé, sans intervenir sur une peau irritée ou lésée.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="top-main">
+        <div class="photo"><img class="blend" src="assets/portrait-couverture.jpg" alt=""></div>
+        <p class="lead objectif"><span class="lbl">Objectif&nbsp;:</span> dessiner une ligne harmonieuse adaptée au visage, tout en respectant la pousse naturelle, la densité et les souhaits de la cliente. Les deux sourcils ne sont pas nécessairement identiques&nbsp;: rechercher une symétrie visuelle, sans surépiler.</p>
+      </div>
+
+      <div class="rail">
+        <div class="rail-label">Au programme</div>
+        <div class="it on"><span class="n">01</span><span class="t">Diagnostic et préparation</span><span class="pg">06</span></div>
+        <div class="it"><span class="n">02</span><span class="t">Mapping&nbsp;: les trois repères</span><span class="pg">07</span></div>
+        <div class="it"><span class="n">03</span><span class="t">Dessiner et faire valider</span><span class="pg">07</span></div>
+        <div class="it"><span class="n">04</span><span class="t">Restructurer</span><span class="pg">07</span></div>
+        <div class="it"><span class="n">05</span><span class="t">Contrôle et conseils</span><span class="pg">07</span></div>
+      </div>
+
+      <div class="bottom-main">
+        <div class="card cream">
+          <h3 class="h-label">Matériel nécessaire</h3>
+          <p>Fil de mapping teinté ou crayon cosmétique, règle ou pied à coulisse adapté, <strong>goupillons jetables, pince désinfectée</strong>, petits ciseaux si nécessaire, brosse, coton, nettoyant doux, miroir et fiche de diagnostic.</p>
+        </div>
+        <div class="step">
+          <div class="step-head"><span class="n" aria-hidden="true">01</span><h3 class="st"><span class="k">Étape 1 —</span> Diagnostic et préparation</h3></div>
+          <p>Interroger la cliente sur ses attentes, réactions cutanées, soins récents et traitements susceptibles de fragiliser la peau. Observer l’implantation, les zones clairsemées, les épis et l’asymétrie. Nettoyer puis brosser les sourcils dans leur sens naturel.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>
+
+<style>
+  [data-id="mapping"] .content { display: flex; flex-direction: column; }
+
+  /* En-tête : rappel de section + étape 2 */
+  [data-id="mapping"] .mp-head { display: grid; grid-template-columns: 22mm 1fr; column-gap: 6mm; align-items: end; }
+  [data-id="mapping"] .mp-head .n {
+    font-family: var(--display); font-style: italic; font-size: 54pt; line-height: .78; color: var(--bordeaux); letter-spacing: -.02em;
+  }
+  [data-id="mapping"] .mp-head .kicker { margin-bottom: 2.6mm; }
+  [data-id="mapping"] .mp-head .h-title { font-size: 21pt; }
+  [data-id="mapping"] .mp-head .h-title .k { font-style: italic; color: var(--bordeaux); text-transform: none; }
+
+  /* Étape 2 : tableau + schéma */
+  [data-id="mapping"] .mp-row {
+    display: grid; grid-template-columns: 1fr 108mm; column-gap: 10mm; margin-top: 6mm; align-items: center;
+  }
+  [data-id="mapping"] .refs td { font-size: 9.2pt; }
+  [data-id="mapping"] .refs td.key { width: 34mm; font-size: 12.5pt; }
+  [data-id="mapping"] .refs td.key em { font-style: italic; font-size: 15pt; margin-right: .6mm; }
+  [data-id="mapping"] .refs .sw { display: block; width: 16mm; height: 2mm; margin-top: 1.6mm; }
+  [data-id="mapping"] .schema { background: var(--paper); border: .2mm solid var(--line); padding: 4mm 5mm; }
+  [data-id="mapping"] .schema svg { display: block; width: 100%; height: auto; }
+
+  /* Étapes 3 à 5 */
+  [data-id="mapping"] .mp-steps {
+    margin-top: auto; display: grid; grid-template-columns: 1fr 1.6fr 1fr; column-gap: 8mm; align-items: start;
+  }
+  [data-id="mapping"] .step { border-top: .3mm solid var(--espresso); padding-top: 3.4mm; }
+  [data-id="mapping"] .step-head { display: flex; align-items: flex-end; gap: 3.4mm; margin-bottom: 2.6mm; }
+  [data-id="mapping"] .step-head .n {
+    font-family: var(--display); font-style: italic; font-size: 34pt; line-height: .8; color: var(--bordeaux); letter-spacing: -.02em;
+  }
+  [data-id="mapping"] .step-head .st {
+    font-family: var(--display); font-weight: 500; font-size: 11pt; line-height: 1.2; color: var(--espresso);
+  }
+  [data-id="mapping"] .step-head .st .k { display: block; margin-bottom: .4mm; font-style: italic; color: var(--bordeaux); font-weight: 400; font-size: 9.5pt; }
+  [data-id="mapping"] .step .alert { margin-top: 3mm; padding: 3.2mm 4.6mm 3.2mm 13mm; }
+  [data-id="mapping"] .step .alert::before { left: 3.6mm; top: 3.2mm; }
+</style>
+<section class="page" data-id="mapping">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie I — Sourcils</span></div>
+  <div class="content">
+    <div class="mp-head">
+      <div class="n" aria-hidden="true">02</div>
+      <div>
+        <div class="kicker">1. Restructuration des sourcils &amp; mapping</div>
+        <h2 class="h-title"><span class="k">Étape 2</span> — Mapping&nbsp;: les trois repères</h2>
+      </div>
+    </div>
+
+    <div class="mp-row">
+      <table class="data refs">
+        <thead><tr><th>Repère</th><th>Méthode indicative</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="key"><em>A</em> — Début<svg class="sw" viewBox="0 0 60 8" aria-hidden="true"><line x1="0" y1="4" x2="60" y2="4" stroke="#7A2430" stroke-width="1.4"/></svg></td>
+            <td>Projeter une ligne depuis l’aile du nez vers le coin interne de l’œil. Adapter à l’implantation naturelle.</td>
+          </tr>
+          <tr>
+            <td class="key"><em>B</em> — Arche<svg class="sw" viewBox="0 0 60 8" aria-hidden="true"><line x1="0" y1="4" x2="60" y2="4" stroke="#7A2430" stroke-width="1.4" stroke-dasharray="7 4"/></svg></td>
+            <td>Repérer le point haut selon la morphologie, souvent vers le bord externe de l’iris, regard droit.</td>
+          </tr>
+          <tr>
+            <td class="key"><em>C</em> — Queue<svg class="sw" viewBox="0 0 60 8" aria-hidden="true"><line x1="1" y1="4" x2="60" y2="4" stroke="#7A2430" stroke-width="1.6" stroke-dasharray="1.5 4" stroke-linecap="round"/></svg></td>
+            <td>Projeter une ligne depuis l’aile du nez vers le coin externe de l’œil, sans abaisser artificiellement la queue.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="schema">
+<svg class="schema-mapping" viewBox="0 0 520 345" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapping des sourcils : A début, B arche, C queue, projetés depuis l'aile du nez">
+  <style>
+    .schema-mapping .face { fill: none; stroke: #A48A7B; stroke-width: 1.2; }
+    .schema-mapping .brow { fill: #3B2823; opacity: .85; }
+    .schema-mapping .eye { fill: #FCFAF7; stroke: #3B2823; stroke-width: 1.3; }
+    .schema-mapping .iris { fill: #A48A7B; }
+    .schema-mapping .pupil { fill: #3B2823; }
+    .schema-mapping .nose { fill: none; stroke: #3B2823; stroke-width: 1.3; stroke-linecap: round; }
+    .schema-mapping .line-a { stroke: #7A2430; stroke-width: 1.4; }
+    .schema-mapping .line-b { stroke: #7A2430; stroke-width: 1.4; stroke-dasharray: 7 4; }
+    .schema-mapping .line-c { stroke: #7A2430; stroke-width: 1.6; stroke-dasharray: 1.5 4; stroke-linecap: round; }
+    .schema-mapping .dot { fill: #7A2430; }
+    .schema-mapping .dot-ring { fill: #FCFAF7; stroke: #7A2430; stroke-width: 1.4; }
+    .schema-mapping .lbl { font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 24px; fill: #7A2430; }
+  </style>
+
+  <!-- contour du visage -->
+  <path class="face" d="M30 26 C30 230 110 342 260 342 C410 342 490 230 490 26"/>
+
+  <!-- sourcils -->
+  <path class="brow" d="M210 124 C209 116 208 110 206 104 C178 92 138 81 101 80 C80 80 60 88 48 100 C64 95 84 92 102 93 C140 95 178 106 210 124 Z"/>
+  <path class="brow" d="M310 124 C311 116 312 110 314 104 C342 92 382 81 419 80 C440 80 460 88 472 100 C456 95 436 92 418 93 C380 95 342 106 310 124 Z"/>
+
+  <!-- yeux -->
+  <path class="eye" d="M98 152 C122 130 188 130 212 152 C188 170 122 170 98 152 Z"/>
+  <circle class="iris" cx="160" cy="151" r="15"/><circle class="pupil" cx="160" cy="151" r="6"/>
+  <path class="eye" d="M308 152 C332 130 398 130 422 152 C398 170 332 170 308 152 Z"/>
+  <circle class="iris" cx="360" cy="151" r="15"/><circle class="pupil" cx="360" cy="151" r="6"/>
+
+  <!-- nez -->
+  <path class="nose" d="M246 160 C246 215 242 255 236 278 C230 294 240 306 252 299 M274 160 C274 215 278 255 284 278 C290 294 280 306 268 299 M252 299 C256 305 264 305 268 299"/>
+
+  <!-- A : aile du nez -> coin interne de l'œil -> début -->
+  <path class="line-a" d="M232 292 L199 58"/><path class="line-a" d="M288 292 L321 58"/>
+  <!-- B : aile du nez -> bord externe de l'iris -> arche -->
+  <path class="line-b" d="M232 292 L82 50"/><path class="line-b" d="M288 292 L438 50"/>
+  <!-- C : aile du nez -> coin externe de l'œil -> queue -->
+  <path class="line-c" d="M232 292 L29 80"/><path class="line-c" d="M288 292 L491 80"/>
+
+  <circle class="dot-ring" cx="232" cy="292" r="5"/><circle class="dot-ring" cx="288" cy="292" r="5"/>
+  <circle class="dot" cx="206" cy="112" r="4.5"/><circle class="dot" cx="314" cy="112" r="4.5"/>
+  <circle class="dot" cx="101" cy="82" r="4.5"/><circle class="dot" cx="419" cy="82" r="4.5"/>
+  <circle class="dot" cx="48" cy="100" r="4.5"/><circle class="dot" cx="472" cy="100" r="4.5"/>
+
+  <text class="lbl" x="196" y="46" text-anchor="middle">A</text><text class="lbl" x="324" y="46" text-anchor="middle">A</text>
+  <text class="lbl" x="76" y="40" text-anchor="middle">B</text><text class="lbl" x="444" y="40" text-anchor="middle">B</text>
+  <text class="lbl" x="20" y="72" text-anchor="middle">C</text><text class="lbl" x="500" y="72" text-anchor="middle">C</text>
+</svg>
+      </div>
+    </div>
+
+    <div class="mp-steps">
+      <div class="step">
+        <div class="step-head"><span class="n" aria-hidden="true">03</span><h3 class="st"><span class="k">Étape 3 —</span> Dessiner et faire valider</h3></div>
+        <p>Marquer le début, l’arche et la queue des deux côtés. Relier les points pour délimiter les contours supérieur et inférieur. Comparer les hauteurs, les épaisseurs et la direction des queues&nbsp;; corriger en tenant compte de l’asymétrie du visage. <strong>Faire valider le dessin à la cliente avant l’épilation.</strong></p>
+      </div>
+      <div class="step">
+        <div class="step-head"><span class="n" aria-hidden="true">04</span><h3 class="st"><span class="k">Étape 4 —</span> Restructurer</h3></div>
+        <p>Tendre délicatement la peau et retirer à la pince uniquement les poils hors des contours validés, dans le sens de pousse. Brosser régulièrement pour contrôler la ligne. <strong>Ne couper que les pointes qui dépassent réellement, avec parcimonie.</strong></p>
+        <div class="alert">
+          <div class="alert-title">Important</div>
+          <p>Éviter l’épilation sur peau lésée, irritée ou fragilisée&nbsp;; pour la cire, respecter les contre-indications propres à la méthode.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-head"><span class="n" aria-hidden="true">05</span><h3 class="st"><span class="k">Étape 5 —</span> Contrôle et conseils</h3></div>
+        <p>Effacer les marques, vérifier le résultat de face et en lumière naturelle, puis montrer la ligne à la cliente. <strong>Conseiller d’éviter les frottements et produits irritants immédiatement après la prestation&nbsp;; respecter les consignes spécifiques si une teinture ou un Brow Lift est associé.</strong></p>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>
+
+<style>
+  [data-id="browlift"] .layout { display: grid; grid-template-columns: 82mm 1fr; gap: 12mm; height: 100%; }
+  [data-id="browlift"] .side { display: flex; flex-direction: column; }
+  [data-id="browlift"] .side .h-title { margin: 3mm 0 4.5mm; font-size: 23pt; }
+  [data-id="browlift"] .side .protocol { font-size: 9.8pt; }
+  [data-id="browlift"] .side .photo {
+    margin-top: 7mm; flex: 1; min-height: 52mm; overflow: hidden; position: relative; background: #fff;
+  }
+  /* Gros plan sur le sourcil (portrait de couverture affiché à ~0,8× sa taille naturelle) */
+  [data-id="browlift"] .side .photo img {
+    position: absolute; width: 280%; max-width: none; left: -98%; top: -37mm;
+  }
+  [data-id="browlift"] .main { display: flex; flex-direction: column; }
+  [data-id="browlift"] .times-group { margin-top: auto; }
+
+  /* Frise du protocole (reprise visuelle du paragraphe, sans numéros pour ne pas
+     concurrencer « Étape 1 / Étape 2 » du tableau) */
+  [data-id="browlift"] .seq { background: var(--paper); border: .2mm solid var(--line); padding: 4.2mm 5mm 4.6mm; }
+  [data-id="browlift"] .seq .h-label { margin-bottom: 3.4mm; }
+  [data-id="browlift"] .seq ol { list-style: none; display: grid; grid-template-columns: repeat(6, 1fr); position: relative; }
+  [data-id="browlift"] .seq ol::before {
+    content: ''; position: absolute; left: 8.33%; right: 8.33%; top: 6.2mm; height: .25mm; background: var(--rose);
+  }
+  [data-id="browlift"] .seq li { position: relative; text-align: center; padding: 0 1.2mm; }
+  [data-id="browlift"] .seq .tag {
+    display: block; height: 4mm; font-size: 6.4pt; font-weight: 500; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--bordeaux); white-space: nowrap;
+  }
+  [data-id="browlift"] .seq .dot {
+    display: block; width: 2.2mm; height: 2.2mm; border-radius: 50%; margin: 1.1mm auto 2.4mm;
+    background: var(--paper); border: .3mm solid var(--rose); position: relative;
+  }
+  [data-id="browlift"] .seq li.key .dot {
+    width: 3.6mm; height: 3.6mm; margin: .4mm auto 1.7mm; background: var(--bordeaux); border-color: var(--bordeaux);
+  }
+  [data-id="browlift"] .seq .t { display: block; font-size: 8.6pt; line-height: 1.3; color: var(--ink); }
+  [data-id="browlift"] .seq li.key .t { font-family: var(--display); font-size: 9.3pt; color: var(--espresso); }
+
+  [data-id="browlift"] .times-head { margin: 0 0 3.2mm; }
+  [data-id="browlift"] .times-head .h-sub { font-size: 13.5pt; margin: 0; }
+  [data-id="browlift"] table.times th { padding-bottom: 2.4mm; }
+  [data-id="browlift"] table.times th .st { color: var(--bordeaux); }
+  [data-id="browlift"] table.times th:nth-child(2),
+  [data-id="browlift"] table.times th:nth-child(3),
+  [data-id="browlift"] table.times td.t { width: 36%; }
+  [data-id="browlift"] table.times td { padding-top: 3.9mm; padding-bottom: 3.9mm; vertical-align: middle; }
+  [data-id="browlift"] table.times td.key { font-size: 12.5pt; }
+  [data-id="browlift"] table.times td.key svg { width: 9mm; height: 5.2mm; vertical-align: -1.2mm; margin-right: 3.2mm; }
+  [data-id="browlift"] table.times .chip { font-size: 8.6pt; padding: .7mm 3.2mm; }
+
+  [data-id="browlift"] .final {
+    display: grid; grid-template-columns: 38mm 1fr; gap: 4mm; align-items: baseline;
+    background: var(--cream); padding: 3.4mm 5mm; margin-top: 1mm;
+  }
+  [data-id="browlift"] .final .h-label { margin: 0; color: var(--bordeaux); }
+  [data-id="browlift"] .alert { margin-top: 3mm; }
+</style>
+<section class="page" data-id="browlift">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie I — Sourcils</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="side">
+        <div class="kicker">Technique et temps de pose</div>
+        <h2 class="h-title"><span class="no">2.</span>Brow Lift&nbsp;— Thuya</h2>
+        <p class="protocol">Nettoyer les sourcils, appliquer la lotion permanente Thuya selon les zones prévues, puis retirer complètement. Appliquer ensuite le neutralisant (deuxième étape), retirer selon la notice, puis <strong>terminer par la crème de soin Thuya</strong>, à la fin de la prestation.</p>
+        <div class="photo"><img class="blend" src="assets/portrait-couverture.jpg" alt=""></div>
+      </div>
+
+      <div class="main">
+        <div class="seq">
+          <h3 class="h-label">Protocole</h3>
+          <ol>
+            <li><span class="tag"></span><span class="dot"></span><span class="t">Nettoyer les sourcils</span></li>
+            <li class="key"><span class="tag">Étape 1</span><span class="dot"></span><span class="t">Lotion permanente Thuya</span></li>
+            <li><span class="tag"></span><span class="dot"></span><span class="t">Retirer complètement</span></li>
+            <li class="key"><span class="tag">Étape 2</span><span class="dot"></span><span class="t">Neutralisant</span></li>
+            <li><span class="tag"></span><span class="dot"></span><span class="t">Retirer selon la notice</span></li>
+            <li class="key"><span class="tag">Étape finale</span><span class="dot"></span><span class="t">Crème de soin Thuya</span></li>
+          </ol>
+        </div>
+
+        <div class="times-group">
+        <div class="times-head">
+          <h3 class="h-sub">Temps de pose&nbsp;— protocole demandé pour la formation</h3>
+        </div>
+        <table class="data times">
+          <thead>
+            <tr>
+              <th>Nature du poil</th>
+              <th><span class="st">Étape 1&nbsp;:</span> permanente</th>
+              <th><span class="st">Étape 2&nbsp;:</span> neutralisant</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="key"><svg viewBox="0 0 36 20" aria-hidden="true"><g fill="none" stroke="#3B2823" stroke-linecap="round" stroke-width=".7"><path d="M3 17 C10 9 18 5 33 4"/><path d="M3 19 C11 12 19 9 33 9"/></g></svg>Poils <em>fins</em></td>
+              <td class="t"><span class="chip fill">8&nbsp;minutes</span></td>
+              <td class="t"><span class="chip fill">8&nbsp;minutes</span></td>
+            </tr>
+            <tr>
+              <td class="key"><svg viewBox="0 0 36 20" aria-hidden="true"><g fill="none" stroke="#3B2823" stroke-linecap="round" stroke-width="1.5"><path d="M3 17 C10 9 18 5 33 4"/><path d="M3 19 C11 12 19 9 33 9"/></g></svg>Poils <em>normaux</em></td>
+              <td class="t"><span class="chip fill">10&nbsp;minutes</span></td>
+              <td class="t"><span class="chip fill">10&nbsp;minutes</span></td>
+            </tr>
+            <tr>
+              <td class="key"><svg viewBox="0 0 36 20" aria-hidden="true"><g fill="none" stroke="#3B2823" stroke-linecap="round" stroke-width="2.6"><path d="M3 16 C10 8 18 4 33 3"/><path d="M3 19 C11 12 19 9 33 10"/></g></svg>Poils <em>épais</em></td>
+              <td class="t"><span class="chip fill">11 à 12&nbsp;minutes maximum</span></td>
+              <td class="t"><span class="chip fill">11 à 12&nbsp;minutes maximum</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="final">
+          <h3 class="h-label">Étape finale</h3>
+          <p>Appliquer la crème de soin Thuya après le retrait du neutralisant, en respectant le mode d’emploi de cette crème.</p>
+        </div>
+        <div class="alert">
+          <div class="alert-title">Précaution</div>
+          <p>Ces temps sont ceux demandés pour ce support de formation&nbsp;; ils ne sont pas présentés comme des durées officiellement validées par Thuya. Vérifier la notice des références exactes, notamment pour la deuxième lotion, avant toute application sur une cliente. <strong>Ne jamais dépasser les limites du fabricant.</strong></p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>
+
+<style>
+  [data-id="teinture"] .layout { display: grid; grid-template-columns: 1fr 96mm; gap: 13mm; height: 100%; }
+  [data-id="teinture"] .main { display: flex; flex-direction: column; }
+  [data-id="teinture"] .main .h-title { margin: 3.5mm 0 0; font-size: 25pt; }
+  [data-id="teinture"] .rule.short { margin: 6mm 0 6.5mm; }
+  [data-id="teinture"] .main .lead { font-size: 15.5pt; line-height: 1.38; color: var(--espresso); max-width: 112mm; }
+  [data-id="teinture"] .main .alert { margin-top: 7mm; }
+  [data-id="teinture"] .main .alert p + p { margin-top: 2mm; }
+
+  [data-id="teinture"] .recall { margin-top: auto; padding: 5mm 6mm 5.2mm; }
+  [data-id="teinture"] .recall .recall-head {
+    display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1.6mm;
+  }
+  [data-id="teinture"] .recall > .h-label { margin-bottom: 3mm; }
+  [data-id="teinture"] .recall .see { font-size: 8.4pt; letter-spacing: .04em; color: var(--taupe); }
+  [data-id="teinture"] .recall .see .pg { font-family: var(--display); font-style: italic; font-size: 10pt; color: var(--bordeaux); }
+  [data-id="teinture"] .recall td.key { width: 42mm; font-size: 12pt; }
+  [data-id="teinture"] .recall td { text-wrap: balance; }
+
+  [data-id="teinture"] .photo { position: relative; overflow: hidden; height: 100%; background: var(--ivory); }
+  [data-id="teinture"] .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 74%; display: block; }
+</style>
+<section class="page" data-id="teinture">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie I — Sourcils</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="main">
+        <div class="kicker">Teinture hybride et décoloration</div>
+        <h2 class="h-title"><span class="no">3.</span>Teinture des sourcils&nbsp;— Brow Daddy</h2>
+        <div class="rule short"></div>
+        <p class="lead">Choisir la nuance selon le diagnostic et suivre la notice de la gamme Brow Daddy utilisée (Hybrid Tint ou StainMe). Protéger la peau et contrôler la coloration.</p>
+        <div class="alert">
+          <div class="alert-title">Important</div>
+          <p>Après un Brow Lift, vérifier la compatibilité et les durées spécifiques avant d’associer les deux prestations.</p>
+          <p><strong>Le protocole de teinture et son temps de pose restent à confirmer à partir de la référence exacte du produit.</strong></p>
+        </div>
+
+        <div class="card recall">
+          <div class="recall-head">
+            <div class="kicker plain">Rappel</div>
+            <span class="see">Voir aussi&nbsp;: Hygiène, sécurité et qualité, p.&nbsp;<span class="pg">12</span></span>
+          </div>
+          <h3 class="h-label">Points de vigilance par technique</h3>
+          <table class="data">
+            <thead><tr><th>Technique</th><th>Vigilance principale</th></tr></thead>
+            <tbody>
+              <tr><td class="key">Teinture <em>hybride</em></td><td>Sensibilisation possible&nbsp;: respecter le test préalable et la notice exacte.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="photo"><img class="blend" src="assets/sac-jambes.jpg" alt=""></div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>
+
+<style>
+  [data-id="decoloration"] .layout {
+    display: grid; grid-template-columns: 84mm 1fr 74mm; gap: 9mm; height: 100%;
+  }
+  [data-id="decoloration"] .col { display: flex; flex-direction: column; min-height: 0; }
+  [data-id="decoloration"] .col1 .h-title { margin: 3.5mm 0 0; font-size: 23pt; }
+  [data-id="decoloration"] .col1 .rule.short { margin: 5mm 0 6mm; }
+
+  /* Cartes produit blanches (photos ≤ 45 mm) */
+  [data-id="decoloration"] .prod { background: #fff; border: .2mm solid var(--line); padding: 4.5mm 5.5mm 5mm; }
+  [data-id="decoloration"] .prod .shot {
+    height: 40mm; display: flex; justify-content: center; align-items: flex-start; margin-bottom: 3.5mm; overflow: hidden;
+  }
+  [data-id="decoloration"] .prod .shot img { width: auto; display: block; }
+  [data-id="decoloration"] .prod .shot.bb img { height: 39mm; margin-top: .5mm; }
+  /* le fichier a un fond à 253 et 2 lignes grises en bas : on masque le bord et on remonte le blanc */
+  [data-id="decoloration"] .col3 .prod .shot { height: 44mm; }
+  [data-id="decoloration"] .prod .shot.ox img { height: 44.7mm; filter: brightness(1.013); }
+  [data-id="decoloration"] .prod-name {
+    font-family: var(--display); font-weight: 400; font-size: 14pt; line-height: 1.15; color: var(--espresso);
+    border-top: .2mm solid var(--line); padding-top: 3mm; margin-bottom: 2mm;
+  }
+  [data-id="decoloration"] .prod-name .lbl {
+    display: block; font-family: var(--sans); font-size: 6.8pt; font-weight: 500; letter-spacing: .24em;
+    text-transform: uppercase; color: var(--bordeaux); margin-bottom: 1.4mm;
+  }
+  [data-id="decoloration"] .prod-name .chip { font-size: 8.4pt; vertical-align: .6mm; margin-left: 1mm; }
+
+  [data-id="decoloration"] .recall { margin-top: auto; padding: 4.2mm 5.5mm 4.6mm; }
+  [data-id="decoloration"] .recall .kicker { margin-bottom: 1.6mm; }
+  [data-id="decoloration"] .recall .h-label { margin-bottom: 2.4mm; }
+  [data-id="decoloration"] .recall .tech {
+    font-family: var(--display); font-size: 12pt; color: var(--espresso); border-top: .3mm solid var(--espresso);
+    padding-top: 2.2mm; margin-bottom: 1.2mm;
+  }
+  [data-id="decoloration"] .recall .see { font-size: 8.4pt; letter-spacing: .04em; color: var(--taupe); margin-top: 2mm; }
+  [data-id="decoloration"] .recall .see .pg { font-family: var(--display); font-style: italic; font-size: 10pt; color: var(--bordeaux); }
+
+  [data-id="decoloration"] .h-sub { font-size: 13pt; }
+  [data-id="decoloration"] .col2 .h-sub { margin-bottom: 3.8mm; }
+  [data-id="decoloration"] ol.steps > li { margin-bottom: 3.4mm; }
+  [data-id="decoloration"] ol.steps > li .chip { font-size: 8.4pt; padding: .3mm 2.4mm; }
+  [data-id="decoloration"] ol.steps > li.warn {
+    background: var(--bordeaux-soft); margin-left: -2.6mm; padding: 1.8mm 2.6mm 1.8mm 11.6mm;
+    border-left: .8mm solid var(--bordeaux);
+  }
+  [data-id="decoloration"] ol.steps > li.warn::before { left: 2.2mm; top: 1.2mm; }
+  [data-id="decoloration"] .pose { margin-top: auto; padding: 4.6mm 5.5mm 5mm; }
+  [data-id="decoloration"] .pose .h-sub { margin-bottom: 2.4mm; }
+  [data-id="decoloration"] .pose .chip { font-size: 8.4pt; }
+
+  [data-id="decoloration"] .col3 .prod { padding-top: 5mm; }
+  [data-id="decoloration"] .col3 .alert { margin-top: 5mm; padding-top: 4.4mm; padding-bottom: 4.6mm; }
+  [data-id="decoloration"] .col3 .alert p + p { margin-top: 1.6mm; }
+  [data-id="decoloration"] .after { margin-top: auto; padding: 4.6mm 5.5mm 5mm; }
+</style>
+<section class="page" data-id="decoloration">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie I — Sourcils</span></div>
+  <div class="content">
+    <div class="layout">
+
+      <div class="col col1">
+        <div class="kicker">Teinture hybride et décoloration</div>
+        <h2 class="h-title"><span class="no">4.</span>Décoloration des sourcils</h2>
+        <div class="rule short"></div>
+        <div class="prod">
+          <div class="shot bb"><img src="assets/zola-bb-blond-powder.jpg" alt="ZOLA BB Blond Powder"></div>
+          <h3 class="prod-name"><span class="lbl">Produit utilisé&nbsp;:</span> ZOLA BB Blond Powder</h3>
+          <p>Poudre éclaircissante spécifique pour les sourcils.</p>
+        </div>
+        <div class="card recall">
+          <div class="kicker plain">Rappel</div>
+          <h3 class="h-label">Points de vigilance par technique</h3>
+          <div class="tech">Décoloration</div>
+          <p>Éviter le surtraitement, utiliser uniquement l’oxydant compatible indiqué par le fabricant.</p>
+          <p class="see">Voir aussi&nbsp;: Hygiène, sécurité et qualité, p.&nbsp;<span class="pg">12</span></p>
+        </div>
+      </div>
+
+      <div class="col col2">
+        <h3 class="h-sub">Préparation et application</h3>
+        <ol class="steps">
+          <li>Effectuer le diagnostic, vérifier les contre-indications et le test de sensibilité.</li>
+          <li>Protéger la peau autour des sourcils et porter des gants.</li>
+          <li>Mélanger dans un récipient non métallique&nbsp;: <span class="chip">1&nbsp;dose de poudre pour 2&nbsp;doses</span> d’oxydant ZOLA compatible, conformément à la notice du produit.</li>
+          <li class="warn"><strong>Appliquer uniquement sur les poils des sourcils, sans contact avec les yeux.</strong></li>
+          <li>Surveiller visuellement et retirer dès que le résultat souhaité est atteint.</li>
+          <li>Rincer et nettoyer soigneusement selon la notice.</li>
+        </ol>
+        <div class="pose card cream">
+          <h3 class="h-sub">Temps de pose</h3>
+          <p>Les revendeurs indiquent <span class="chip">3 à 20&nbsp;minutes</span> selon le résultat visé.</p>
+          <p><strong>Adapter au poil et à l’objectif, pas uniquement à la couleur de peau.</strong></p>
+          <p>Sur peau foncée comme sur peau claire, contrôler régulièrement l’éclaircissement, la tolérance cutanée et le contraste recherché.</p>
+        </div>
+      </div>
+
+      <div class="col col3">
+        <div class="prod">
+          <div class="shot ox"><img src="assets/zola-oxydant-3.jpg" alt="Oxydant ZOLA 3 %"></div>
+          <h3 class="prod-name"><span class="lbl">Oxydant utilisé&nbsp;:</span> ZOLA <span class="chip fill">3&nbsp;%</span></h3>
+          <p>Oxydant teinture sourcils ZOLA à 3&nbsp;%, associé à la poudre ZOLA BB Blond Powder selon les instructions du fabricant.</p>
+        </div>
+        <div class="alert">
+          <div class="alert-title">Important</div>
+          <p><strong>Ne pas remplacer par un oxydant plus concentré.</strong></p>
+          <p>Respecter le ratio de mélange et les limites de pose de la notice.</p>
+        </div>
+        <div class="after card cream"><p><strong>Après prestation&nbsp;:</strong> éviter les frottements et surveiller toute irritation.</p></div>
+      </div>
+
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>
+
+<style>
+  [data-id="atelier"] .layout { display: grid; grid-template-columns: 92mm 1fr; gap: 17mm; height: 100%; }
+  [data-id="atelier"] .side { display: flex; flex-direction: column; }
+  [data-id="atelier"] .side .h-title { margin: 3.5mm 0 0; font-size: 25pt; }
+  [data-id="atelier"] .side .rule.short { margin: 7mm 0 9mm; }
+  [data-id="atelier"] .side .h-label { margin-bottom: 1mm; }
+  [data-id="atelier"] .tasks { list-style: none; border-top: .3mm solid var(--espresso); }
+  [data-id="atelier"] .tasks li {
+    position: relative; padding: 4.2mm 0 4.2mm 6mm; border-bottom: .2mm solid var(--line);
+    font-size: 10.2pt; line-height: 1.5; text-wrap: pretty;
+  }
+  [data-id="atelier"] .tasks li::before {
+    content: ''; position: absolute; left: .4mm; top: calc(4.2mm + .62em); width: 1.5mm; height: 1.5mm;
+    border-radius: 50%; background: var(--rose);
+  }
+  [data-id="atelier"] .tasks li:last-child { border-bottom: 0; }
+  [data-id="atelier"] .side .alert { margin-top: auto; }
+  [data-id="atelier"] .side .alert p { font-size: 10.2pt; text-wrap: balance; }
+
+  [data-id="atelier"] .main { display: flex; flex-direction: column; }
+  [data-id="atelier"] .intro {
+    font-family: var(--serif); font-style: italic; font-size: 12.6pt; line-height: 1.36; color: var(--espresso);
+    margin: 0 0 5.5mm; text-wrap: pretty;
+  }
+  [data-id="atelier"] .intro .lbl {
+    font-family: var(--sans); font-style: normal; font-size: 6.8pt; font-weight: 500; letter-spacing: .26em;
+    text-transform: uppercase; color: var(--bordeaux); margin-right: .6mm;
+  }
+  [data-id="atelier"] .views { display: flex; flex-direction: column; gap: 2.2mm; }
+  [data-id="atelier"] .view { display: grid; grid-template-columns: 14mm 1fr; gap: 4mm; align-items: start; }
+  [data-id="atelier"] .view .n {
+    font-family: var(--display); font-style: italic; font-size: 30pt; line-height: .9; color: var(--bordeaux);
+    border-top: .3mm solid var(--bordeaux); padding-top: 2mm; text-align: left;
+  }
+  /* Photos affichées entières, à leur proportion d'origine : aucun recadrage, filigrane de la 3e vue intact */
+  [data-id="atelier"] .view img { display: block; width: 134mm; height: auto; }
+  [data-id="atelier"] .credit {
+    margin: 2.4mm 0 0 18mm; font-size: 8.4pt; letter-spacing: .04em; color: var(--taupe);
+  }
+</style>
+<section class="page" data-id="atelier">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie I — Sourcils</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="side">
+        <div class="kicker">Observation</div>
+        <h2 class="h-title">Atelier visuel&nbsp;— Brow Lift</h2>
+        <div class="rule short"></div>
+        <h3 class="h-label">Consignes</h3>
+        <ul class="tasks">
+          <li>Décrire le sens d’implantation et le sens de brossage sur chacune des trois images.</li>
+          <li>Repérer les zones où les poils se croisent, les espaces clairsemés et les contours à respecter.</li>
+          <li>Expliquer à la cliente la différence entre un effet naturel, discipliné et plus structuré.</li>
+          <li><strong>Faire valider la forme et le résultat attendu avant la prestation.</strong></li>
+        </ul>
+        <div class="alert">
+          <div class="alert-title">Important</div>
+          <p>Les images ne constituent pas un protocole de pose.</p>
+        </div>
+      </div>
+
+      <div class="main">
+        <p class="intro"><span class="lbl">Lecture du résultat&nbsp;:</span> la photographie ci-dessous montre trois présentations de sourcils. Elle permet de discuter de l’orientation des poils, du volume apparent, de la définition de la ligne et du rendu final.</p>
+        <div class="views">
+          <div class="view"><div class="n">1</div><img src="assets/atelier-brow-1.jpg" alt="Présentation de sourcil 1"></div>
+          <div class="view"><div class="n">2</div><img src="assets/atelier-brow-2.jpg" alt="Présentation de sourcil 2"></div>
+          <div class="view"><div class="n">3</div><img src="assets/atelier-brow-3.jpg" alt="Présentation de sourcil 3"></div>
+        </div>
+        <p class="credit">Crédit photo&nbsp;: @refreshednrefined</p>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>
+
+<style>
+  [data-id="hygiene"] .layout { display: grid; grid-template-columns: 94mm 1fr; gap: 13mm; height: 100%; }
+  [data-id="hygiene"] .side { display: flex; flex-direction: column; }
+  [data-id="hygiene"] .side .h-title { margin: 3.5mm 0 0; font-size: 24pt; }
+  [data-id="hygiene"] .side .rule.short { margin: 6.5mm 0 7mm; }
+  [data-id="hygiene"] .sec-head { display: flex; align-items: baseline; gap: 2.6mm; margin-bottom: 3mm; }
+  [data-id="hygiene"] .sec-head .no {
+    font-family: var(--display); font-style: italic; font-size: 19pt; line-height: 1; color: var(--rose);
+  }
+  [data-id="hygiene"] .sec-head .h-sub { margin: 0; font-size: 13pt; }
+
+  /* Checklist : cases à cocher */
+  [data-id="hygiene"] ul.checks { list-style: none; border-top: .3mm solid var(--espresso); }
+  [data-id="hygiene"] ul.checks li {
+    position: relative; padding: 3.7mm 0 3.7mm 8.4mm; border-bottom: .2mm solid var(--line); line-height: 1.5;
+    text-wrap: pretty;
+  }
+  [data-id="hygiene"] ul.checks li:last-child { border-bottom: 0; }
+  [data-id="hygiene"] ul.checks li::before {
+    content: ''; position: absolute; left: 0; top: calc(3.7mm + .22em); width: 3.5mm; height: 3.5mm;
+    border: .28mm solid var(--mocha); border-radius: .5mm; background: var(--paper);
+  }
+  [data-id="hygiene"] .side .alert { margin-top: 1.6mm; padding: 3.8mm 5mm 4mm 14mm; }
+  [data-id="hygiene"] .side .alert::before { left: 4mm; top: 3.8mm; }
+  [data-id="hygiene"] .side .alert ul.checks { border-top: 0; }
+  [data-id="hygiene"] .side .alert ul.checks li { border-bottom-color: rgba(122, 36, 48, .2); }
+  [data-id="hygiene"] .side .alert ul.checks li:first-child { padding-top: 1.2mm; }
+  [data-id="hygiene"] .side .alert ul.checks li:first-child::before { top: calc(1.2mm + .22em); }
+  [data-id="hygiene"] .side .alert ul.checks li:last-child { padding-bottom: 0; }
+  [data-id="hygiene"] .side .alert ul.checks li::before { border-color: var(--bordeaux); background: #fff; }
+  [data-id="hygiene"] .side .alert li.eye { font-size: 10.2pt; }
+
+  /* Colonne de droite : visuel + tableau */
+  [data-id="hygiene"] .main { display: flex; flex-direction: column; }
+  [data-id="hygiene"] .photo {
+    position: relative; flex: 1; min-height: 60mm; overflow: hidden; background: var(--cream);
+    display: flex; align-items: center; justify-content: center; padding: 6mm 10mm 4mm;
+  }
+  [data-id="hygiene"] .photo svg { width: 100%; height: 100%; }
+  [data-id="hygiene"] .vigil { margin-top: 8mm; }
+  [data-id="hygiene"] table.data td { text-wrap: pretty; font-size: 9.4pt; padding-top: 3.2mm; padding-bottom: 3.2mm; }
+  [data-id="hygiene"] table.data td.key { width: 46mm; font-size: 12.5pt; line-height: 1.2; }
+  [data-id="hygiene"] table.data th { padding-bottom: 2.4mm; }
+</style>
+<section class="page" data-id="hygiene">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie I — Sourcils</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="side">
+        <div class="kicker">Les fondamentaux</div>
+        <h2 class="h-title">Hygiène, sécurité et qualité</h2>
+        <div class="rule short"></div>
+        <div class="sec-head"><span class="no">i.</span><h3 class="h-sub">Checklist du poste de travail</h3></div>
+        <ul class="checks">
+          <li>Plan de travail propre&nbsp;; mains lavées&nbsp;; instruments nettoyés puis désinfectés selon leur usage.</li>
+          <li>Produits identifiés, non périmés, fermés et conservés conformément aux notices.</li>
+          <li>Consommables à usage unique disponibles&nbsp;; déchets éliminés dans les filières adaptées.</li>
+        </ul>
+        <div class="alert">
+          <div class="alert-title">Important</div>
+          <ul class="checks">
+            <li><strong>Aucune prestation sur une zone présentant une infection, une lésion ou une irritation active.</strong></li>
+            <li class="eye"><strong>En cas de projection oculaire&nbsp;: rinçage immédiat abondant et avis médical urgent.</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="photo"><svg viewBox="0 0 600 290" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <!-- sol -->
+            <path d="M40 270 H560" stroke="#A48A7B" stroke-width="1"/>
+            <!-- pince -->
+            <path d="M136 36 Q120 150 128 262" stroke="#3B2823" stroke-width="6"/>
+            <path d="M144 36 Q160 150 136 262" stroke="#3B2823" stroke-width="6"/>
+            <path d="M136 36 Q140 26 144 36" stroke="#3B2823" stroke-width="6"/>
+            <path d="M128 120 L131 150 M152 120 L149 150" stroke="#FCFAF7" stroke-width="1.4"/>
+            <!-- goupillon -->
+            <path d="M262 262 L262 128" stroke="#3B2823" stroke-width="5"/>
+            <g stroke="#3B2823" stroke-width="1.6">
+              <path d="M250 124 H274"/><path d="M248 118 H276"/><path d="M247 112 H277"/><path d="M247 106 H277"/>
+              <path d="M247 100 H277"/><path d="M247 94 H277"/><path d="M248 88 H276"/><path d="M248 82 H276"/>
+              <path d="M249 76 H275"/><path d="M250 70 H274"/><path d="M251 64 H273"/><path d="M252 58 H272"/>
+              <path d="M254 52 H270"/><path d="M256 46 H268"/>
+            </g>
+            <!-- petits ciseaux -->
+            <circle cx="372" cy="238" r="17" stroke="#3B2823" stroke-width="3"/>
+            <circle cx="414" cy="238" r="17" stroke="#3B2823" stroke-width="3"/>
+            <path d="M380 223 L404 58" stroke="#3B2823" stroke-width="4"/>
+            <path d="M406 223 L386 58" stroke="#3B2823" stroke-width="4"/>
+            <circle cx="393" cy="146" r="3.5" fill="#7A2430" stroke="none"/>
+            <!-- cotons -->
+            <circle cx="500" cy="228" r="38" fill="#FCFAF7" stroke="#D8B7AF" stroke-width="1.6"/>
+            <circle cx="500" cy="228" r="28" stroke="#D8B7AF" stroke-width="1" stroke-dasharray="2 5"/>
+            <circle cx="520" cy="186" r="30" fill="#FCFAF7" stroke="#D8B7AF" stroke-width="1.6"/>
+            <circle cx="520" cy="186" r="21" stroke="#D8B7AF" stroke-width="1" stroke-dasharray="2 5"/>
+            <!-- éclats de propreté -->
+            <g stroke="#7A2430" stroke-width="1.4">
+              <path d="M196 70 V90 M186 80 H206"/><path d="M330 40 V54 M323 47 H337"/>
+              <path d="M468 104 V122 M459 113 H477"/><path d="M80 150 V164 M73 157 H87"/>
+            </g>
+          </g>
+        </svg></div>
+        <div class="vigil">
+          <div class="sec-head"><span class="no">ii.</span><h3 class="h-sub">Points de vigilance par technique</h3></div>
+          <table class="data">
+            <thead><tr><th>Technique</th><th>Vigilance principale</th></tr></thead>
+            <tbody>
+              <tr><td class="key">Teinture <em>hybride</em></td><td>Sensibilisation possible&nbsp;: respecter le test préalable et la notice exacte.</td></tr>
+              <tr><td class="key">Décoloration</td><td>Éviter le surtraitement, utiliser uniquement l’oxydant compatible indiqué par le fabricant.</td></tr>
+              <tr><td class="key">Rehaussement <em>de cils</em></td><td>Protéger l’œil, contrôler le placement des cils et respecter les temps du système.</td></tr>
+              <tr><td class="key">Lash <em>Botox</em></td><td>Soin cosmétique&nbsp;: emplacement dans la séquence à vérifier auprès du fabricant.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>
+
+<style>
+  [data-id="partie-2"] .os-photo { left: 0; width: 158mm; }
+  [data-id="partie-2"] .os-photo img { object-position: 78% 40%; }
+  [data-id="partie-2"] .os-photo::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(247, 242, 236, 0) 70%, var(--ivory) 100%);
+  }
+  [data-id="partie-2"] .os-num { right: 16mm; top: 20mm; }
+  /* Titre et sommaire alignés sur un même bord, hors du visage (ne traverse plus les lèvres) */
+  [data-id="partie-2"] .os-title { left: 136mm; top: 96mm; }
+  [data-id="partie-2"] .os-toc { left: 136mm; right: 20mm; bottom: 18mm; }
+</style>
+<section class="page opener-side" data-id="partie-2">
+  <div class="os-photo"><img class="blend" src="assets/portrait-couverture.jpg" alt=""></div>
+  <div class="os-num">02</div>
+  <div class="os-title">
+    <div class="os-part">Partie II</div>
+    <div class="os-name">Les cils</div>
+  </div>
+  <div class="os-toc">
+    <div class="label">Au programme de cette partie</div>
+    <div class="item"><span class="pg">14</span>Diagnostic avant rehaussement</div>
+    <div class="item"><span class="pg">14</span>Rehaussement de cils — Noemi Innovate</div>
+    <div class="item"><span class="pg">15</span>Teinture des cils — Noemi</div>
+    <div class="item"><span class="pg">15</span>Lash Botox — Noemi Intense, Step 1.5</div>
+    <div class="item"><span class="pg">15</span>Conseils après prestation</div>
+  </div>
+</section>
+
+<style>
+  [data-id="rehaussement"] .layout { display: grid; grid-template-columns: 82mm 1fr; gap: 12mm; height: 100%; }
+  [data-id="rehaussement"] .side,
+  [data-id="rehaussement"] .main { display: flex; flex-direction: column; }
+  [data-id="rehaussement"] .h-title { margin: 3mm 0 0; font-size: 21pt; }
+  [data-id="rehaussement"] .rule.short { margin: 5mm 0 5mm; }
+  [data-id="rehaussement"] .side .diag { font-size: 9.8pt; }
+  /* Gros plan sur les cils (œil éloigné du portrait de couverture, ~1× sa taille naturelle) :
+     un autre regard que l'arche de la page en vis-à-vis */
+  [data-id="rehaussement"] .side .photo {
+    margin-top: 7mm; flex: 1; min-height: 60mm; position: relative; overflow: hidden; background: var(--ivory);
+  }
+  [data-id="rehaussement"] .side .photo img {
+    position: absolute; width: 298.7mm; max-width: none; left: -199mm; top: -57.5mm;
+  }
+
+  [data-id="rehaussement"] .main .lead { font-size: 15pt; line-height: 1.36; color: var(--espresso); max-width: 150mm; }
+  [data-id="rehaussement"] .protocol { margin-top: auto; }
+  [data-id="rehaussement"] .protocol .h-label { margin-bottom: 3.2mm; }
+  [data-id="rehaussement"] .steps-table th { padding-bottom: 2.4mm; }
+  [data-id="rehaussement"] .steps-table td { font-size: 9.6pt; padding-top: 4.2mm; padding-bottom: 4.2mm; vertical-align: middle; }
+  [data-id="rehaussement"] .steps-table td.key { width: 30mm; font-size: 14pt; }
+  [data-id="rehaussement"] .steps-table td.time { width: 44mm; text-align: right; padding-right: 2mm; }
+  [data-id="rehaussement"] .steps-table th:last-child { text-align: right; padding-right: 2mm; }
+  [data-id="rehaussement"] .steps-table .chip { font-size: 8.4pt; padding: .7mm 3mm; }
+  [data-id="rehaussement"] .steps-table tr.mid td { background: rgba(240, 224, 220, .5); }
+  [data-id="rehaussement"] .steps-table tr.mid td.key { padding-left: 2mm; }
+  [data-id="rehaussement"] .alert { margin-top: 5mm; }
+</style>
+<section class="page" data-id="rehaussement">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie II — Les cils</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="side">
+        <div class="kicker">Avant tout</div>
+        <h2 class="h-title"><span class="no">5.</span>Diagnostic avant rehaussement</h2>
+        <div class="rule short"></div>
+        <p class="diag">Observer les cils, leur état et les éventuelles contre-indications. Vérifier l’absence d’irritation ou d’infection oculaire, effectuer les contrôles prévus par les notices et choisir les pads adaptés.</p>
+        <div class="photo"><img class="blend" src="assets/portrait-couverture.jpg" alt=""></div>
+      </div>
+
+      <div class="main">
+        <div class="kicker">Protocole</div>
+        <h2 class="h-title"><span class="no">6.</span>Rehaussement de cils&nbsp;— Noemi&nbsp;Innovate</h2>
+        <div class="rule short"></div>
+        <p class="lead">Nettoyer les cils, protéger les cils inférieurs, positionner le pad en silicone et aligner soigneusement les cils.</p>
+
+        <div class="protocol">
+          <h3 class="h-label">Ordre des étapes enseigné</h3>
+          <table class="data steps-table">
+            <thead><tr><th>Étape</th><th>Produit</th><th>Temps de pose</th></tr></thead>
+            <tbody>
+              <tr><td class="key"><em>Step</em> 1</td><td>Noemi Innovate — Step 1</td><td class="time"><span class="chip fill">10&nbsp;minutes</span></td></tr>
+              <tr class="mid"><td class="key"><em>Step</em> 1.5</td><td>Noemi Intense — Lash Botox (soin cils et sourcils)</td><td class="time"><span class="chip">Selon notice du soin</span></td></tr>
+              <tr><td class="key"><em>Step</em> 2</td><td>Noemi Innovate — Step 2</td><td class="time"><span class="chip fill">10&nbsp;minutes</span></td></tr>
+            </tbody>
+          </table>
+          <div class="alert">
+            <div class="alert-title">Important</div>
+            <p>Ces temps de 10&nbsp;minutes correspondent au protocole demandé pour la formation et doivent être confirmés sur les notices Noemi Innovate du lot utilisé. Vérifier expressément auprès du fabricant que le soin Intense peut être appliqué entre Step&nbsp;1 et Step&nbsp;2&nbsp;: certains systèmes imposent de neutraliser avant tout soin. <strong>Ne pas appliquer cette séquence sans validation.</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>
+
+<style>
+  [data-id="teinture-cils"] .layout {
+    display: grid; grid-template-columns: 80mm 64mm 1fr; grid-template-rows: 1fr auto;
+    column-gap: 10mm; row-gap: 8mm; height: 100%;
+  }
+  [data-id="teinture-cils"] .col { display: flex; flex-direction: column; }
+  [data-id="teinture-cils"] .h-title { margin: 3mm 0 0; font-size: 21pt; }
+  [data-id="teinture-cils"] .rule.short { margin: 5mm 0 5mm; }
+  [data-id="teinture-cils"] .s7 .lead { font-size: 16.5pt; line-height: 1.34; color: var(--espresso); }
+  [data-id="teinture-cils"] .s7 .care { margin-top: auto; height: 43mm; padding: 5.6mm 6mm 6mm; }
+  [data-id="teinture-cils"] .s7 .care p { font-size: 10.2pt; line-height: 1.55; }
+  [data-id="teinture-cils"] .s7 .care p + p { margin-top: 2mm; }
+
+  /* Visuel : regard et cils, recadré dans une arche */
+  [data-id="teinture-cils"] .visual { position: relative; }
+  [data-id="teinture-cils"] .arch-line {
+    position: absolute; inset: 0;
+    border: .25mm solid var(--bordeaux); border-bottom: 0; border-radius: 32mm 32mm 0 0; opacity: .45;
+  }
+  [data-id="teinture-cils"] .arch {
+    position: absolute; top: 3mm; left: 3mm; right: 3mm; bottom: 0; overflow: hidden;
+    border-radius: 29mm 29mm 0 0; background: var(--paper);
+  }
+  /* portrait-couverture.jpg (1129 × 1210 px), échelle 0,92 : zone x 465–703 px, y 200–705 px */
+  [data-id="teinture-cils"] .arch img { position: absolute; width: 274.8mm; left: -113.2mm; top: -48.7mm; }
+
+  [data-id="teinture-cils"] .s8 .alert { margin-top: 6mm; }
+  [data-id="teinture-cils"] .s8 .alert p + p { margin-top: 2mm; }
+  [data-id="teinture-cils"] .s8 .marker {
+    margin-top: auto; height: 43mm; display: grid; grid-template-columns: auto 1fr; column-gap: 6mm; align-items: end;
+    border-top: .2mm solid var(--line); padding-top: 3.4mm;
+  }
+  [data-id="teinture-cils"] .s8 .marker .num {
+    font-family: var(--display); font-weight: 400; font-size: 92pt; line-height: .76; letter-spacing: -.02em;
+    color: transparent; -webkit-text-stroke: .3mm var(--bordeaux); opacity: .8;
+  }
+  [data-id="teinture-cils"] .s8 .marker .num small {
+    display: block; font-size: 15pt; font-style: italic; letter-spacing: 0; line-height: 1;
+    color: var(--bordeaux); -webkit-text-stroke: 0; margin: 0 0 1.2mm .6mm;
+  }
+  [data-id="teinture-cils"] .s8 .see { font-size: 8.4pt; line-height: 1.45; color: var(--mocha); padding-bottom: 1mm; }
+  [data-id="teinture-cils"] .s8 .see .h-label { display: block; color: var(--taupe); margin-bottom: .8mm; }
+  [data-id="teinture-cils"] .s8 .see .pg { font-family: var(--display); font-style: italic; font-size: 10pt; color: var(--bordeaux); }
+
+  [data-id="teinture-cils"] .after {
+    grid-column: 1 / -1;
+    display: grid; grid-template-columns: 80mm 1fr; column-gap: 10mm; align-items: center;
+    background: var(--cream); padding: 7mm 8mm 7.4mm;
+  }
+  [data-id="teinture-cils"] .after .h-sub { font-size: 17pt; margin: 2.6mm 0 0; }
+  [data-id="teinture-cils"] .after .lead { font-size: 16.5pt; line-height: 1.32; max-width: 140mm; color: var(--espresso); }
+</style>
+<section class="page" data-id="teinture-cils">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie II — Les cils</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="col s7">
+        <div class="kicker">Protocole</div>
+        <h2 class="h-title"><span class="no">7.</span>Teinture des cils&nbsp;— Noemi</h2>
+        <div class="rule short"></div>
+        <p class="lead">Utiliser la teinture Noemi autorisée pour les cils avec son révélateur compatible.</p>
+        <div class="card care">
+          <p>Préparer, appliquer et retirer selon la notice exacte.</p>
+          <p><strong>Respecter les précautions oculaires et les éventuels ajustements de temps après rehaussement.</strong></p>
+        </div>
+      </div>
+
+      <div class="visual">
+        <div class="arch-line"></div>
+        <div class="arch"><img class="blend" src="assets/portrait-couverture.jpg" alt=""></div>
+      </div>
+
+      <div class="col s8">
+        <div class="kicker">Soin cosmétique</div>
+        <h2 class="h-title"><span class="no">8.</span>Lash Botox&nbsp;— Noemi Intense, Step&nbsp;1.5</h2>
+        <div class="alert">
+          <div class="alert-title">Important</div>
+          <p><strong>Le Lash Botox est un soin cosmétique et non une injection.</strong> Dans ce manuel, il est nommé <strong>Noemi&nbsp;Intense&nbsp;— Step&nbsp;1.5&nbsp;— Lash Botox</strong>.</p>
+          <p><strong>Le temps de pose et sa place exacte dans la procédure restent à valider avec la notice du fabricant.</strong></p>
+        </div>
+        <div class="marker">
+          <div class="num"><small>Step</small>1.5</div>
+          <div class="see"><span class="h-label">Voir aussi</span>Ordre des étapes enseigné, p.&nbsp;<span class="pg">14</span></div>
+        </div>
+      </div>
+
+      <div class="after">
+        <div>
+          <div class="kicker">Après la séance</div>
+          <h3 class="h-sub">Conseils après prestation</h3>
+        </div>
+        <p class="lead">Expliquer les recommandations après soin prévues par les fabricants et remettre à la cliente les conseils personnalisés adaptés à ses cils.</p>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>
+
+<style>
+  [data-id="partie-3"] { background: var(--cream); }
+  [data-id="partie-3"] .os-photo { right: 0; width: 90mm; }
+  [data-id="partie-3"] .os-photo img { object-position: 50% 50%; }
+  [data-id="partie-3"] .os-num { left: 18mm; top: 16mm; -webkit-text-stroke-color: var(--bordeaux); opacity: .7; }
+  [data-id="partie-3"] .os-title { left: 20mm; top: 86mm; }
+  [data-id="partie-3"] .os-name { font-size: 50pt; }
+  [data-id="partie-3"] .os-toc { left: 20mm; width: 160mm; bottom: 18mm; }
+  [data-id="partie-3"] .os-toc .items { display: grid; grid-template-columns: 1fr 1fr; column-gap: 8mm; }
+</style>
+<section class="page opener-side" data-id="partie-3">
+  <div class="os-photo"><img src="assets/sac-jambes.jpg" alt=""></div>
+  <div class="os-num">03</div>
+  <div class="os-title">
+    <div class="os-part">Partie III</div>
+    <div class="os-name">Pratique<br>professionnelle</div>
+  </div>
+  <div class="os-toc">
+    <div class="label">Au programme de cette partie</div>
+    <div class="items">
+      <div class="item"><span class="pg">17</span>Fiches pratiques et suivi des clientes</div>
+      <div class="item"><span class="pg">18</span>Photographier son travail</div>
+      <div class="item"><span class="pg">19</span>Réseaux sociaux et communication</div>
+      <div class="item"><span class="pg">21</span>Gestion d’activité et fidélisation</div>
+    </div>
+  </div>
+</section>
+
+<style>
+  [data-id="fiche-technique"] .wrap { display: flex; flex-direction: column; height: 100%; }
+  [data-id="fiche-technique"] .head { display: flex; justify-content: space-between; align-items: flex-end; }
+  [data-id="fiche-technique"] .head .h-title { margin: 3.5mm 0 0; font-size: 25pt; }
+  [data-id="fiche-technique"] .head .see { font-size: 8.4pt; letter-spacing: .04em; color: var(--taupe); padding-bottom: 1.4mm; }
+  [data-id="fiche-technique"] .head .see .pg { font-family: var(--display); font-style: italic; font-size: 10pt; color: var(--bordeaux); }
+
+  /* Frise des trois temps : un filet, trois repères numérotés */
+  [data-id="fiche-technique"] .timeline,
+  [data-id="fiche-technique"] .cols { display: grid; grid-template-columns: 1fr 1.6fr 1fr; gap: 7mm; }
+  [data-id="fiche-technique"] .timeline { position: relative; margin: 9mm 0 0; height: 10mm; }
+  [data-id="fiche-technique"] .timeline::before {
+    content: ''; position: absolute; left: 0; right: 0; top: 50%; height: .25mm; background: var(--rose);
+  }
+  [data-id="fiche-technique"] .timeline .node {
+    position: relative; justify-self: start; margin-left: 6.5mm; width: 10mm; height: 10mm; border-radius: 50%;
+    background: var(--ivory); border: .3mm solid var(--bordeaux);
+    font-family: var(--display); font-style: italic; font-size: 13pt; line-height: 9.4mm; text-align: center;
+    color: var(--bordeaux);
+  }
+  [data-id="fiche-technique"] .timeline .node.on { background: var(--bordeaux); color: #fff; }
+
+  [data-id="fiche-technique"] .cols { flex: 1; margin-top: 4mm; }
+  [data-id="fiche-technique"] .cols .col { padding: 6mm 6.5mm 6.5mm; display: flex; flex-direction: column; }
+  [data-id="fiche-technique"] .cols .col.mid { background: var(--cream); border-color: transparent; }
+  [data-id="fiche-technique"] .cols .h-sub {
+    font-size: 14.5pt; margin: 0 0 1mm; padding-bottom: 3.6mm; border-bottom: .3mm solid var(--espresso);
+  }
+  [data-id="fiche-technique"] .items { list-style: none; }
+  [data-id="fiche-technique"] .items li {
+    position: relative; padding: 4.2mm 0 4.2mm 5.6mm; border-bottom: .2mm solid var(--line);
+    font-size: 10.2pt; line-height: 1.55; text-wrap: pretty;
+  }
+  [data-id="fiche-technique"] .items li:last-child { border-bottom: 0; }
+  [data-id="fiche-technique"] .items li::before {
+    content: ''; position: absolute; left: .3mm; top: calc(4.2mm + .64em); width: 1.4mm; height: 1.4mm;
+    border-radius: 50%; background: var(--rose);
+  }
+  [data-id="fiche-technique"] .mid .lead { font-size: 13.6pt; line-height: 1.4; color: var(--espresso); margin-top: 3.6mm; text-wrap: pretty; }
+  /* Séquence Thuya rappelée en frise (mêmes termes, même ordre que le paragraphe) */
+  [data-id="fiche-technique"] .seq {
+    list-style: none; display: flex; justify-content: space-between; position: relative; margin: 6mm 0 6mm;
+  }
+  [data-id="fiche-technique"] .seq::before {
+    content: ''; position: absolute; left: 7mm; right: 6mm; top: 1.05mm; height: .25mm; background: var(--rose);
+  }
+  [data-id="fiche-technique"] .seq li {
+    position: relative; display: flex; flex-direction: column; align-items: center; text-align: center;
+    font-size: 8.4pt; line-height: 1.25; color: var(--mocha);
+  }
+  [data-id="fiche-technique"] .seq li::before {
+    content: ''; width: 2.1mm; height: 2.1mm; border-radius: 50%; margin-bottom: 2.2mm;
+    background: var(--cream); border: .3mm solid var(--rose); position: relative;
+  }
+  [data-id="fiche-technique"] .seq li.key { font-family: var(--display); font-size: 9.4pt; color: var(--espresso); }
+  [data-id="fiche-technique"] .seq li.key::before { background: var(--bordeaux); border-color: var(--bordeaux); }
+  [data-id="fiche-technique"] .mid .alert { margin-top: auto; }
+  [data-id="fiche-technique"] .mid .alert p { font-size: 9.8pt; text-wrap: pretty; }
+</style>
+<section class="page" data-id="fiche-technique">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie III — Pratique professionnelle</span></div>
+  <div class="content">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <div class="kicker">Fiches pratiques et suivi des clientes</div>
+          <h2 class="h-title">Fiche technique&nbsp;— Brow Lift</h2>
+        </div>
+        <div class="see">Voir aussi&nbsp;: Brow Lift&nbsp;— Thuya, p.&nbsp;<span class="pg">08</span></div>
+      </div>
+
+      <div class="timeline" aria-hidden="true">
+        <div class="node">1</div><div class="node on">2</div><div class="node">3</div>
+      </div>
+
+      <div class="cols">
+        <div class="card col">
+          <h3 class="h-sub">Avant la séance</h3>
+          <ul class="items">
+            <li>Accueillir la cliente, vérifier les antécédents de réaction et les éventuelles irritations ou lésions.</li>
+            <li>Observer la porosité, l’épaisseur, la densité et la direction des poils&nbsp;; photographier avec consentement.</li>
+            <li>Préparer le matériel désinfecté, un minuteur, les consommables à usage unique et les notices des références exactes.</li>
+          </ul>
+        </div>
+
+        <div class="card col mid">
+          <h3 class="h-sub">Pendant la séance</h3>
+          <p class="lead">Pour la gamme Thuya présentée au §2 (Brow&nbsp;Lift&nbsp;—&nbsp;Thuya), conserver la séquence de préparation, lotion permanente, retrait complet, neutralisant, retrait et soin final.</p>
+          <ol class="seq" aria-hidden="true">
+            <li>Préparation</li>
+            <li class="key">Lotion<br>permanente</li>
+            <li>Retrait<br>complet</li>
+            <li class="key">Neutralisant</li>
+            <li>Retrait</li>
+            <li class="key">Soin<br>final</li>
+          </ol>
+          <div class="alert">
+            <div class="alert-title">Important</div>
+            <p>Les temps présentés au §2 sont des valeurs pédagogiques à confirmer sur les notices de chaque référence&nbsp;: <strong>ils ne doivent pas être appliqués automatiquement.</strong></p>
+          </div>
+        </div>
+
+        <div class="card col">
+          <h3 class="h-sub">Après la séance</h3>
+          <ul class="items">
+            <li>Vérifier la forme, la tolérance cutanée et le confort de la cliente.</li>
+            <li>Remettre les recommandations du fabricant et noter les produits, lots, temps effectivement appliqués et réactions.</li>
+            <li>Programmer un suivi adapté sans promettre une durée identique pour toutes les clientes.</li>
           </ul>
         </div>
       </div>
@@ -186,58 +1503,925 @@
 </section>
 
 <style>
-  [data-id="rehaussement"] .layout { display: grid; grid-template-columns: 82mm 1fr; gap: 12mm; height: 100%; }
-  [data-id="rehaussement"] .side { display: flex; flex-direction: column; }
-  [data-id="rehaussement"] .side .block + .block { margin-top: 7mm; }
-  [data-id="rehaussement"] .side .h-title { margin: 3mm 0 3mm; font-size: 21pt; }
-  [data-id="rehaussement"] .protocol-head {
-    display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3mm;
+  [data-id="photographier"] .layout { display: grid; grid-template-columns: 1fr 147mm; column-gap: 12mm; height: 100%; }
+  [data-id="photographier"] .side { display: flex; flex-direction: column; }
+  [data-id="photographier"] .h-title { margin: 3.5mm 0 0; font-size: 26pt; }
+  [data-id="photographier"] .rule.short { margin: 6mm 0 5mm; }
+  [data-id="photographier"] .side .lead { font-size: 19pt; line-height: 1.25; color: var(--espresso); max-width: 92mm; }
+
+  /* Méthode : quatre consignes numérotées, filets fins */
+  [data-id="photographier"] .method { list-style: none; margin-top: auto; border-top: .3mm solid var(--espresso); }
+  [data-id="photographier"] .method li {
+    display: grid; grid-template-columns: 13mm 1fr; align-items: baseline;
+    padding: 5.6mm 0 5.8mm; border-bottom: .2mm solid var(--line);
+    font-size: 10.4pt; line-height: 1.58; text-wrap: pretty;
   }
-  [data-id="rehaussement"] .steps-table td { font-size: 9.4pt; }
-  [data-id="rehaussement"] .steps-table td.key { width: 26mm; font-size: 14pt; }
-  [data-id="rehaussement"] .steps-table td.time { width: 38mm; text-align: right; }
-  [data-id="rehaussement"] .steps-table th:last-child { text-align: right; }
-  [data-id="rehaussement"] .steps-table tr.mid td { background: rgba(240, 224, 220, .5); }
-  [data-id="rehaussement"] .steps-table tr.mid td.key { padding-left: 2mm; }
-  [data-id="rehaussement"] .alert { margin-top: 6mm; }
+  [data-id="photographier"] .method li:last-child { border-bottom: 0; padding-bottom: 0; }
+  [data-id="photographier"] .method .n {
+    font-family: var(--display); font-style: italic; font-size: 17pt; line-height: 1; color: var(--rose);
+  }
+
+  /* Visuel : regard cadré comme dans un viseur (repères d’angle, tiers, mise au point) */
+  [data-id="photographier"] .shot { position: relative; }
+  /* Photo en retrait de 5 mm : les repères de cadrage sont tracés dans la marge, autour */
+  [data-id="photographier"] .shot .frame {
+    position: absolute; inset: 5mm; overflow: hidden; background: #fff;
+  }
+  /* portrait-regard-haut-chaud.jpg (1129 × 657 px) : hauteur 154 mm (échelle 0,89), zone x ≈ 316–900 px */
+  [data-id="photographier"] .shot .frame img {
+    width: 100%; height: 100%; object-fit: cover; object-position: 58% 50%; display: block;
+  }
+  [data-id="photographier"] .shot svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  [data-id="photographier"] .shot .thirds line { stroke: #fff; stroke-width: .22; opacity: .75; }
+  [data-id="photographier"] .shot .corners path { fill: none; stroke: var(--espresso); stroke-width: .3; }
+  [data-id="photographier"] .shot .cross line { stroke: #fff; stroke-width: .3; }
 </style>
-<section class="page" data-id="rehaussement">
-  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie II — Les cils</span></div>
+<section class="page" data-id="photographier">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie III — Pratique professionnelle</span></div>
   <div class="content">
     <div class="layout">
       <div class="side">
-        <div class="block">
-          <div class="kicker">Avant tout</div>
-          <h2 class="h-title"><span class="no">5.</span>Diagnostic avant rehaussement</h2>
-          <p>Observer les cils, leur état et les éventuelles contre-indications. Vérifier l’absence d’irritation ou d’infection oculaire, effectuer les contrôles prévus par les notices et choisir les pads adaptés.</p>
-        </div>
-        <div class="block">
-          <div class="kicker">Préparation</div>
-          <p class="lead" style="margin-top:3mm">Nettoyer les cils, protéger les cils inférieurs, positionner le pad en silicone et aligner soigneusement les cils.</p>
+        <div class="kicker">Réseaux sociaux et communication</div>
+        <h2 class="h-title">Photographier<br>son travail</h2>
+        <div class="rule short"></div>
+        <p class="lead">Une méthode cohérente<br>pour les avant/après</p>
+
+        <ol class="method">
+          <li><span class="n">i.</span><span>Photographier avant et après avec le même angle, la même distance et un éclairage comparable.</span></li>
+          <li><span class="n">ii.</span><span>Nettoyer l’objectif&nbsp;; choisir un fond neutre&nbsp;; <strong>éviter les filtres qui changent la couleur de la peau ou du poil.</strong></span></li>
+          <li><span class="n">iii.</span><span>Privilégier un cadrage net et régulier&nbsp;; <strong>demander une autorisation explicite avant toute publication.</strong></span></li>
+          <li><span class="n">iv.</span><span>Conserver les originaux et <strong>ne jamais présenter comme sien le travail d’une autre professionnelle.</strong></span></li>
+        </ol>
+      </div>
+
+      <div class="shot" aria-hidden="true">
+        <div class="frame"><img src="assets/portrait-regard-haut-chaud.jpg" alt=""></div>
+        <svg viewBox="0 0 147 164" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <g class="thirds">
+            <line x1="50.67" y1="5" x2="50.67" y2="159"/><line x1="96.33" y1="5" x2="96.33" y2="159"/>
+            <line x1="5" y1="56.33" x2="142" y2="56.33"/><line x1="5" y1="107.67" x2="142" y2="107.67"/>
+          </g>
+          <g class="corners">
+            <path d="M0 14 V0 H14"/><path d="M133 0 H147 V14"/>
+            <path d="M147 150 V164 H133"/><path d="M14 164 H0 V150"/>
+          </g>
+          <g class="cross">
+            <line x1="70.5" y1="82" x2="76.5" y2="82"/><line x1="73.5" y1="79" x2="73.5" y2="85"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>
+
+<style>
+  [data-id="reseaux"] .layout {
+    display: grid; grid-template-columns: 86mm 58mm 1fr; grid-template-rows: 1fr auto;
+    column-gap: 11mm; row-gap: 8mm; height: 100%;
+  }
+  [data-id="reseaux"] .col { display: flex; flex-direction: column; }
+  [data-id="reseaux"] .h-title { margin: 3.5mm 0 0; font-size: 22pt; }
+  [data-id="reseaux"] .rule.short { margin: 5.5mm 0 0; }
+
+  [data-id="reseaux"] .sec-head { border-bottom: .3mm solid var(--espresso); padding-bottom: 2.4mm; margin-bottom: 3.6mm; }
+  [data-id="reseaux"] .sec-head .h-sub { font-size: 14pt; margin: 0; }
+  [data-id="reseaux"] .identity { margin-top: auto; }
+  [data-id="reseaux"] .identity .lead { font-size: 13.4pt; line-height: 1.42; color: var(--espresso); text-wrap: pretty; }
+
+  /* ---- Maquette de profil Instagram (schéma, sans texte inventé) ---- */
+  [data-id="reseaux"] .phone {
+    position: relative; height: 100%; border: .35mm solid var(--espresso); border-radius: 8mm;
+    background: var(--paper); padding: 7.5mm 4.2mm 4.2mm; display: flex; flex-direction: column; gap: 3.4mm;
+  }
+  [data-id="reseaux"] .phone::before {
+    content: ''; position: absolute; top: 2.6mm; left: 50%; width: 13mm; height: 1.5mm; margin-left: -6.5mm;
+    border-radius: 1mm; background: var(--espresso); opacity: .85;
+  }
+  [data-id="reseaux"] .phone .row { position: relative; }
+  [data-id="reseaux"] .phone .mk {
+    position: absolute; right: -8.4mm; top: 50%; margin-top: -2.3mm;
+    width: 4.6mm; height: 4.6mm; border-radius: 50%; background: var(--bordeaux); color: #fff;
+    font-family: var(--display); font-style: italic; font-size: 8.6pt; line-height: 4.3mm; text-align: center;
+  }
+  [data-id="reseaux"] .bar { height: 1.1mm; border-radius: .6mm; background: var(--sand); }
+  [data-id="reseaux"] .bar + .bar { margin-top: 1.5mm; }
+  [data-id="reseaux"] .bar.dark { background: var(--espresso); height: 1.6mm; opacity: .85; }
+  [data-id="reseaux"] .bar.link { background: var(--bordeaux); opacity: .55; }
+
+  [data-id="reseaux"] .p-top { display: flex; align-items: center; gap: 4mm; }
+  [data-id="reseaux"] .avatar {
+    flex: none; width: 14mm; height: 14mm; border-radius: 50%; overflow: hidden;
+    box-shadow: 0 0 0 .5mm var(--paper), 0 0 0 .85mm var(--rose);
+  }
+  [data-id="reseaux"] .avatar img { width: 100%; height: 100%; object-fit: cover; object-position: 62% 38%; }
+  [data-id="reseaux"] .stats { flex: 1; display: flex; justify-content: space-between; }
+  [data-id="reseaux"] .stats span { display: flex; flex-direction: column; align-items: center; gap: 1.2mm; }
+  [data-id="reseaux"] .stats i { display: block; height: 1.6mm; width: 5mm; border-radius: .6mm; background: var(--espresso); opacity: .8; }
+  [data-id="reseaux"] .stats b { display: block; height: 1mm; width: 7.5mm; border-radius: .5mm; background: var(--sand); }
+
+  [data-id="reseaux"] .hl { display: flex; justify-content: space-between; }
+  [data-id="reseaux"] .hl span:not(.mk) {
+    width: 6.6mm; height: 6.6mm; border-radius: 50%; background: var(--cream);
+    box-shadow: 0 0 0 .45mm var(--paper), 0 0 0 .75mm var(--rose);
+  }
+  [data-id="reseaux"] .hl span:nth-child(2n):not(.mk) { background: var(--blush); }
+  [data-id="reseaux"] .hl span:nth-child(3n):not(.mk) { background: var(--sand); }
+
+  [data-id="reseaux"] .tabs { border-top: .2mm solid var(--line); display: flex; }
+  [data-id="reseaux"] .tabs span { flex: 1; height: 0; }
+  [data-id="reseaux"] .tabs span:first-child { border-top: .45mm solid var(--espresso); margin-top: -.3mm; }
+
+  [data-id="reseaux"] .posts { flex: 1; min-height: 0; margin-top: -1.8mm; }
+  [data-id="reseaux"] .posts .mk { top: 8.5mm; margin-top: 0; }
+  [data-id="reseaux"] .grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: min-content; gap: .8mm; align-content: start;
+    height: 100%; overflow: hidden;
+  }
+  [data-id="reseaux"] .grid .t { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: var(--cream); }
+  [data-id="reseaux"] .grid .t img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  [data-id="reseaux"] .grid .t svg {
+    position: absolute; top: .9mm; right: .9mm; width: 3.4mm; height: 3.4mm; border-radius: 50%;
+    background: rgba(59, 40, 35, .5);
+  }
+  [data-id="reseaux"] .grid .t.blush { background: var(--blush); }
+  [data-id="reseaux"] .grid .t.sand { background: var(--sand); }
+
+  /* ---- 2. Profil : quatre réglages, repérés a–d sur la maquette ---- */
+  [data-id="reseaux"] .tips { list-style: none; }
+  [data-id="reseaux"] .tips li {
+    display: grid; grid-template-columns: 9mm 1fr; padding: 3mm 0; border-bottom: .2mm solid var(--line);
+    font-size: 9.8pt; line-height: 1.55; text-wrap: pretty;
+  }
+  [data-id="reseaux"] .tips li:last-child { border-bottom: 0; }
+  [data-id="reseaux"] .tips .mk {
+    width: 4.6mm; height: 4.6mm; margin-top: .5mm; border-radius: 50%; border: .25mm solid var(--bordeaux); color: var(--bordeaux);
+    font-family: var(--display); font-style: italic; font-size: 8.6pt; line-height: 4.1mm; text-align: center;
+  }
+  [data-id="reseaux"] .tips .k {
+    display: block; font-family: var(--display); font-weight: 400; font-size: 12pt; line-height: 1.25;
+    color: var(--espresso); margin-bottom: .8mm;
+  }
+  [data-id="reseaux"] .profile .tips { flex: 1; display: flex; flex-direction: column; margin-top: -3.6mm; }
+  [data-id="reseaux"] .profile .tips li { flex: 1; align-content: center; }
+
+  /* ---- 3. Les cinq piliers : tableau transposé, une colonne par pilier ---- */
+  [data-id="reseaux"] .pillars { grid-column: 1 / -1; }
+  [data-id="reseaux"] .pillars .sec-head { margin-bottom: 0; }
+  [data-id="reseaux"] table.pil { width: 100%; border-collapse: collapse; table-layout: fixed; }
+  [data-id="reseaux"] table.pil col.lab { width: 33mm; }
+  [data-id="reseaux"] table.pil th {
+    text-align: left; vertical-align: top; font-weight: 500; font-size: 6.8pt; letter-spacing: .22em;
+    text-transform: uppercase; color: var(--taupe); padding: 3.4mm 4mm 0 0; line-height: 1.5;
+  }
+  [data-id="reseaux"] table.pil td { vertical-align: top; padding: 0 4.5mm; border-left: .2mm solid var(--line); }
+  [data-id="reseaux"] table.pil tr.names td { padding-top: 3mm; padding-bottom: 2.4mm; }
+  [data-id="reseaux"] table.pil tr.names th { padding-top: 9.4mm; }
+  [data-id="reseaux"] table.pil tr.names td .r {
+    display: block; font-family: var(--display); font-style: italic; font-size: 15pt; line-height: 1; color: var(--rose); margin-bottom: 1.4mm;
+  }
+  [data-id="reseaux"] table.pil tr.names td .nm { font-family: var(--display); font-size: 13.5pt; line-height: 1.2; color: var(--espresso); }
+  [data-id="reseaux"] table.pil tr.ideas td { font-size: 9.2pt; line-height: 1.5; text-wrap: pretty; padding-bottom: .5mm; }
+  [data-id="reseaux"] table.pil tr.ideas th { padding-top: 0; }
+</style>
+<section class="page" data-id="reseaux">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie III — Pratique professionnelle</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="col">
+        <div class="kicker">Réseaux sociaux et communication</div>
+        <h2 class="h-title">Développer son activité sur les réseaux sociaux</h2>
+        <div class="rule short"></div>
+        <div class="identity">
+          <div class="sec-head"><h3 class="h-sub"><span class="no">1.</span>Construire une identité professionnelle</h3></div>
+          <p class="lead">Choisir un nom cohérent, une photo de profil lisible, une palette de couleurs et une présentation claire des prestations. Indiquer la ville, les modalités de réservation et un lien fonctionnel. Mettre en avant le savoir-faire, l’hygiène, les résultats réels et l’accueil.</p>
         </div>
       </div>
-      <div class="main">
-        <h2 class="h-title"><span class="no">6.</span>Rehaussement de cils — Noemi Innovate</h2>
-        <div class="rule"></div>
-        <div class="protocol-head">
-          <h3 class="h-label">Ordre des étapes enseigné</h3>
+
+      <div class="phone" aria-hidden="true">
+        <div class="row p-top">
+          <div class="avatar"><img src="assets/portrait-couverture.jpg" alt=""></div>
+          <div class="stats"><span><i></i><b></b></span><span><i></i><b></b></span><span><i></i><b></b></span></div>
         </div>
-        <table class="data steps-table">
-          <thead><tr><th>Étape</th><th>Produit</th><th>Temps de pose</th></tr></thead>
-          <tbody>
-            <tr><td class="key"><em>Step</em> 1</td><td>Noemi Innovate — Step 1</td><td class="time"><span class="chip fill">10 minutes</span></td></tr>
-            <tr class="mid"><td class="key"><em>Step</em> 1.5</td><td>Noemi Intense — Lash Botox (soin cils et sourcils)</td><td class="time"><span class="chip">Selon notice du soin</span></td></tr>
-            <tr><td class="key"><em>Step</em> 2</td><td>Noemi Innovate — Step 2</td><td class="time"><span class="chip fill">10 minutes</span></td></tr>
-          </tbody>
+        <div class="row"><div class="bar dark" style="width:24mm"></div><span class="mk">a</span></div>
+        <div class="row">
+          <div class="bar" style="width:44mm"></div><div class="bar" style="width:40mm"></div><div class="bar" style="width:31mm"></div><div class="bar link" style="width:22mm"></div>
+          <span class="mk">b</span>
+        </div>
+        <div class="row hl"><span></span><span></span><span></span><span></span><span></span><span></span><span class="mk">c</span></div>
+        <div class="tabs"><span></span><span></span><span></span></div>
+        <div class="row posts"><div class="grid">
+          <div class="t"><img src="assets/portrait-regard-haut.jpg" alt="" style="object-position:40% 55%"><svg viewBox="0 0 10 10"><path d="M3.4 1h3.2l-.5 3 1.6 1.6H5.5V9L5 9.6 4.5 9V5.6H2.3L3.9 4z" fill="#fff"/></svg></div>
+          <div class="t"><img src="assets/portrait-couverture.jpg" alt="" style="object-position:60% 30%"><svg viewBox="0 0 10 10"><path d="M3.4 1h3.2l-.5 3 1.6 1.6H5.5V9L5 9.6 4.5 9V5.6H2.3L3.9 4z" fill="#fff"/></svg></div>
+          <div class="t"><img src="assets/portrait-cou-bas.jpg" alt="" style="object-position:70% 10%"><svg viewBox="0 0 10 10"><path d="M3.4 1h3.2l-.5 3 1.6 1.6H5.5V9L5 9.6 4.5 9V5.6H2.3L3.9 4z" fill="#fff"/></svg></div>
+          <div class="t blush"></div>
+          <div class="t"><img src="assets/sac-jambes.jpg" alt="" style="object-position:50% 45%"></div>
+          <div class="t sand"></div>
+          <div class="t"><img src="assets/portrait-regard-haut-chaud.jpg" alt="" style="object-position:62% 60%"></div>
+          <div class="t blush"></div>
+          <div class="t"><img src="assets/portrait-couverture.jpg" alt="" style="object-position:80% 75%"></div>
+        </div><span class="mk">d</span></div>
+      </div>
+
+      <div class="col profile">
+        <div class="sec-head"><h3 class="h-sub"><span class="no">2.</span>Optimiser son profil Instagram</h3></div>
+        <ul class="tips">
+          <li><span class="mk">a</span><span><span class="k">Nom visible&nbsp;:</span> spécialité&nbsp;+ localisation, lorsque cela reste naturel.</span></li>
+          <li><span class="mk">b</span><span><span class="k">Biographie&nbsp;:</span> prestations, secteur géographique, bénéfice concret et appel à réserver.</span></li>
+          <li><span class="mk">c</span><span><span class="k">Stories à la une&nbsp;:</span> Tarifs, Résultats, Avis, FAQ, Accès, Disponibilités.</span></li>
+          <li><span class="mk">d</span><span><span class="k">Épingler trois publications&nbsp;:</span> présentation, prestations, résultats représentatifs.</span></li>
+        </ul>
+      </div>
+
+      <div class="pillars">
+        <div class="sec-head"><h3 class="h-sub"><span class="no">3.</span>Les cinq piliers de contenu</h3></div>
+        <table class="pil">
+          <colgroup><col class="lab"><col><col><col><col><col></colgroup>
+          <tr class="names">
+            <th scope="row">Pilier</th>
+            <td><span class="r">i.</span><span class="nm">Résultats</span></td>
+            <td><span class="r">ii.</span><span class="nm">Éducation</span></td>
+            <td><span class="r">iii.</span><span class="nm">Confiance</span></td>
+            <td><span class="r">iv.</span><span class="nm">Preuve sociale</span></td>
+            <td><span class="r">v.</span><span class="nm">Conversion</span></td>
+          </tr>
+          <tr class="ideas">
+            <th scope="row">Idées de publications</th>
+            <td>Avant/après authentiques, gros plans, vidéo de finition.</td>
+            <td>Brow Lift&nbsp;: pour qui&nbsp;? Teinture hybride&nbsp;: entretien et précautions.</td>
+            <td>Présentation de la praticienne, hygiène, déroulé d’un rendez-vous.</td>
+            <td>Avis authentiques <strong>publiés avec accord</strong>, retours d’expérience.</td>
+            <td>Créneaux disponibles, présentation des prestations et lien de réservation.</td>
+          </tr>
         </table>
-        <div class="alert">
-          <div class="alert-title">Important</div>
-          <p>Ces temps de 10 minutes correspondent au protocole demandé pour la formation et doivent être confirmés sur les notices Noemi Innovate du lot utilisé. Vérifier expressément auprès du fabricant que le soin Intense peut être appliqué entre Step 1 et Step 2 : certains systèmes imposent de neutraliser avant tout soin. <strong>Ne pas appliquer cette séquence sans validation.</strong></p>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>
+
+<style>
+  [data-id="reseaux-2"] .wrap { display: flex; flex-direction: column; height: 100%; }
+  [data-id="reseaux-2"] .head { display: flex; justify-content: space-between; align-items: flex-end; }
+  [data-id="reseaux-2"] .head .h-title { margin: 3.5mm 0 0; font-size: 22pt; }
+  [data-id="reseaux-2"] .head .see { font-size: 8.4pt; letter-spacing: .04em; color: var(--taupe); padding-bottom: 1mm; }
+  [data-id="reseaux-2"] .head .see .pg { font-family: var(--display); font-style: italic; font-size: 10pt; color: var(--bordeaux); }
+
+  [data-id="reseaux-2"] .body {
+    flex: 1; margin-top: 9mm; display: grid; grid-template-columns: 84mm 1fr; grid-template-rows: auto 1fr;
+    column-gap: 11mm; row-gap: 9mm;
+  }
+  [data-id="reseaux-2"] .sec-head { border-bottom: .3mm solid var(--espresso); padding-bottom: 2.4mm; margin-bottom: 3.8mm; }
+  [data-id="reseaux-2"] .sec-head .h-sub { font-size: 14pt; margin: 0; }
+
+  /* ---- 4. Reel ---- */
+  [data-id="reseaux-2"] .reel { grid-row: 1 / 3; display: flex; flex-direction: column; }
+  [data-id="reseaux-2"] .reel .lead { font-size: 14pt; line-height: 1.42; color: var(--espresso); text-wrap: pretty; }
+  [data-id="reseaux-2"] .reel .lead strong { font-weight: 500; color: var(--bordeaux); }
+  [data-id="reseaux-2"] .board { margin-top: auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; }
+  [data-id="reseaux-2"] .board .fr {
+    position: relative; aspect-ratio: 9 / 16; border-radius: 3mm; overflow: hidden; background: var(--blush);
+  }
+  [data-id="reseaux-2"] .board .fr img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  /* Gros plan sans transform (un transform empêche l’arrondi de découper l’image dans le PDF) */
+  [data-id="reseaux-2"] .board .fr img.zoom { position: absolute; width: 145%; height: 145%; left: -27.9%; top: -18.9%; max-width: none; }
+  [data-id="reseaux-2"] .board .fr .n {
+    position: absolute; top: 2mm; left: 2.4mm; font-family: var(--display); font-style: italic; font-size: 12pt;
+    line-height: 1; color: #fff;
+  }
+  [data-id="reseaux-2"] .board .fr.plain .n { color: var(--bordeaux); }
+  [data-id="reseaux-2"] .board .fr .subs { position: absolute; left: 2.6mm; right: 2.6mm; bottom: 4mm; }
+  [data-id="reseaux-2"] .board .fr .subs i { display: block; height: 1.3mm; border-radius: .7mm; background: rgba(255,255,255,.92); margin: 0 auto; }
+  [data-id="reseaux-2"] .board .fr .subs i + i { margin-top: 1.2mm; }
+  [data-id="reseaux-2"] .board .fr .cta {
+    position: absolute; left: 3.2mm; right: 3.2mm; bottom: 5mm; height: 4.4mm; border-radius: 2.2mm; background: var(--bordeaux);
+  }
+  [data-id="reseaux-2"] .board .fr .play {
+    position: absolute; top: 50%; left: 50%; width: 7mm; height: 7mm; margin: -3.5mm 0 0 -3.5mm;
+  }
+  /* frise sous les vignettes : même tracé que le calendrier */
+  [data-id="reseaux-2"] .board .tick { position: relative; height: 8mm; margin-right: -4mm; }
+  [data-id="reseaux-2"] .board > div:last-child .tick { margin-right: 0; }
+  [data-id="reseaux-2"] .board .tick::before { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: .25mm; background: var(--rose); }
+  [data-id="reseaux-2"] .board .tick::after {
+    content: ''; position: absolute; left: 0; top: 50%; width: 2.2mm; height: 2.2mm; margin-top: -1.1mm;
+    border-radius: 50%; background: var(--ivory); border: .3mm solid var(--bordeaux);
+  }
+  [data-id="reseaux-2"] .board .cap { margin-top: .4mm; font-size: 7pt; letter-spacing: .2em; line-height: 1.45; text-transform: uppercase; color: var(--mocha); font-weight: 500; }
+
+  /* ---- 5. Calendrier : une colonne par jour, sur une frise ---- */
+  [data-id="reseaux-2"] .cal { display: grid; grid-template-columns: 20mm repeat(6, 1fr); }
+  [data-id="reseaux-2"] .cal .lab {
+    font-weight: 500; font-size: 6.8pt; letter-spacing: .22em; text-transform: uppercase; color: var(--taupe); line-height: 1.5;
+  }
+  [data-id="reseaux-2"] .cal .day { font-family: var(--display); font-size: 13pt; line-height: 1.1; color: var(--espresso); padding-right: 2mm; }
+  [data-id="reseaux-2"] .cal .lab.r1 { padding-top: 1.6mm; }
+  [data-id="reseaux-2"] .cal .dot { position: relative; height: 10.5mm; }
+  [data-id="reseaux-2"] .cal .dot::before { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: .25mm; background: var(--rose); }
+  [data-id="reseaux-2"] .cal .dot::after {
+    content: ''; position: absolute; left: 0; top: 50%; width: 2.2mm; height: 2.2mm; margin-top: -1.1mm;
+    border-radius: 50%; background: var(--ivory); border: .3mm solid var(--bordeaux);
+  }
+  [data-id="reseaux-2"] .cal .dot.first::before { left: 1mm; }
+  [data-id="reseaux-2"] .cal .dot.last::before { right: 0; }
+  [data-id="reseaux-2"] .cal .txt { font-size: 9.4pt; line-height: 1.5; padding-right: 3.5mm; text-wrap: pretty; }
+
+  /* ---- 6. Clientèle locale ---- */
+  [data-id="reseaux-2"] .local .inner { display: grid; grid-template-columns: 1fr 44mm; column-gap: 9mm; align-items: center; }
+  [data-id="reseaux-2"] .local ul.dots li { font-size: 10.2pt; line-height: 1.55; margin-bottom: 3.4mm; text-wrap: pretty; }
+  [data-id="reseaux-2"] .local ul.dots li:last-child { margin-bottom: 0; }
+  [data-id="reseaux-2"] .local svg { width: 44mm; height: 44mm; display: block; }
+</style>
+<section class="page" data-id="reseaux-2">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie III — Pratique professionnelle</span></div>
+  <div class="content">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <div class="kicker">Réseaux sociaux et communication</div>
+          <h2 class="h-title">Développer son activité sur les réseaux sociaux</h2>
+        </div>
+        <div class="see">Suite de la p.&nbsp;<span class="pg">19</span></div>
+      </div>
+
+      <div class="body">
+        <div class="reel">
+          <div class="sec-head"><h3 class="h-sub"><span class="no">4.</span>Réaliser un Reel efficace</h3></div>
+          <p class="lead">Commencer par une accroche claire dans les premières secondes («&nbsp;Brow Lift naturel&nbsp;: voici le résultat&nbsp;»), montrer le détail de la prestation <strong>sans masquer les précautions</strong>, puis terminer par un appel à l’action («&nbsp;Réservation via le lien en bio&nbsp;»). Ajouter des sous-titres et une couverture lisible.</p>
+          <div class="board" aria-hidden="true">
+            <div>
+              <div class="fr"><img class="zoom" src="assets/portrait-couverture.jpg" alt="" style="object-position:62% 45%"><span class="n">1</span>
+                <svg class="play" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9.3" fill="none" stroke="#fff" stroke-width=".9"/><path d="M8 6.2v7.6l6-3.8z" fill="#fff"/></svg>
+                <div class="subs"><i style="width:86%"></i><i style="width:62%"></i></div></div>
+              <div class="tick"></div>
+              <div class="cap">Accroche</div>
+            </div>
+            <div>
+              <div class="fr"><img src="assets/portrait-regard-haut.jpg" alt="" style="object-position:45% 50%"><span class="n">2</span>
+                <div class="subs"><i style="width:80%"></i><i style="width:54%"></i></div></div>
+              <div class="tick"></div>
+              <div class="cap">Détail de la prestation</div>
+            </div>
+            <div>
+              <div class="fr plain"><span class="n">3</span><div class="cta"></div></div>
+              <div class="tick"></div>
+              <div class="cap">Appel à l’action</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="week">
+          <div class="sec-head"><h3 class="h-sub"><span class="no">5.</span>Exemple de calendrier hebdomadaire</h3></div>
+          <div class="cal">
+            <div class="lab r1">Jour</div>
+            <div class="day">Lundi</div><div class="day">Mardi</div><div class="day">Mercredi</div>
+            <div class="day">Jeudi</div><div class="day">Vendredi</div><div class="day">Week-end</div>
+
+            <div></div>
+            <div class="dot first"></div><div class="dot"></div><div class="dot"></div>
+            <div class="dot"></div><div class="dot"></div><div class="dot last"></div>
+
+            <div class="lab">Contenu</div>
+            <div class="txt">Conseil pratique en carrousel</div>
+            <div class="txt">Story&nbsp;: coulisses et préparation du poste</div>
+            <div class="txt">Reel&nbsp;: résultat avant/après autorisé</div>
+            <div class="txt">Réponse à une question fréquente</div>
+            <div class="txt">Avis authentique ou présentation d’une prestation</div>
+            <div class="txt">Story&nbsp;: disponibilités de la semaine suivante</div>
+          </div>
+        </div>
+
+        <div class="local">
+          <div class="sec-head"><h3 class="h-sub"><span class="no">6.</span>Attirer une clientèle locale</h3></div>
+          <div class="inner">
+            <ul class="dots">
+              <li>Préciser la zone desservie dans la biographie et les publications pertinentes.</li>
+              <li>Développer une fiche d’établissement à jour lorsque l’activité est éligible.</li>
+              <li>Collaborer avec des professionnels complémentaires, <strong>sans échanges d’avis trompeurs.</strong></li>
+              <li>Répondre rapidement et poliment aux messages&nbsp;; proposer une réservation simple.</li>
+              <li>Utiliser quelques mots-clés locaux précis plutôt qu’une longue série de hashtags génériques.</li>
+            </ul>
+            <svg viewBox="0 0 100 100" aria-hidden="true">
+              <circle cx="50" cy="54" r="44" fill="none" stroke="#D8B7AF" stroke-width=".5" stroke-dasharray="1.6 2.2"/>
+              <circle cx="50" cy="54" r="30" fill="none" stroke="#D8B7AF" stroke-width=".5"/>
+              <circle cx="50" cy="54" r="16" fill="#F0E0DC"/>
+              <circle cx="22" cy="34" r="1.6" fill="#A48A7B"/><circle cx="80" cy="40" r="1.6" fill="#A48A7B"/>
+              <circle cx="73" cy="82" r="1.6" fill="#A48A7B"/><circle cx="24" cy="76" r="1.6" fill="#A48A7B"/>
+              <path d="M50 58 C45 50 41.5 46 41.5 41.5 A8.5 8.5 0 0 1 58.5 41.5 C58.5 46 55 50 50 58 Z" fill="#7A2430"/>
+              <circle cx="50" cy="41.5" r="3" fill="#F7F2EC"/>
+            </svg>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>
+
+<style>
+  [data-id="gestion"] .layout {
+    display: grid; grid-template-columns: 82mm 1fr; grid-template-rows: auto auto;
+    column-gap: 12mm; align-content: space-between; height: 100%;
+  }
+  [data-id="gestion"] .h-title { margin: 3.5mm 0 0; }
+  [data-id="gestion"] .rule.short { margin: 6mm 0 0; }
+  [data-id="gestion"] .head { display: flex; flex-direction: column; }
+  [data-id="gestion"] .head .photo { margin-top: auto; height: 40mm; position: relative; overflow: hidden; }
+  /* portrait-cou-bas.jpg (1129 × 838 px), échelle 0,449 : zone x 330–1020 px, y 0–337 px */
+  [data-id="gestion"] .head .photo img {
+    position: absolute; width: 134.1mm; left: -39.2mm; top: 0;
+    -webkit-mask-image: linear-gradient(90deg, #000 0, #000 85%, transparent 99%);
+            mask-image: linear-gradient(90deg, #000 0, #000 85%, transparent 99%);
+  }
+
+  [data-id="gestion"] .sec-head {
+    border-bottom: .3mm solid var(--espresso); padding-bottom: 2.4mm; margin-bottom: 4mm;
+  }
+  [data-id="gestion"] .sec-head .h-sub { font-size: 14pt; margin: 0; }
+
+  [data-id="gestion"] .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 4.5mm; }
+  [data-id="gestion"] .cards .card { padding: 4.6mm 5.6mm 5mm; min-height: 31mm; }
+  [data-id="gestion"] .cards .tag {
+    font-family: var(--display); font-style: italic; font-size: 20pt; line-height: 1; color: var(--rose);
+    margin-bottom: 2.2mm;
+  }
+
+  [data-id="gestion"] .xp .lead { font-size: 15pt; line-height: 1.38; color: var(--espresso); }
+
+  [data-id="gestion"] .measure table.data th { padding-bottom: 2.2mm; }
+  [data-id="gestion"] .measure td { padding-top: 2.9mm; padding-bottom: 2.9mm; vertical-align: baseline; }
+  [data-id="gestion"] .measure td.key { width: 58mm; font-size: 13pt; }
+  [data-id="gestion"] .measure td.q { font-size: 9.8pt; }
+</style>
+<section class="page" data-id="gestion">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie III — Pratique professionnelle</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="head">
+        <div class="kicker">Pratique professionnelle</div>
+        <h2 class="h-title">Gestion d’activité et fidélisation</h2>
+        <div class="rule short"></div>
+        <div class="photo"><img class="blend" src="assets/portrait-cou-bas.jpg" alt=""></div>
+      </div>
+
+      <div class="welcome">
+        <div class="sec-head"><h3 class="h-sub">Accueil, prix et organisation</h3></div>
+        <div class="cards">
+          <div class="card"><div class="tag">i.</div><p>Afficher les tarifs et conditions de réservation de manière compréhensible.</p></div>
+          <div class="card"><div class="tag">ii.</div><p>Prévoir le temps de préparation, le coût des consommables, les charges et une marge réaliste dans le calcul du prix.</p></div>
+          <div class="card"><div class="tag">iii.</div><p>Confirmer les rendez-vous, expliquer les retards et les conditions d’annulation.</p></div>
+          <div class="card"><div class="tag">iv.</div><p>Conserver un suivi des prestations et des éventuelles réactions, avec des données limitées au nécessaire.</p></div>
+        </div>
+      </div>
+
+      <div class="xp">
+        <div class="sec-head"><h3 class="h-sub">Expérience cliente</h3></div>
+        <p class="lead">Une bonne expérience repose sur une écoute attentive, une explication des étapes, un résultat adapté et des conseils de suivi. Demander un retour après le rendez-vous, sans pression, puis proposer une nouvelle réservation au moment approprié.</p>
+      </div>
+
+      <div class="measure">
+        <div class="sec-head"><h3 class="h-sub">Mesurer ses résultats</h3></div>
+        <table class="data">
+          <thead><tr><th>Indicateur</th><th>Question à se poser</th></tr></thead>
+          <tbody>
+            <tr><td class="key">Visites <em>du profil</em></td><td class="q">Le contenu suscite-t-il de la curiosité&nbsp;?</td></tr>
+            <tr><td class="key">Messages <em>reçus</em></td><td class="q">Les personnes comprennent-elles comment me contacter&nbsp;?</td></tr>
+            <tr><td class="key">Réservations</td><td class="q">Combien de demandes deviennent des rendez-vous&nbsp;?</td></tr>
+            <tr><td class="key">Clientes <em>fidèles</em></td><td class="q">Combien reviennent ou recommandent le salon&nbsp;?</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>
+
+<style>
+  [data-id="partie-4"] { background: var(--blush); }
+  [data-id="partie-4"] .arch {
+    position: absolute; right: 24mm; top: 22mm; width: 92mm; height: 150mm;
+    border-radius: 46mm 46mm 0 0; overflow: hidden; background: var(--paper);
+  }
+  [data-id="partie-4"] .arch img { width: 100%; height: 100%; object-fit: cover; object-position: 70% 30%; }
+  [data-id="partie-4"] .arch-line {
+    position: absolute; right: 20mm; top: 18mm; width: 100mm; height: 158mm;
+    border: .25mm solid var(--bordeaux); border-bottom: 0; border-radius: 50mm 50mm 0 0; opacity: .5;
+  }
+  [data-id="partie-4"] .os-num { left: 16mm; top: 16mm; -webkit-text-stroke-color: var(--bordeaux); opacity: .7; }
+  [data-id="partie-4"] .os-title { left: 20mm; top: 92mm; }
+  [data-id="partie-4"] .os-toc { left: 20mm; width: 140mm; bottom: 18mm; }
+</style>
+<section class="page opener-side" data-id="partie-4">
+  <div class="arch-line"></div>
+  <div class="arch"><img src="assets/portrait-couverture.jpg" alt=""></div>
+  <div class="os-num">04</div>
+  <div class="os-title">
+    <div class="os-part">Partie IV</div>
+    <div class="os-name">Évaluation</div>
+  </div>
+  <div class="os-toc">
+    <div class="label">Au programme de cette partie</div>
+    <div class="item"><span class="pg">23</span>Évaluation QCM</div>
+    <div class="item"><span class="pg">25</span>Sources et vérification des protocoles</div>
+  </div>
+</section>
+
+<style>
+  /* ===== Évaluation QCM (2 pages : qcm, qcm-2) — styles propres au fichier ===== */
+  .qcm-page .layout { display: grid; column-gap: 10mm; height: 100%; }
+  .qcm-page[data-id="qcm"] .layout { grid-template-columns: 64mm 1fr; }
+  .qcm-page[data-id="qcm-2"] .layout { grid-template-columns: 1fr 64mm; }
+
+  /* Colonne de titre (page 1) */
+  .qcm-page .side { display: flex; flex-direction: column; }
+  .qcm-page .side .h-title { margin: 3.6mm 0 0; font-size: 26pt; line-height: 1; }
+  .qcm-page .side .h-title .pre {
+    display: block; margin-bottom: 1.8mm;
+    font-style: italic; text-transform: none; font-size: 15pt; letter-spacing: 0; color: var(--mocha);
+  }
+  .qcm-page .side .rule.short { margin: 5.5mm 0 0; }
+
+  /* Champs à remplir */
+  .qcm-page .fields { margin-top: 12mm; }
+  .qcm-page .field + .field { margin-top: 10mm; }
+  .qcm-page .field .h-label { display: block; margin: 0; color: var(--mocha); }
+  .qcm-page .field .wline { display: block; height: 14mm; border-bottom: .25mm solid var(--espresso); }
+
+  /* Consigne */
+  .qcm-page .consigne { margin-top: auto; background: var(--cream); padding: 6mm 6mm 6.2mm; overflow: hidden; }
+  .qcm-page .consigne .lead { font-size: 15pt; line-height: 1.28; color: var(--espresso); }
+  .qcm-page .consigne .count {
+    display: flex; align-items: flex-end; gap: 3.4mm;
+    margin-top: 4.4mm; padding-top: 4.4mm; border-top: .2mm solid var(--line-strong);
+  }
+  .qcm-page .consigne .count .num {
+    font-family: var(--display); font-weight: 400; font-size: 56pt; line-height: .74; letter-spacing: -.02em;
+    color: transparent; -webkit-text-stroke: .3mm var(--bordeaux);
+  }
+  .qcm-page .consigne .count .txt {
+    font-size: 9.2pt; line-height: 1.42; color: var(--espresso); padding-bottom: .1mm; text-wrap: balance;
+  }
+
+  /* Grille des questions : 2 colonnes, rangées alignées */
+  .qcm-page .qgrid {
+    display: grid; grid-template-columns: 1fr 1fr; grid-auto-flow: column;
+    grid-template-rows: repeat(4, 1fr); column-gap: 9mm;
+  }
+  .qcm-page .q { border-top: .2mm solid var(--line-strong); padding: 2.8mm 0 1.8mm; }
+  .qcm-page .q-head { display: grid; grid-template-columns: 9.5mm 1fr; align-items: baseline; }
+  .qcm-page .q-no {
+    font-family: var(--display); font-style: italic; font-size: 16pt; line-height: 1; color: var(--bordeaux);
+  }
+  .qcm-page .q-text {
+    margin: 0; font-family: var(--display); font-weight: 500; font-size: 10pt; line-height: 1.28; color: var(--espresso);
+    text-wrap: balance;
+  }
+  .qcm-page .opts { list-style: none; margin: 2.3mm 0 0 9.5mm; }
+  .qcm-page .opts li {
+    display: grid; grid-template-columns: 5.6mm 5mm 1fr; align-items: start;
+    font-size: 9pt; line-height: 1.38; margin-bottom: 1.1mm; text-wrap: pretty;
+  }
+  .qcm-page .opts li:last-child { margin-bottom: 0; }
+  .qcm-page .opts .box {
+    width: 3.3mm; height: 3.3mm; margin-top: .55mm; border-radius: .4mm;
+    border: .3mm solid var(--mocha); background: var(--paper);
+  }
+  .qcm-page .opts .let {
+    font-family: var(--display); font-style: italic; font-size: 9.6pt; color: var(--bordeaux);
+  }
+
+  /* Page 2 : en-tête de suite, score, observations */
+  .qcm-page .qwrap { display: flex; flex-direction: column; min-height: 0; }
+  .qcm-page .qwrap .kicker { margin-bottom: 4mm; }
+  .qcm-page .qwrap .qgrid { flex: 1; min-height: 0; }
+  .qcm-page .score { border-top: .6mm solid var(--bordeaux); padding-top: 3.6mm; }
+  .qcm-page .score .h-label { display: block; color: var(--bordeaux); margin: 0; }
+  .qcm-page .score .row { display: flex; align-items: flex-end; gap: 3mm; margin-top: 1mm; }
+  .qcm-page .score .wline { display: block; width: 46mm; height: 17mm; border-bottom: .3mm solid var(--espresso); }
+  .qcm-page .score .total {
+    font-family: var(--display); font-style: italic; font-size: 42pt; line-height: .86; color: var(--bordeaux);
+  }
+  .qcm-page .obs { background: var(--cream); padding: 6mm 6mm 6mm; display: flex; flex-direction: column; }
+  .qcm-page .obs .h-label { color: var(--mocha); margin: 0; }
+  .qcm-page .obs .lines {
+    flex: 1; margin-top: 1mm;
+    background: repeating-linear-gradient(180deg, transparent 0 8.75mm, var(--line-strong) 8.75mm 9mm);
+  }
+</style>
+
+<section class="page qcm-page" data-id="qcm">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie IV — Évaluation</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="side">
+        <div class="kicker">Questionnaire</div>
+        <h2 class="h-title"><span class="pre">Dolce Lash &amp; Brow&nbsp;—</span>Évaluation QCM</h2>
+        <div class="rule short"></div>
+        <div class="fields">
+          <div class="field"><span class="h-label">Nom de l’apprenante&nbsp;:</span><span class="wline"></span></div>
+          <div class="field"><span class="h-label">Date&nbsp;:</span><span class="wline"></span></div>
+        </div>
+        <div class="consigne">
+          <p class="lead">Cochez une seule réponse par question.</p>
+          <div class="count"><span class="num">15</span><span class="txt">questions&nbsp;—<br>1&nbsp;point par bonne&nbsp;réponse.</span></div>
+        </div>
+      </div>
+
+      <div class="qgrid">
+        <div class="q">
+          <div class="q-head"><span class="q-no">1.</span><p class="q-text">Avant une prestation, quelle situation nécessite de reporter le soin&nbsp;?</p></div>
+          <ul class="opts">
+            <li><span class="box"></span><span class="let">A.</span><span>Sourcils naturellement clairsemés</span></li>
+            <li><span class="box"></span><span class="let">B.</span><span>Irritation ou lésion sur la zone à traiter</span></li>
+            <li><span class="box"></span><span class="let">C.</span><span>Poils épais</span></li>
+          </ul>
+        </div>
+        <div class="q">
+          <div class="q-head"><span class="q-no">2.</span><p class="q-text">Pourquoi effectuer un diagnostic avant un Brow&nbsp;Lift&nbsp;?</p></div>
+          <ul class="opts">
+            <li><span class="box"></span><span class="let">A.</span><span>Pour choisir uniquement la couleur de teinture</span></li>
+            <li><span class="box"></span><span class="let">B.</span><span>Pour évaluer le poil, la peau et les contre-indications</span></li>
+            <li><span class="box"></span><span class="let">C.</span><span>Pour supprimer le test de sensibilité</span></li>
+          </ul>
+        </div>
+        <div class="q">
+          <div class="q-head"><span class="q-no">3.</span><p class="q-text">Sur quoi faut-il se baser pour choisir le temps de pose&nbsp;?</p></div>
+          <ul class="opts">
+            <li><span class="box"></span><span class="let">A.</span><span>La notice de la référence exacte et le diagnostic</span></li>
+            <li><span class="box"></span><span class="let">B.</span><span>Toujours sur le temps le plus long</span></li>
+            <li><span class="box"></span><span class="let">C.</span><span>Uniquement sur la couleur de peau</span></li>
+          </ul>
+        </div>
+        <div class="q">
+          <div class="q-head"><span class="q-no">4.</span><p class="q-text">Que faire en cas de sensation de brûlure pendant une prestation&nbsp;?</p></div>
+          <ul class="opts">
+            <li><span class="box"></span><span class="let">A.</span><span>Attendre la fin du chronomètre</span></li>
+            <li><span class="box"></span><span class="let">B.</span><span>Ajouter davantage de produit</span></li>
+            <li><span class="box"></span><span class="let">C.</span><span>Arrêter, retirer le produit et évaluer la situation</span></li>
+          </ul>
+        </div>
+        <div class="q">
+          <div class="q-head"><span class="q-no">5.</span><p class="q-text">Quel est le rôle du neutralisant dans une lamination&nbsp;?</p></div>
+          <ul class="opts">
+            <li><span class="box"></span><span class="let">A.</span><span>Fixer la nouvelle forme du poil après l’étape de réduction</span></li>
+            <li><span class="box"></span><span class="let">B.</span><span>Décolorer la peau</span></li>
+            <li><span class="box"></span><span class="let">C.</span><span>Nettoyer les pinceaux</span></li>
+          </ul>
+        </div>
+        <div class="q">
+          <div class="q-head"><span class="q-no">6.</span><p class="q-text">Pourquoi faut-il vérifier la compatibilité de deux produits de marques différentes&nbsp;?</p></div>
+          <ul class="opts">
+            <li><span class="box"></span><span class="let">A.</span><span>Pour éviter une réaction indésirable ou un surtraitement</span></li>
+            <li><span class="box"></span><span class="let">B.</span><span>Seulement pour harmoniser les emballages</span></li>
+            <li><span class="box"></span><span class="let">C.</span><span>Ce n’est jamais nécessaire</span></li>
+          </ul>
+        </div>
+        <div class="q">
+          <div class="q-head"><span class="q-no">7.</span><p class="q-text">Quel critère est prioritaire pour une restructuration des sourcils&nbsp;?</p></div>
+          <ul class="opts">
+            <li><span class="box"></span><span class="let">A.</span><span>Reproduire la même forme sur toutes les clientes</span></li>
+            <li><span class="box"></span><span class="let">B.</span><span>Respecter la morphologie, l’implantation et les souhaits réalistes</span></li>
+            <li><span class="box"></span><span class="let">C.</span><span>Épiler systématiquement le dessus</span></li>
+          </ul>
+        </div>
+        <div class="q">
+          <div class="q-head"><span class="q-no">8.</span><p class="q-text">Quel risque présente une décoloration mal maîtrisée&nbsp;?</p></div>
+          <ul class="opts">
+            <li><span class="box"></span><span class="let">A.</span><span>Aucun si les sourcils sont épais</span></li>
+            <li><span class="box"></span><span class="let">B.</span><span>Irritation cutanée et fragilisation des poils</span></li>
+            <li><span class="box"></span><span class="let">C.</span><span>Une pousse plus rapide</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>
+
+<section class="page qcm-page" data-id="qcm-2">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie IV — Évaluation</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="qwrap">
+        <div class="kicker">Évaluation QCM&nbsp;— suite</div>
+        <div class="qgrid">
+          <div class="q">
+            <div class="q-head"><span class="q-no">9.</span><p class="q-text">Comment déterminer le temps de pose d’une teinture des cils&nbsp;?</p></div>
+            <ul class="opts">
+              <li><span class="box"></span><span class="let">A.</span><span>En suivant la notice de la gamme et le diagnostic</span></li>
+              <li><span class="box"></span><span class="let">B.</span><span>En reprenant le temps de la teinture sourcils</span></li>
+              <li><span class="box"></span><span class="let">C.</span><span>Toujours 20&nbsp;minutes</span></li>
+            </ul>
+          </div>
+          <div class="q">
+            <div class="q-head"><span class="q-no">10.</span><p class="q-text">Avant le rehaussement, pourquoi choisir soigneusement le support en silicone&nbsp;?</p></div>
+            <ul class="opts">
+              <li><span class="box"></span><span class="let">A.</span><span>Pour adapter la courbure à la longueur et à la direction des cils</span></li>
+              <li><span class="box"></span><span class="let">B.</span><span>Pour raccourcir les cils</span></li>
+              <li><span class="box"></span><span class="let">C.</span><span>Pour remplacer le diagnostic</span></li>
+            </ul>
+          </div>
+          <div class="q">
+            <div class="q-head"><span class="q-no">11.</span><p class="q-text">Quelle précaution est indispensable autour des yeux&nbsp;?</p></div>
+            <ul class="opts">
+              <li><span class="box"></span><span class="let">A.</span><span>Éviter le contact des produits avec l’œil et respecter les consignes de sécurité</span></li>
+              <li><span class="box"></span><span class="let">B.</span><span>Appliquer les produits sur la muqueuse</span></li>
+              <li><span class="box"></span><span class="let">C.</span><span>Laisser la cliente ouvrir les yeux pendant l’application</span></li>
+            </ul>
+          </div>
+          <div class="q">
+            <div class="q-head"><span class="q-no">12.</span><p class="q-text">À quel moment appliquer un Lash Botox dit «&nbsp;Step&nbsp;1.5&nbsp;»&nbsp;?</p></div>
+            <ul class="opts">
+              <li><span class="box"></span><span class="let">A.</span><span>Systématiquement entre les deux étapes, sans vérification</span></li>
+              <li><span class="box"></span><span class="let">B.</span><span>À l’étape prescrite par la notice du système utilisé</span></li>
+              <li><span class="box"></span><span class="let">C.</span><span>Avant le diagnostic</span></li>
+            </ul>
+          </div>
+          <div class="q">
+            <div class="q-head"><span class="q-no">13.</span><p class="q-text">Pourquoi noter la référence et le lot des produits&nbsp;?</p></div>
+            <ul class="opts">
+              <li><span class="box"></span><span class="let">A.</span><span>Pour la traçabilité et le suivi en cas de réaction</span></li>
+              <li><span class="box"></span><span class="let">B.</span><span>Uniquement pour calculer le prix</span></li>
+              <li><span class="box"></span><span class="let">C.</span><span>Pour éviter de demander le consentement</span></li>
+            </ul>
+          </div>
+          <div class="q">
+            <div class="q-head"><span class="q-no">14.</span><p class="q-text">Quelle consigne donner après une prestation&nbsp;?</p></div>
+            <ul class="opts">
+              <li><span class="box"></span><span class="let">A.</span><span>Des conseils adaptés à la technique et aux recommandations fabricant</span></li>
+              <li><span class="box"></span><span class="let">B.</span><span>Aucun conseil n’est utile</span></li>
+              <li><span class="box"></span><span class="let">C.</span><span>Refaire immédiatement la prestation si le résultat déplaît</span></li>
+            </ul>
+          </div>
+          <div class="q">
+            <div class="q-head"><span class="q-no">15.</span><p class="q-text">Si les cils semblent fragilisés avant un rehaussement, que faire&nbsp;?</p></div>
+            <ul class="opts">
+              <li><span class="box"></span><span class="let">A.</span><span>Augmenter le temps de pose</span></li>
+              <li><span class="box"></span><span class="let">B.</span><span>Évaluer leur état et différer la prestation si nécessaire</span></li>
+              <li><span class="box"></span><span class="let">C.</span><span>Ajouter deux couches de Step&nbsp;1</span></li>
+            </ul>
+          </div>
+          <div class="score">
+            <span class="h-label">Score&nbsp;:</span>
+            <div class="row"><span class="wline"></span><span class="total">/&nbsp;15</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="obs">
+        <span class="h-label">Observations&nbsp;:</span>
+        <div class="lines"></div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>
+
+<style>
+  [data-id="sources"] .layout { display: grid; grid-template-columns: 82mm 1fr; gap: 12mm; height: 100%; }
+  [data-id="sources"] .side { display: flex; flex-direction: column; }
+  [data-id="sources"] .side .h-title { margin: 3.5mm 0 0; }
+  [data-id="sources"] .side .rule.short { margin: 6mm 0 6mm; }
+  /* Date de consultation, dans une arche (motif de la marque) */
+  [data-id="sources"] .side .consult {
+    position: relative; margin: 0 6mm; height: 55.7mm; text-align: center;
+    border: .25mm solid rgba(122, 36, 48, .5); border-bottom: 0; border-radius: 35mm 35mm 0 0;
+    display: flex; flex-direction: column; justify-content: flex-end; padding: 0 4mm 6mm;
+  }
+  [data-id="sources"] .side .consult::after {
+    content: ''; position: absolute; left: -6mm; right: -6mm; bottom: 0; height: .25mm; background: var(--line-strong);
+  }
+  [data-id="sources"] .side .consult .h-label { color: var(--taupe); margin: 0 0 1mm; letter-spacing: .26em; }
+  [data-id="sources"] .side .consult .day {
+    display: block; font-family: var(--display); font-style: italic; font-weight: 400; font-size: 58pt; line-height: .95;
+    color: var(--bordeaux);
+  }
+  [data-id="sources"] .side .consult .month {
+    display: block; font-family: var(--display); font-weight: 400; font-size: 17pt; line-height: 1.1; color: var(--espresso);
+  }
+  [data-id="sources"] .side .alert { margin-top: auto; padding: 5.4mm 6mm 5.6mm 15mm; }
+  [data-id="sources"] .side .alert::before { top: 5.4mm; }
+  [data-id="sources"] .side .alert p { font-size: 11pt; line-height: 1.48; }
+
+  [data-id="sources"] .main { display: flex; flex-direction: column; }
+  [data-id="sources"] .sec-head {
+    border-bottom: .3mm solid var(--espresso); padding-bottom: 2.4mm; margin-bottom: .6mm;
+  }
+  [data-id="sources"] .sec-head .h-sub { font-size: 14pt; margin: 0; }
+  [data-id="sources"] .refs { list-style: none; counter-reset: ref; }
+  [data-id="sources"] .refs li {
+    counter-increment: ref; display: grid; grid-template-columns: 11mm 1fr; align-items: baseline;
+    padding: 2.5mm 0 2.6mm; border-bottom: .2mm solid var(--line);
+  }
+  [data-id="sources"] .refs li::before {
+    content: counter(ref, decimal-leading-zero);
+    font-family: var(--display); font-style: italic; font-size: 12pt; color: var(--bordeaux);
+  }
+  [data-id="sources"] .refs .ref-title {
+    font-family: var(--display); font-size: 11pt; line-height: 1.25; color: var(--espresso);
+  }
+  [data-id="sources"] .refs a, [data-id="sources"] .refs .url {
+    display: inline-block; margin-top: .8mm;
+    font-size: 8.4pt; letter-spacing: .01em; color: var(--mocha);
+    text-decoration: underline; text-decoration-color: var(--rose); text-decoration-thickness: .2mm; text-underline-offset: .7mm;
+  }
+  [data-id="sources"] .refs .url { text-decoration: none; color: var(--taupe); }
+  [data-id="sources"] .refs .pending-flag {
+    display: inline-block; margin-left: 2.4mm; padding: .3mm 2.2mm; border: .3mm dashed var(--rose);
+    font-family: var(--sans); font-size: 6.6pt; font-weight: 500; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--bordeaux); vertical-align: .3mm;
+  }
+
+  /* Carte fournisseur */
+  [data-id="sources"] .supplier {
+    margin-top: auto; position: relative; background: var(--blush); padding: 5.6mm 9mm 6mm;
+  }
+  [data-id="sources"] .supplier::after {
+    content: ''; position: absolute; inset: 2.6mm; border: .2mm solid rgba(122, 36, 48, .28); pointer-events: none;
+  }
+  [data-id="sources"] .supplier .kicker { font-size: 6.6pt; letter-spacing: .26em; }
+  [data-id="sources"] .supplier .name {
+    font-family: var(--display); font-weight: 400; font-size: 23pt; line-height: 1; color: var(--espresso);
+    margin: 2.8mm 0 0; padding-bottom: 3.6mm; border-bottom: .2mm solid rgba(122, 36, 48, .25);
+  }
+  [data-id="sources"] .supplier .name em { font-style: italic; font-size: 17pt; color: var(--bordeaux); margin-left: 1.6mm; }
+  [data-id="sources"] .supplier .txt { display: grid; grid-template-columns: 1fr 1.32fr; column-gap: 7mm; align-items: start; margin-top: 4mm; }
+  [data-id="sources"] .supplier .txt > p { margin: 0; }
+  [data-id="sources"] .supplier .alert { background: rgba(252, 250, 247, .75); padding: 3.4mm 5mm 3.6mm 14mm; }
+  [data-id="sources"] .supplier .alert::before { top: 3.6mm; left: 4mm; }
+</style>
+<section class="page" data-id="sources">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie IV — Évaluation</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="side">
+        <div class="kicker">Références</div>
+        <h2 class="h-title">Sources et vérification des protocoles</h2>
+        <div class="rule short"></div>
+        <p class="consult"><span class="h-label">Sources consultées le</span> <span class="day">23</span> <span class="month">octobre 2026.</span></p>
+        <div class="alert">
+          <div class="alert-title">Important</div>
+          <p><strong>Vérifier la notice livrée avec chaque produit, qui prime sur ce manuel.</strong></p>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="sec-head"><h3 class="h-sub">Références techniques</h3></div>
+        <ol class="refs">
+          <li><div><div class="ref-title">Noemi USA&nbsp;— support, Hybrid Dye et Innovate</div>
+            <a href="https://noemiusa.com/pages/support">https://noemiusa.com/pages/support</a></div></li>
+          <li><div><div class="ref-title">Noemi Innovate&nbsp;— informations distributeur</div>
+            <a href="https://lafabriquebeaute.com/produit/lash-lift-brow-lift-innovate-noemi/">https://lafabriquebeaute.com/produit/lash-lift-brow-lift-innovate-noemi/</a></div></li>
+          <li><div><div class="ref-title">Brow Daddy Hybrid Tint&nbsp;— gamme officielle</div>
+            <a href="https://shop.browdaddy.com/product/hybrid-tint-collection/">https://shop.browdaddy.com/product/hybrid-tint-collection/</a></div></li>
+          <li><div><div class="ref-title">Brow Daddy Hybrid Tint&nbsp;— ratio distributeur</div>
+            <a href="https://labobrowz.com/products/brow-daddy-teinture-hybrid">https://labobrowz.com/products/brow-daddy-teinture-hybrid</a></div></li>
+          <li><div><div class="ref-title">Noemi Freelift&nbsp;— guide technique<span class="pending-flag">Lien à compléter</span></div>
+            <span class="url">https://browlashworld.com/fr/blog-cils/noemi-freelift-mode-emploi-rehaussement-cils-sa…</span></div></li>
+        </ol>
+
+        <div class="supplier">
+          <div class="kicker">Fournisseur professionnel des produits</div>
+          <h3 class="name">Only Lash Paris <em>(Brow &amp; Lash)</em></h3>
+          <div class="txt">
+            <p>Les produits Thuya, Brow Daddy, Noemi et ZOLA utilisés pendant la formation ont été achetés auprès de Only Lash Paris (Brow&nbsp;&amp;&nbsp;Lash).</p>
+            <div class="alert">
+              <p><strong>Les notices des fabricants restent les références pour les temps de pose, les compatibilités et les précautions de chaque produit.</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>
+
+<style>
+  [data-id="dos"] { background: var(--blush); }
+  [data-id="dos"] .dos-center {
+    position: absolute; left: 0; right: 0; top: 66mm; text-align: center;
+  }
+  [data-id="dos"] .dos-logo { width: 96mm; display: block; margin: 0 auto; }
+  [data-id="dos"] .dos-rule { width: 14mm; height: .35mm; background: var(--bordeaux); margin: 9mm auto 7mm; }
+  [data-id="dos"] .dos-tag { font-family: var(--serif); font-style: italic; font-size: 20pt; color: var(--mocha); }
+  [data-id="dos"] .dos-sub {
+    margin-top: 4mm; font-size: 7.2pt; letter-spacing: .32em; text-transform: uppercase; color: var(--mocha);
+  }
+  [data-id="dos"] .dos-foot {
+    position: absolute; left: 0; right: 0; bottom: 12mm; text-align: center;
+    font-size: 6.6pt; letter-spacing: .3em; text-transform: uppercase; color: var(--taupe);
+  }
+  [data-id="dos"] .dos-band { position: absolute; right: 0; top: 0; bottom: 0; width: 6mm; background: var(--bordeaux); }
+</style>
+<section class="page" data-id="dos">
+  <div class="dos-band"></div>
+  <div class="dos-center">
+    <img class="dos-logo" src="assets/logo-dolce.png" alt="dolce lash &amp; brow">
+    <div class="dos-rule"></div>
+    <div class="dos-tag">Beauté du regard</div>
+    <div class="dos-sub">Manuel de formation</div>
+  </div>
+  <div class="dos-foot">Dolce Lash &amp;&nbsp;Brow&nbsp;·&nbsp;Support pédagogique</div>
 </section>
 
 </body>

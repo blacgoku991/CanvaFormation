@@ -1,0 +1,118 @@
+<style>
+  [data-id="sources"] .layout { display: grid; grid-template-columns: 82mm 1fr; gap: 12mm; height: 100%; }
+  [data-id="sources"] .side { display: flex; flex-direction: column; }
+  [data-id="sources"] .side .h-title { margin: 3.5mm 0 0; }
+  [data-id="sources"] .side .rule.short { margin: 6mm 0 6mm; }
+  /* Date de consultation, dans une arche (motif de la marque) */
+  [data-id="sources"] .side .consult {
+    position: relative; margin: 0 6mm; height: 55.7mm; text-align: center;
+    border: .25mm solid rgba(122, 36, 48, .5); border-bottom: 0; border-radius: 35mm 35mm 0 0;
+    display: flex; flex-direction: column; justify-content: flex-end; padding: 0 4mm 6mm;
+  }
+  [data-id="sources"] .side .consult::after {
+    content: ''; position: absolute; left: -6mm; right: -6mm; bottom: 0; height: .25mm; background: var(--line-strong);
+  }
+  [data-id="sources"] .side .consult .h-label { color: var(--taupe); margin: 0 0 1mm; letter-spacing: .26em; }
+  [data-id="sources"] .side .consult .day {
+    display: block; font-family: var(--display); font-style: italic; font-weight: 400; font-size: 58pt; line-height: .95;
+    color: var(--bordeaux);
+  }
+  [data-id="sources"] .side .consult .month {
+    display: block; font-family: var(--display); font-weight: 400; font-size: 17pt; line-height: 1.1; color: var(--espresso);
+  }
+  [data-id="sources"] .side .alert { margin-top: auto; padding: 5.4mm 6mm 5.6mm 15mm; }
+  [data-id="sources"] .side .alert::before { top: 5.4mm; }
+  [data-id="sources"] .side .alert p { font-size: 11pt; line-height: 1.48; }
+
+  [data-id="sources"] .main { display: flex; flex-direction: column; }
+  [data-id="sources"] .sec-head {
+    border-bottom: .3mm solid var(--espresso); padding-bottom: 2.4mm; margin-bottom: .6mm;
+  }
+  [data-id="sources"] .sec-head .h-sub { font-size: 14pt; margin: 0; }
+  [data-id="sources"] .refs { list-style: none; counter-reset: ref; }
+  [data-id="sources"] .refs li {
+    counter-increment: ref; display: grid; grid-template-columns: 11mm 1fr; align-items: baseline;
+    padding: 2.5mm 0 2.6mm; border-bottom: .2mm solid var(--line);
+  }
+  [data-id="sources"] .refs li::before {
+    content: counter(ref, decimal-leading-zero);
+    font-family: var(--display); font-style: italic; font-size: 12pt; color: var(--bordeaux);
+  }
+  [data-id="sources"] .refs .ref-title {
+    font-family: var(--display); font-size: 11pt; line-height: 1.25; color: var(--espresso);
+  }
+  [data-id="sources"] .refs a, [data-id="sources"] .refs .url {
+    display: inline-block; margin-top: .8mm;
+    font-size: 8.4pt; letter-spacing: .01em; color: var(--mocha);
+    text-decoration: underline; text-decoration-color: var(--rose); text-decoration-thickness: .2mm; text-underline-offset: .7mm;
+  }
+  [data-id="sources"] .refs .url { text-decoration: none; color: var(--taupe); }
+  [data-id="sources"] .refs .pending-flag {
+    display: inline-block; margin-left: 2.4mm; padding: .3mm 2.2mm; border: .3mm dashed var(--rose);
+    font-family: var(--sans); font-size: 6.6pt; font-weight: 500; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--bordeaux); vertical-align: .3mm;
+  }
+
+  /* Carte fournisseur */
+  [data-id="sources"] .supplier {
+    margin-top: auto; position: relative; background: var(--blush); padding: 5.6mm 9mm 6mm;
+  }
+  [data-id="sources"] .supplier::after {
+    content: ''; position: absolute; inset: 2.6mm; border: .2mm solid rgba(122, 36, 48, .28); pointer-events: none;
+  }
+  [data-id="sources"] .supplier .kicker { font-size: 6.6pt; letter-spacing: .26em; }
+  [data-id="sources"] .supplier .name {
+    font-family: var(--display); font-weight: 400; font-size: 23pt; line-height: 1; color: var(--espresso);
+    margin: 2.8mm 0 0; padding-bottom: 3.6mm; border-bottom: .2mm solid rgba(122, 36, 48, .25);
+  }
+  [data-id="sources"] .supplier .name em { font-style: italic; font-size: 17pt; color: var(--bordeaux); margin-left: 1.6mm; }
+  [data-id="sources"] .supplier .txt { display: grid; grid-template-columns: 1fr 1.32fr; column-gap: 7mm; align-items: start; margin-top: 4mm; }
+  [data-id="sources"] .supplier .txt > p { margin: 0; }
+  [data-id="sources"] .supplier .alert { background: rgba(252, 250, 247, .75); padding: 3.4mm 5mm 3.6mm 14mm; }
+  [data-id="sources"] .supplier .alert::before { top: 3.6mm; left: 4mm; }
+</style>
+<section class="page" data-id="sources">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie IV — Évaluation</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="side">
+        <div class="kicker">Références</div>
+        <h2 class="h-title">Sources et vérification des protocoles</h2>
+        <div class="rule short"></div>
+        <p class="consult"><span class="h-label">Sources consultées le</span> <span class="day">23</span> <span class="month">octobre 2026.</span></p>
+        <div class="alert">
+          <div class="alert-title">Important</div>
+          <p><strong>Vérifier la notice livrée avec chaque produit, qui prime sur ce manuel.</strong></p>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="sec-head"><h3 class="h-sub">Références techniques</h3></div>
+        <ol class="refs">
+          <li><div><div class="ref-title">Noemi USA&nbsp;— support, Hybrid Dye et Innovate</div>
+            <a href="https://noemiusa.com/pages/support">https://noemiusa.com/pages/support</a></div></li>
+          <li><div><div class="ref-title">Noemi Innovate&nbsp;— informations distributeur</div>
+            <a href="https://lafabriquebeaute.com/produit/lash-lift-brow-lift-innovate-noemi/">https://lafabriquebeaute.com/produit/lash-lift-brow-lift-innovate-noemi/</a></div></li>
+          <li><div><div class="ref-title">Brow Daddy Hybrid Tint&nbsp;— gamme officielle</div>
+            <a href="https://shop.browdaddy.com/product/hybrid-tint-collection/">https://shop.browdaddy.com/product/hybrid-tint-collection/</a></div></li>
+          <li><div><div class="ref-title">Brow Daddy Hybrid Tint&nbsp;— ratio distributeur</div>
+            <a href="https://labobrowz.com/products/brow-daddy-teinture-hybrid">https://labobrowz.com/products/brow-daddy-teinture-hybrid</a></div></li>
+          <li><div><div class="ref-title">Noemi Freelift&nbsp;— guide technique<span class="pending-flag">Lien à compléter</span></div>
+            <span class="url">https://browlashworld.com/fr/blog-cils/noemi-freelift-mode-emploi-rehaussement-cils-sa…</span></div></li>
+        </ol>
+
+        <div class="supplier">
+          <div class="kicker">Fournisseur professionnel des produits</div>
+          <h3 class="name">Only Lash Paris <em>(Brow &amp; Lash)</em></h3>
+          <div class="txt">
+            <p>Les produits Thuya, Brow Daddy, Noemi et ZOLA utilisés pendant la formation ont été achetés auprès de Only Lash Paris (Brow&nbsp;&amp;&nbsp;Lash).</p>
+            <div class="alert">
+              <p><strong>Les notices des fabricants restent les références pour les temps de pose, les compatibilités et les précautions de chaque produit.</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>

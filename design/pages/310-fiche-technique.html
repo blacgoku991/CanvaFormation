@@ -1,0 +1,115 @@
+<style>
+  [data-id="fiche-technique"] .wrap { display: flex; flex-direction: column; height: 100%; }
+  [data-id="fiche-technique"] .head { display: flex; justify-content: space-between; align-items: flex-end; }
+  [data-id="fiche-technique"] .head .h-title { margin: 3.5mm 0 0; font-size: 25pt; }
+  [data-id="fiche-technique"] .head .see { font-size: 8.4pt; letter-spacing: .04em; color: var(--taupe); padding-bottom: 1.4mm; }
+  [data-id="fiche-technique"] .head .see .pg { font-family: var(--display); font-style: italic; font-size: 10pt; color: var(--bordeaux); }
+
+  /* Frise des trois temps : un filet, trois repères numérotés */
+  [data-id="fiche-technique"] .timeline,
+  [data-id="fiche-technique"] .cols { display: grid; grid-template-columns: 1fr 1.6fr 1fr; gap: 7mm; }
+  [data-id="fiche-technique"] .timeline { position: relative; margin: 9mm 0 0; height: 10mm; }
+  [data-id="fiche-technique"] .timeline::before {
+    content: ''; position: absolute; left: 0; right: 0; top: 50%; height: .25mm; background: var(--rose);
+  }
+  [data-id="fiche-technique"] .timeline .node {
+    position: relative; justify-self: start; margin-left: 6.5mm; width: 10mm; height: 10mm; border-radius: 50%;
+    background: var(--ivory); border: .3mm solid var(--bordeaux);
+    font-family: var(--display); font-style: italic; font-size: 13pt; line-height: 9.4mm; text-align: center;
+    color: var(--bordeaux);
+  }
+  [data-id="fiche-technique"] .timeline .node.on { background: var(--bordeaux); color: #fff; }
+
+  [data-id="fiche-technique"] .cols { flex: 1; margin-top: 4mm; }
+  [data-id="fiche-technique"] .cols .col { padding: 6mm 6.5mm 6.5mm; display: flex; flex-direction: column; }
+  [data-id="fiche-technique"] .cols .col.mid { background: var(--cream); border-color: transparent; }
+  [data-id="fiche-technique"] .cols .h-sub {
+    font-size: 14.5pt; margin: 0 0 1mm; padding-bottom: 3.6mm; border-bottom: .3mm solid var(--espresso);
+  }
+  [data-id="fiche-technique"] .items { list-style: none; }
+  [data-id="fiche-technique"] .items li {
+    position: relative; padding: 4.2mm 0 4.2mm 5.6mm; border-bottom: .2mm solid var(--line);
+    font-size: 10.2pt; line-height: 1.55; text-wrap: pretty;
+  }
+  [data-id="fiche-technique"] .items li:last-child { border-bottom: 0; }
+  [data-id="fiche-technique"] .items li::before {
+    content: ''; position: absolute; left: .3mm; top: calc(4.2mm + .64em); width: 1.4mm; height: 1.4mm;
+    border-radius: 50%; background: var(--rose);
+  }
+  [data-id="fiche-technique"] .mid .lead { font-size: 13.6pt; line-height: 1.4; color: var(--espresso); margin-top: 3.6mm; text-wrap: pretty; }
+  /* Séquence Thuya rappelée en frise (mêmes termes, même ordre que le paragraphe) */
+  [data-id="fiche-technique"] .seq {
+    list-style: none; display: flex; justify-content: space-between; position: relative; margin: 6mm 0 6mm;
+  }
+  [data-id="fiche-technique"] .seq::before {
+    content: ''; position: absolute; left: 7mm; right: 6mm; top: 1.05mm; height: .25mm; background: var(--rose);
+  }
+  [data-id="fiche-technique"] .seq li {
+    position: relative; display: flex; flex-direction: column; align-items: center; text-align: center;
+    font-size: 8.4pt; line-height: 1.25; color: var(--mocha);
+  }
+  [data-id="fiche-technique"] .seq li::before {
+    content: ''; width: 2.1mm; height: 2.1mm; border-radius: 50%; margin-bottom: 2.2mm;
+    background: var(--cream); border: .3mm solid var(--rose); position: relative;
+  }
+  [data-id="fiche-technique"] .seq li.key { font-family: var(--display); font-size: 9.4pt; color: var(--espresso); }
+  [data-id="fiche-technique"] .seq li.key::before { background: var(--bordeaux); border-color: var(--bordeaux); }
+  [data-id="fiche-technique"] .mid .alert { margin-top: auto; }
+  [data-id="fiche-technique"] .mid .alert p { font-size: 9.8pt; text-wrap: pretty; }
+</style>
+<section class="page" data-id="fiche-technique">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie III — Pratique professionnelle</span></div>
+  <div class="content">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <div class="kicker">Fiches pratiques et suivi des clientes</div>
+          <h2 class="h-title">Fiche technique&nbsp;— Brow Lift</h2>
+        </div>
+        <div class="see">Voir aussi&nbsp;: Brow Lift&nbsp;— Thuya, p.&nbsp;<span class="pg">{{p:browlift}}</span></div>
+      </div>
+
+      <div class="timeline" aria-hidden="true">
+        <div class="node">1</div><div class="node on">2</div><div class="node">3</div>
+      </div>
+
+      <div class="cols">
+        <div class="card col">
+          <h3 class="h-sub">Avant la séance</h3>
+          <ul class="items">
+            <li>Accueillir la cliente, vérifier les antécédents de réaction et les éventuelles irritations ou lésions.</li>
+            <li>Observer la porosité, l’épaisseur, la densité et la direction des poils&nbsp;; photographier avec consentement.</li>
+            <li>Préparer le matériel désinfecté, un minuteur, les consommables à usage unique et les notices des références exactes.</li>
+          </ul>
+        </div>
+
+        <div class="card col mid">
+          <h3 class="h-sub">Pendant la séance</h3>
+          <p class="lead">Pour la gamme Thuya présentée au §2 (Brow&nbsp;Lift&nbsp;—&nbsp;Thuya), conserver la séquence de préparation, lotion permanente, retrait complet, neutralisant, retrait et soin final.</p>
+          <ol class="seq" aria-hidden="true">
+            <li>Préparation</li>
+            <li class="key">Lotion<br>permanente</li>
+            <li>Retrait<br>complet</li>
+            <li class="key">Neutralisant</li>
+            <li>Retrait</li>
+            <li class="key">Soin<br>final</li>
+          </ol>
+          <div class="alert">
+            <div class="alert-title">Important</div>
+            <p>Les temps présentés au §2 sont des valeurs pédagogiques à confirmer sur les notices de chaque référence&nbsp;: <strong>ils ne doivent pas être appliqués automatiquement.</strong></p>
+          </div>
+        </div>
+
+        <div class="card col">
+          <h3 class="h-sub">Après la séance</h3>
+          <ul class="items">
+            <li>Vérifier la forme, la tolérance cutanée et le confort de la cliente.</li>
+            <li>Remettre les recommandations du fabricant et noter les produits, lots, temps effectivement appliqués et réactions.</li>
+            <li>Programmer un suivi adapté sans promettre une durée identique pour toutes les clientes.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>

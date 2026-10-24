@@ -1,0 +1,99 @@
+<style>
+  [data-id="diagnostic"] .layout {
+    display: grid; grid-template-columns: 82mm 1fr; grid-template-rows: 1fr auto; column-gap: 12mm; row-gap: 7mm; height: 100%;
+  }
+  [data-id="diagnostic"] .top-side .h-title { margin: 4mm 0 0; font-size: 23pt; }
+  [data-id="diagnostic"] .top-side .rule.short { margin: 7mm 0 6.4mm; }
+  [data-id="diagnostic"] .synth .h-label { color: var(--bordeaux); }
+  [data-id="diagnostic"] .synth .alert { margin-top: 3.4mm; padding: 3.4mm 5mm 3.4mm 13.5mm; }
+  [data-id="diagnostic"] .synth .alert::before { left: 3.8mm; top: 3.4mm; }
+
+  /* Haut de la colonne principale : photo + objectif */
+  [data-id="diagnostic"] .top-main { display: flex; flex-direction: column; }
+  [data-id="diagnostic"] .photo { position: relative; flex: 1; min-height: 60mm; overflow: hidden; }
+  [data-id="diagnostic"] .photo img {
+    position: absolute; width: 270mm; left: -91mm; top: -70mm; max-width: none; filter: brightness(1.02);
+    -webkit-mask-image: linear-gradient(90deg, #000 76%, transparent 93%); mask-image: linear-gradient(90deg, #000 76%, transparent 93%);
+  }
+  [data-id="diagnostic"] .objectif { margin-top: 6mm; font-size: 14pt; line-height: 1.36; max-width: 132mm; }
+  [data-id="diagnostic"] .objectif .lbl {
+    font-family: var(--sans); font-style: normal; font-weight: 500; font-size: 7.2pt; letter-spacing: .26em;
+    text-transform: uppercase; color: var(--bordeaux);
+  }
+
+  /* Bande basse : déroulé, matériel, étape 1 */
+  [data-id="diagnostic"] .rail { border-top: .3mm solid var(--espresso); padding-top: 2.6mm; }
+  [data-id="diagnostic"] .rail .rail-label {
+    font-size: 6.8pt; font-weight: 500; letter-spacing: .3em; text-transform: uppercase; color: var(--taupe);
+    padding-bottom: .6mm;
+  }
+  [data-id="diagnostic"] .rail .it {
+    display: flex; align-items: baseline; gap: 3mm; padding: 1.3mm 0; border-bottom: .2mm solid var(--line);
+    font-size: 8.4pt; color: var(--ink);
+  }
+  [data-id="diagnostic"] .rail .it:last-child { border-bottom: 0; padding-bottom: 0; }
+  [data-id="diagnostic"] .rail .it .n {
+    font-family: var(--display); font-style: italic; font-size: 11pt; color: var(--bordeaux); min-width: 6mm;
+  }
+  [data-id="diagnostic"] .rail .it .t { flex: 1; }
+  [data-id="diagnostic"] .rail .it .pg { font-family: var(--display); font-style: italic; font-size: 9pt; color: var(--taupe); }
+  [data-id="diagnostic"] .rail .it.on .t { font-weight: 500; color: var(--espresso); }
+
+  [data-id="diagnostic"] .bottom-main { display: grid; grid-template-columns: 1fr 1.18fr; column-gap: 9mm; align-items: stretch; }
+  [data-id="diagnostic"] .bottom-main .card { padding: 4.6mm 5.4mm; }
+  [data-id="diagnostic"] .step { border-top: .3mm solid var(--espresso); padding-top: 3.4mm; }
+  [data-id="diagnostic"] .step-head { display: flex; align-items: flex-end; gap: 3.4mm; margin-bottom: 2.6mm; }
+  [data-id="diagnostic"] .step-head .n {
+    font-family: var(--display); font-style: italic; font-size: 34pt; line-height: .8; color: var(--bordeaux); letter-spacing: -.02em;
+  }
+  [data-id="diagnostic"] .step-head .st {
+    font-family: var(--display); font-weight: 500; font-size: 11pt; line-height: 1.2; color: var(--espresso);
+  }
+  [data-id="diagnostic"] .step-head .st .k { display: block; font-style: italic; font-weight: 400; font-size: 9.5pt; color: var(--bordeaux); margin-bottom: .4mm; }
+</style>
+<section class="page" data-id="diagnostic">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie I — Sourcils</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="top-side">
+        <div class="kicker">Protocole</div>
+        <h2 class="h-title"><span class="no">1.</span>Restructuration des sourcils &amp;&nbsp;mapping</h2>
+        <div class="rule short"></div>
+        <div class="synth">
+          <h3 class="h-label">Diagnostic et restructuration</h3>
+          <p>Évaluer la ligne naturelle, la symétrie, la densité et le résultat souhaité. Effectuer un mapping et le valider avec la cliente.</p>
+          <div class="alert">
+            <div class="alert-title">Important</div>
+            <p>Épiler uniquement les poils hors du tracé, sans intervenir sur une peau irritée ou lésée.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="top-main">
+        <div class="photo"><img class="blend" src="assets/portrait-couverture.jpg" alt=""></div>
+        <p class="lead objectif"><span class="lbl">Objectif&nbsp;:</span> dessiner une ligne harmonieuse adaptée au visage, tout en respectant la pousse naturelle, la densité et les souhaits de la cliente. Les deux sourcils ne sont pas nécessairement identiques&nbsp;: rechercher une symétrie visuelle, sans surépiler.</p>
+      </div>
+
+      <div class="rail">
+        <div class="rail-label">Au programme</div>
+        <div class="it on"><span class="n">01</span><span class="t">Diagnostic et préparation</span><span class="pg">{{p:diagnostic}}</span></div>
+        <div class="it"><span class="n">02</span><span class="t">Mapping&nbsp;: les trois repères</span><span class="pg">{{p:mapping}}</span></div>
+        <div class="it"><span class="n">03</span><span class="t">Dessiner et faire valider</span><span class="pg">{{p:mapping}}</span></div>
+        <div class="it"><span class="n">04</span><span class="t">Restructurer</span><span class="pg">{{p:mapping}}</span></div>
+        <div class="it"><span class="n">05</span><span class="t">Contrôle et conseils</span><span class="pg">{{p:mapping}}</span></div>
+      </div>
+
+      <div class="bottom-main">
+        <div class="card cream">
+          <h3 class="h-label">Matériel nécessaire</h3>
+          <p>Fil de mapping teinté ou crayon cosmétique, règle ou pied à coulisse adapté, <strong>goupillons jetables, pince désinfectée</strong>, petits ciseaux si nécessaire, brosse, coton, nettoyant doux, miroir et fiche de diagnostic.</p>
+        </div>
+        <div class="step">
+          <div class="step-head"><span class="n" aria-hidden="true">01</span><h3 class="st"><span class="k">Étape 1 —</span> Diagnostic et préparation</h3></div>
+          <p>Interroger la cliente sur ses attentes, réactions cutanées, soins récents et traitements susceptibles de fragiliser la peau. Observer l’implantation, les zones clairsemées, les épis et l’asymétrie. Nettoyer puis brosser les sourcils dans leur sens naturel.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>

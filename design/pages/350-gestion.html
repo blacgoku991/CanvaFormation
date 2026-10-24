@@ -1,0 +1,77 @@
+<style>
+  [data-id="gestion"] .layout {
+    display: grid; grid-template-columns: 82mm 1fr; grid-template-rows: auto auto;
+    column-gap: 12mm; align-content: space-between; height: 100%;
+  }
+  [data-id="gestion"] .h-title { margin: 3.5mm 0 0; }
+  [data-id="gestion"] .rule.short { margin: 6mm 0 0; }
+  [data-id="gestion"] .head { display: flex; flex-direction: column; }
+  [data-id="gestion"] .head .photo { margin-top: auto; height: 40mm; position: relative; overflow: hidden; }
+  /* portrait-cou-bas.jpg (1129 × 838 px), échelle 0,449 : zone x 330–1020 px, y 0–337 px */
+  [data-id="gestion"] .head .photo img {
+    position: absolute; width: 134.1mm; left: -39.2mm; top: 0;
+    -webkit-mask-image: linear-gradient(90deg, #000 0, #000 85%, transparent 99%);
+            mask-image: linear-gradient(90deg, #000 0, #000 85%, transparent 99%);
+  }
+
+  [data-id="gestion"] .sec-head {
+    border-bottom: .3mm solid var(--espresso); padding-bottom: 2.4mm; margin-bottom: 4mm;
+  }
+  [data-id="gestion"] .sec-head .h-sub { font-size: 14pt; margin: 0; }
+
+  [data-id="gestion"] .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 4.5mm; }
+  [data-id="gestion"] .cards .card { padding: 4.6mm 5.6mm 5mm; min-height: 31mm; }
+  [data-id="gestion"] .cards .tag {
+    font-family: var(--display); font-style: italic; font-size: 20pt; line-height: 1; color: var(--rose);
+    margin-bottom: 2.2mm;
+  }
+
+  [data-id="gestion"] .xp .lead { font-size: 15pt; line-height: 1.38; color: var(--espresso); }
+
+  [data-id="gestion"] .measure table.data th { padding-bottom: 2.2mm; }
+  [data-id="gestion"] .measure td { padding-top: 2.9mm; padding-bottom: 2.9mm; vertical-align: baseline; }
+  [data-id="gestion"] .measure td.key { width: 58mm; font-size: 13pt; }
+  [data-id="gestion"] .measure td.q { font-size: 9.8pt; }
+</style>
+<section class="page" data-id="gestion">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie III — Pratique professionnelle</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="head">
+        <div class="kicker">Pratique professionnelle</div>
+        <h2 class="h-title">Gestion d’activité et fidélisation</h2>
+        <div class="rule short"></div>
+        <div class="photo"><img class="blend" src="assets/portrait-cou-bas.jpg" alt=""></div>
+      </div>
+
+      <div class="welcome">
+        <div class="sec-head"><h3 class="h-sub">Accueil, prix et organisation</h3></div>
+        <div class="cards">
+          <div class="card"><div class="tag">i.</div><p>Afficher les tarifs et conditions de réservation de manière compréhensible.</p></div>
+          <div class="card"><div class="tag">ii.</div><p>Prévoir le temps de préparation, le coût des consommables, les charges et une marge réaliste dans le calcul du prix.</p></div>
+          <div class="card"><div class="tag">iii.</div><p>Confirmer les rendez-vous, expliquer les retards et les conditions d’annulation.</p></div>
+          <div class="card"><div class="tag">iv.</div><p>Conserver un suivi des prestations et des éventuelles réactions, avec des données limitées au nécessaire.</p></div>
+        </div>
+      </div>
+
+      <div class="xp">
+        <div class="sec-head"><h3 class="h-sub">Expérience cliente</h3></div>
+        <p class="lead">Une bonne expérience repose sur une écoute attentive, une explication des étapes, un résultat adapté et des conseils de suivi. Demander un retour après le rendez-vous, sans pression, puis proposer une nouvelle réservation au moment approprié.</p>
+      </div>
+
+      <div class="measure">
+        <div class="sec-head"><h3 class="h-sub">Mesurer ses résultats</h3></div>
+        <table class="data">
+          <thead><tr><th>Indicateur</th><th>Question à se poser</th></tr></thead>
+          <tbody>
+            <tr><td class="key">Visites <em>du profil</em></td><td class="q">Le contenu suscite-t-il de la curiosité&nbsp;?</td></tr>
+            <tr><td class="key">Messages <em>reçus</em></td><td class="q">Les personnes comprennent-elles comment me contacter&nbsp;?</td></tr>
+            <tr><td class="key">Réservations</td><td class="q">Combien de demandes deviennent des rendez-vous&nbsp;?</td></tr>
+            <tr><td class="key">Clientes <em>fidèles</em></td><td class="q">Combien reviennent ou recommandent le salon&nbsp;?</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>

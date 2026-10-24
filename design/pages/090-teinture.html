@@ -1,0 +1,57 @@
+<style>
+  [data-id="teinture"] .layout { display: grid; grid-template-columns: 1fr 96mm; gap: 13mm; height: 100%; }
+  [data-id="teinture"] .main { display: flex; flex-direction: column; }
+  [data-id="teinture"] .main .h-title { margin: 3.5mm 0 0; font-size: 25pt; }
+  [data-id="teinture"] .rule.short { margin: 6mm 0 6.5mm; }
+  [data-id="teinture"] .main .lead { font-size: 15.5pt; line-height: 1.38; color: var(--espresso); max-width: 112mm; }
+  [data-id="teinture"] .main .alert { margin-top: 7mm; }
+  [data-id="teinture"] .main .alert p + p { margin-top: 2mm; }
+
+  [data-id="teinture"] .recall { margin-top: auto; padding: 5mm 6mm 5.2mm; }
+  [data-id="teinture"] .recall .recall-head {
+    display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1.6mm;
+  }
+  [data-id="teinture"] .recall > .h-label { margin-bottom: 3mm; }
+  [data-id="teinture"] .recall .see { font-size: 8.4pt; letter-spacing: .04em; color: var(--taupe); }
+  [data-id="teinture"] .recall .see .pg { font-family: var(--display); font-style: italic; font-size: 10pt; color: var(--bordeaux); }
+  [data-id="teinture"] .recall td.key { width: 42mm; font-size: 12pt; }
+  [data-id="teinture"] .recall td { text-wrap: balance; }
+
+  [data-id="teinture"] .photo { position: relative; overflow: hidden; height: 100%; background: var(--ivory); }
+  [data-id="teinture"] .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 74%; display: block; }
+</style>
+<section class="page" data-id="teinture">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie I — Sourcils</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="main">
+        <div class="kicker">Teinture hybride et décoloration</div>
+        <h2 class="h-title"><span class="no">3.</span>Teinture des sourcils&nbsp;— Brow Daddy</h2>
+        <div class="rule short"></div>
+        <p class="lead">Choisir la nuance selon le diagnostic et suivre la notice de la gamme Brow Daddy utilisée (Hybrid Tint ou StainMe). Protéger la peau et contrôler la coloration.</p>
+        <div class="alert">
+          <div class="alert-title">Important</div>
+          <p>Après un Brow Lift, vérifier la compatibilité et les durées spécifiques avant d’associer les deux prestations.</p>
+          <p><strong>Le protocole de teinture et son temps de pose restent à confirmer à partir de la référence exacte du produit.</strong></p>
+        </div>
+
+        <div class="card recall">
+          <div class="recall-head">
+            <div class="kicker plain">Rappel</div>
+            <span class="see">Voir aussi&nbsp;: Hygiène, sécurité et qualité, p.&nbsp;<span class="pg">{{p:hygiene}}</span></span>
+          </div>
+          <h3 class="h-label">Points de vigilance par technique</h3>
+          <table class="data">
+            <thead><tr><th>Technique</th><th>Vigilance principale</th></tr></thead>
+            <tbody>
+              <tr><td class="key">Teinture <em>hybride</em></td><td>Sensibilisation possible&nbsp;: respecter le test préalable et la notice exacte.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="photo"><img class="blend" src="assets/sac-jambes.jpg" alt=""></div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>

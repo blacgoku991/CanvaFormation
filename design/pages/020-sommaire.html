@@ -5,75 +5,85 @@
   }
   [data-id="sommaire"] .side .h-display { font-size: 36pt; margin: 6mm 0 6mm; }
   [data-id="sommaire"] .side .lead { font-size: 14pt; max-width: 64mm; }
-  [data-id="sommaire"] .col > .part + .part { margin-top: 10mm; }
   [data-id="sommaire"] .side .arch {
     position: absolute; left: 20mm; bottom: 32mm; width: 58mm; height: 72mm;
     border-radius: 29mm 29mm 0 0; overflow: hidden; background: var(--paper);
   }
-  [data-id="sommaire"] .side .arch img { width: 100%; height: 100%; object-fit: cover; object-position: 58% 40%; }
-  [data-id="sommaire"] .side .logo { position: absolute; left: 20mm; bottom: 16mm; width: 46mm; opacity: .85; }
-  [data-id="sommaire"] .parts {
-    padding: 30mm 20mm 18mm 16mm; display: grid; grid-template-columns: 1fr 1fr; column-gap: 14mm;
-    align-content: start;
+  [data-id="sommaire"] .side .arch img {
+    width: 100%; height: 100%; object-fit: cover; object-position: 58% 40%;
+    transform: scale(1.22); transform-origin: 38% 74%; filter: brightness(1.02);
   }
-  [data-id="sommaire"] .part-head {
-    display: flex; align-items: baseline; gap: 3mm; padding-bottom: 2.4mm; margin-bottom: 1.6mm;
-    border-bottom: .3mm solid var(--espresso);
+  [data-id="sommaire"] .side .logo { position: absolute; left: 20mm; bottom: 16mm; width: 46mm; opacity: .85; }
+
+  /* Parties empilées sur toute la hauteur : intitulé de partie à gauche, rubriques à droite */
+  [data-id="sommaire"] .parts {
+    padding: 30mm 20mm 17mm 16mm; display: flex; flex-direction: column; justify-content: space-between;
+  }
+  [data-id="sommaire"] .part {
+    display: grid; grid-template-columns: 47mm 1fr; column-gap: 8mm; align-items: start;
+    border-top: .3mm solid var(--espresso); padding-top: 3.4mm;
   }
   [data-id="sommaire"] .part-head .roman {
-    font-family: var(--display); font-style: italic; font-size: 24pt; line-height: 1; color: var(--bordeaux);
-    min-width: 11mm;
+    display: block; font-family: var(--display); font-style: italic; font-size: 26pt; line-height: .9; color: var(--bordeaux);
   }
   [data-id="sommaire"] .part-head .name {
-    font-family: var(--display); font-size: 12.5pt; text-transform: uppercase; letter-spacing: .04em; color: var(--espresso);
-    flex: 1;
+    display: block; margin-top: 2mm; font-family: var(--display); font-size: 11.5pt; line-height: 1.2;
+    text-transform: uppercase; letter-spacing: .05em; color: var(--espresso);
   }
   [data-id="sommaire"] .part-head .pg,
   [data-id="sommaire"] .entry .pg {
     font-family: var(--display); font-style: italic; font-size: 10pt; color: var(--bordeaux);
   }
+  [data-id="sommaire"] .part-head .pg { display: block; margin-top: 1.2mm; }
   [data-id="sommaire"] .entry {
-    display: flex; align-items: baseline; gap: 2mm; padding: 2.1mm 0; font-size: 9.6pt; color: var(--ink);
+    display: flex; align-items: baseline; gap: 2mm; padding: 1.9mm 0; font-size: 9.6pt; color: var(--ink);
+    border-bottom: .2mm solid var(--line);
   }
-  [data-id="sommaire"] .entry .dots { flex: 1; border-bottom: .25mm dotted var(--taupe); transform: translateY(-1mm); }
+  [data-id="sommaire"] .entry:first-child { padding-top: .6mm; }
+  [data-id="sommaire"] .entry:last-child { border-bottom: 0; }
+  [data-id="sommaire"] .entry .dots { flex: 1; min-width: 6mm; border-bottom: .25mm dotted var(--taupe); transform: translateY(-1mm); }
 </style>
 <section class="page" data-id="sommaire">
   <div class="layout">
     <div class="side">
       <div class="kicker">Support pédagogique</div>
       <h2 class="h-display">Sommaire</h2>
-      <p class="lead">Parcours de formation : les sourcils, puis les cils et le développement professionnel</p>
+      <p class="lead">Parcours de formation&nbsp;: les sourcils, puis les cils et le développement professionnel</p>
       <div class="arch"><img class="blend" src="assets/portrait-regard-haut-chaud.jpg" alt=""></div>
       <img class="logo" src="assets/logo-dolce.png" alt="dolce lash &amp; brow">
     </div>
     <div class="parts">
-      <div class="col">
       <div class="part">
         <div class="part-head"><span class="roman">I.</span><span class="name">Sourcils</span><span class="pg">{{p:partie-1}}</span></div>
-        <div class="entry">Anatomie et cycle de vie du poil<span class="dots"></span><span class="pg">{{p:cycle}}</span></div>
-        <div class="entry">Pourquoi les sourcils tombent-ils&nbsp;?<span class="dots"></span><span class="pg">{{p:chute}}</span></div>
-        <div class="entry">Diagnostic et application en cabine<span class="dots"></span><span class="pg">{{p:diagnostic}}</span></div>
-        <div class="entry">Restructuration et mapping<span class="dots"></span><span class="pg">{{p:mapping}}</span></div>
-        <div class="entry">Brow Lift&nbsp;: technique et temps de pose<span class="dots"></span><span class="pg">{{p:browlift}}</span></div>
-        <div class="entry">Teinture hybride et décoloration<span class="dots"></span><span class="pg">{{p:teinture}}</span></div>
-        <div class="entry">Atelier visuel Brow Lift et sécurité<span class="dots"></span><span class="pg">{{p:atelier}}</span></div>
+        <div class="entries">
+          <div class="entry">Anatomie et cycle de vie du poil<span class="dots"></span><span class="pg">{{p:cycle}}</span></div>
+          <div class="entry">Pourquoi les sourcils tombent-ils&nbsp;?<span class="dots"></span><span class="pg">{{p:chute}}</span></div>
+          <div class="entry">Diagnostic et application en cabine<span class="dots"></span><span class="pg">{{p:diagnostic}}</span></div>
+          <div class="entry">Restructuration et mapping<span class="dots"></span><span class="pg">{{p:mapping}}</span></div>
+          <div class="entry">Brow Lift&nbsp;: technique et temps de pose<span class="dots"></span><span class="pg">{{p:browlift}}</span></div>
+          <div class="entry">Teinture hybride et décoloration<span class="dots"></span><span class="pg">{{p:teinture}}</span></div>
+          <div class="entry">Atelier visuel Brow Lift et sécurité<span class="dots"></span><span class="pg">{{p:atelier}}</span></div>
+        </div>
       </div>
-      </div>
-      <div class="col">
       <div class="part">
         <div class="part-head"><span class="roman">II.</span><span class="name">Cils</span><span class="pg">{{p:partie-2}}</span></div>
-        <div class="entry">Diagnostic, rehaussement de cils, teinture et Lash Botox<span class="dots"></span><span class="pg">{{p:rehaussement}}</span></div>
+        <div class="entries">
+          <div class="entry">Diagnostic, rehaussement de cils, teinture et Lash Botox<span class="dots"></span><span class="pg">{{p:rehaussement}}</span></div>
+        </div>
       </div>
       <div class="part">
         <div class="part-head"><span class="roman">III.</span><span class="name">Pratique professionnelle</span><span class="pg">{{p:partie-3}}</span></div>
-        <div class="entry">Fiches pratiques et suivi des clientes<span class="dots"></span><span class="pg">{{p:fiche-technique}}</span></div>
-        <div class="entry">Réseaux sociaux et communication<span class="dots"></span><span class="pg">{{p:reseaux}}</span></div>
-        <div class="entry">Gestion d’activité et fidélisation<span class="dots"></span><span class="pg">{{p:gestion}}</span></div>
+        <div class="entries">
+          <div class="entry">Fiches pratiques et suivi des clientes<span class="dots"></span><span class="pg">{{p:fiche-technique}}</span></div>
+          <div class="entry">Réseaux sociaux et communication<span class="dots"></span><span class="pg">{{p:photographier}}</span></div>
+          <div class="entry">Gestion d’activité et fidélisation<span class="dots"></span><span class="pg">{{p:gestion}}</span></div>
+        </div>
       </div>
       <div class="part">
         <div class="part-head"><span class="roman">IV.</span><span class="name">Évaluation</span><span class="pg">{{p:partie-4}}</span></div>
-        <div class="entry">Questionnaire de connaissances et références<span class="dots"></span><span class="pg">{{p:qcm}}</span></div>
-      </div>
+        <div class="entries">
+          <div class="entry">Questionnaire de connaissances et références<span class="dots"></span><span class="pg">{{p:qcm}}</span></div>
+        </div>
       </div>
     </div>
   </div>

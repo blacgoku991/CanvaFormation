@@ -1,0 +1,72 @@
+<style>
+  [data-id="photographier"] .layout { display: grid; grid-template-columns: 1fr 147mm; column-gap: 12mm; height: 100%; }
+  [data-id="photographier"] .side { display: flex; flex-direction: column; }
+  [data-id="photographier"] .h-title { margin: 3.5mm 0 0; font-size: 26pt; }
+  [data-id="photographier"] .rule.short { margin: 6mm 0 5mm; }
+  [data-id="photographier"] .side .lead { font-size: 19pt; line-height: 1.25; color: var(--espresso); max-width: 92mm; }
+
+  /* Méthode : quatre consignes numérotées, filets fins */
+  [data-id="photographier"] .method { list-style: none; margin-top: auto; border-top: .3mm solid var(--espresso); }
+  [data-id="photographier"] .method li {
+    display: grid; grid-template-columns: 13mm 1fr; align-items: baseline;
+    padding: 5.6mm 0 5.8mm; border-bottom: .2mm solid var(--line);
+    font-size: 10.4pt; line-height: 1.58; text-wrap: pretty;
+  }
+  [data-id="photographier"] .method li:last-child { border-bottom: 0; padding-bottom: 0; }
+  [data-id="photographier"] .method .n {
+    font-family: var(--display); font-style: italic; font-size: 17pt; line-height: 1; color: var(--rose);
+  }
+
+  /* Visuel : regard cadré comme dans un viseur (repères d’angle, tiers, mise au point) */
+  [data-id="photographier"] .shot { position: relative; }
+  /* Photo en retrait de 5 mm : les repères de cadrage sont tracés dans la marge, autour */
+  [data-id="photographier"] .shot .frame {
+    position: absolute; inset: 5mm; overflow: hidden; background: #fff;
+  }
+  /* portrait-regard-haut-chaud.jpg (1129 × 657 px) : hauteur 154 mm (échelle 0,89), zone x ≈ 316–900 px */
+  [data-id="photographier"] .shot .frame img {
+    width: 100%; height: 100%; object-fit: cover; object-position: 58% 50%; display: block;
+  }
+  [data-id="photographier"] .shot svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  [data-id="photographier"] .shot .thirds line { stroke: #fff; stroke-width: .22; opacity: .75; }
+  [data-id="photographier"] .shot .corners path { fill: none; stroke: var(--espresso); stroke-width: .3; }
+  [data-id="photographier"] .shot .cross line { stroke: #fff; stroke-width: .3; }
+</style>
+<section class="page" data-id="photographier">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie III — Pratique professionnelle</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="side">
+        <div class="kicker">Réseaux sociaux et communication</div>
+        <h2 class="h-title">Photographier<br>son travail</h2>
+        <div class="rule short"></div>
+        <p class="lead">Une méthode cohérente<br>pour les avant/après</p>
+
+        <ol class="method">
+          <li><span class="n">i.</span><span>Photographier avant et après avec le même angle, la même distance et un éclairage comparable.</span></li>
+          <li><span class="n">ii.</span><span>Nettoyer l’objectif&nbsp;; choisir un fond neutre&nbsp;; <strong>éviter les filtres qui changent la couleur de la peau ou du poil.</strong></span></li>
+          <li><span class="n">iii.</span><span>Privilégier un cadrage net et régulier&nbsp;; <strong>demander une autorisation explicite avant toute publication.</strong></span></li>
+          <li><span class="n">iv.</span><span>Conserver les originaux et <strong>ne jamais présenter comme sien le travail d’une autre professionnelle.</strong></span></li>
+        </ol>
+      </div>
+
+      <div class="shot" aria-hidden="true">
+        <div class="frame"><img src="assets/portrait-regard-haut-chaud.jpg" alt=""></div>
+        <svg viewBox="0 0 147 164" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <g class="thirds">
+            <line x1="50.67" y1="5" x2="50.67" y2="159"/><line x1="96.33" y1="5" x2="96.33" y2="159"/>
+            <line x1="5" y1="56.33" x2="142" y2="56.33"/><line x1="5" y1="107.67" x2="142" y2="107.67"/>
+          </g>
+          <g class="corners">
+            <path d="M0 14 V0 H14"/><path d="M133 0 H147 V14"/>
+            <path d="M147 150 V164 H133"/><path d="M14 164 H0 V150"/>
+          </g>
+          <g class="cross">
+            <line x1="70.5" y1="82" x2="76.5" y2="82"/><line x1="73.5" y1="79" x2="73.5" y2="85"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>

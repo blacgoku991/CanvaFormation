@@ -1,0 +1,184 @@
+<style>
+  [data-id="reseaux"] .layout {
+    display: grid; grid-template-columns: 86mm 58mm 1fr; grid-template-rows: 1fr auto;
+    column-gap: 11mm; row-gap: 8mm; height: 100%;
+  }
+  [data-id="reseaux"] .col { display: flex; flex-direction: column; }
+  [data-id="reseaux"] .h-title { margin: 3.5mm 0 0; font-size: 22pt; }
+  [data-id="reseaux"] .rule.short { margin: 5.5mm 0 0; }
+
+  [data-id="reseaux"] .sec-head { border-bottom: .3mm solid var(--espresso); padding-bottom: 2.4mm; margin-bottom: 3.6mm; }
+  [data-id="reseaux"] .sec-head .h-sub { font-size: 14pt; margin: 0; }
+  [data-id="reseaux"] .identity { margin-top: auto; }
+  [data-id="reseaux"] .identity .lead { font-size: 13.4pt; line-height: 1.42; color: var(--espresso); text-wrap: pretty; }
+
+  /* ---- Maquette de profil Instagram (schéma, sans texte inventé) ---- */
+  [data-id="reseaux"] .phone {
+    position: relative; height: 100%; border: .35mm solid var(--espresso); border-radius: 8mm;
+    background: var(--paper); padding: 7.5mm 4.2mm 4.2mm; display: flex; flex-direction: column; gap: 3.4mm;
+  }
+  [data-id="reseaux"] .phone::before {
+    content: ''; position: absolute; top: 2.6mm; left: 50%; width: 13mm; height: 1.5mm; margin-left: -6.5mm;
+    border-radius: 1mm; background: var(--espresso); opacity: .85;
+  }
+  [data-id="reseaux"] .phone .row { position: relative; }
+  [data-id="reseaux"] .phone .mk {
+    position: absolute; right: -8.4mm; top: 50%; margin-top: -2.3mm;
+    width: 4.6mm; height: 4.6mm; border-radius: 50%; background: var(--bordeaux); color: #fff;
+    font-family: var(--display); font-style: italic; font-size: 8.6pt; line-height: 4.3mm; text-align: center;
+  }
+  [data-id="reseaux"] .bar { height: 1.1mm; border-radius: .6mm; background: var(--sand); }
+  [data-id="reseaux"] .bar + .bar { margin-top: 1.5mm; }
+  [data-id="reseaux"] .bar.dark { background: var(--espresso); height: 1.6mm; opacity: .85; }
+  [data-id="reseaux"] .bar.link { background: var(--bordeaux); opacity: .55; }
+
+  [data-id="reseaux"] .p-top { display: flex; align-items: center; gap: 4mm; }
+  [data-id="reseaux"] .avatar {
+    flex: none; width: 14mm; height: 14mm; border-radius: 50%; overflow: hidden;
+    box-shadow: 0 0 0 .5mm var(--paper), 0 0 0 .85mm var(--rose);
+  }
+  [data-id="reseaux"] .avatar img { width: 100%; height: 100%; object-fit: cover; object-position: 62% 38%; }
+  [data-id="reseaux"] .stats { flex: 1; display: flex; justify-content: space-between; }
+  [data-id="reseaux"] .stats span { display: flex; flex-direction: column; align-items: center; gap: 1.2mm; }
+  [data-id="reseaux"] .stats i { display: block; height: 1.6mm; width: 5mm; border-radius: .6mm; background: var(--espresso); opacity: .8; }
+  [data-id="reseaux"] .stats b { display: block; height: 1mm; width: 7.5mm; border-radius: .5mm; background: var(--sand); }
+
+  [data-id="reseaux"] .hl { display: flex; justify-content: space-between; }
+  [data-id="reseaux"] .hl span:not(.mk) {
+    width: 6.6mm; height: 6.6mm; border-radius: 50%; background: var(--cream);
+    box-shadow: 0 0 0 .45mm var(--paper), 0 0 0 .75mm var(--rose);
+  }
+  [data-id="reseaux"] .hl span:nth-child(2n):not(.mk) { background: var(--blush); }
+  [data-id="reseaux"] .hl span:nth-child(3n):not(.mk) { background: var(--sand); }
+
+  [data-id="reseaux"] .tabs { border-top: .2mm solid var(--line); display: flex; }
+  [data-id="reseaux"] .tabs span { flex: 1; height: 0; }
+  [data-id="reseaux"] .tabs span:first-child { border-top: .45mm solid var(--espresso); margin-top: -.3mm; }
+
+  [data-id="reseaux"] .posts { flex: 1; min-height: 0; margin-top: -1.8mm; }
+  [data-id="reseaux"] .posts .mk { top: 8.5mm; margin-top: 0; }
+  [data-id="reseaux"] .grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: min-content; gap: .8mm; align-content: start;
+    height: 100%; overflow: hidden;
+  }
+  [data-id="reseaux"] .grid .t { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: var(--cream); }
+  [data-id="reseaux"] .grid .t img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  [data-id="reseaux"] .grid .t svg {
+    position: absolute; top: .9mm; right: .9mm; width: 3.4mm; height: 3.4mm; border-radius: 50%;
+    background: rgba(59, 40, 35, .5);
+  }
+  [data-id="reseaux"] .grid .t.blush { background: var(--blush); }
+  [data-id="reseaux"] .grid .t.sand { background: var(--sand); }
+
+  /* ---- 2. Profil : quatre réglages, repérés a–d sur la maquette ---- */
+  [data-id="reseaux"] .tips { list-style: none; }
+  [data-id="reseaux"] .tips li {
+    display: grid; grid-template-columns: 9mm 1fr; padding: 3mm 0; border-bottom: .2mm solid var(--line);
+    font-size: 9.8pt; line-height: 1.55; text-wrap: pretty;
+  }
+  [data-id="reseaux"] .tips li:last-child { border-bottom: 0; }
+  [data-id="reseaux"] .tips .mk {
+    width: 4.6mm; height: 4.6mm; margin-top: .5mm; border-radius: 50%; border: .25mm solid var(--bordeaux); color: var(--bordeaux);
+    font-family: var(--display); font-style: italic; font-size: 8.6pt; line-height: 4.1mm; text-align: center;
+  }
+  [data-id="reseaux"] .tips .k {
+    display: block; font-family: var(--display); font-weight: 400; font-size: 12pt; line-height: 1.25;
+    color: var(--espresso); margin-bottom: .8mm;
+  }
+  [data-id="reseaux"] .profile .tips { flex: 1; display: flex; flex-direction: column; margin-top: -3.6mm; }
+  [data-id="reseaux"] .profile .tips li { flex: 1; align-content: center; }
+
+  /* ---- 3. Les cinq piliers : tableau transposé, une colonne par pilier ---- */
+  [data-id="reseaux"] .pillars { grid-column: 1 / -1; }
+  [data-id="reseaux"] .pillars .sec-head { margin-bottom: 0; }
+  [data-id="reseaux"] table.pil { width: 100%; border-collapse: collapse; table-layout: fixed; }
+  [data-id="reseaux"] table.pil col.lab { width: 33mm; }
+  [data-id="reseaux"] table.pil th {
+    text-align: left; vertical-align: top; font-weight: 500; font-size: 6.8pt; letter-spacing: .22em;
+    text-transform: uppercase; color: var(--taupe); padding: 3.4mm 4mm 0 0; line-height: 1.5;
+  }
+  [data-id="reseaux"] table.pil td { vertical-align: top; padding: 0 4.5mm; border-left: .2mm solid var(--line); }
+  [data-id="reseaux"] table.pil tr.names td { padding-top: 3mm; padding-bottom: 2.4mm; }
+  [data-id="reseaux"] table.pil tr.names th { padding-top: 9.4mm; }
+  [data-id="reseaux"] table.pil tr.names td .r {
+    display: block; font-family: var(--display); font-style: italic; font-size: 15pt; line-height: 1; color: var(--rose); margin-bottom: 1.4mm;
+  }
+  [data-id="reseaux"] table.pil tr.names td .nm { font-family: var(--display); font-size: 13.5pt; line-height: 1.2; color: var(--espresso); }
+  [data-id="reseaux"] table.pil tr.ideas td { font-size: 9.2pt; line-height: 1.5; text-wrap: pretty; padding-bottom: .5mm; }
+  [data-id="reseaux"] table.pil tr.ideas th { padding-top: 0; }
+</style>
+<section class="page" data-id="reseaux">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie III — Pratique professionnelle</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="col">
+        <div class="kicker">Réseaux sociaux et communication</div>
+        <h2 class="h-title">Développer son activité sur les réseaux sociaux</h2>
+        <div class="rule short"></div>
+        <div class="identity">
+          <div class="sec-head"><h3 class="h-sub"><span class="no">1.</span>Construire une identité professionnelle</h3></div>
+          <p class="lead">Choisir un nom cohérent, une photo de profil lisible, une palette de couleurs et une présentation claire des prestations. Indiquer la ville, les modalités de réservation et un lien fonctionnel. Mettre en avant le savoir-faire, l’hygiène, les résultats réels et l’accueil.</p>
+        </div>
+      </div>
+
+      <div class="phone" aria-hidden="true">
+        <div class="row p-top">
+          <div class="avatar"><img src="assets/portrait-couverture.jpg" alt=""></div>
+          <div class="stats"><span><i></i><b></b></span><span><i></i><b></b></span><span><i></i><b></b></span></div>
+        </div>
+        <div class="row"><div class="bar dark" style="width:24mm"></div><span class="mk">a</span></div>
+        <div class="row">
+          <div class="bar" style="width:44mm"></div><div class="bar" style="width:40mm"></div><div class="bar" style="width:31mm"></div><div class="bar link" style="width:22mm"></div>
+          <span class="mk">b</span>
+        </div>
+        <div class="row hl"><span></span><span></span><span></span><span></span><span></span><span></span><span class="mk">c</span></div>
+        <div class="tabs"><span></span><span></span><span></span></div>
+        <div class="row posts"><div class="grid">
+          <div class="t"><img src="assets/portrait-regard-haut.jpg" alt="" style="object-position:40% 55%"><svg viewBox="0 0 10 10"><path d="M3.4 1h3.2l-.5 3 1.6 1.6H5.5V9L5 9.6 4.5 9V5.6H2.3L3.9 4z" fill="#fff"/></svg></div>
+          <div class="t"><img src="assets/portrait-couverture.jpg" alt="" style="object-position:60% 30%"><svg viewBox="0 0 10 10"><path d="M3.4 1h3.2l-.5 3 1.6 1.6H5.5V9L5 9.6 4.5 9V5.6H2.3L3.9 4z" fill="#fff"/></svg></div>
+          <div class="t"><img src="assets/portrait-cou-bas.jpg" alt="" style="object-position:70% 10%"><svg viewBox="0 0 10 10"><path d="M3.4 1h3.2l-.5 3 1.6 1.6H5.5V9L5 9.6 4.5 9V5.6H2.3L3.9 4z" fill="#fff"/></svg></div>
+          <div class="t blush"></div>
+          <div class="t"><img src="assets/sac-jambes.jpg" alt="" style="object-position:50% 45%"></div>
+          <div class="t sand"></div>
+          <div class="t"><img src="assets/portrait-regard-haut-chaud.jpg" alt="" style="object-position:62% 60%"></div>
+          <div class="t blush"></div>
+          <div class="t"><img src="assets/portrait-couverture.jpg" alt="" style="object-position:80% 75%"></div>
+        </div><span class="mk">d</span></div>
+      </div>
+
+      <div class="col profile">
+        <div class="sec-head"><h3 class="h-sub"><span class="no">2.</span>Optimiser son profil Instagram</h3></div>
+        <ul class="tips">
+          <li><span class="mk">a</span><span><span class="k">Nom visible&nbsp;:</span> spécialité&nbsp;+ localisation, lorsque cela reste naturel.</span></li>
+          <li><span class="mk">b</span><span><span class="k">Biographie&nbsp;:</span> prestations, secteur géographique, bénéfice concret et appel à réserver.</span></li>
+          <li><span class="mk">c</span><span><span class="k">Stories à la une&nbsp;:</span> Tarifs, Résultats, Avis, FAQ, Accès, Disponibilités.</span></li>
+          <li><span class="mk">d</span><span><span class="k">Épingler trois publications&nbsp;:</span> présentation, prestations, résultats représentatifs.</span></li>
+        </ul>
+      </div>
+
+      <div class="pillars">
+        <div class="sec-head"><h3 class="h-sub"><span class="no">3.</span>Les cinq piliers de contenu</h3></div>
+        <table class="pil">
+          <colgroup><col class="lab"><col><col><col><col><col></colgroup>
+          <tr class="names">
+            <th scope="row">Pilier</th>
+            <td><span class="r">i.</span><span class="nm">Résultats</span></td>
+            <td><span class="r">ii.</span><span class="nm">Éducation</span></td>
+            <td><span class="r">iii.</span><span class="nm">Confiance</span></td>
+            <td><span class="r">iv.</span><span class="nm">Preuve sociale</span></td>
+            <td><span class="r">v.</span><span class="nm">Conversion</span></td>
+          </tr>
+          <tr class="ideas">
+            <th scope="row">Idées de publications</th>
+            <td>Avant/après authentiques, gros plans, vidéo de finition.</td>
+            <td>Brow Lift&nbsp;: pour qui&nbsp;? Teinture hybride&nbsp;: entretien et précautions.</td>
+            <td>Présentation de la praticienne, hygiène, déroulé d’un rendez-vous.</td>
+            <td>Avis authentiques <strong>publiés avec accord</strong>, retours d’expérience.</td>
+            <td>Créneaux disponibles, présentation des prestations et lien de réservation.</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>

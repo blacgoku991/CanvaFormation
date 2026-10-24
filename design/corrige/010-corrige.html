@@ -1,0 +1,241 @@
+<style>
+  /* ===== Corrigé du QCM (document séparé, réservé à la formatrice) — styles propres au fichier ===== */
+  .corrige-page .content { display: flex; flex-direction: column; }
+
+  /* En-tête de page 1 */
+  .corrige-page .head { display: grid; grid-template-columns: 1fr 126mm; column-gap: 14mm; align-items: end; }
+  .corrige-page .head .h-title { margin: 3mm 0 0; font-size: 26pt; line-height: 1; }
+  .corrige-page .head .h-title .pre {
+    display: block; margin-bottom: 1.6mm;
+    font-style: italic; text-transform: none; font-size: 14pt; letter-spacing: 0; color: var(--mocha);
+  }
+  .corrige-page .head .alert { padding: 3.6mm 6mm 3.8mm 15mm; }
+  .corrige-page .head .alert::before { top: 3.8mm; }
+  .corrige-page .head .alert .alert-title { font-size: 7.6pt; letter-spacing: .17em; margin-bottom: 1mm; white-space: nowrap; }
+  .corrige-page .head .alert p { font-size: 8.6pt; line-height: 1.45; }
+
+  /* En-tête de page 2 */
+  .corrige-page .head-2 { display: flex; justify-content: space-between; align-items: center; }
+  .corrige-page .stamp {
+    font-family: var(--sans); font-weight: 600; font-size: 6.8pt; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--bordeaux); border: .3mm solid var(--bordeaux); padding: 1.4mm 3.4mm;
+    outline: .2mm solid rgba(122, 36, 48, .45); outline-offset: .8mm;
+  }
+
+  /* Grille de correction */
+  .corrige-page table.key-table { margin-top: 5mm; table-layout: fixed; }
+  .corrige-page .head-2 + table.key-table { margin-top: 3mm; }
+  .corrige-page table.key-table th { padding-bottom: 1.8mm; }
+  .corrige-page table.key-table td { padding: 1.4mm 3mm 1.4mm 0; vertical-align: middle; }
+  .corrige-page table.key-table col.c-no { width: 11mm; }
+  .corrige-page table.key-table col.c-q { width: 60mm; }
+  .corrige-page table.key-table col.c-let { width: 13.5mm; }
+  .corrige-page table.key-table col.c-ans { width: 67mm; }
+  .corrige-page td.no {
+    font-family: var(--display); font-style: italic; font-size: 15pt; line-height: 1; color: var(--bordeaux);
+  }
+  .corrige-page td.q { font-size: 8.4pt; line-height: 1.38; color: var(--mocha); text-wrap: balance; }
+  .corrige-page .pastille {
+    display: block; width: 9.6mm; height: 9.6mm; border-radius: 50%;
+    background: var(--bordeaux); color: #fff; text-align: center;
+    font-family: var(--display); font-style: italic; font-size: 16pt; line-height: 9.6mm;
+  }
+  .corrige-page td.ans {
+    font-family: var(--display); font-weight: 500; font-size: 9.8pt; line-height: 1.28; color: var(--espresso);
+    text-wrap: balance;
+  }
+  .corrige-page td.why { font-size: 8.4pt; line-height: 1.42; text-wrap: pretty; }
+  .corrige-page td.why .rub {
+    display: block; margin-bottom: .5mm;
+    font-weight: 500; font-size: 6.6pt; letter-spacing: .2em; text-transform: uppercase; color: var(--bordeaux);
+  }
+  .corrige-page .flag {
+    display: inline-block; margin-left: 2mm; padding: 0 1.8mm; border: .3mm dashed var(--rose);
+    font-size: 6.6pt; font-weight: 500; letter-spacing: .16em; color: var(--bordeaux); vertical-align: .2mm;
+  }
+
+  /* Repères de correction (page 2) */
+  .corrige-page .notes {
+    margin-top: auto; display: grid; grid-template-columns: 1.05fr 1.25fr .7fr; column-gap: 9mm;
+    background: var(--cream); padding: 4.4mm 7mm 4.6mm;
+  }
+  .corrige-page .notes .h-label { color: var(--bordeaux); margin-bottom: 2mm; }
+  .corrige-page .notes p { font-size: 8.4pt; line-height: 1.45; }
+  .corrige-page .notes .split { display: flex; gap: 5mm; align-items: flex-start; }
+  .corrige-page .notes .split > div { display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .corrige-page .notes .split .pastille { width: 9mm; height: 9mm; line-height: 9mm; font-size: 14pt; }
+  .corrige-page .notes .split .n {
+    margin-top: 1.2mm; font-family: var(--display); font-size: 15pt; line-height: 1; color: var(--espresso);
+  }
+  .corrige-page .notes .split .which { margin-top: .8mm; font-size: 8.4pt; line-height: 1.35; color: var(--mocha); white-space: nowrap; }
+  .corrige-page .notes .total {
+    font-family: var(--display); font-style: italic; font-size: 26pt; line-height: 1; color: var(--bordeaux);
+  }
+</style>
+
+<section class="page corrige-page" data-id="corrige">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie IV — Évaluation · Corrigé</span></div>
+  <div class="content">
+    <div class="head">
+      <div>
+        <div class="kicker">Corrigé du QCM</div>
+        <h1 class="h-title"><span class="pre">Dolce Lash &amp; Brow&nbsp;— Évaluation QCM</span>Grille de correction</h1>
+      </div>
+      <div class="alert">
+        <div class="alert-title">Document réservé à la formatrice&nbsp;— ne pas distribuer</div>
+        <p>Une bonne réponse par question, 1&nbsp;point chacune. Chaque réponse est justifiée par la rubrique du manuel qui la fonde&nbsp;; les mentions «&nbsp;à valider&nbsp;» signalent un point que le manuel ne traite pas, ou pas entièrement.</p>
+      </div>
+    </div>
+
+    <table class="data key-table">
+      <colgroup><col class="c-no"><col class="c-q"><col class="c-let"><col class="c-ans"><col></colgroup>
+      <thead><tr><th>N°</th><th>Question</th><th colspan="2">Bonne réponse</th><th>Justification — rubrique du manuel</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="no">1</td>
+          <td class="q">Avant une prestation, quelle situation nécessite de reporter le soin&nbsp;?</td>
+          <td><span class="pastille">B</span></td>
+          <td class="ans">Irritation ou lésion sur la zone à traiter</td>
+          <td class="why"><span class="rub">Hygiène, sécurité et qualité</span>«&nbsp;Aucune prestation sur une zone présentant une infection, une lésion ou une irritation active.&nbsp;»</td>
+        </tr>
+        <tr>
+          <td class="no">2</td>
+          <td class="q">Pourquoi effectuer un diagnostic avant un Brow&nbsp;Lift&nbsp;?</td>
+          <td><span class="pastille">B</span></td>
+          <td class="ans">Pour évaluer le poil, la peau et les contre-indications</td>
+          <td class="why"><span class="rub">Fiche technique — Brow Lift · Avant la séance</span>«&nbsp;vérifier les antécédents de réaction et les éventuelles irritations ou lésions&nbsp;»&nbsp;; observer «&nbsp;la porosité, l’épaisseur, la densité et la direction des poils&nbsp;».</td>
+        </tr>
+        <tr>
+          <td class="no">3</td>
+          <td class="q">Sur quoi faut-il se baser pour choisir le temps de pose&nbsp;?</td>
+          <td><span class="pastille">A</span></td>
+          <td class="ans">La notice de la référence exacte et le diagnostic</td>
+          <td class="why"><span class="rub">§2 Brow Lift — Thuya</span>Temps donnés selon la nature du poil, et «&nbsp;Vérifier la notice des références exactes […] avant toute application sur une cliente.&nbsp;»</td>
+        </tr>
+        <tr>
+          <td class="no">4</td>
+          <td class="q">Que faire en cas de sensation de brûlure pendant une prestation&nbsp;?</td>
+          <td><span class="pastille">C</span></td>
+          <td class="ans">Arrêter, retirer le produit et évaluer la situation</td>
+          <td class="why"><span class="rub">§4 Décoloration · Fiche technique <span class="flag">À valider</span></span>Seule réponse sûre&nbsp;: le manuel demande de «&nbsp;surveiller toute irritation&nbsp;» et la tolérance cutanée, sans consigne écrite pour la brûlure.</td>
+        </tr>
+        <tr>
+          <td class="no">5</td>
+          <td class="q">Quel est le rôle du neutralisant dans une lamination&nbsp;?</td>
+          <td><span class="pastille">A</span></td>
+          <td class="ans">Fixer la nouvelle forme du poil après l’étape de réduction</td>
+          <td class="why"><span class="rub">§2 Brow Lift — Thuya <span class="flag">À valider</span></span>Le neutralisant est la «&nbsp;deuxième étape&nbsp;», après la lotion permanente&nbsp;; son rôle et les termes «&nbsp;lamination&nbsp;» et «&nbsp;étape de réduction&nbsp;» ne figurent pas au manuel.</td>
+        </tr>
+        <tr>
+          <td class="no">6</td>
+          <td class="q">Pourquoi faut-il vérifier la compatibilité de deux produits de marques différentes&nbsp;?</td>
+          <td><span class="pastille">A</span></td>
+          <td class="ans">Pour éviter une réaction indésirable ou un surtraitement</td>
+          <td class="why"><span class="rub">§3 Teinture des sourcils — Brow Daddy</span>«&nbsp;Après un Brow Lift, vérifier la compatibilité et les durées spécifiques avant d’associer les deux prestations.&nbsp;»</td>
+        </tr>
+        <tr>
+          <td class="no">7</td>
+          <td class="q">Quel critère est prioritaire pour une restructuration des sourcils&nbsp;?</td>
+          <td><span class="pastille">B</span></td>
+          <td class="ans">Respecter la morphologie, l’implantation et les souhaits réalistes</td>
+          <td class="why"><span class="rub">§1 Restructuration des sourcils &amp; mapping</span>Objectif&nbsp;: «&nbsp;respectant la pousse naturelle, la densité et les souhaits de la cliente&nbsp;»&nbsp;; mapping «&nbsp;selon la morphologie&nbsp;», «&nbsp;Adapter à l’implantation naturelle&nbsp;».</td>
+        </tr>
+        <tr>
+          <td class="no">8</td>
+          <td class="q">Quel risque présente une décoloration mal maîtrisée&nbsp;?</td>
+          <td><span class="pastille">B</span></td>
+          <td class="ans">Irritation cutanée et fragilisation des poils</td>
+          <td class="why"><span class="rub">Pourquoi les sourcils tombent-ils&nbsp;? · §4 Décoloration</span>«&nbsp;les traitements chimiques mal adaptés […] peuvent casser les poils ou fragiliser la zone&nbsp;»&nbsp;; «&nbsp;surveiller toute irritation&nbsp;».</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Corrigé du QCM — réservé à la formatrice</span><span class="num"></span></div>
+</section>
+
+<section class="page corrige-page" data-id="corrige-2">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie IV — Évaluation · Corrigé</span></div>
+  <div class="content">
+    <div class="head-2">
+      <div class="kicker">Corrigé du QCM&nbsp;— suite</div>
+      <div class="stamp">Document réservé à la formatrice&nbsp;— ne pas distribuer</div>
+    </div>
+
+    <table class="data key-table">
+      <colgroup><col class="c-no"><col class="c-q"><col class="c-let"><col class="c-ans"><col></colgroup>
+      <thead><tr><th>N°</th><th>Question</th><th colspan="2">Bonne réponse</th><th>Justification — rubrique du manuel</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="no">9</td>
+          <td class="q">Comment déterminer le temps de pose d’une teinture des cils&nbsp;?</td>
+          <td><span class="pastille">A</span></td>
+          <td class="ans">En suivant la notice de la gamme et le diagnostic</td>
+          <td class="why"><span class="rub">§7 Teinture des cils — Noemi · §5 Diagnostic</span>«&nbsp;Préparer, appliquer et retirer selon la notice exacte.&nbsp;» Le manuel ne fixe aucun temps pour la teinture des cils.</td>
+        </tr>
+        <tr>
+          <td class="no">10</td>
+          <td class="q">Avant le rehaussement, pourquoi choisir soigneusement le support en silicone&nbsp;?</td>
+          <td><span class="pastille">A</span></td>
+          <td class="ans">Pour adapter la courbure à la longueur et à la direction des cils</td>
+          <td class="why"><span class="rub">§5 Diagnostic · §6 Rehaussement <span class="flag">À valider</span></span>«&nbsp;choisir les pads adaptés&nbsp;», «&nbsp;positionner le pad en silicone et aligner soigneusement les cils&nbsp;»&nbsp;; la courbure n’est pas expliquée.</td>
+        </tr>
+        <tr>
+          <td class="no">11</td>
+          <td class="q">Quelle précaution est indispensable autour des yeux&nbsp;?</td>
+          <td><span class="pastille">A</span></td>
+          <td class="ans">Éviter le contact des produits avec l’œil et respecter les consignes de sécurité</td>
+          <td class="why"><span class="rub">§4 Décoloration · §7 Teinture des cils · Hygiène</span>«&nbsp;sans contact avec les yeux&nbsp;»&nbsp;; «&nbsp;Respecter les précautions oculaires&nbsp;»&nbsp;; «&nbsp;Protéger l’œil&nbsp;».</td>
+        </tr>
+        <tr>
+          <td class="no">12</td>
+          <td class="q">À quel moment appliquer un Lash Botox dit «&nbsp;Step&nbsp;1.5&nbsp;»&nbsp;?</td>
+          <td><span class="pastille">B</span></td>
+          <td class="ans">À l’étape prescrite par la notice du système utilisé</td>
+          <td class="why"><span class="rub">§8 Lash Botox · §6 encadré Important</span>Place exacte «&nbsp;à valider avec la notice du fabricant&nbsp;»&nbsp;; «&nbsp;Ne pas appliquer cette séquence sans validation.&nbsp;» A est donc fausse.</td>
+        </tr>
+        <tr>
+          <td class="no">13</td>
+          <td class="q">Pourquoi noter la référence et le lot des produits&nbsp;?</td>
+          <td><span class="pastille">A</span></td>
+          <td class="ans">Pour la traçabilité et le suivi en cas de réaction</td>
+          <td class="why"><span class="rub">Fiche technique — Brow Lift · Après la séance</span>«&nbsp;noter les produits, lots, temps effectivement appliqués et réactions&nbsp;».</td>
+        </tr>
+        <tr>
+          <td class="no">14</td>
+          <td class="q">Quelle consigne donner après une prestation&nbsp;?</td>
+          <td><span class="pastille">A</span></td>
+          <td class="ans">Des conseils adaptés à la technique et aux recommandations fabricant</td>
+          <td class="why"><span class="rub">Fiche technique · Conseils après prestation (Partie II)</span>«&nbsp;Remettre les recommandations du fabricant&nbsp;»&nbsp;; «&nbsp;conseils personnalisés adaptés à ses cils&nbsp;».</td>
+        </tr>
+        <tr>
+          <td class="no">15</td>
+          <td class="q">Si les cils semblent fragilisés avant un rehaussement, que faire&nbsp;?</td>
+          <td><span class="pastille">B</span></td>
+          <td class="ans">Évaluer leur état et différer la prestation si nécessaire</td>
+          <td class="why"><span class="rub">§5 Diagnostic · Pourquoi les sourcils tombent-ils&nbsp;?</span>«&nbsp;Observer les cils, leur état et les éventuelles contre-indications&nbsp;»&nbsp;; par analogie avec les sourcils, reporter «&nbsp;lorsque l’état des poils paraît préoccupant&nbsp;».</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="notes">
+      <div>
+        <div class="h-label">Répartition des bonnes réponses</div>
+        <div class="split">
+          <div><span class="pastille">A</span><span class="n">8</span><span class="which">Q3, 5, 6, 9,<br>10, 11, 13, 14</span></div>
+          <div><span class="pastille">B</span><span class="n">6</span><span class="which">Q1, 2, 7,<br>8, 12, 15</span></div>
+          <div><span class="pastille">C</span><span class="n">1</span><span class="which">Q4</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="h-label">Points à valider</div>
+        <p>Q4, Q5 et Q10&nbsp;: le manuel ne traite pas, ou pas entièrement, le point évalué&nbsp;; la réponse est déduite des passages les plus proches. Q12&nbsp;: le tableau du §6 place le Step&nbsp;1.5 entre Step&nbsp;1 et Step&nbsp;2, mais sous réserve de validation&nbsp;: insister sur ce point à la correction.</p>
+      </div>
+      <div>
+        <div class="h-label">Barème</div>
+        <div class="total">/&nbsp;15</div>
+        <p>1&nbsp;point par bonne réponse.</p>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Corrigé du QCM — réservé à la formatrice</span><span class="num"></span></div>
+</section>

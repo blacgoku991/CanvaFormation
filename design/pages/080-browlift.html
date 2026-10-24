@@ -1,0 +1,126 @@
+<style>
+  [data-id="browlift"] .layout { display: grid; grid-template-columns: 82mm 1fr; gap: 12mm; height: 100%; }
+  [data-id="browlift"] .side { display: flex; flex-direction: column; }
+  [data-id="browlift"] .side .h-title { margin: 3mm 0 4.5mm; font-size: 23pt; }
+  [data-id="browlift"] .side .protocol { font-size: 9.8pt; }
+  [data-id="browlift"] .side .photo {
+    margin-top: 7mm; flex: 1; min-height: 52mm; overflow: hidden; position: relative; background: #fff;
+  }
+  /* Gros plan sur le sourcil (portrait de couverture affiché à ~0,8× sa taille naturelle) */
+  [data-id="browlift"] .side .photo img {
+    position: absolute; width: 280%; max-width: none; left: -98%; top: -37mm;
+  }
+  [data-id="browlift"] .main { display: flex; flex-direction: column; }
+  [data-id="browlift"] .times-group { margin-top: auto; }
+
+  /* Frise du protocole (reprise visuelle du paragraphe, sans numéros pour ne pas
+     concurrencer « Étape 1 / Étape 2 » du tableau) */
+  [data-id="browlift"] .seq { background: var(--paper); border: .2mm solid var(--line); padding: 4.2mm 5mm 4.6mm; }
+  [data-id="browlift"] .seq .h-label { margin-bottom: 3.4mm; }
+  [data-id="browlift"] .seq ol { list-style: none; display: grid; grid-template-columns: repeat(6, 1fr); position: relative; }
+  [data-id="browlift"] .seq ol::before {
+    content: ''; position: absolute; left: 8.33%; right: 8.33%; top: 6.2mm; height: .25mm; background: var(--rose);
+  }
+  [data-id="browlift"] .seq li { position: relative; text-align: center; padding: 0 1.2mm; }
+  [data-id="browlift"] .seq .tag {
+    display: block; height: 4mm; font-size: 6.4pt; font-weight: 500; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--bordeaux); white-space: nowrap;
+  }
+  [data-id="browlift"] .seq .dot {
+    display: block; width: 2.2mm; height: 2.2mm; border-radius: 50%; margin: 1.1mm auto 2.4mm;
+    background: var(--paper); border: .3mm solid var(--rose); position: relative;
+  }
+  [data-id="browlift"] .seq li.key .dot {
+    width: 3.6mm; height: 3.6mm; margin: .4mm auto 1.7mm; background: var(--bordeaux); border-color: var(--bordeaux);
+  }
+  [data-id="browlift"] .seq .t { display: block; font-size: 8.6pt; line-height: 1.3; color: var(--ink); }
+  [data-id="browlift"] .seq li.key .t { font-family: var(--display); font-size: 9.3pt; color: var(--espresso); }
+
+  [data-id="browlift"] .times-head { margin: 0 0 3.2mm; }
+  [data-id="browlift"] .times-head .h-sub { font-size: 13.5pt; margin: 0; }
+  [data-id="browlift"] table.times th { padding-bottom: 2.4mm; }
+  [data-id="browlift"] table.times th .st { color: var(--bordeaux); }
+  [data-id="browlift"] table.times th:nth-child(2),
+  [data-id="browlift"] table.times th:nth-child(3),
+  [data-id="browlift"] table.times td.t { width: 36%; }
+  [data-id="browlift"] table.times td { padding-top: 3.9mm; padding-bottom: 3.9mm; vertical-align: middle; }
+  [data-id="browlift"] table.times td.key { font-size: 12.5pt; }
+  [data-id="browlift"] table.times td.key svg { width: 9mm; height: 5.2mm; vertical-align: -1.2mm; margin-right: 3.2mm; }
+  [data-id="browlift"] table.times .chip { font-size: 8.6pt; padding: .7mm 3.2mm; }
+
+  [data-id="browlift"] .final {
+    display: grid; grid-template-columns: 38mm 1fr; gap: 4mm; align-items: baseline;
+    background: var(--cream); padding: 3.4mm 5mm; margin-top: 1mm;
+  }
+  [data-id="browlift"] .final .h-label { margin: 0; color: var(--bordeaux); }
+  [data-id="browlift"] .alert { margin-top: 3mm; }
+</style>
+<section class="page" data-id="browlift">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie I — Sourcils</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="side">
+        <div class="kicker">Technique et temps de pose</div>
+        <h2 class="h-title"><span class="no">2.</span>Brow Lift&nbsp;— Thuya</h2>
+        <p class="protocol">Nettoyer les sourcils, appliquer la lotion permanente Thuya selon les zones prévues, puis retirer complètement. Appliquer ensuite le neutralisant (deuxième étape), retirer selon la notice, puis <strong>terminer par la crème de soin Thuya</strong>, à la fin de la prestation.</p>
+        <div class="photo"><img class="blend" src="assets/portrait-couverture.jpg" alt=""></div>
+      </div>
+
+      <div class="main">
+        <div class="seq">
+          <h3 class="h-label">Protocole</h3>
+          <ol>
+            <li><span class="tag"></span><span class="dot"></span><span class="t">Nettoyer les sourcils</span></li>
+            <li class="key"><span class="tag">Étape 1</span><span class="dot"></span><span class="t">Lotion permanente Thuya</span></li>
+            <li><span class="tag"></span><span class="dot"></span><span class="t">Retirer complètement</span></li>
+            <li class="key"><span class="tag">Étape 2</span><span class="dot"></span><span class="t">Neutralisant</span></li>
+            <li><span class="tag"></span><span class="dot"></span><span class="t">Retirer selon la notice</span></li>
+            <li class="key"><span class="tag">Étape finale</span><span class="dot"></span><span class="t">Crème de soin Thuya</span></li>
+          </ol>
+        </div>
+
+        <div class="times-group">
+        <div class="times-head">
+          <h3 class="h-sub">Temps de pose&nbsp;— protocole demandé pour la formation</h3>
+        </div>
+        <table class="data times">
+          <thead>
+            <tr>
+              <th>Nature du poil</th>
+              <th><span class="st">Étape 1&nbsp;:</span> permanente</th>
+              <th><span class="st">Étape 2&nbsp;:</span> neutralisant</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="key"><svg viewBox="0 0 36 20" aria-hidden="true"><g fill="none" stroke="#3B2823" stroke-linecap="round" stroke-width=".7"><path d="M3 17 C10 9 18 5 33 4"/><path d="M3 19 C11 12 19 9 33 9"/></g></svg>Poils <em>fins</em></td>
+              <td class="t"><span class="chip fill">8&nbsp;minutes</span></td>
+              <td class="t"><span class="chip fill">8&nbsp;minutes</span></td>
+            </tr>
+            <tr>
+              <td class="key"><svg viewBox="0 0 36 20" aria-hidden="true"><g fill="none" stroke="#3B2823" stroke-linecap="round" stroke-width="1.5"><path d="M3 17 C10 9 18 5 33 4"/><path d="M3 19 C11 12 19 9 33 9"/></g></svg>Poils <em>normaux</em></td>
+              <td class="t"><span class="chip fill">10&nbsp;minutes</span></td>
+              <td class="t"><span class="chip fill">10&nbsp;minutes</span></td>
+            </tr>
+            <tr>
+              <td class="key"><svg viewBox="0 0 36 20" aria-hidden="true"><g fill="none" stroke="#3B2823" stroke-linecap="round" stroke-width="2.6"><path d="M3 16 C10 8 18 4 33 3"/><path d="M3 19 C11 12 19 9 33 10"/></g></svg>Poils <em>épais</em></td>
+              <td class="t"><span class="chip fill">11 à 12&nbsp;minutes maximum</span></td>
+              <td class="t"><span class="chip fill">11 à 12&nbsp;minutes maximum</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="final">
+          <h3 class="h-label">Étape finale</h3>
+          <p>Appliquer la crème de soin Thuya après le retrait du neutralisant, en respectant le mode d’emploi de cette crème.</p>
+        </div>
+        <div class="alert">
+          <div class="alert-title">Précaution</div>
+          <p>Ces temps sont ceux demandés pour ce support de formation&nbsp;; ils ne sont pas présentés comme des durées officiellement validées par Thuya. Vérifier la notice des références exactes, notamment pour la deuxième lotion, avant toute application sur une cliente. <strong>Ne jamais dépasser les limites du fabricant.</strong></p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>

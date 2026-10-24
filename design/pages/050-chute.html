@@ -5,19 +5,29 @@
   [data-id="chute"] .side .photo {
     margin-top: auto; height: 62mm; overflow: hidden; position: relative;
   }
-  [data-id="chute"] .side .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 55% 62%; }
+  [data-id="chute"] .side .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 55% 62%; filter: brightness(1.02); }
   [data-id="chute"] .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; }
   [data-id="chute"] .cards .card { padding: 5mm 5mm 5.5mm; }
   [data-id="chute"] .cards .tag {
     font-family: var(--display); font-style: italic; font-size: 26pt; line-height: 1; color: var(--rose);
     margin-bottom: 3mm;
   }
-  [data-id="chute"] .cards .card.alertish { border-top: .8mm solid var(--bordeaux); }
+  /* Carte iii : mise en garde (avis médical) traitée comme un encadré .alert */
+  [data-id="chute"] .cards .card.alert {
+    background: var(--bordeaux-soft); border: 0; border-left: 1.1mm solid var(--bordeaux);
+    padding: 5mm 5mm 5.5mm;
+  }
+  [data-id="chute"] .cards .card.alert::before { left: auto; right: 5mm; top: 5.6mm; }
+  [data-id="chute"] .cards .card.alert .tag { color: var(--bordeaux); opacity: .5; }
+  [data-id="chute"] .cards .card.alert .h-label { color: var(--bordeaux); }
+  [data-id="chute"] .main { display: flex; flex-direction: column; }
   [data-id="chute"] .practice {
-    margin-top: 6mm; display: grid; grid-template-columns: 42mm 1fr; gap: 6mm; align-items: start;
+    margin-top: auto; display: grid; grid-template-columns: 42mm 1fr; gap: 6mm; align-items: start;
     background: var(--cream); padding: 6mm 7mm;
   }
   [data-id="chute"] .practice .lead { font-size: 15pt; }
+  [data-id="chute"] .practice .alert { margin-top: 3.4mm; padding: 3.4mm 5mm 3.4mm 13.5mm; }
+  [data-id="chute"] .practice .alert::before { left: 3.8mm; top: 3.4mm; }
 </style>
 <section class="page" data-id="chute">
   <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie I — Sourcils</span></div>
@@ -25,35 +35,40 @@
     <div class="layout">
       <div class="side">
         <div class="kicker">Anatomie du poil</div>
-        <h2 class="h-title">Pourquoi les sourcils tombent-ils ?</h2>
+        <h2 class="h-title">Pourquoi les sourcils tombent-ils&nbsp;?</h2>
         <p class="lead">Distinguer renouvellement normal, casse et chute anormale</p>
-        <div class="photo"><img src="assets/portrait-regard-haut.jpg" alt=""></div>
+        <div class="photo"><img class="blend" src="assets/portrait-regard-haut.jpg" alt=""></div>
       </div>
       <div class="main">
         <div class="cards">
           <div class="card">
             <div class="tag">i.</div>
             <h3 class="h-label">Chute physiologique</h3>
-            <p>Un sourcil arrivé en fin de cycle peut tomber : c’est le renouvellement naturel. La perte isolée de quelques poils n’indique pas forcément un problème. Les follicules ne sont pas synchronisés, ce qui permet de conserver une ligne visible.</p>
+            <p>Un sourcil arrivé en fin de cycle peut tomber&nbsp;: c’est le renouvellement naturel. La perte isolée de quelques poils n’indique pas forcément un problème. Les follicules ne sont pas synchronisés, ce qui permet de conserver une ligne visible.</p>
           </div>
           <div class="card">
             <div class="tag">ii.</div>
             <h3 class="h-label">Casse ou fragilisation</h3>
             <p>Les frottements répétés, l’épilation excessive, les traitements chimiques mal adaptés et une manipulation agressive peuvent casser les poils ou fragiliser la zone. Un poil cassé n’est pas nécessairement un poil tombé avec sa racine.</p>
           </div>
-          <div class="card alertish">
+          <div class="card alert">
             <div class="tag">iii.</div>
             <h3 class="h-label">Chute inhabituelle</h3>
-            <p>Une perte en plaques, rapide, persistante ou associée à rougeur, démangeaisons, squames ou douleur mérite un avis médical. Parmi les causes possibles : affection dermatologique, alopécie, troubles thyroïdiens, carences ou certains traitements. <strong>Une technicienne esthétique ne pose pas de diagnostic médical.</strong></p>
+            <p>Une perte en plaques, rapide, persistante ou associée à rougeur, démangeaisons, squames ou douleur <strong>mérite un avis médical.</strong> Parmi les causes possibles&nbsp;: affection dermatologique, alopécie, troubles thyroïdiens, carences ou certains traitements. <strong>Une technicienne esthétique ne pose pas de diagnostic médical.</strong></p>
           </div>
         </div>
         <div class="practice">
-          <p class="lead">En pratique, avant une prestation :</p>
-          <ul class="dots">
-            <li>Observer la densité, les zones clairsemées, l’état de la peau et la résistance apparente du poil.</li>
-            <li>Questionner sans juger sur les épilations et soins récents.</li>
-            <li>Reporter tout traitement chimique sur une zone irritée ou lorsque l’état des poils paraît préoccupant.</li>
-          </ul>
+          <p class="lead">En pratique, avant une prestation&nbsp;:</p>
+          <div>
+            <ul class="dots">
+              <li>Observer la densité, les zones clairsemées, l’état de la peau et la résistance apparente du poil.</li>
+              <li>Questionner sans juger sur les épilations et soins récents.</li>
+            </ul>
+            <div class="alert">
+              <div class="alert-title">Important</div>
+              <p>Reporter tout traitement chimique sur une zone irritée ou lorsque l’état des poils paraît préoccupant.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

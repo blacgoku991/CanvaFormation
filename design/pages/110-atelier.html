@@ -1,0 +1,74 @@
+<style>
+  [data-id="atelier"] .layout { display: grid; grid-template-columns: 92mm 1fr; gap: 17mm; height: 100%; }
+  [data-id="atelier"] .side { display: flex; flex-direction: column; }
+  [data-id="atelier"] .side .h-title { margin: 3.5mm 0 0; font-size: 25pt; }
+  [data-id="atelier"] .side .rule.short { margin: 7mm 0 9mm; }
+  [data-id="atelier"] .side .h-label { margin-bottom: 1mm; }
+  [data-id="atelier"] .tasks { list-style: none; border-top: .3mm solid var(--espresso); }
+  [data-id="atelier"] .tasks li {
+    position: relative; padding: 4.2mm 0 4.2mm 6mm; border-bottom: .2mm solid var(--line);
+    font-size: 10.2pt; line-height: 1.5; text-wrap: pretty;
+  }
+  [data-id="atelier"] .tasks li::before {
+    content: ''; position: absolute; left: .4mm; top: calc(4.2mm + .62em); width: 1.5mm; height: 1.5mm;
+    border-radius: 50%; background: var(--rose);
+  }
+  [data-id="atelier"] .tasks li:last-child { border-bottom: 0; }
+  [data-id="atelier"] .side .alert { margin-top: auto; }
+  [data-id="atelier"] .side .alert p { font-size: 10.2pt; text-wrap: balance; }
+
+  [data-id="atelier"] .main { display: flex; flex-direction: column; }
+  [data-id="atelier"] .intro {
+    font-family: var(--serif); font-style: italic; font-size: 12.6pt; line-height: 1.36; color: var(--espresso);
+    margin: 0 0 5.5mm; text-wrap: pretty;
+  }
+  [data-id="atelier"] .intro .lbl {
+    font-family: var(--sans); font-style: normal; font-size: 6.8pt; font-weight: 500; letter-spacing: .26em;
+    text-transform: uppercase; color: var(--bordeaux); margin-right: .6mm;
+  }
+  [data-id="atelier"] .views { display: flex; flex-direction: column; gap: 2.2mm; }
+  [data-id="atelier"] .view { display: grid; grid-template-columns: 14mm 1fr; gap: 4mm; align-items: start; }
+  [data-id="atelier"] .view .n {
+    font-family: var(--display); font-style: italic; font-size: 30pt; line-height: .9; color: var(--bordeaux);
+    border-top: .3mm solid var(--bordeaux); padding-top: 2mm; text-align: left;
+  }
+  /* Photos affichées entières, à leur proportion d'origine : aucun recadrage, filigrane de la 3e vue intact */
+  [data-id="atelier"] .view img { display: block; width: 134mm; height: auto; }
+  [data-id="atelier"] .credit {
+    margin: 2.4mm 0 0 18mm; font-size: 8.4pt; letter-spacing: .04em; color: var(--taupe);
+  }
+</style>
+<section class="page" data-id="atelier">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie I — Sourcils</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="side">
+        <div class="kicker">Observation</div>
+        <h2 class="h-title">Atelier visuel&nbsp;— Brow Lift</h2>
+        <div class="rule short"></div>
+        <h3 class="h-label">Consignes</h3>
+        <ul class="tasks">
+          <li>Décrire le sens d’implantation et le sens de brossage sur chacune des trois images.</li>
+          <li>Repérer les zones où les poils se croisent, les espaces clairsemés et les contours à respecter.</li>
+          <li>Expliquer à la cliente la différence entre un effet naturel, discipliné et plus structuré.</li>
+          <li><strong>Faire valider la forme et le résultat attendu avant la prestation.</strong></li>
+        </ul>
+        <div class="alert">
+          <div class="alert-title">Important</div>
+          <p>Les images ne constituent pas un protocole de pose.</p>
+        </div>
+      </div>
+
+      <div class="main">
+        <p class="intro"><span class="lbl">Lecture du résultat&nbsp;:</span> la photographie ci-dessous montre trois présentations de sourcils. Elle permet de discuter de l’orientation des poils, du volume apparent, de la définition de la ligne et du rendu final.</p>
+        <div class="views">
+          <div class="view"><div class="n">1</div><img src="assets/atelier-brow-1.jpg" alt="Présentation de sourcil 1"></div>
+          <div class="view"><div class="n">2</div><img src="assets/atelier-brow-2.jpg" alt="Présentation de sourcil 2"></div>
+          <div class="view"><div class="n">3</div><img src="assets/atelier-brow-3.jpg" alt="Présentation de sourcil 3"></div>
+        </div>
+        <p class="credit">Crédit photo&nbsp;: @refreshednrefined</p>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>

@@ -1,0 +1,120 @@
+<style>
+  [data-id="hygiene"] .layout { display: grid; grid-template-columns: 94mm 1fr; gap: 13mm; height: 100%; }
+  [data-id="hygiene"] .side { display: flex; flex-direction: column; }
+  [data-id="hygiene"] .side .h-title { margin: 3.5mm 0 0; font-size: 24pt; }
+  [data-id="hygiene"] .side .rule.short { margin: 6.5mm 0 7mm; }
+  [data-id="hygiene"] .sec-head { display: flex; align-items: baseline; gap: 2.6mm; margin-bottom: 3mm; }
+  [data-id="hygiene"] .sec-head .no {
+    font-family: var(--display); font-style: italic; font-size: 19pt; line-height: 1; color: var(--rose);
+  }
+  [data-id="hygiene"] .sec-head .h-sub { margin: 0; font-size: 13pt; }
+
+  /* Checklist : cases à cocher */
+  [data-id="hygiene"] ul.checks { list-style: none; border-top: .3mm solid var(--espresso); }
+  [data-id="hygiene"] ul.checks li {
+    position: relative; padding: 3.7mm 0 3.7mm 8.4mm; border-bottom: .2mm solid var(--line); line-height: 1.5;
+    text-wrap: pretty;
+  }
+  [data-id="hygiene"] ul.checks li:last-child { border-bottom: 0; }
+  [data-id="hygiene"] ul.checks li::before {
+    content: ''; position: absolute; left: 0; top: calc(3.7mm + .22em); width: 3.5mm; height: 3.5mm;
+    border: .28mm solid var(--mocha); border-radius: .5mm; background: var(--paper);
+  }
+  [data-id="hygiene"] .side .alert { margin-top: 1.6mm; padding: 3.8mm 5mm 4mm 14mm; }
+  [data-id="hygiene"] .side .alert::before { left: 4mm; top: 3.8mm; }
+  [data-id="hygiene"] .side .alert ul.checks { border-top: 0; }
+  [data-id="hygiene"] .side .alert ul.checks li { border-bottom-color: rgba(122, 36, 48, .2); }
+  [data-id="hygiene"] .side .alert ul.checks li:first-child { padding-top: 1.2mm; }
+  [data-id="hygiene"] .side .alert ul.checks li:first-child::before { top: calc(1.2mm + .22em); }
+  [data-id="hygiene"] .side .alert ul.checks li:last-child { padding-bottom: 0; }
+  [data-id="hygiene"] .side .alert ul.checks li::before { border-color: var(--bordeaux); background: #fff; }
+  [data-id="hygiene"] .side .alert li.eye { font-size: 10.2pt; }
+
+  /* Colonne de droite : visuel + tableau */
+  [data-id="hygiene"] .main { display: flex; flex-direction: column; }
+  [data-id="hygiene"] .photo {
+    position: relative; flex: 1; min-height: 60mm; overflow: hidden; background: var(--cream);
+    display: flex; align-items: center; justify-content: center; padding: 6mm 10mm 4mm;
+  }
+  [data-id="hygiene"] .photo svg { width: 100%; height: 100%; }
+  [data-id="hygiene"] .vigil { margin-top: 8mm; }
+  [data-id="hygiene"] table.data td { text-wrap: pretty; font-size: 9.4pt; padding-top: 3.2mm; padding-bottom: 3.2mm; }
+  [data-id="hygiene"] table.data td.key { width: 46mm; font-size: 12.5pt; line-height: 1.2; }
+  [data-id="hygiene"] table.data th { padding-bottom: 2.4mm; }
+</style>
+<section class="page" data-id="hygiene">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie I — Sourcils</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="side">
+        <div class="kicker">Les fondamentaux</div>
+        <h2 class="h-title">Hygiène, sécurité et qualité</h2>
+        <div class="rule short"></div>
+        <div class="sec-head"><span class="no">i.</span><h3 class="h-sub">Checklist du poste de travail</h3></div>
+        <ul class="checks">
+          <li>Plan de travail propre&nbsp;; mains lavées&nbsp;; instruments nettoyés puis désinfectés selon leur usage.</li>
+          <li>Produits identifiés, non périmés, fermés et conservés conformément aux notices.</li>
+          <li>Consommables à usage unique disponibles&nbsp;; déchets éliminés dans les filières adaptées.</li>
+        </ul>
+        <div class="alert">
+          <div class="alert-title">Important</div>
+          <ul class="checks">
+            <li><strong>Aucune prestation sur une zone présentant une infection, une lésion ou une irritation active.</strong></li>
+            <li class="eye"><strong>En cas de projection oculaire&nbsp;: rinçage immédiat abondant et avis médical urgent.</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="photo"><svg viewBox="0 0 600 290" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <!-- sol -->
+            <path d="M40 270 H560" stroke="#A48A7B" stroke-width="1"/>
+            <!-- pince -->
+            <path d="M136 36 Q120 150 128 262" stroke="#3B2823" stroke-width="6"/>
+            <path d="M144 36 Q160 150 136 262" stroke="#3B2823" stroke-width="6"/>
+            <path d="M136 36 Q140 26 144 36" stroke="#3B2823" stroke-width="6"/>
+            <path d="M128 120 L131 150 M152 120 L149 150" stroke="#FCFAF7" stroke-width="1.4"/>
+            <!-- goupillon -->
+            <path d="M262 262 L262 128" stroke="#3B2823" stroke-width="5"/>
+            <g stroke="#3B2823" stroke-width="1.6">
+              <path d="M250 124 H274"/><path d="M248 118 H276"/><path d="M247 112 H277"/><path d="M247 106 H277"/>
+              <path d="M247 100 H277"/><path d="M247 94 H277"/><path d="M248 88 H276"/><path d="M248 82 H276"/>
+              <path d="M249 76 H275"/><path d="M250 70 H274"/><path d="M251 64 H273"/><path d="M252 58 H272"/>
+              <path d="M254 52 H270"/><path d="M256 46 H268"/>
+            </g>
+            <!-- petits ciseaux -->
+            <circle cx="372" cy="238" r="17" stroke="#3B2823" stroke-width="3"/>
+            <circle cx="414" cy="238" r="17" stroke="#3B2823" stroke-width="3"/>
+            <path d="M380 223 L404 58" stroke="#3B2823" stroke-width="4"/>
+            <path d="M406 223 L386 58" stroke="#3B2823" stroke-width="4"/>
+            <circle cx="393" cy="146" r="3.5" fill="#7A2430" stroke="none"/>
+            <!-- cotons -->
+            <circle cx="500" cy="228" r="38" fill="#FCFAF7" stroke="#D8B7AF" stroke-width="1.6"/>
+            <circle cx="500" cy="228" r="28" stroke="#D8B7AF" stroke-width="1" stroke-dasharray="2 5"/>
+            <circle cx="520" cy="186" r="30" fill="#FCFAF7" stroke="#D8B7AF" stroke-width="1.6"/>
+            <circle cx="520" cy="186" r="21" stroke="#D8B7AF" stroke-width="1" stroke-dasharray="2 5"/>
+            <!-- éclats de propreté -->
+            <g stroke="#7A2430" stroke-width="1.4">
+              <path d="M196 70 V90 M186 80 H206"/><path d="M330 40 V54 M323 47 H337"/>
+              <path d="M468 104 V122 M459 113 H477"/><path d="M80 150 V164 M73 157 H87"/>
+            </g>
+          </g>
+        </svg></div>
+        <div class="vigil">
+          <div class="sec-head"><span class="no">ii.</span><h3 class="h-sub">Points de vigilance par technique</h3></div>
+          <table class="data">
+            <thead><tr><th>Technique</th><th>Vigilance principale</th></tr></thead>
+            <tbody>
+              <tr><td class="key">Teinture <em>hybride</em></td><td>Sensibilisation possible&nbsp;: respecter le test préalable et la notice exacte.</td></tr>
+              <tr><td class="key">Décoloration</td><td>Éviter le surtraitement, utiliser uniquement l’oxydant compatible indiqué par le fabricant.</td></tr>
+              <tr><td class="key">Rehaussement <em>de cils</em></td><td>Protéger l’œil, contrôler le placement des cils et respecter les temps du système.</td></tr>
+              <tr><td class="key">Lash <em>Botox</em></td><td>Soin cosmétique&nbsp;: emplacement dans la séquence à vérifier auprès du fabricant.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>
