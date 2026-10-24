@@ -13,7 +13,7 @@ CHARS_PER_SEC = 20.0
 LEAD = 0.55   # silence avant la voix, le temps que la transition se pose
 LEADS = {'outro': 3.6}   # la conclusion montre d'abord le collage des pages, puis la voix accompagne le logo
 TAIL = 0.85   # respiration après la voix
-MIN_DUR = {'intro': 6.8, 'sommaire': 6.6, 'p1': 3.2, 'p2': 3.2, 'p3': 3.4, 'gestion': 7.4, 'evaluation': 5.4, 'outro': 10.6}
+MIN_DUR = {'intro': 6.8, 'sommaire': 6.6, 'p1': 3.2, 'p2': 3.2, 'p3': 3.4, 'chute': 11.4, 'gestion': 7.4, 'outro': 10.6}
 
 
 def audio_duration(path):
