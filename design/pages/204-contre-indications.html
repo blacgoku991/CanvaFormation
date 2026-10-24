@@ -1,0 +1,104 @@
+<style>
+  /* Contre-indications — colonne de titre + arche photo à gauche, deux colonnes de critères à droite */
+  [data-id="contre-indications"] .layout {
+    display: grid; grid-template-columns: 70mm 1fr; column-gap: 11mm; height: 100%;
+  }
+  [data-id="contre-indications"] .side { display: flex; flex-direction: column; min-height: 0; }
+  [data-id="contre-indications"] .side .h-title { margin: 3.5mm 0 0; font-size: 23pt; }
+  [data-id="contre-indications"] .side .rule.short { margin: 5mm 0 0; }
+  [data-id="contre-indications"] .visual { position: relative; margin-top: 9mm; flex: 1 1 0; min-height: 0; }
+  [data-id="contre-indications"] .arch-line {
+    position: absolute; inset: 0;
+    border: .25mm solid var(--rose); border-bottom: 0; border-radius: 35mm 35mm 0 0;
+  }
+  [data-id="contre-indications"] .arch {
+    position: absolute; top: 3mm; left: 3mm; right: 3mm; bottom: 0; overflow: hidden;
+    border-radius: 32mm 32mm 0 0; background: var(--cream);
+  }
+  [data-id="contre-indications"] .arch img {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 38% 40%;
+  }
+
+  [data-id="contre-indications"] .main { display: flex; flex-direction: column; min-height: 0; }
+  [data-id="contre-indications"] .cols { display: grid; grid-template-columns: 1fr 1fr; column-gap: 9mm; }
+  [data-id="contre-indications"] .col-head {
+    background: var(--blush); padding: 3.6mm 5mm 3.4mm; margin-bottom: 1.6mm;
+  }
+  [data-id="contre-indications"] .col-head .h-sub {
+    margin: 0; font-size: 13pt; line-height: 1.2; text-transform: uppercase; letter-spacing: .02em;
+  }
+  [data-id="contre-indications"] .ci { padding: 4.7mm 0 4.7mm; border-bottom: .2mm solid var(--line); }
+  [data-id="contre-indications"] .ci:last-child { border-bottom: 0; }
+  [data-id="contre-indications"] .ci .lbl {
+    font-family: var(--display); font-weight: 600; font-size: 11.8pt; line-height: 1.25; color: var(--bordeaux); margin: 0 0 1.4mm;
+  }
+  [data-id="contre-indications"] .ci p { font-size: 9.2pt; line-height: 1.6; }
+  [data-id="contre-indications"] .alert { margin-top: auto; padding-top: 4.4mm; padding-bottom: 4.6mm; }
+  [data-id="contre-indications"] .alert p { font-size: 9.4pt; line-height: 1.6; }
+</style>
+<section class="page" data-id="contre-indications">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie II — Les cils</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="side">
+        <div class="kicker">Sécurité &amp; diagnostic</div>
+        <h2 class="h-title">Contre-indications</h2>
+        <div class="rule short"></div>
+        <div class="visual">
+          <div class="arch-line"></div>
+          <div class="arch"><img src="assets/ia/ouverture-cils.jpg" alt=""></div>
+        </div>
+      </div>
+
+      <div class="main" data-fit>
+        <div class="cols">
+          <div class="col">
+            <div class="col-head"><h3 class="h-sub">Brow Lift</h3></div>
+            <div class="ci">
+              <h4 class="lbl">Ne pas réaliser la prestation</h4>
+              <p>Infection, plaie, irritation, brûlure, eczéma ou dermatite active sur la zone des sourcils.</p>
+            </div>
+            <div class="ci">
+              <h4 class="lbl">Réaction ou allergie connue</h4>
+              <p>Antécédent de réaction aux produits utilisés ou test de sensibilité positif, selon la notice.</p>
+            </div>
+            <div class="ci">
+              <h4 class="lbl">Peau récemment sensibilisée</h4>
+              <p>Peeling, exfoliation intense, laser ou soin irritant récent&nbsp;: attendre la récupération complète et respecter les délais indiqués.</p>
+            </div>
+            <div class="ci">
+              <h4 class="lbl">Sourcils fragilisés</h4>
+              <p>Poils cassants, très abîmés ou traitement chimique récent&nbsp;: évaluer et reporter si nécessaire.</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="col-head"><h3 class="h-sub">Rehaussement de cils</h3></div>
+            <div class="ci">
+              <h4 class="lbl">Ne pas réaliser la prestation</h4>
+              <p>Conjonctivite, orgelet, blépharite, infection, inflammation ou irritation oculaire active.</p>
+            </div>
+            <div class="ci">
+              <h4 class="lbl">Réaction ou allergie connue</h4>
+              <p>Antécédent de réaction aux produits ou test de sensibilité positif, selon les instructions du fabricant.</p>
+            </div>
+            <div class="ci">
+              <h4 class="lbl">Yeux ou paupières sensibilisés</h4>
+              <p>Plaie, brûlure, sécheresse ou irritation importante&nbsp;; chirurgie ou intervention oculaire récente sans accord médical.</p>
+            </div>
+            <div class="ci">
+              <h4 class="lbl">Cils fragilisés</h4>
+              <p>Cils cassants, clairsemés ou abîmés&nbsp;: examiner leur état et reporter la prestation si nécessaire.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="alert">
+          <div class="alert-title">À retenir</div>
+          <p>Avant chaque prestation&nbsp;: réaliser un diagnostic, questionner la cliente sur ses antécédents, vérifier les contre-indications et suivre la notice du fabricant. En cas de doute ou de symptômes persistants, <strong>reporter le soin et orienter vers un professionnel de santé. Ne jamais appliquer de produit sur une zone lésée ou infectée.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>

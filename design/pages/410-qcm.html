@@ -52,13 +52,14 @@
   }
   .qcm-page .opts { list-style: none; margin: 2.2mm 0 0 9mm; }
   .qcm-page .opts li {
-    position: relative; padding-left: 10.4mm; text-indent: -4.8mm;
+    padding-left: 10.4mm; text-indent: -10.4mm;
     font-size: 8.6pt; line-height: 1.4; margin-bottom: 1mm; text-wrap: pretty;
   }
   .qcm-page .opts li:last-child { margin-bottom: 0; }
+  /* case à cocher : carré décoratif dans le flux (pas de calque positionné) */
   .qcm-page .opts li::before {
-    content: ''; position: absolute; left: 0; top: .3mm; width: 3.1mm; height: 3.1mm; border-radius: .4mm;
-    border: .3mm solid var(--mocha); background: var(--paper);
+    content: ''; display: inline-block; box-sizing: border-box; width: 3.6mm; height: 3.6mm; margin-right: 2mm; vertical-align: -.6mm;
+    border-radius: .4mm; border: .3mm solid var(--mocha); background: var(--paper);
   }
   .qcm-page .opts .let {
     display: inline-block; min-width: 4mm; text-indent: 0;
