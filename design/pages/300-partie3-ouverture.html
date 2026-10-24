@@ -8,7 +8,7 @@
   [data-id="partie-3"] .os-name { font-size: 50pt; line-height: .96; }
   [data-id="partie-3"] .os-toc { left: 20mm; width: 162mm; bottom: 18mm; }
   [data-id="partie-3"] .os-toc .items { display: grid; grid-template-columns: 1fr 1fr; column-gap: 9mm; }
-  /* Numéro et intitulé dans une même ligne de texte */
+  /* Numéro et intitulé dans une même ligne de texte ; une vraie espace insécable après le numéro (Canva la garde) */
   [data-id="partie-3"] .os-toc .item { display: block; white-space: nowrap; }
   [data-id="partie-3"] .os-toc .item .pg { display: inline-block; width: 9mm; }
 </style>
@@ -22,10 +22,10 @@
   <div class="os-toc">
     <div class="label">Au programme de cette partie</div>
     <div class="items">
-      <div class="item"><span class="pg">{{p:fiche-technique}}</span>Fiches pratiques et suivi des clientes</div>
-      <div class="item"><span class="pg">{{p:photographier}}</span>Photographier son travail</div>
-      <div class="item"><span class="pg">{{p:reseaux}}</span>Réseaux sociaux et communication</div>
-      <div class="item"><span class="pg">{{p:gestion}}</span>Gestion d’activité et fidélisation</div>
+      <div class="item"><span class="pg">{{p:fiche-technique}}&nbsp;</span>Fiches pratiques et suivi des clientes</div>
+      <div class="item"><span class="pg">{{p:photographier}}&nbsp;</span>Photographier son travail</div>
+      <div class="item"><span class="pg">{{p:reseaux}}&nbsp;</span>Réseaux sociaux et communication</div>
+      <div class="item"><span class="pg">{{p:gestion}}&nbsp;</span>Gestion d’activité et fidélisation</div>
     </div>
   </div>
 </section>

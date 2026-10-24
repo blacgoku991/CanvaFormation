@@ -13,12 +13,11 @@
   }
   [data-id="decoloration"] .prod .shot img { width: auto; display: block; }
   [data-id="decoloration"] .prod .shot.bb img { height: 33.4mm; margin-top: .3mm; }
-  /* Oxydant : le fond du fichier est à 253 (bandeau blanc pur de 2 mm en haut, lignes grises en bas).
-     On masque ces bords (cadre en overflow hidden) et la carte prend la teinte exacte du fond (#FDFDFD),
-     sans filtre CSS : aucune « boîte » visible autour du flacon. */
+  /* Oxydant : fichier recadré (bandeau blanc du haut et lignes grises du bas retirés) ; la carte prend
+     la teinte exacte de son fond (#FDFDFD), sans filtre ni masque : aucune « boîte » visible, même dans Canva. */
   [data-id="decoloration"] .col3 .prod { background: #FDFDFD; }
   [data-id="decoloration"] .col3 .prod .shot { height: 40.8mm; margin-bottom: 4mm; }
-  [data-id="decoloration"] .prod .shot.ox img { height: 44.7mm; margin-top: -2.3mm; }
+  [data-id="decoloration"] .prod .shot.ox img { height: 40.8mm; margin: 0 auto; }
   [data-id="decoloration"] .prod-name {
     font-family: var(--display); font-weight: 400; font-size: 14pt; line-height: 1.15; color: var(--espresso);
     border-top: .2mm solid var(--line); padding-top: 3mm; margin-bottom: 2mm;
@@ -107,7 +106,7 @@
 
       <div class="col col3">
         <div class="prod">
-          <div class="shot ox"><img src="assets/zola-oxydant-3-hd.jpg" alt="Oxydant ZOLA 3 %"></div>
+          <div class="shot ox"><img src="assets/zola-oxydant-3-hd-net.jpg" alt="Oxydant ZOLA 3 %"></div>
           <h3 class="prod-name"><span class="lbl">Oxydant utilisé&nbsp;:</span> ZOLA <span class="chip fill">3&nbsp;%</span></h3>
           <p>Oxydant teinture sourcils ZOLA à 3&nbsp;%, associé à la poudre <span class="nw">ZOLA BB Blond Powder</span> selon les instructions du fabricant.</p>
         </div>

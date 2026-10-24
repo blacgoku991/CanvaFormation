@@ -30,11 +30,17 @@
   [data-id="contre-indications"] .ci { padding: 4.7mm 0 4.7mm; border-bottom: .2mm solid var(--line); }
   [data-id="contre-indications"] .ci:last-child { border-bottom: 0; }
   [data-id="contre-indications"] .ci .lbl {
-    font-family: var(--display); font-weight: 600; font-size: 11.8pt; line-height: 1.25; color: var(--bordeaux); margin: 0 0 1.4mm;
+    font-family: var(--display); font-weight: 500; font-size: 12pt; line-height: 1.25; color: var(--bordeaux); margin: 0 0 1.4mm;
   }
   [data-id="contre-indications"] .ci p { font-size: 9.2pt; line-height: 1.6; }
   [data-id="contre-indications"] .alert { margin-top: auto; padding-top: 4.4mm; padding-bottom: 4.6mm; }
-  [data-id="contre-indications"] .alert p { font-size: 9.4pt; line-height: 1.6; }
+  /* « À retenir » en deux paragraphes côte à côte (lignes de ~70-80 mm au lieu de 155 mm),
+     le second calé sur la colonne « Rehaussement de cils » : zone de texte = 180 − 22,1 mm,
+     2e colonne à (180 − 9) / 2 + 9 mm du bord de la colonne principale */
+  [data-id="contre-indications"] .alert .alert-cols {
+    display: grid; grid-template-columns: calc(50% - 9.55mm) 1fr; column-gap: 9mm;
+  }
+  [data-id="contre-indications"] .alert p { font-size: 9.4pt; line-height: 1.6; margin: 0; }
 </style>
 <section class="page" data-id="contre-indications">
   <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie II — Les cils</span></div>
@@ -95,7 +101,10 @@
 
         <div class="alert">
           <div class="alert-title">À retenir</div>
-          <p>Avant chaque prestation&nbsp;: réaliser un diagnostic, questionner la cliente sur ses antécédents, vérifier les contre-indications et suivre la notice du fabricant. En cas de doute ou de symptômes persistants, <strong>reporter le soin et orienter vers un professionnel de santé. Ne jamais appliquer de produit sur une zone lésée ou infectée.</strong></p>
+          <div class="alert-cols">
+            <p>Avant chaque prestation&nbsp;: réaliser un diagnostic, questionner la cliente sur ses antécédents, vérifier les contre-indications et suivre la notice du fabricant.</p>
+            <p>En cas de doute ou de symptômes persistants, <strong>reporter le soin et orienter vers un professionnel de santé. Ne jamais appliquer de produit sur une zone lésée ou infectée.</strong></p>
+          </div>
         </div>
       </div>
     </div>

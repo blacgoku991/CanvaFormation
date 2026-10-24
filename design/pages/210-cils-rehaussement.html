@@ -5,7 +5,7 @@
   [data-id="rehaussement"] .h-title { margin: 3mm 0 0; font-size: 21pt; font-variant-numeric: lining-nums; }
   [data-id="rehaussement"] .rule.short { margin: 5mm 0 5mm; }
   [data-id="rehaussement"] .side .diag { font-size: 9.4pt; line-height: 1.62; }
-  /* Photo de la cliente : diagnostic sur tablette (864 × 1058 px, ~270 dpi à cette taille) */
+  /* Photo de la cliente : diagnostic sur tablette (856 × 1056 px, ~265 dpi à cette taille) */
   [data-id="rehaussement"] .side .photo {
     margin-top: 6mm; flex: 1; min-height: 60mm; position: relative; overflow: hidden; background: var(--cream);
   }
@@ -17,13 +17,14 @@
 
   /* En-tête du protocole : titre à gauche, produits Noemi Innovate (fond blanc) à droite */
   [data-id="rehaussement"] .main .head { display: grid; grid-template-columns: 1fr 50mm; column-gap: 8mm; align-items: start; }
-  /* Cadre de 30 mm de haut (image 46 mm) : il s'arrête 4 mm au-dessus de la phrase d'accroche,
-     qui reste alignée sur le texte du diagnostic à gauche */
+  /* Cadre produits : son bas s'aligne sur le filet bordeaux du titre (27 + 28,8 mm), 5 mm au-dessus
+     de la phrase d'accroche (alignée sur le texte du diagnostic à gauche). Image de 44 mm décalée
+     de −0,9 mm / +0,8 mm (marges blanches inégales de la photo) : produits centrés à ~2,6 mm du cadre */
   [data-id="rehaussement"] .main .product {
-    background: #fff; border: .2mm solid var(--line); height: 30mm; overflow: hidden;
+    background: #fff; border: .2mm solid var(--line); height: 28.8mm; overflow: hidden;
     display: flex; align-items: flex-start; justify-content: center;
   }
-  [data-id="rehaussement"] .main .product img { display: block; width: 46mm; height: auto; }
+  [data-id="rehaussement"] .main .product img { display: block; width: 44mm; height: auto; margin: -.9mm 0 0 1.6mm; }
   [data-id="rehaussement"] .main .lead { font-size: 15pt; line-height: 1.36; color: var(--espresso); max-width: 150mm; }
   [data-id="rehaussement"] .protocol { margin-top: auto; }
   [data-id="rehaussement"] .protocol .h-label { margin-bottom: 3.2mm; }
@@ -34,7 +35,10 @@
   [data-id="rehaussement"] .steps-table th:last-child { text-align: right; padding-right: 2mm; }
   [data-id="rehaussement"] .steps-table .chip { font-size: 8pt; padding: .7mm 3mm; }
   [data-id="rehaussement"] .steps-table tr.mid td { background: var(--blush); }
-  [data-id="rehaussement"] .steps-table tr.mid td.key { padding-left: 2mm; }
+  /* Même retrait de 2 mm pour toute la colonne « Étape » : Step 1, 1.5 et 2 restent alignés,
+     et le texte de la ligne rosée ne touche pas le bord de son aplat */
+  [data-id="rehaussement"] .steps-table th:first-child,
+  [data-id="rehaussement"] .steps-table td.key { padding-left: 2mm; }
   [data-id="rehaussement"] .alert { margin-top: 5mm; }
   [data-id="rehaussement"] .alert p { font-size: 9pt; line-height: 1.58; }
 </style>
@@ -73,7 +77,7 @@
           </table>
           <div class="alert">
             <div class="alert-title">Important</div>
-            <p>Ces temps de 10&nbsp;minutes correspondent au protocole demandé pour la formation et doivent être confirmés sur les notices Noemi Innovate du lot utilisé. Vérifier expressément auprès du fabricant que le soin Intense peut être appliqué entre Step&nbsp;1 et Step&nbsp;2&nbsp;: certains systèmes imposent de neutraliser avant tout soin. <strong>Ne pas appliquer cette séquence sans validation.</strong></p>
+            <p>Ces temps de 10&nbsp;minutes correspondent au protocole demandé pour la formation et doivent être confirmés sur les notices Noemi Innovate du lot utilisé. Vérifier expressément auprès du fabricant que le soin Intense peut être appliqué entre Step&nbsp;1 et Step&nbsp;2&nbsp;: certains systèmes imposent de neutraliser avant tout soin. <strong>Ne pas appliquer cette séquence sans&nbsp;validation.</strong></p>
           </div>
         </div>
       </div>

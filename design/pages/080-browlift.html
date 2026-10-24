@@ -9,13 +9,10 @@
     margin-top: 7mm; flex: 1; min-height: 60mm; display: flex; flex-direction: column;
     background: #fff; border: .2mm solid var(--line);
   }
-  [data-id="browlift"] .side .prod .shot { position: relative; flex: 1; overflow: hidden; }
-  /* 852 × 1034 px affichés sur 78 mm de large (≈ 280 dpi) ; les produits (x 86-800, y 258-802 px)
-     sont centrés dans le cadre, le blanc de la photo se confond avec celui de la carte */
-  [data-id="browlift"] .side .prod .shot img {
-    position: absolute; display: block; width: 78mm; height: auto;
-    left: calc(50% - 40.6mm); top: calc(50% - 49.5mm);
-  }
+  /* Photo déjà recadrée autour des produits (819 × 600 px, ≈ 270 dpi à 77 mm) : centrée dans la carte,
+     sans masque ni débord, donc identique après un import Canva ; son blanc se confond avec la carte */
+  [data-id="browlift"] .side .prod .shot { flex: 1; display: flex; align-items: center; justify-content: center; }
+  [data-id="browlift"] .side .prod .shot img { display: block; width: 77mm; height: auto; }
   [data-id="browlift"] .side .prod .cap {
     margin: 0 5.5mm; padding: 3mm 0 3.6mm; border-top: .2mm solid var(--line);
     font-family: var(--display); font-size: 14pt; line-height: 1.15; color: var(--espresso);
@@ -79,7 +76,7 @@
         <div class="rule short"></div>
         <p class="protocol">Nettoyer les sourcils, appliquer la lotion permanente Thuya selon les zones prévues, puis retirer complètement. Appliquer ensuite le neutralisant (deuxième étape), retirer selon la notice, puis <strong>terminer par la crème de soin Thuya</strong>, à la fin de la prestation.</p>
         <div class="prod">
-          <div class="shot"><img src="assets/client/produits-thuya.jpg" alt="Produits Thuya"></div>
+          <div class="shot"><img src="assets/client/produits-thuya-net.jpg" alt="Produits Thuya"></div>
           <p class="cap"><span class="lbl">Produits utilisés&nbsp;:</span> Gamme Thuya</p>
         </div>
       </div>

@@ -2,7 +2,8 @@
   [data-id="diagnostic"] .layout {
     display: grid; grid-template-columns: 82mm 1fr; grid-template-rows: 1fr auto; column-gap: 12mm; row-gap: 7mm; height: 100%;
   }
-  [data-id="diagnostic"] .top-side .h-title { margin: 4mm 0 0; font-size: 23pt; }
+  /* 22 pt : « 1. Restructuration » tient dans la colonne de 82 mm (à 23 pt il la dépassait de 2 mm) */
+  [data-id="diagnostic"] .top-side .h-title { margin: 4mm 0 0; font-size: 22pt; }
   [data-id="diagnostic"] .top-side .rule.short { margin: 7mm 0 6.4mm; }
   [data-id="diagnostic"] .synth .h-label { color: var(--bordeaux); }
   [data-id="diagnostic"] .synth .alert { margin-top: 3.4mm; padding: 3.4mm 5mm 3.4mm 13.5mm; }

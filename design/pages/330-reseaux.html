@@ -9,6 +9,8 @@
 
   [data-id="reseaux"] .sec-head { border-bottom: .3mm solid var(--espresso); padding-bottom: 2.4mm; margin-bottom: 3.6mm; }
   [data-id="reseaux"] .sec-head .h-sub { font-size: 14pt; margin: 0; }
+  /* numéro suivi d’une vraie espace insécable (Canva la conserve) ; marge réduite d’autant */
+  [data-id="reseaux"] .sec-head .h-sub .no { margin-right: .25mm; }
   [data-id="reseaux"] .identity { margin-top: auto; }
   [data-id="reseaux"] .identity .lead { font-size: 13.4pt; line-height: 1.42; color: var(--espresso); text-wrap: pretty; }
 
@@ -23,7 +25,7 @@
   }
   [data-id="reseaux"] .phone .row { position: relative; }
   [data-id="reseaux"] .phone .mk {
-    position: absolute; right: -8.4mm; top: 50%; margin-top: -2.3mm;
+    position: absolute; right: -6.675mm; top: 50%; margin-top: -2.3mm; /* centrée sur le contour du téléphone (4,2 mm de marge + ½ trait) */
     width: 4.6mm; height: 4.6mm; border-radius: 50%; background: var(--bordeaux); color: #fff;
     font-family: var(--display); font-style: italic; font-size: 8.6pt; line-height: 4.3mm; text-align: center;
   }
@@ -78,7 +80,7 @@
   }
   [data-id="reseaux"] .tips li:last-child { border-bottom: 0; }
   [data-id="reseaux"] .tips .mk {
-    display: inline-block; vertical-align: .5mm; width: 4.6mm; height: 4.6mm; margin: 0 4.4mm 0 -9mm;
+    display: inline-block; vertical-align: .5mm; width: 4.6mm; height: 4.6mm; margin: 0 3.35mm 0 -9mm; /* + espace insécable réelle (1,05 mm) */
     border-radius: 50%; border: .25mm solid var(--bordeaux); color: var(--bordeaux);
     font-family: var(--display); font-style: italic; font-size: 8.4pt; line-height: 4.1mm; text-align: center;
   }
@@ -100,13 +102,13 @@
   }
   [data-id="reseaux"] table.pil td { vertical-align: top; padding: 0 4.5mm; border-left: .2mm solid var(--line); }
   [data-id="reseaux"] table.pil tr.names td { padding-top: 3mm; padding-bottom: 2.4mm; }
-  [data-id="reseaux"] table.pil tr.names th { padding-top: 9.4mm; }
+  [data-id="reseaux"] table.pil tr.names th { padding-top: 11.9mm; } /* même ligne de base que le nom du pilier */
   [data-id="reseaux"] table.pil tr.names td .r {
     display: block; font-family: var(--display); font-style: italic; font-size: 15pt; line-height: 1; color: var(--rose); margin-bottom: 1.4mm;
   }
   [data-id="reseaux"] table.pil tr.names td .nm { font-family: var(--display); font-size: 13.5pt; line-height: 1.2; color: var(--espresso); }
   [data-id="reseaux"] table.pil tr.ideas td { font-size: 9.2pt; line-height: 1.5; text-wrap: pretty; padding-bottom: .5mm; }
-  [data-id="reseaux"] table.pil tr.ideas th { padding-top: 0; }
+  [data-id="reseaux"] table.pil tr.ideas th { padding-top: .9mm; } /* même ligne de base que la 1re ligne d’idées */
 </style>
 <section class="page" data-id="reseaux">
   <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie III — Pratique professionnelle</span></div>
@@ -117,7 +119,7 @@
         <h2 class="h-title">Développer son activité sur les réseaux sociaux</h2>
         <div class="rule short"></div>
         <div class="identity">
-          <div class="sec-head"><h3 class="h-sub"><span class="no">1.</span>Construire une identité professionnelle</h3></div>
+          <div class="sec-head"><h3 class="h-sub"><span class="no">1.&nbsp;</span>Construire une identité professionnelle</h3></div>
           <p class="lead">Choisir un nom cohérent, une photo de profil lisible, une palette de couleurs et une présentation claire des prestations. Indiquer la ville, les modalités de réservation et un lien fonctionnel. Mettre en avant le savoir-faire, l’hygiène, les résultats réels et l’accueil.</p>
         </div>
       </div>
@@ -148,17 +150,17 @@
       </div>
 
       <div class="col profile">
-        <div class="sec-head"><h3 class="h-sub"><span class="no">2.</span>Optimiser son profil Instagram</h3></div>
+        <div class="sec-head"><h3 class="h-sub"><span class="no">2.&nbsp;</span>Optimiser son profil Instagram</h3></div>
         <ul class="tips">
-          <li><span class="k"><span class="mk">a</span>Nom visible&nbsp;:</span><span>spécialité&nbsp;+ localisation, lorsque cela reste naturel.</span></li>
-          <li><span class="k"><span class="mk">b</span>Biographie&nbsp;:</span><span>prestations, secteur géographique, bénéfice concret et appel à réserver.</span></li>
-          <li><span class="k"><span class="mk">c</span>Stories à la une&nbsp;:</span><span>Tarifs, Résultats, Avis, FAQ, Accès, Disponibilités.</span></li>
-          <li><span class="k"><span class="mk">d</span>Épingler trois publications&nbsp;:</span><span>présentation, prestations, résultats représentatifs.</span></li>
+          <li><span class="k"><span class="mk">a</span>&nbsp;Nom visible&nbsp;:</span><span>spécialité&nbsp;+ localisation, lorsque cela reste naturel.</span></li>
+          <li><span class="k"><span class="mk">b</span>&nbsp;Biographie&nbsp;:</span><span>prestations, secteur géographique, bénéfice concret et appel à réserver.</span></li>
+          <li><span class="k"><span class="mk">c</span>&nbsp;Stories à la une&nbsp;:</span><span>Tarifs, Résultats, Avis, FAQ, Accès, Disponibilités.</span></li>
+          <li><span class="k"><span class="mk">d</span>&nbsp;Épingler trois publications&nbsp;:</span><span>présentation, prestations, résultats représentatifs.</span></li>
         </ul>
       </div>
 
       <div class="pillars">
-        <div class="sec-head"><h3 class="h-sub"><span class="no">3.</span>Les cinq piliers de contenu</h3></div>
+        <div class="sec-head"><h3 class="h-sub"><span class="no">3.&nbsp;</span>Les cinq piliers de contenu</h3></div>
         <table class="pil">
           <colgroup><col class="lab"><col><col><col><col><col></colgroup>
           <tr class="names">

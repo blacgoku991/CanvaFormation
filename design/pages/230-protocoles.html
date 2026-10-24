@@ -2,9 +2,10 @@
   /* Protocoles de prestation — en-tête, deux colonnes (Brow Lift / rehaussement) en frise avant → pendant → après,
      précautions essentielles en encadré bordeaux */
   [data-id="protocoles"] .wrap { display: flex; flex-direction: column; height: 100%; }
-  [data-id="protocoles"] .head { display: flex; align-items: flex-end; justify-content: space-between; gap: 10mm; }
+  /* la phrase d'accroche partage la ligne de base du titre */
+  [data-id="protocoles"] .head { display: flex; align-items: last baseline; justify-content: space-between; gap: 10mm; }
   [data-id="protocoles"] .head .h-title { margin: 3.5mm 0 0; font-size: 24pt; }
-  [data-id="protocoles"] .head .lead { font-size: 15pt; line-height: 1.3; color: var(--mocha); margin: 0 0 .8mm; }
+  [data-id="protocoles"] .head .lead { font-size: 15pt; line-height: 1.3; color: var(--mocha); margin: 0; }
 
   [data-id="protocoles"] .cols { display: grid; grid-template-columns: 1fr 1fr; column-gap: 10mm; margin-top: 9mm; }
   [data-id="protocoles"] .tech-head {
@@ -30,8 +31,17 @@
   [data-id="protocoles"] .phase .h-label { color: var(--bordeaux); margin: 0 0 1.2mm; font-size: 6.8pt; line-height: 1.6; }
   [data-id="protocoles"] .phase p { font-size: 9pt; line-height: 1.58; }
 
+  [data-id="protocoles"] .phase .nw { white-space: nowrap; }
+
+  /* Précautions : deux paragraphes côte à côte (lignes de ~105 mm au lieu de 240 mm),
+     le second calé sur le texte de la colonne « Rehaussement de cils » */
   [data-id="protocoles"] .alert { margin-top: auto; padding-top: 4mm; padding-bottom: 4.2mm; }
-  [data-id="protocoles"] .alert p { font-size: 9.4pt; line-height: 1.58; }
+  [data-id="protocoles"] .alert .alert-cols {
+    /* zone de texte de l'encadré = page utile − 22,1 mm (filet 1,1 + retrait 15 + marge 6) :
+       la 2e colonne démarre à (261 − 10) / 2 + 10 + 7 mm du bord, comme le texte au-dessus */
+    display: grid; grid-template-columns: calc(50% - 3.05mm) 1fr; column-gap: 10mm;
+  }
+  [data-id="protocoles"] .alert p { font-size: 9.4pt; line-height: 1.58; margin: 0; }
 </style>
 <section class="page" data-id="protocoles">
   <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie II — Les cils</span></div>
@@ -53,7 +63,7 @@
           </div>
           <div class="phase">
             <h4 class="h-label">Avant la prestation</h4>
-            <p>Questionner la cliente sur ses attentes, allergies, soins récents et antécédents. Examiner la peau et les poils&nbsp;; rechercher toute contre-indication. Réaliser le test de sensibilité selon la notice et préparer un poste propre.</p>
+            <p>Questionner la cliente sur ses attentes, allergies, soins récents et antécédents. Examiner la peau et les poils&nbsp;; rechercher toute <span class="nw">contre-indication</span>. Réaliser le test de sensibilité selon la notice et préparer un poste propre.</p>
           </div>
           <div class="phase on">
             <h4 class="h-label">Pendant la prestation</h4>
@@ -87,7 +97,10 @@
 
       <div class="alert">
         <div class="alert-title">Précautions essentielles</div>
-        <p><strong>Ne jamais appliquer sur une zone irritée ou infectée.</strong> Ne pas improviser les temps de pose ni mélanger des gammes sans validation du fabricant. <strong>En cas de brûlure ou de projection oculaire&nbsp;: arrêter, rincer abondamment à l’eau et demander rapidement un avis médical.</strong></p>
+        <div class="alert-cols">
+          <p><strong>Ne jamais appliquer sur une zone irritée ou infectée.</strong> Ne pas improviser les temps de pose ni mélanger des gammes sans validation&nbsp;du&nbsp;fabricant.</p>
+          <p><strong>En cas de brûlure ou de projection oculaire&nbsp;: arrêter, rincer abondamment à l’eau et demander rapidement un avis médical.</strong></p>
+        </div>
       </div>
     </div>
   </div>
