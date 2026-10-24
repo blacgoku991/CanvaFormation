@@ -36,4 +36,10 @@ Demande : tout ré-analyser et refaire le PDF proprement, dans l'ordre, avec les
 | 30 | 30-a90043b9.jpg | Page 10 — Décoloration ZOLA |
 | 31 | 31-ef31d76d.jpg | Page 08 — Brow Lift Thuya (nouvelle photo produits Thuya) |
 
+| 32 | 32-ae774b87.jpg | NOUVELLE page — Protocoles de prestation : Brow Lift & rehaussement (avant / pendant / après) + précautions essentielles |
+| 33 | 33-d698ebcc.jpg | NOUVELLE page — Contre-indications : Brow Lift / rehaussement de cils + « À retenir » |
+| 34 | 34-e1c0d802.jpg | NOUVELLE page — Les fondamentaux : Brow Lift & rehaussement de cils (qu'est-ce que c'est, objectif, bienfaits, pour qui) |
+
+Consigne de la cliente pour 32-34 : « tu les mets dans la partie des cils aussi ».
+
 Couverture des 26 pages : toutes présentes (01 couverture, 02 sommaire, 03 ouverture I, 04-12, 13 ouverture II, 14-15, 16 ouverture III, 17-21, 22 ouverture IV, 23-25, 26 dos).
