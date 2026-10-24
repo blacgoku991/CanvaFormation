@@ -126,6 +126,7 @@ Texte de l'en-tête de droite, selon la partie :
 | `portrait-cou-bas.jpg` | Bas du visage, lèvres, cou, épaule, fond blanc, 1129 × 838 px | |
 | `sac-jambes.jpg` | Bord du sac rose « Beauté du regard » avec ruban bordeaux, jambes en escarpins noirs, fond gris clair, 457 × 1070 px (vertical) | |
 | `zola-bb-blond-powder.jpg` | Pot ZOLA BB Blond powder, fond blanc, 200 × 208 px | afficher à 45 mm maximum |
+| `atelier-brow-1.jpg`, `-2.jpg`, `-3.jpg` | Les 3 présentations de sourcils de l'atelier visuel, dans l'ordre de la planche d'origine (ne pas leur attribuer de légende « naturel / discipliné / structuré » : non validé par la cliente ; numéroter 1, 2, 3), bandes 1200 × ~385 px (HD) | **la 3e porte le filigrane @refreshednrefined : ne jamais le masquer, le recadrer ni l'effacer** ; ajouter sous les photos « Crédit photo : @refreshednrefined » |
 | `zola-oxydant-3.jpg` | Flacon oxydant ZOLA 3 %, fond blanc, 110 × 215 px | afficher à 45 mm maximum |
 
 Les images sont de résolution moyenne : n'agrandis pas une photo au-delà d'environ 1,4× sa taille naturelle à 96 dpi.

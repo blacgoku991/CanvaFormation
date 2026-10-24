@@ -67,4 +67,4 @@ Cochez une seule réponse par question. 15 questions — 1 point par bonne répo
 - Aucune réponse n'est cochée ni signalée comme correcte : **aucune grille de correction** n'apparaît sur cette page (ni sur la suivante). Ne pas en inventer ; la demander à la formatrice si un corrigé est souhaité.
 - Le QCM continue sur qcm-page-2.md (questions 9 à 15, score et observations). Numérotation continue 1 → 8 sur cette page, sans saut.
 - Typographie : apostrophes typographiques « ’ », tirets cadratins « — » dans le titre et la consigne. Aucune coquille d'orthographe repérée.
-- Mise en page : grand blanc entre la consigne et la question 1 (≈ 100 px) ; bas de page vide sur ≈ 11 % de la hauteur.
+- Mise en page : grand blanc entre la consigne et la question 1 (≈ 90 px) ; bas de page vide sur ≈ 11 % de la hauteur.
