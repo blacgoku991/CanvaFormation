@@ -2,7 +2,7 @@
  "fps": 30,
  "width": 1920,
  "height": 1080,
- "total": 165.744,
+ "total": 166.608,
  "scenes": [
   {
    "id": "intro",
@@ -111,7 +111,7 @@
    "partie": "Partie I — Sourcils",
    "vo": "Perdre quelques poils est naturel. La casse, elle, vient souvent des frottements ou de traitements mal adaptés. Et une chute inhabituelle mérite toujours un avis médical.",
    "start": 29.792,
-   "dur": 10.448,
+   "dur": 11.4,
    "vo_start": 30.342,
    "vo_dur": 9.048,
    "vo_reelle": true,
@@ -140,9 +140,9 @@
    "id": "mapping",
    "partie": "Partie I — Sourcils",
    "vo": "Place ensuite à la restructuration. Le mapping fixe trois repères : le début du sourcil, l'arche et la queue, pour dessiner une ligne harmonieuse, validée avec la cliente avant toute épilation.",
-   "start": 40.24,
+   "start": 41.192,
    "dur": 11.984,
-   "vo_start": 40.79,
+   "vo_start": 41.742,
    "vo_dur": 10.584,
    "vo_reelle": true,
    "phrases": [
@@ -164,9 +164,9 @@
    "id": "browlift",
    "partie": "Partie I — Sourcils",
    "vo": "Le Brow Lift Thuya suit une séquence précise : la lotion permanente, le neutralisant, puis la crème de soin. Le temps de pose s'adapte à la nature du poil, et se vérifie toujours sur la notice du fabricant.",
-   "start": 52.224,
+   "start": 53.176,
    "dur": 12.968,
-   "vo_start": 52.774,
+   "vo_start": 53.726,
    "vo_dur": 11.568,
    "vo_reelle": true,
    "phrases": [
@@ -188,9 +188,9 @@
    "id": "couleur",
    "partie": "Partie I — Sourcils",
    "vo": "Côté couleur, la teinture Brow Daddy se choisit selon le diagnostic. Pour la décoloration ZOLA : une dose de poudre pour deux doses d'oxydant à trois pour cent, selon la notice, sous surveillance constante.",
-   "start": 65.192,
+   "start": 66.144,
    "dur": 12.536,
-   "vo_start": 65.742,
+   "vo_start": 66.694,
    "vo_dur": 11.136,
    "vo_reelle": true,
    "phrases": [
@@ -211,11 +211,11 @@
   {
    "id": "hygiene",
    "partie": "Partie I — Sourcils",
-   "vo": "Et à chaque étape, l'hygiène et la sécurité passent avant tout : matériel désinfecté, et aucune prestation en cas d'irritation, de lésion ou d'infection. En cas de projection oculaire : rinçage abondant, et avis médical urgent.",
-   "start": 77.728,
-   "dur": 14.024,
-   "vo_start": 78.278,
-   "vo_dur": 12.624,
+   "vo": "Et à chaque étape, l'hygiène et la sécurité passent avant tout : matériel désinfecté, et aucune prestation en cas d'irritation, de lésion ou d'infection. En cas de projection oculaire : rinçage immédiat abondant et avis médical urgent.",
+   "start": 78.68,
+   "dur": 14.456,
+   "vo_start": 79.23,
+   "vo_dur": 13.056,
    "vo_reelle": true,
    "phrases": [
     {
@@ -226,9 +226,9 @@
     },
     {
      "i0": 154,
-     "i1": 227,
+     "i1": 235,
      "t0": 8.613,
-     "t1": 12.572
+     "t1": 12.994
     }
    ]
   },
@@ -236,9 +236,9 @@
    "id": "p2",
    "partie": "Partie II — Les cils",
    "vo": "Deuxième partie : les cils.",
-   "start": 91.752,
+   "start": 93.136,
    "dur": 3.2,
-   "vo_start": 92.302,
+   "vo_start": 93.686,
    "vo_dur": 1.536,
    "vo_reelle": true,
    "phrases": [
@@ -254,9 +254,9 @@
    "id": "rehaussement",
    "partie": "Partie II — Les cils",
    "vo": "Après un diagnostic attentif, le rehaussement Noemi Innovate se déroule en deux étapes de dix minutes, à confirmer sur la notice. Le soin Lash Botox Noemi Intense, soin cosmétique sans injection, peut s'y ajouter, uniquement après vérification auprès du fabricant.",
-   "start": 94.952,
+   "start": 96.336,
    "dur": 17.024,
-   "vo_start": 95.502,
+   "vo_start": 96.886,
    "vo_dur": 15.624,
    "vo_reelle": true,
    "phrases": [
@@ -278,9 +278,9 @@
    "id": "teintecils",
    "partie": "Partie II — Les cils",
    "vo": "La teinture des cils sublime le résultat, et les conseils après prestation le prolongent.",
-   "start": 111.976,
+   "start": 113.36,
    "dur": 6.344,
-   "vo_start": 112.526,
+   "vo_start": 113.91,
    "vo_dur": 4.944,
    "vo_reelle": true,
    "phrases": [
@@ -296,9 +296,9 @@
    "id": "p3",
    "partie": "Partie III — Pratique professionnelle",
    "vo": "Troisième partie : la pratique professionnelle.",
-   "start": 118.32,
+   "start": 119.704,
    "dur": 3.944,
-   "vo_start": 118.87,
+   "vo_start": 120.254,
    "vo_dur": 2.544,
    "vo_reelle": true,
    "phrases": [
@@ -314,9 +314,9 @@
    "id": "fiche",
    "partie": "Partie III — Pratique professionnelle",
    "vo": "Une fiche technique pour chaque séance : avant, pendant et après. Et des photos avant-après prises avec le même angle, la même distance et la même lumière.",
-   "start": 122.264,
+   "start": 123.648,
    "dur": 9.512,
-   "vo_start": 122.814,
+   "vo_start": 124.198,
    "vo_dur": 8.112,
    "vo_reelle": true,
    "phrases": [
@@ -338,9 +338,9 @@
    "id": "reseaux",
    "partie": "Partie III — Pratique professionnelle",
    "vo": "Vous apprendrez aussi à développer votre activité : un profil Instagram optimisé, cinq piliers de contenu, des Reels efficaces, et un calendrier simple à tenir.",
-   "start": 131.776,
+   "start": 133.16,
    "dur": 10.568,
-   "vo_start": 132.326,
+   "vo_start": 133.71,
    "vo_dur": 9.168,
    "vo_reelle": true,
    "phrases": [
@@ -356,9 +356,9 @@
    "id": "gestion",
    "partie": "Partie III — Pratique professionnelle",
    "vo": "Sans oublier la gestion : des tarifs clairs, une expérience cliente soignée, et des résultats que l'on mesure.",
-   "start": 142.344,
+   "start": 143.728,
    "dur": 7.4,
-   "vo_start": 142.894,
+   "vo_start": 144.278,
    "vo_dur": 5.928,
    "vo_reelle": true,
    "phrases": [
@@ -374,9 +374,9 @@
    "id": "evaluation",
    "partie": "Partie IV — Évaluation",
    "vo": "Enfin, l'évaluation, avec quinze questions pour valider vos acquis.",
-   "start": 149.744,
-   "dur": 5.4,
-   "vo_start": 150.294,
+   "start": 151.128,
+   "dur": 4.88,
+   "vo_start": 151.678,
    "vo_dur": 3.48,
    "vo_reelle": true,
    "phrases": [
@@ -392,9 +392,9 @@
    "id": "outro",
    "partie": "",
    "vo": "Dolce Lash and Brow. La beauté du regard, avec méthode et précision.",
-   "start": 155.144,
+   "start": 156.008,
    "dur": 10.6,
-   "vo_start": 158.744,
+   "vo_start": 159.608,
    "vo_dur": 4.248,
    "vo_reelle": true,
    "phrases": [
