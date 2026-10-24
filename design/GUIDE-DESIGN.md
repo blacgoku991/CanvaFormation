@@ -73,7 +73,7 @@ Texte de l'en-tête de droite, selon la partie :
 
 **Grands éléments**
 - `.big-num` (`.dark`, `.ghost`) : très grand chiffre façon magazine.
-- `.blend` (mix-blend multiply) : pose une photo sur fond blanc sans « boîte » visible sur l'ivoire.
+- (supprimé) `.blend` : Canva n'importe pas les modes de fusion ; poser les photos sur fond blanc dans une carte blanche.
 
 **Couleurs** (variables CSS)
 - Fonds : `--ivory` (fond des pages), `--paper`, `--cream`, `--sand`, `--blush`.
@@ -81,7 +81,9 @@ Texte de l'en-tête de droite, selon la partie :
 - Textes et titres : `--espresso`, `--ink`.
 - Accent : `--bordeaux`, `--bordeaux-soft`.
 
-**Polices** : `--display` (Bodoni Moda), `--serif` (Cormorant Garamond), `--sans` (Jost 300 pour le texte).
+**Polices** (toutes disponibles dans Canva, fichiers statiques dans `fonts/canva/`, déclarées dans `fonts/fonts-canva.css`) : `--display` (Playfair Display), `--serif` (Cormorant Garamond), `--sans` (Montserrat 300 pour le texte).
+
+**Compatibilité import Canva** : pas de -webkit-text-stroke (chiffres en contour = `assets/numerals/*.svg`), pas de mode de fusion, de filtre ni d'ombre portée, pas de texte justifié ni de césure, pas de calque posé sur toute la page ; une étiquette et son texte dans le même élément.
 
 ## Règles de design
 
@@ -120,7 +122,7 @@ Texte de l'en-tête de droite, selon la partie :
 | Fichier | Contenu | Remarques |
 |---|---|---|
 | `logo-dolce.png` | Logo « dolce lash & brow », noir sur fond transparent, 720 × 103 px | pour la couverture et la 4e de couverture |
-| `portrait-couverture.jpg` | Portrait 3/4 de la mannequin, yeux fermés, fond blanc, 1129 × 1210 px | déjà sur la couverture ; possible en gros plan recadré (yeux, lèvres), avec `.blend` |
+| `portrait-couverture.jpg` | Portrait 3/4 de la mannequin, yeux fermés, fond blanc, 1129 × 1210 px | déjà sur la couverture ; possible en gros plan recadré (yeux, lèvres) |
 | `portrait-regard-haut.jpg` | Gros plan front, sourcils et yeux fermés, fond blanc, 1129 × 668 px | ouverture de la Partie I et page « chute » ; à recadrer autrement si tu le réutilises |
 | `portrait-regard-haut-chaud.jpg` | Même image, version plus chaude | |
 | `portrait-cou-bas.jpg` | Bas du visage, lèvres, cou, épaule, fond blanc, 1129 × 838 px | |

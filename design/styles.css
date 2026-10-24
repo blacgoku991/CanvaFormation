@@ -289,21 +289,14 @@ ol.steps > li::before {
   padding: 4mm 6mm 4mm 15mm;
   color: var(--ink);
 }
-.alert::before {
-  content: '!';
+.alert::before {   /* pastille « ! » dessinée (forme vectorielle, pas un caractère isolé dans Canva) */
+  content: '';
   position: absolute;
   left: 4.4mm;
   top: 4mm;
   width: 6.4mm;
   height: 6.4mm;
-  border-radius: 50%;
-  background: var(--bordeaux);
-  color: #fff;
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: 10pt;
-  line-height: 6.4mm;
-  text-align: center;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%237A2430'/%3E%3Crect x='28.5' y='14' width='7' height='24' rx='3.5' fill='%23fff'/%3E%3Ccircle cx='32' cy='47' r='4.2' fill='%23fff'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 .alert .alert-title {
   font-family: var(--sans);
@@ -426,12 +419,10 @@ table.data tr:last-child td { border-bottom: 0; }
   font-weight: 400;
   font-size: 220pt;
   line-height: .8;
-  color: transparent;
-  -webkit-text-stroke: .35mm rgba(255, 255, 255, .95);
+  color: rgba(122, 36, 48, .12);   /* chiffres en contour : utiliser assets/numerals/*.svg */
   letter-spacing: -.02em;
 }
-.big-num.dark { -webkit-text-stroke: .3mm var(--rose); }
-.big-num.ghost { color: rgba(122, 36, 48, .06); -webkit-text-stroke: 0; }
+.big-num.ghost { color: rgba(122, 36, 48, .06); }
 
 /* Grilles utilitaires */
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 9mm; }
@@ -455,7 +446,7 @@ table.data tr:last-child td { border-bottom: 0; }
 .opener-side .os-photo img { height: 100%; width: 100%; object-fit: cover; }
 .opener-side .os-num {
   position: absolute; font-family: var(--display); font-size: 230pt; line-height: .72; letter-spacing: -.03em;
-  color: transparent; -webkit-text-stroke: .4mm var(--bordeaux); opacity: .85;
+  color: rgba(122, 36, 48, .12);   /* chiffres en contour : utiliser assets/numerals/*.svg */
 }
 .opener-side .os-title { position: absolute; }
 .opener-side .os-part {
@@ -480,3 +471,9 @@ table.data tr:last-child td { border-bottom: 0; }
 
 /* Compatibilité import Canva : chaque texte reste un vrai texte, sans césure ni justification */
 body { hyphens: manual; text-align: left; }
+
+/* Chiffres alignés pour les titres, pastilles et tableaux (Playfair a des chiffres elzéviriens par défaut) */
+.h-display, .h-title, .h-sub, table.data td.key, .chip, .folio .num { font-variant-numeric: lining-nums; }
+
+/* Impression : le PDF fait 297,01 mm de large ; le fond hors page reste ivoire au lieu d'un filet gris */
+@media print { html, body { background: var(--ivory); } }

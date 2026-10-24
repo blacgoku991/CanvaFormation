@@ -6,29 +6,29 @@
   [data-id="protocoles"] .head .h-title { margin: 3.5mm 0 0; font-size: 24pt; }
   [data-id="protocoles"] .head .lead { font-size: 15pt; line-height: 1.3; color: var(--mocha); margin: 0 0 .8mm; }
 
-  [data-id="protocoles"] .cols { display: grid; grid-template-columns: 1fr 1fr; column-gap: 12mm; margin-top: 7mm; }
+  [data-id="protocoles"] .cols { display: grid; grid-template-columns: 1fr 1fr; column-gap: 10mm; margin-top: 9mm; }
   [data-id="protocoles"] .tech-head {
     display: flex; align-items: flex-end; gap: 4mm;
     padding-bottom: 3mm; border-bottom: .3mm solid var(--espresso);
   }
-  [data-id="protocoles"] .tech-head .num-svg { height: 9.5mm; width: auto; flex: none; }
+  [data-id="protocoles"] .tech-head .num-svg { height: 10.5mm; width: auto; flex: none; }
   [data-id="protocoles"] .tech-head .h-sub {
-    margin: 0 0 .4mm; font-size: 13.5pt; line-height: 1.15; text-transform: uppercase; letter-spacing: .02em;
+    margin: 0 0 .6mm; font-size: 14pt; line-height: 1.15; text-transform: uppercase; letter-spacing: .02em;
   }
   /* Frise verticale : un repère par temps, reliés par un filet rose (formes décoratives) */
-  [data-id="protocoles"] .phase { position: relative; padding: 3.6mm 0 0 7.5mm; }
+  [data-id="protocoles"] .phase { position: relative; padding: 4.2mm 0 0 7mm; }
   [data-id="protocoles"] .phase::before {
-    content: ''; position: absolute; left: 0; top: calc(3.6mm + .9mm); width: 2.6mm; height: 2.6mm;
+    content: ''; position: absolute; left: 0; top: calc(4.2mm + 1mm); width: 2.6mm; height: 2.6mm;
     border-radius: 50%; border: .3mm solid var(--bordeaux); background: var(--ivory); z-index: 1;
   }
   [data-id="protocoles"] .phase.on::before { background: var(--bordeaux); }
   [data-id="protocoles"] .phase::after {
-    content: ''; position: absolute; left: 1.3mm; top: calc(3.6mm + 2.2mm); bottom: -4.5mm; width: .25mm;
+    content: ''; position: absolute; left: 1.18mm; top: calc(4.2mm + 3.6mm); bottom: calc(-4.2mm - 1mm); width: .25mm;
     background: var(--rose);
   }
   [data-id="protocoles"] .phase:last-child::after { display: none; }
   [data-id="protocoles"] .phase .h-label { color: var(--bordeaux); margin: 0 0 1.2mm; font-size: 6.8pt; line-height: 1.6; }
-  [data-id="protocoles"] .phase p { font-size: 8.9pt; line-height: 1.56; }
+  [data-id="protocoles"] .phase p { font-size: 9pt; line-height: 1.58; }
 
   [data-id="protocoles"] .alert { margin-top: auto; padding-top: 4mm; padding-bottom: 4.2mm; }
   [data-id="protocoles"] .alert p { font-size: 9.4pt; line-height: 1.58; }
