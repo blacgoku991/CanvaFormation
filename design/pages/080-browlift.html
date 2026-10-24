@@ -1,7 +1,8 @@
 <style>
   [data-id="browlift"] .layout { display: grid; grid-template-columns: 82mm 1fr; gap: 12mm; height: 100%; }
   [data-id="browlift"] .side { display: flex; flex-direction: column; }
-  [data-id="browlift"] .side .h-title { margin: 3mm 0 4.5mm; font-size: 23pt; }
+  [data-id="browlift"] .side .h-title { margin: 3.5mm 0 0; font-size: 24pt; }
+  [data-id="browlift"] .side .rule.short { margin: 5.5mm 0 5.5mm; }
   [data-id="browlift"] .side .protocol { font-size: 9.8pt; }
   /* Carte produit blanche : la photo Thuya (fond blanc pur) se fond dans la carte */
   [data-id="browlift"] .side .prod {
@@ -17,11 +18,11 @@
   }
   [data-id="browlift"] .side .prod .cap {
     margin: 0 5.5mm; padding: 3mm 0 3.6mm; border-top: .2mm solid var(--line);
-    font-family: var(--display); font-size: 12.5pt; line-height: 1.2; color: var(--espresso);
+    font-family: var(--display); font-size: 14pt; line-height: 1.15; color: var(--espresso);
   }
   [data-id="browlift"] .side .prod .cap .lbl {
-    display: block; font-family: var(--sans); font-size: 6.4pt; font-weight: 500; letter-spacing: .24em;
-    text-transform: uppercase; color: var(--bordeaux); margin-bottom: 1.2mm;
+    display: block; font-family: var(--sans); font-size: 6.8pt; font-weight: 500; letter-spacing: .24em;
+    text-transform: uppercase; color: var(--bordeaux); margin-bottom: 1.4mm;
   }
   [data-id="browlift"] .main { display: flex; flex-direction: column; }
   [data-id="browlift"] .times-group { margin-top: auto; }
@@ -75,10 +76,11 @@
       <div class="side">
         <div class="kicker">Technique et temps de pose</div>
         <h2 class="h-title"><span class="no">2.</span>Brow Lift&nbsp;— Thuya</h2>
+        <div class="rule short"></div>
         <p class="protocol">Nettoyer les sourcils, appliquer la lotion permanente Thuya selon les zones prévues, puis retirer complètement. Appliquer ensuite le neutralisant (deuxième étape), retirer selon la notice, puis <strong>terminer par la crème de soin Thuya</strong>, à la fin de la prestation.</p>
         <div class="prod">
           <div class="shot"><img src="assets/client/produits-thuya.jpg" alt="Produits Thuya"></div>
-          <p class="cap"><span class="lbl">Produits utilisés&nbsp;:</span>Gamme Thuya</p>
+          <p class="cap"><span class="lbl">Produits utilisés&nbsp;:</span> Gamme Thuya</p>
         </div>
       </div>
 

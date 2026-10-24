@@ -1,7 +1,7 @@
 <style>
   /* Grille 2 × 2 : titre | cartes, puis photo | « En pratique » sur une même bande basse */
   [data-id="chute"] .layout {
-    display: grid; grid-template-columns: 78mm 1fr; grid-template-rows: 1fr 62mm;
+    display: grid; grid-template-columns: 70mm 1fr; grid-template-rows: 1fr 68mm;
     column-gap: 12mm; row-gap: 6mm; height: 100%;
   }
   [data-id="chute"] .side .h-title { margin: 4mm 0 5.4mm; font-size: 25pt; }
@@ -14,8 +14,11 @@
     position: absolute; top: -.6mm; left: -.6mm; width: calc(100% + 1.2mm); height: calc(100% + 1.2mm);
     object-fit: cover; object-position: 50% 50%;
   }
-  [data-id="chute"] .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; }
+  /* Carte iii (texte le plus long, avis médical) plus large : les trois cartes se remplissent de façon égale ;
+     i et ii gardent la largeur minimale qui tient « Casse ou fragilisation » sur une ligne */
+  [data-id="chute"] .cards { display: grid; grid-template-columns: 53.7mm 53.7mm 1fr; gap: 5mm; }
   [data-id="chute"] .cards .card { padding: 5mm 5mm 5mm; }
+  [data-id="chute"] .cards .card p, [data-id="chute"] .practice li, [data-id="chute"] .practice .alert p { font-size: 9.4pt; }
   [data-id="chute"] .cards .tag {
     font-family: var(--display); font-style: italic; font-size: 24pt; line-height: 1; color: var(--rose);
     margin-bottom: 2.8mm;

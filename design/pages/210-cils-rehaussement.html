@@ -17,11 +17,13 @@
 
   /* En-tête du protocole : titre à gauche, produits Noemi Innovate (fond blanc) à droite */
   [data-id="rehaussement"] .main .head { display: grid; grid-template-columns: 1fr 50mm; column-gap: 8mm; align-items: start; }
+  /* Cadre de 30 mm de haut (image 46 mm) : il s'arrête 4 mm au-dessus de la phrase d'accroche,
+     qui reste alignée sur le texte du diagnostic à gauche */
   [data-id="rehaussement"] .main .product {
-    background: #fff; border: .2mm solid var(--line); height: 34mm; overflow: hidden;
-    display: flex; align-items: center; justify-content: center;
+    background: #fff; border: .2mm solid var(--line); height: 30mm; overflow: hidden;
+    display: flex; align-items: flex-start; justify-content: center;
   }
-  [data-id="rehaussement"] .main .product img { display: block; width: 100%; height: auto; }
+  [data-id="rehaussement"] .main .product img { display: block; width: 46mm; height: auto; }
   [data-id="rehaussement"] .main .lead { font-size: 15pt; line-height: 1.36; color: var(--espresso); max-width: 150mm; }
   [data-id="rehaussement"] .protocol { margin-top: auto; }
   [data-id="rehaussement"] .protocol .h-label { margin-bottom: 3.2mm; }

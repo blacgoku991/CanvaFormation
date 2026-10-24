@@ -11,8 +11,11 @@
     position: absolute; right: 20mm; top: 18mm; width: 100mm; height: 158mm;
     border: .25mm solid var(--rose); border-bottom: 0; border-radius: 50mm 50mm 0 0;
   }
-  [data-id="partie-4"] .p4-num { position: absolute; left: 19mm; top: 25mm; height: 58mm; width: auto; }
-  [data-id="partie-4"] .os-title { left: 20mm; top: 94mm; }
+  /* Même position et même taille que le « 03 » de l'ouverture III ; le haut du chiffre s'aligne sur l'arche */
+  [data-id="partie-4"] .p4-num { position: absolute; left: 19mm; top: 19mm; height: 60mm; width: auto; }
+  [data-id="partie-4"] .os-title { left: 20mm; top: 90mm; }
+  /* un peu d'air entre « Partie IV » et l'accent du É */
+  [data-id="partie-4"] .os-part { margin-bottom: 3mm; }
   [data-id="partie-4"] .os-toc { left: 20mm; width: 140mm; bottom: 18mm; }
 </style>
 <section class="page opener-side" data-id="partie-4">
