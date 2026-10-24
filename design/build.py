@@ -99,7 +99,8 @@ def build(doc, png=True, only=None, tag=None, light=False):
     if light:
         # Version allégée (envoi par téléphone, e-mail) : images réduites, même mise en page
         make_light_assets()
-        body = body.replace('src="assets/', 'src="assets-light/')
+        # seules les photos sont réduites : les dessins vectoriels (chiffres en contour) restent dans assets/
+        body = re.sub(r'src="assets/([^"]+\.(?:jpe?g|png))"', r'src="assets-light/\1"', body, flags=re.I)
         html_path = html_path.with_name(html_path.stem + '-leger.html')
         pdf_name = pdf_name.replace('.pdf', '-leger.pdf')
     out_dir.mkdir(parents=True, exist_ok=True)

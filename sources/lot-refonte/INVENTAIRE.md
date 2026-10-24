@@ -43,3 +43,7 @@ Demande : tout ré-analyser et refaire le PDF proprement, dans l'ordre, avec les
 Consigne de la cliente pour 32-34 : « tu les mets dans la partie des cils aussi ».
 
 Couverture des 26 pages : toutes présentes (01 couverture, 02 sommaire, 03 ouverture I, 04-12, 13 ouverture II, 14-15, 16 ouverture III, 17-21, 22 ouverture IV, 23-25, 26 dos).
+
+| 35 | 35-photo-regard-cadre.jpg | Photo — remplace la photo de la page 14 (Les fondamentaux) |
+| 36 | 36-photo-browlift-application.jpg | Photo — remplace l'arche photo de la page 15 (Contre-indications) |
+| 37 | 37-consigne-pages-14-15.jpg | Capture de la cliente : « change la première photo par la première que je t'ai envoyée et la 2e en bas par la 2e » |
