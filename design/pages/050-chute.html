@@ -1,0 +1,62 @@
+<style>
+  [data-id="chute"] .layout { display: grid; grid-template-columns: 78mm 1fr; gap: 12mm; height: 100%; }
+  [data-id="chute"] .side { display: flex; flex-direction: column; }
+  [data-id="chute"] .side .h-title { margin: 4mm 0 4mm; }
+  [data-id="chute"] .side .photo {
+    margin-top: auto; height: 62mm; overflow: hidden; position: relative;
+  }
+  [data-id="chute"] .side .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 55% 62%; }
+  [data-id="chute"] .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; }
+  [data-id="chute"] .cards .card { padding: 5mm 5mm 5.5mm; }
+  [data-id="chute"] .cards .tag {
+    font-family: var(--display); font-style: italic; font-size: 26pt; line-height: 1; color: var(--rose);
+    margin-bottom: 3mm;
+  }
+  [data-id="chute"] .cards .card.alertish { border-top: .8mm solid var(--bordeaux); }
+  [data-id="chute"] .practice {
+    margin-top: 6mm; display: grid; grid-template-columns: 42mm 1fr; gap: 6mm; align-items: start;
+    background: var(--cream); padding: 6mm 7mm;
+  }
+  [data-id="chute"] .practice .lead { font-size: 15pt; }
+</style>
+<section class="page" data-id="chute">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie I — Sourcils</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="side">
+        <div class="kicker">Anatomie du poil</div>
+        <h2 class="h-title">Pourquoi les sourcils tombent-ils ?</h2>
+        <p class="lead">Distinguer renouvellement normal, casse et chute anormale</p>
+        <div class="photo"><img src="assets/portrait-regard-haut.jpg" alt=""></div>
+      </div>
+      <div class="main">
+        <div class="cards">
+          <div class="card">
+            <div class="tag">i.</div>
+            <h3 class="h-label">Chute physiologique</h3>
+            <p>Un sourcil arrivé en fin de cycle peut tomber : c’est le renouvellement naturel. La perte isolée de quelques poils n’indique pas forcément un problème. Les follicules ne sont pas synchronisés, ce qui permet de conserver une ligne visible.</p>
+          </div>
+          <div class="card">
+            <div class="tag">ii.</div>
+            <h3 class="h-label">Casse ou fragilisation</h3>
+            <p>Les frottements répétés, l’épilation excessive, les traitements chimiques mal adaptés et une manipulation agressive peuvent casser les poils ou fragiliser la zone. Un poil cassé n’est pas nécessairement un poil tombé avec sa racine.</p>
+          </div>
+          <div class="card alertish">
+            <div class="tag">iii.</div>
+            <h3 class="h-label">Chute inhabituelle</h3>
+            <p>Une perte en plaques, rapide, persistante ou associée à rougeur, démangeaisons, squames ou douleur mérite un avis médical. Parmi les causes possibles : affection dermatologique, alopécie, troubles thyroïdiens, carences ou certains traitements. <strong>Une technicienne esthétique ne pose pas de diagnostic médical.</strong></p>
+          </div>
+        </div>
+        <div class="practice">
+          <p class="lead">En pratique, avant une prestation :</p>
+          <ul class="dots">
+            <li>Observer la densité, les zones clairsemées, l’état de la peau et la résistance apparente du poil.</li>
+            <li>Questionner sans juger sur les épilations et soins récents.</li>
+            <li>Reporter tout traitement chimique sur une zone irritée ou lorsque l’état des poils paraît préoccupant.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>

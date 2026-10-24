@@ -18,8 +18,8 @@ DOLCE LASH & BROW  •  Support de formation
 
 - Aucune coquille repérée sur cette page ; aucun mot incertain.
 - Le nom de marque apparaît sous trois graphies différentes dans le document : « dolce lash & brow » (logo, minuscules), « DOLCE LASH & BROW » (pied de page, capitales) et « dolcelash&brow » (attaché, imprimé sur le sac du sommaire). À harmoniser au choix lors du redesign (ce n'est pas une faute de saisie).
-- « SUPPORT PÉDAGOGIQUE » est en gras, brun (≈ #56301B), centré au-dessus de la ligne « DOLCE LASH & BROW  •  Support de formation » (noir, non gras, séparateur « • » puce ronde entourée d'espaces doubles). Sur le sommaire le séparateur est un point médian « · » : légère incohérence de séparateur entre les pages.
+- « SUPPORT PÉDAGOGIQUE » est en gras, brun (≈ #56301B), placé au-dessus de la ligne « DOLCE LASH & BROW  •  Support de formation » mais pas centré sur elle : décalé d'environ 45 px vers la droite (x ≈ 184–400 px contre 58–434 px pour la seconde ligne) (noir, non gras, séparateur « • » puce ronde entourée d'espaces doubles). Sur le sommaire le séparateur est un point médian « · » : légère incohérence de séparateur entre les pages.
 - Lisibilité : le pied de page (texte noir/brun) est posé directement sur la peau de l'épaule, contraste faible ; il est aussi décentré (aligné à gauche, x ≈ 5–38 %).
 - Le titre « MANUEL DE FORMATION » est légèrement décentré vers la gauche par rapport au logo (x ≈ 8–89 %).
-- La même photo de mannequin (même séance) est réutilisée sur les pages d'ouverture Partie I et Partie II, avec un cadrage différent.
+- La même photo (même prise, vérifiée par superposition) est réutilisée sur les pages d'ouverture Partie I et Partie II, à quasiment la même échelle (à ~2 % près) mais remontée d'environ 270 px (le haut du crâne y touche le bord supérieur) et dans une version plus pâle et moins contrastée que celle de la couverture.
 - Couleurs relevées (pour le redesign) : logo noir #000000 ; titre brun taupe ≈ #523F3A ; « SUPPORT PÉDAGOGIQUE » brun ≈ #56301B.

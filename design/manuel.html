@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Dolce Lash & Brow — Manuel de formation</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<style>
+  [data-id="couverture"] .cover-photo {
+    position: absolute; top: 0; right: -24mm; height: 210mm; width: auto;
+  }
+  [data-id="couverture"] .cover-veil {
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, var(--ivory) 0 34%, rgba(247, 242, 236, 0) 52%);
+  }
+  [data-id="couverture"] .cover-text {
+    position: absolute; left: 20mm; top: 30mm; width: 150mm;
+  }
+  [data-id="couverture"] .cover-logo { width: 84mm; display: block; margin-bottom: 15mm; }
+  [data-id="couverture"] .cover-title {
+    font-family: var(--display); font-weight: 400; text-transform: uppercase;
+    font-size: 54pt; line-height: .9; color: var(--espresso); letter-spacing: -.01em;
+    margin: 6mm 0 0;
+  }
+  [data-id="couverture"] .cover-title em {
+    font-style: italic; text-transform: none; color: var(--bordeaux); font-size: .78em;
+  }
+  [data-id="couverture"] .cover-sub {
+    font-family: var(--sans); font-size: 7.6pt; letter-spacing: .3em; text-transform: uppercase;
+    color: var(--mocha);
+  }
+  [data-id="couverture"] .cover-sub span { color: var(--rose); margin: 0 2.4mm; }
+  [data-id="couverture"] .cover-tagline {
+    position: absolute; left: 20mm; bottom: 15mm;
+    font-family: var(--serif); font-style: italic; font-size: 15pt; color: var(--mocha);
+  }
+  [data-id="couverture"] .cover-foot {
+    position: absolute; left: 20mm; bottom: 9mm;
+    font-size: 6.4pt; letter-spacing: .28em; text-transform: uppercase; color: var(--mocha);
+  }
+  [data-id="couverture"] .cover-band {
+    position: absolute; left: 0; top: 0; bottom: 0; width: 6mm; background: var(--bordeaux);
+  }
+</style>
+<section class="page" data-id="couverture">
+  <img class="cover-photo blend" src="assets/portrait-couverture.jpg" alt="">
+  <div class="cover-veil"></div>
+  <div class="cover-band"></div>
+  <div class="cover-text">
+    <img class="cover-logo" src="assets/logo-dolce.png" alt="dolce lash &amp; brow">
+    <div class="kicker">Support pédagogique</div>
+    <h1 class="cover-title">Manuel<br><em>de</em> formation</h1>
+    <div class="rule short"></div>
+    <p class="cover-sub">Sourcils<span>·</span>Cils<span>·</span>Pratique professionnelle<span>·</span>Évaluation</p>
+  </div>
+  <div class="cover-tagline">Beauté du regard</div>
+  <div class="cover-foot">Dolce Lash &amp; Brow • Support de formation</div>
+</section>
+
+<style>
+  .opener .op-photo {
+    position: absolute; left: 0; top: 0; width: 297mm; height: 128mm; overflow: hidden;
+  }
+  .opener .op-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 78%; mix-blend-mode: multiply; }
+  .opener .op-photo::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(247, 242, 236, 0) 62%, rgba(247, 242, 236, .9) 96%, var(--ivory) 100%);
+  }
+  .opener .op-num {
+    position: absolute; right: 14mm; top: 58mm;
+    font-family: var(--display); font-size: 250pt; line-height: .72; letter-spacing: -.03em;
+    color: transparent; -webkit-text-stroke: .4mm var(--bordeaux); opacity: .85;
+  }
+  .opener .op-title {
+    position: absolute; left: 20mm; top: 104mm;
+  }
+  .opener .op-part {
+    font-family: var(--display); font-style: italic; font-size: 20pt; color: var(--bordeaux);
+    margin-bottom: 1mm;
+  }
+  .opener .op-name {
+    font-family: var(--display); font-weight: 400; font-size: 76pt; line-height: .86;
+    text-transform: uppercase; letter-spacing: -.01em; color: var(--espresso);
+  }
+  .opener .op-toc {
+    position: absolute; left: 20mm; right: 20mm; bottom: 15mm;
+    display: grid; grid-template-columns: repeat(4, 1fr); column-gap: 8mm; row-gap: 0;
+    border-top: .3mm solid var(--espresso); padding-top: 3.4mm;
+  }
+  .opener .op-toc .item {
+    display: flex; gap: 2.6mm; align-items: baseline;
+    padding: 1.6mm 0; border-bottom: .2mm solid var(--line);
+    font-size: 8.2pt; color: var(--ink);
+  }
+  .opener .op-toc .item .pg {
+    font-family: var(--display); font-style: italic; color: var(--bordeaux); font-size: 9.5pt; min-width: 6mm;
+  }
+  .opener .op-intro {
+    position: absolute; left: 20mm; bottom: 34mm; width: 120mm;
+    font-family: var(--sans); font-size: 7pt; letter-spacing: .3em; text-transform: uppercase; color: var(--taupe);
+  }
+</style>
+<section class="page opener" data-id="partie-1">
+  <div class="op-photo"><img src="assets/portrait-regard-haut.jpg" alt=""></div>
+  <div class="op-num">01</div>
+  <div class="op-title">
+    <div class="op-part">Partie I</div>
+    <div class="op-name">Sourcils</div>
+  </div>
+  <div class="op-intro">Au programme de cette partie</div>
+  <div class="op-toc">
+    <div class="item"><span class="pg">??</span>Anatomie et cycle de vie du poil</div>
+    <div class="item"><span class="pg">03</span>Pourquoi les sourcils tombent-ils ?</div>
+    <div class="item"><span class="pg">??</span>Restructuration et mapping</div>
+    <div class="item"><span class="pg">??</span>Brow Lift : technique et temps de pose</div>
+    <div class="item"><span class="pg">??</span>Teinture hybride</div>
+    <div class="item"><span class="pg">??</span>Décoloration</div>
+    <div class="item"><span class="pg">??</span>Atelier visuel Brow Lift</div>
+    <div class="item"><span class="pg">??</span>Hygiène, sécurité et qualité</div>
+  </div>
+</section>
+
+<style>
+  [data-id="chute"] .layout { display: grid; grid-template-columns: 78mm 1fr; gap: 12mm; height: 100%; }
+  [data-id="chute"] .side { display: flex; flex-direction: column; }
+  [data-id="chute"] .side .h-title { margin: 4mm 0 4mm; }
+  [data-id="chute"] .side .photo {
+    margin-top: auto; height: 62mm; overflow: hidden; position: relative;
+  }
+  [data-id="chute"] .side .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 55% 62%; }
+  [data-id="chute"] .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; }
+  [data-id="chute"] .cards .card { padding: 5mm 5mm 5.5mm; }
+  [data-id="chute"] .cards .tag {
+    font-family: var(--display); font-style: italic; font-size: 26pt; line-height: 1; color: var(--rose);
+    margin-bottom: 3mm;
+  }
+  [data-id="chute"] .cards .card.alertish { border-top: .8mm solid var(--bordeaux); }
+  [data-id="chute"] .practice {
+    margin-top: 6mm; display: grid; grid-template-columns: 42mm 1fr; gap: 6mm; align-items: start;
+    background: var(--cream); padding: 6mm 7mm;
+  }
+  [data-id="chute"] .practice .lead { font-size: 15pt; }
+</style>
+<section class="page" data-id="chute">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie I — Sourcils</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="side">
+        <div class="kicker">Anatomie du poil</div>
+        <h2 class="h-title">Pourquoi les sourcils tombent-ils ?</h2>
+        <p class="lead">Distinguer renouvellement normal, casse et chute anormale</p>
+        <div class="photo"><img src="assets/portrait-regard-haut.jpg" alt=""></div>
+      </div>
+      <div class="main">
+        <div class="cards">
+          <div class="card">
+            <div class="tag">i.</div>
+            <h3 class="h-label">Chute physiologique</h3>
+            <p>Un sourcil arrivé en fin de cycle peut tomber : c’est le renouvellement naturel. La perte isolée de quelques poils n’indique pas forcément un problème. Les follicules ne sont pas synchronisés, ce qui permet de conserver une ligne visible.</p>
+          </div>
+          <div class="card">
+            <div class="tag">ii.</div>
+            <h3 class="h-label">Casse ou fragilisation</h3>
+            <p>Les frottements répétés, l’épilation excessive, les traitements chimiques mal adaptés et une manipulation agressive peuvent casser les poils ou fragiliser la zone. Un poil cassé n’est pas nécessairement un poil tombé avec sa racine.</p>
+          </div>
+          <div class="card alertish">
+            <div class="tag">iii.</div>
+            <h3 class="h-label">Chute inhabituelle</h3>
+            <p>Une perte en plaques, rapide, persistante ou associée à rougeur, démangeaisons, squames ou douleur mérite un avis médical. Parmi les causes possibles : affection dermatologique, alopécie, troubles thyroïdiens, carences ou certains traitements. <strong>Une technicienne esthétique ne pose pas de diagnostic médical.</strong></p>
+          </div>
+        </div>
+        <div class="practice">
+          <p class="lead">En pratique, avant une prestation :</p>
+          <ul class="dots">
+            <li>Observer la densité, les zones clairsemées, l’état de la peau et la résistance apparente du poil.</li>
+            <li>Questionner sans juger sur les épilations et soins récents.</li>
+            <li>Reporter tout traitement chimique sur une zone irritée ou lorsque l’état des poils paraît préoccupant.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>
+
+<style>
+  [data-id="rehaussement"] .layout { display: grid; grid-template-columns: 82mm 1fr; gap: 12mm; height: 100%; }
+  [data-id="rehaussement"] .side { display: flex; flex-direction: column; }
+  [data-id="rehaussement"] .side .block + .block { margin-top: 7mm; }
+  [data-id="rehaussement"] .side .h-title { margin: 3mm 0 3mm; font-size: 21pt; }
+  [data-id="rehaussement"] .protocol-head {
+    display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3mm;
+  }
+  [data-id="rehaussement"] .steps-table td { font-size: 9.4pt; }
+  [data-id="rehaussement"] .steps-table td.key { width: 26mm; font-size: 14pt; }
+  [data-id="rehaussement"] .steps-table td.time { width: 38mm; text-align: right; }
+  [data-id="rehaussement"] .steps-table th:last-child { text-align: right; }
+  [data-id="rehaussement"] .steps-table tr.mid td { background: rgba(240, 224, 220, .5); }
+  [data-id="rehaussement"] .steps-table tr.mid td.key { padding-left: 2mm; }
+  [data-id="rehaussement"] .alert { margin-top: 6mm; }
+</style>
+<section class="page" data-id="rehaussement">
+  <div class="runhead"><span class="brand">Dolce Lash &amp; Brow · Support pédagogique</span><span>Partie II — Les cils</span></div>
+  <div class="content">
+    <div class="layout">
+      <div class="side">
+        <div class="block">
+          <div class="kicker">Avant tout</div>
+          <h2 class="h-title"><span class="no">5.</span>Diagnostic avant rehaussement</h2>
+          <p>Observer les cils, leur état et les éventuelles contre-indications. Vérifier l’absence d’irritation ou d’infection oculaire, effectuer les contrôles prévus par les notices et choisir les pads adaptés.</p>
+        </div>
+        <div class="block">
+          <div class="kicker">Préparation</div>
+          <p class="lead" style="margin-top:3mm">Nettoyer les cils, protéger les cils inférieurs, positionner le pad en silicone et aligner soigneusement les cils.</p>
+        </div>
+      </div>
+      <div class="main">
+        <h2 class="h-title"><span class="no">6.</span>Rehaussement de cils — Noemi Innovate</h2>
+        <div class="rule"></div>
+        <div class="protocol-head">
+          <h3 class="h-label">Ordre des étapes enseigné</h3>
+        </div>
+        <table class="data steps-table">
+          <thead><tr><th>Étape</th><th>Produit</th><th>Temps de pose</th></tr></thead>
+          <tbody>
+            <tr><td class="key"><em>Step</em> 1</td><td>Noemi Innovate — Step 1</td><td class="time"><span class="chip fill">10 minutes</span></td></tr>
+            <tr class="mid"><td class="key"><em>Step</em> 1.5</td><td>Noemi Intense — Lash Botox (soin cils et sourcils)</td><td class="time"><span class="chip">Selon notice du soin</span></td></tr>
+            <tr><td class="key"><em>Step</em> 2</td><td>Noemi Innovate — Step 2</td><td class="time"><span class="chip fill">10 minutes</span></td></tr>
+          </tbody>
+        </table>
+        <div class="alert">
+          <div class="alert-title">Important</div>
+          <p>Ces temps de 10 minutes correspondent au protocole demandé pour la formation et doivent être confirmés sur les notices Noemi Innovate du lot utilisé. Vérifier expressément auprès du fabricant que le soin Intense peut être appliqué entre Step 1 et Step 2 : certains systèmes imposent de neutraliser avant tout soin. <strong>Ne pas appliquer cette séquence sans validation.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Dolce Lash &amp; Brow • Manuel de formation</span><span class="num"></span></div>
+</section>
+
+</body>
+</html>

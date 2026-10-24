@@ -1,0 +1,66 @@
+<!-- Schéma du cycle de vie du poil — SVG inline (à coller tel quel dans la page).
+     Largeur conseillée : 100 % d'un conteneur de 170 à 240 mm. Les libellés vont en HTML sous le schéma
+     (grille de 4 colonnes égales, alignées sur les 4 follicules). -->
+<svg class="schema-cycle" viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Les quatre phases du cycle du poil : anagène, catagène, télogène, puis anagène à nouveau">
+  <style>
+    .schema-cycle .derm { fill: #F0E0DC; }
+    .schema-cycle .epi { fill: #E4CFC8; }
+    .schema-cycle .skin { fill: none; stroke: #3B2823; stroke-width: 1.6; }
+    .schema-cycle .sheath { fill: #FCFAF7; stroke: #3B2823; stroke-width: 1.4; }
+    .schema-cycle .bulb { fill: #3B2823; }
+    .schema-cycle .papilla { fill: #7A2430; }
+    .schema-cycle .hair { fill: none; stroke: #3B2823; stroke-width: 4.2; stroke-linecap: round; }
+    .schema-cycle .hair-new { fill: none; stroke: #3B2823; stroke-width: 3.2; stroke-linecap: round; }
+    .schema-cycle .hair-old { fill: none; stroke: #A48A7B; stroke-width: 3.6; stroke-linecap: round; stroke-dasharray: 1 6; }
+    .schema-cycle .strand { fill: none; stroke: #A48A7B; stroke-width: 1.2; stroke-dasharray: 3 4; }
+    .schema-cycle .arrow { fill: none; stroke: #D8B7AF; stroke-width: 1.2; }
+    .schema-cycle .arrow-head { fill: #D8B7AF; }
+  </style>
+  <!-- peau -->
+  <rect class="derm" x="0" y="92" width="800" height="158"/>
+  <rect class="epi" x="0" y="80" width="800" height="14"/>
+  <path class="skin" d="M0 80 H800"/>
+
+  <!-- flèches de progression entre les phases -->
+  <g>
+    <path class="arrow" d="M150 236 H246"/><path class="arrow-head" d="M246 232 L254 236 L246 240 Z"/>
+    <path class="arrow" d="M350 236 H446"/><path class="arrow-head" d="M446 232 L454 236 L446 240 Z"/>
+    <path class="arrow" d="M550 236 H646"/><path class="arrow-head" d="M646 232 L654 236 L646 240 Z"/>
+  </g>
+
+  <!-- 1. Anagène : follicule long, bulbe profond, poil en pleine croissance -->
+  <g transform="translate(100 0)">
+    <path class="sheath" d="M-11 80 C-11 130 -13 165 -20 190 C-28 214 -16 226 0 226 C16 226 28 214 20 190 C13 165 11 130 11 80"/>
+    <path class="bulb" d="M-15 196 C-20 214 -10 221 0 221 C10 221 20 214 15 196 C11 184 6 178 0 178 C-6 178 -11 184 -15 196 Z"/>
+    <path class="papilla" d="M-7 221 C-7 211 -4 205 0 205 C4 205 7 211 7 221 Z"/>
+    <path class="hair" d="M0 182 C0 120 0 80 4 52 C9 24 26 8 48 2"/>
+  </g>
+
+  <!-- 2. Catagène : le follicule se rétracte, le bulbe remonte -->
+  <g transform="translate(300 0)">
+    <path class="sheath" d="M-11 80 C-11 115 -12 138 -16 152 C-21 168 -12 176 0 176 C12 176 21 168 16 152 C12 138 11 115 11 80"/>
+    <path class="bulb" d="M-10 156 C-13 168 -6 172 0 172 C6 172 13 168 10 156 C7 148 4 144 0 144 C-4 144 -7 148 -10 156 Z"/>
+    <path class="strand" d="M0 176 V212"/>
+    <path class="papilla" d="M-6 222 C-6 214 -3 210 0 210 C3 210 6 214 6 222 Z"/>
+    <path class="hair" d="M0 148 C0 110 0 80 4 52 C9 24 26 8 48 2"/>
+  </g>
+
+  <!-- 3. Télogène : poil au repos, détaché de la papille -->
+  <g transform="translate(500 0)">
+    <path class="sheath" d="M-11 80 C-11 106 -11 120 -13 130 C-16 142 -9 148 0 148 C9 148 16 142 13 130 C11 120 11 106 11 80"/>
+    <ellipse class="bulb" cx="0" cy="134" rx="8" ry="10"/>
+    <path class="strand" d="M0 148 V200"/>
+    <path class="papilla" d="M-6 210 C-6 202 -3 198 0 198 C3 198 6 202 6 210 Z"/>
+    <path class="hair" d="M0 128 C0 100 0 80 4 52 C9 24 26 8 48 2"/>
+  </g>
+
+  <!-- 4. Anagène : nouvelle pousse, l'ancien poil se libère (exogène) -->
+  <g transform="translate(700 0)">
+    <path class="sheath" d="M-11 80 C-11 130 -13 165 -20 190 C-28 214 -16 226 0 226 C16 226 28 214 20 190 C13 165 11 130 11 80"/>
+    <path class="bulb" d="M-15 196 C-20 214 -10 221 0 221 C10 221 20 214 15 196 C11 184 6 178 0 178 C-6 178 -11 184 -15 196 Z"/>
+    <path class="papilla" d="M-7 221 C-7 211 -4 205 0 205 C4 205 7 211 7 221 Z"/>
+    <path class="hair-new" d="M0 182 C0 150 0 118 1 96"/>
+    <ellipse class="bulb" cx="-3" cy="92" rx="6" ry="8" opacity=".35"/>
+    <path class="hair-old" d="M-3 86 C-3 64 -1 46 4 30 C10 14 24 4 42 0"/>
+  </g>
+</svg>

@@ -8,8 +8,8 @@
 
 ## Notes de transcription
 
-- Seul texte de la page : « PARTIE II — LES CILS » (capitales serif fines, même police que l'ouverture Partie I, brun moyen ≈ #603F2E), centré horizontalement, position approx. (15%, 40,5%, 85%, 45,5%), séparateur tiret cadratin « — ».
+- Seul texte de la page : « PARTIE II — LES CILS » (capitales serif fines, même police que l'ouverture Partie I, brun moyen ≈ #603F2E), centré horizontalement, position approx. (16%, 41,5%, 85%, 45,5%), séparateur tiret cadratin « — ».
 - Incohérence avec le sommaire, qui écrit « PARTIE II · CILS » (point médian, et « CILS » sans l'article « LES »).
 - Aucune coquille, aucun mot incertain.
-- Même photo et même cadrage que l'ouverture de la Partie I (comparaison pixel à pixel : pas de décalage), mais version très légèrement plus chaude/plus sombre ici (étalonnage ou compression différents) ; le titre est d'un brun plus clair. Pour le redesign, prévoir un visuel ou un accent couleur propre à chaque partie, idéalement un visuel « cils » pour cette partie.
-- Lisibilité : le titre traverse l'oreille et la joue et touche la lèvre supérieure (lettres « CILS ») ; contraste moyen brun sur peau.
+- Même photo et même cadrage que l'ouverture de la Partie I (comparaison pixel à pixel : décalage ≤ 1 px, négligeable), mais version très légèrement plus chaude/plus sombre ici (étalonnage ou compression différents) ; le titre est d'un brun plus clair. Pour le redesign, prévoir un visuel ou un accent couleur propre à chaque partie, idéalement un visuel « cils » pour cette partie.
+- Lisibilité : le titre traverse l'oreille et la joue et le bas des lettres « CIL » touche le haut de la lèvre supérieure ; le titre est environ 20 px plus haut que celui de l'ouverture Partie I ; contraste moyen brun sur peau.

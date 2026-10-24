@@ -1,0 +1,27 @@
+<style>
+  [data-id="partie-3"] { background: var(--cream); }
+  [data-id="partie-3"] .os-photo { right: 0; width: 90mm; }
+  [data-id="partie-3"] .os-photo img { object-position: 50% 50%; }
+  [data-id="partie-3"] .os-num { left: 18mm; top: 16mm; -webkit-text-stroke-color: var(--rose); opacity: 1; }
+  [data-id="partie-3"] .os-title { left: 20mm; top: 86mm; }
+  [data-id="partie-3"] .os-name { font-size: 50pt; }
+  [data-id="partie-3"] .os-toc { left: 20mm; width: 160mm; bottom: 18mm; }
+  [data-id="partie-3"] .os-toc .items { display: grid; grid-template-columns: 1fr 1fr; column-gap: 8mm; }
+</style>
+<section class="page opener-side" data-id="partie-3">
+  <div class="os-photo"><img src="assets/sac-jambes.jpg" alt=""></div>
+  <div class="os-num">03</div>
+  <div class="os-title">
+    <div class="os-part">Partie III</div>
+    <div class="os-name">Pratique<br>professionnelle</div>
+  </div>
+  <div class="os-toc">
+    <div class="label">Au programme de cette partie</div>
+    <div class="items">
+      <div class="item"><span class="pg">{{p:fiche-technique}}</span>Fiches pratiques et suivi des clientes</div>
+      <div class="item"><span class="pg">{{p:photographier}}</span>Photographier son travail</div>
+      <div class="item"><span class="pg">{{p:reseaux}}</span>Réseaux sociaux et communication</div>
+      <div class="item"><span class="pg">{{p:gestion}}</span>Gestion d’activité et fidélisation</div>
+    </div>
+  </div>
+</section>
