@@ -16,3 +16,13 @@
 - Visuels d'origine en basse définition agrandis ×2 (Lanczos + accentuation) : versions `*-hd.jpg`.
 - Grain papier léger sur toutes les pages ; 4e de couverture sur fond soie et ruban bordeaux.
 - Deux PDF : HD pour l'impression, « léger » pour l'envoi par téléphone.
+
+## Arbitrages du 24 octobre 2026 (refonte Canva) — la cliente : « à toi de gérer »
+
+- **Ordre des soins cils (p. 18 / p. 16)** : « terminer par le soin autorisé » devient « terminer par le soin final autorisé par le fabricant » ; le Lash Botox Noemi Intense reste en Step 1.5, toujours sous réserve de la notice (encadrés p. 16-17 inchangés).
+- **Repère B du mapping (p. 07)** : le texte s'accorde au schéma de la cliente : « la ligne passe généralement entre la pupille et le bord externe de l'iris, regard droit ».
+- **Test de sensibilité** : ajouté dans la fiche technique Brow Lift, « Avant la séance » (p. 20), comme le demandent les nouvelles pages 15 et 18.
+- **Source Freelift** : supprimée (URL incomplète, produit non utilisé dans le manuel).
+- **Point 4 de « Gestion d'activité »** : non retrouvé ; la renumérotation 1-6 est conservée, aucun trou visible.
+- **QCM** : bonnes réponses rééquilibrées (5 A, 5 B, 5 C) en échangeant l'ordre des propositions des questions 6, 8, 11 et 13 ; corrigé mis à jour. Q5 et Q10 validées (couvertes par les p. 08, 14, 16 et 18).
+- **Droits des images** : crédit @refreshednrefined conservé (p. 11) ; les images de mapping (p. 06-07) sont celles fournies par la cliente.
