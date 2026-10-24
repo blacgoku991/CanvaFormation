@@ -1,6 +1,6 @@
 <!-- source: 402cd44e-image.jpg -->
 
-> en-tête/pied : aucun (pas d'en-tête, pas de pied de page, pas de numéro de page sur cette page — contrairement aux autres pages de contenu).
+> en-tête/pied : aucun (pas d'en-tête, pas de pied de page, pas de numéro de page sur cette page — contrairement à la plupart des autres pages de contenu ; les deux pages du QCM n'en ont pas non plus ; vérifié : bas de page entièrement blanc).
 
 [VISUEL: aucun — page entièrement typographique sur fond blanc (#FFFFFF), sans photo, pictogramme, filigrane ni cadre (vérifié : aucun pixel coloré sur la page)]
 
@@ -45,7 +45,7 @@ Expliquer les recommandations après soin prévues par les fabricants et remettr
 - Tableau d'origine sans bordures ni fond : ligne d'en-tête « Étape / Produit / Temps de pose » en gris clair (≈ #808080), lignes en noir dans le corps du texte courant ; colonnes à x ≈ 10 %, 25 %, 69,5 %. « Selon notice du / soin » est sur deux lignes (retour automatique).
 - « Ordre des étapes enseigné : » est en gras noir (pseudo-intertitre), non numéroté.
 - Hiérarchie : « PARTIE II — LES CILS » est en capitales **non grasses** (graisse légère, brun ≈ #584840), contrairement aux titres de page des autres pages de contenu (capitales grasses) ; intertitres numérotés « 5. », « 6. », « 7. », « 8. » en brun, graisse normale, casse normale ; « Conseils après prestation » est un intertitre du même style mais **non numéroté** (on attendrait « 9. »).
-- **Numérotation** : la Partie II commence à « 5. » — suite logique de la numérotation de la Partie I (sections 1 à 4 supposées), à vérifier avec le sommaire. Le « Step 1.5 » apparaît à la fois comme étape du tableau (section 6) et comme section dédiée (section 8).
+- **Numérotation** : la Partie II commence à « 5. » — suite logique de la numérotation de la Partie I (sections 1 à 4 supposées : « 1. RESTRUCTURATION DES SOURCILS & MAPPING » et « 4. Décoloration des sourcils » sont transcrites sur d'autres pages, 2 et 3 ne sont pas encore vues), à vérifier avec le sommaire. Le « Step 1.5 » apparaît à la fois comme étape du tableau (section 6) et comme section dédiée (section 8).
 - Alignement gauche incohérent : sections 5 et 6 à x ≈ 7,9 %, sections 7, 8 et « Conseils » à x ≈ 7,3 %, note « Important » à x ≈ 7 %.
 - Cette page reprend en titre « PARTIE II — LES CILS » alors qu'il existe déjà une page d'ouverture (intercalaire photo) avec le même titre : doublon à arbitrer lors du redesign (garder le titre sur l'intercalaire, ou commencer cette page directement par « 5. Diagnostic avant rehaussement »).
-- Pas de pied de page ni d'en-tête sur cette page (les autres pages de contenu ont « DOLCE LASH & BROW • … »).
+- Pas de pied de page ni d'en-tête sur cette page (la plupart des autres pages de contenu ont « DOLCE LASH & BROW • … » ; seules les pages du QCM et les pages d'ouverture n'en ont pas non plus).
