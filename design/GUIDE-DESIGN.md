@@ -113,7 +113,7 @@ Texte de l'en-tête de droite, selon la partie :
   - guillemets « … » avec espaces insécables (`«&nbsp;…&nbsp;»`) ;
   - espace insécable avant : ; ? ! (`&nbsp;`) ;
   - tiret cadratin — dans les titres de produits.
-- Les filigranes et crédits d'autrui ne doivent jamais apparaître.
+- Filigranes : seul le filigrane @refreshednrefined (atelier visuel) existe ; il reste visible, jamais masqué ni effacé, avec la mention « Crédit photo : @refreshednrefined » (décision de la cliente). Aucun autre visuel tiers (mockup, infographie d'origine) n'est réutilisé.
 
 ## Visuels disponibles (`design/assets/`)
 
